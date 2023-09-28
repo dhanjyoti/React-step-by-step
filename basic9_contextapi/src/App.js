@@ -1,10 +1,11 @@
 import './App.css';
 import Family from './context/Family';
+import { FamilyContext } from './context/FamilyContext';
 
 const familySecret = {
   familyName: 'The Smiths',
   onlyParentCanSee: () => {
-    return `The Smiths are the best!`;
+    return `The Smiths are the best!!`;
   },
   onlyGrandChildrenShouldKnow: () => {
     return `They are the best!`;
@@ -14,7 +15,9 @@ const familySecret = {
 function App() {
   return (
     <div className='App'>
-      <Family secret={familySecret}/>
+      <FamilyContext.Provider value={familySecret}>
+        <Family />
+      </FamilyContext.Provider>
     </div>
   );
 }

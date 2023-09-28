@@ -1,10 +1,9 @@
-import React from 'react'
-import Parent from './Parent'
+import Parent1 from "./Parent1"
 
-const Family = ({secret}) => {
+const Family = () => {
   return (
     <div>
-        <Parent secret={secret} />
+        <Parent1 />
     </div>
   )
 }
