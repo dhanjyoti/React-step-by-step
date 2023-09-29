@@ -1,9 +1,9 @@
 import React from 'react'
 import TextInput from '../components/share/TextInput'
 import PasswordInput from '../components/share/PasswordInput'
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
-const Login = () => {
+const SignUp = () => {
   return (
     <div className='w-full h-full flex flex-col items-center'>
       <div>
@@ -21,25 +21,26 @@ const Login = () => {
       </div>
       <div className='w-1/3 py-10 flex items-center justify-center flex-col'>
         <div className='font-bold mb-4'>
-          Login To Spotify
+            Sign up for free to start listening.
         </div>
-        <TextInput label="Email or username" placeholder="Email or username" />
-        <PasswordInput label="Password" placeholder="Password" />
+        <TextInput label="Email or username" placeholder="Enter email or username" />
+        <PasswordInput label="Password" placeholder="Create a password" />
+        <TextInput label="What should we call you?" placeholder="Enter your name" />
         <div className='w-full flex items-center my-8'>
           <button className='bg-green-500 w-full text-lg font-semibold p-3 px-10 rounded-full'>
-            LOG IN
+            SIGN UP
           </button>
         </div>
       <div className='w-full border border-solid border-gray-300'></div>
       </div>
       <div className='my-6 font-semibold text-lg'>
-        Don't have an account?
+        Already have an account?
       </div>
       <div>
-        <Link to='/signup'>SIGN UP FOR SPOTIFY</Link>
+        <Link to='/login'>LOG IN INSTEAD</Link>
       </div>
     </div>
   )
 }
 
-export default Login
+export default SignUp
