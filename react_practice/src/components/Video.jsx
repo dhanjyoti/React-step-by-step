@@ -3,7 +3,12 @@ import './Video.css'
 function Video({title, channel="Coder Dost", views, time}) {
 
     let verified = true;
-    let channelJSX = <div className='channel'>{channel} ✅</div>
+    let channelJSX;
+    if(verified){
+        channelJSX = <div className='channel'>{channel} ✅</div>
+    } else {
+        channelJSX = <div className='channel'>{channel}</div>
+    }
 
 
   return (
