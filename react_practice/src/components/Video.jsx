@@ -1,8 +1,7 @@
 import './Video.css'
 
-function Video({title, channel="Coder Dost", views, time}) {
+function Video({title, channel="Coder Dost", views, time, verified}) {
 
-    let verified = true;
     let channelJSX;
     if(verified){
         channelJSX = <div className='channel'>{channel} ✅</div>
