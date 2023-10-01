@@ -3,21 +3,50 @@ import Video from './components/Video';
 
 function App() {
 
-  let obj = {
-    title: "JS tutorial",
-    views: "999K",
-    time: "2 year ago",
-    channel: "App Coding",
-    verified: true,
-  };
+  let videos = [
+    {
+      title: "JS tutorial",
+      views: "10K",
+      time: "1 year ago",
+      channel: "App Coding",
+      verified: true,
+    },
+    {
+      title: "JS Classes",
+      views: "24K",
+      time: "2 month ago",
+      channel: "App Coder",
+      verified: false,
+    },
+    {
+      title: "React tutorial",
+      views: "9M",
+      time: "1 year ago",
+      channel: "App Maker",
+      verified: true,
+    },
+    {
+      title: "Node tutorial",
+      views: "99K",
+      time: "1 month ago",
+      channel: "App Guru",
+      verified: false,
+    }
+  ]
 
   return (
     <div className="App">
       <div>Videos</div>
-      <Video {...obj} />
-      <Video title="Node JS tutorial" views="100K" time="1 year ago" Channel="Coding boy" verified={false}/>
-      <Video title="React JS tutorial" views="100M" time="1 month ago" Channel="Coding Guru" verified={false} />
-      <Video {...obj} />
+      {
+        videos.map(video => <Video 
+          title={video.title}
+          views={video.views}
+          time={video.time}
+          channel={video.channel} 
+          verified={video.verified} 
+          />
+        )
+      }
     </div>
   );
 }
