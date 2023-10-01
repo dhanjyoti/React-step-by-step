@@ -5,7 +5,7 @@ responsible only for the view layer of the application. ReactJS is not a framewo
 it is just a library developed by Facebook to solve some problems that we were 
 facing earlier.
 
-            Chapter 1 - Why React?
+                    Chapter 1 - Why React?
 
 Advantages/Characteristics-
 1. Component-Based Architecture:
@@ -92,7 +92,8 @@ Start Your React App:
 Once the dependencies are installed, you can start your React app as usual:
 4. npm start
 
-            Chapter 2 - Components
+                    Chapter 2 - Components
+
 In React, components are the functional building blocks of a user interface(UI). They 
 encapsulate a piece of the UI's functionality and appearance, allowing you to create modular,
 reusable, and maintainable code. Components are like reusable custom HTML elements with their
@@ -113,4 +114,110 @@ JSX (JavaScript XML) is an extension of JavaScript used in React for defining th
                                     JSX resembles HTML but is actually a syntax extension for JavaScript. It allows you to write
  HTML-like code within your JavaScript files. 
 
-3. 
+                    Chapter 3 - Conditional Rendering
+                    
+Conditional rendering in React allows you to display different content or components
+ based on certain conditions or criteria. You can use JavaScript expressions or
+  conditional statements to determine what should be rendered in your React components.
+   Here are some common patterns for conditional rendering in React:
+1. Using Ternary Operators:
+
+function App({ isLoggedIn }) {
+  return (
+    <div>
+      {isLoggedIn ? (
+        <p>Welcome, User!</p>
+      ) : (
+        <p>Please log in to continue.</p>
+      )}
+    </div>
+  );
+}
+In this example, the isLoggedIn prop is used to conditionally render a welcome message or
+ a login prompt.
+
+2. Using Logical && Operator:
+
+Note:: This method should not be used in case of Numbers as it might mis-identify the
+result with `0` and `1`.
+
+function App({ isLoading }) {
+  return (
+    <div>
+      {isLoading && <p>Loading...</p>}
+      {!isLoading && <p>Content Loaded</p>}
+    </div>
+  );
+}
+Here, the isLoading prop is used to conditionally render a loading message. 
+If isLoading is true, the loading message is displayed; otherwise, the content is displayed.
+
+3. Using Conditional Statements:
+
+function App({ isMobile }) {
+  if (isMobile) {
+    return <p>This is a mobile device.</p>;
+  } else {
+    return <p>This is not a mobile device.</p>;
+  }
+}
+In this case, the isMobile prop is used to determine which message to render using 
+a traditional if-else statement.
+
+4. Using a Function:
+We can create a separate function to handle conditional rendering:
+
+function Message({ isMorning }) {
+  function getMessage() {
+    if (isMorning) {
+      return <p>Good morning!</p>;
+    } else {
+      return <p>Good evening!</p>;
+    }
+  }
+
+  return <div>{getMessage()}</div>;
+}
+In this example, the getMessage function is responsible for determining the message based
+ on the isMorning prop.
+
+5. Using the Map Function:
+If you have an array of items to render conditionally, you can use the map function to 
+render them based on a condition:
+
+function List({ items }) {
+  return (
+    <ul>
+      {items.map((item, index) => (
+        <li key={index}>{item.isCompleted ? 'Done' : 'Not Done'}</li>
+      ))}
+    </ul>
+  );
+}
+In this example, each item in the items array is rendered conditionally based on its
+ isCompleted property.
+
+
+`Key` -> In React, a key is a special attribute that you can include when rendering a list
+ of elements, such as an array of components or DOM elements. The key is used by React to 
+ help it identify each element in the list uniquely and efficiently update the list when 
+ changes occur. Keys are essential for optimizing the rendering performance and behavior of 
+ lists in React.
+
+Here are some key points to understand about keys in React:
+
+Uniqueness: Keys must be unique among the siblings of the same parent. In other words, 
+within a list of elements, each key should be different.
+
+Stability: React expects keys to be stable across re-renders. This means that the key of 
+an element should not change between renders, especially if the element retains its position 
+in the list.
+
+Performance: Keys help React identify which elements have changed, been added, or been removed 
+in a list. This allows React to update the DOM efficiently by reusing existing elements and 
+minimizing re-rendering.
+
+Reconciliation: React uses keys to perform a process called "reconciliation," which determines 
+how to update the UI when the underlying data changes. Keys help React maintain a mapping 
+between the elements in the virtual DOM and their corresponding elements in the real DOM.
+
