@@ -2,14 +2,6 @@ import './Video.css'
 
 function Video({title, channel="Coder Dost", views, time, verified}) {
 
-    let channelJSX;
-    if(verified){
-        channelJSX = <div className='channel'>{channel} ✅</div>
-    } else {
-        channelJSX = <div className='channel'>{channel}</div>
-    }
-
-
   return (
     <>
         <div className='container'>
@@ -17,7 +9,7 @@ function Video({title, channel="Coder Dost", views, time, verified}) {
                 <img src='https://picsum.photos/id/1/160/90' alt='Dhanjyoti Rabha' />
             </div>
             <div className='title'>{title}</div>
-            {channelJSX}
+            {verified ? <div className='channel'>{channel} ✅</div> : <div className='channel'>{channel}</div> }
             <div className='views'>
                 {views} views <span>.</span> {time}
             </div>
