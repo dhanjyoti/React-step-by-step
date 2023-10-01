@@ -1,0 +1,116 @@
+React-
+ReactJS is a declarative, efficient, and flexible JavaScript library for building
+user interfaces. It is an open-source, component-based front-end library that is 
+responsible only for the view layer of the application. ReactJS is not a framework, 
+it is just a library developed by Facebook to solve some problems that we were 
+facing earlier.
+
+            Chapter 1 - Why React?
+
+Advantages/Characteristics-
+1. Component-Based Architecture:
+- React promotes a modular and component-based architecture, where you can break 
+down your user interface into small, reusable pieces called components.
+- This modularity improves code organization, reusability, and maintainability, 
+making it easier to build and maintain complex applications.
+
+2. Virtual DOM(Document Object Model):
+- React introduces a Virtual DOM, which is a lightweight copy of the actual DOM. 
+It allows React to efficiently update and render changes to the user interface.
+- By minimizing direct interactions with the actual DOM, React significantly 
+improves performance, leading to faster and more responsive applications.
+
+3. Declarative Syntex:
+- React uses a declarative syntax, meaning you describe what you want the 
+UI to look like, and React takes care of updating the UI to match that description.
+- This leads to more predictable and easier-to-understand code compared to 
+imperative approaches.
+
+4. Efficient Updates:
+- React efficiently updates only the parts of the UI that have changed, thanks
+ to its reconciliation algorithm and the Virtual DOM.
+- This reduces unnecessary re-renders and improves application performance.
+
+5. Larger Ecosystem and Community: 
+- React has a vast ecosystem of libraries, tools, and extensions, making it easy 
+to integrate with other technologies and solve various development challenges.
+- A large and active community provides extensive support, resources, and documentation
+ for developers.
+
+6. One-Way Data Flow:
+- React enforces a one-way data flow, which simplifies debugging and helps prevent 
+common data-related bugs by ensuring that data flows in a single direction.
+- This pattern improves code predictability and maintainability.
+
+7. Server-Side Rendering(SSR) and Isomorphic Apps:
+- React supports server-side rendering, allowing you to render components on the server
+ and send pre-rendered HTML to the client.
+- This benefits SEO, performance, and user experience, especially for single-page 
+applications (SPAs).
+
+8. React Native for Mobile Development:
+- React Native extends the React paradigm to mobile app development, enabling you to use
+ the same skills and codebase to build native iOS and Android applications.
+- This leads to faster development and code sharing between web and mobile platforms.
+
+9. Strong Developer Tools:
+- React comes with a set of developer tools (e.g., React DevTools) that make it easier to 
+inspect and debug React applications.
+- These tools help developers identify performance bottlenecks and track component behavior.
+
+10. Community and Industry Adoption:
+- React has gained widespread popularity and is used by many large companies and
+ organizations, ensuring its long-term viability and industry support.
+
+* To start React we use `npx create-react-app app-name`
+npx - to run package.json script
+create-react-app - toolchain
+app-name - name of our react file
+
+* index.html inside the public folder is the Single-Page-Application
+
+# Assignment 1:
+If we delete node_modules. How to run our app again successfully ?
+
+Open Your Terminal/Command Prompt:
+Open the terminal or command prompt on your computer.
+
+Navigate to Your React Project Directory:
+Use the cd (change directory) command to navigate to the root directory of your React project.
+1. cd path/to/your/react/project
+
+Initialize a New package.json File:
+If you don't have a package.json file already, you can create one using the following command:
+2. npm init -y
+
+Install Dependencies:
+Use the npm install command to reinstall all the dependencies listed in your package.json file.
+ Since you deleted the node_modules folder, you need to reinstall the dependencies:
+3. npm install
+
+Start Your React App:
+Once the dependencies are installed, you can start your React app as usual:
+4. npm start
+
+            Chapter 2 - Components
+In React, components are the functional building blocks of a user interface(UI). They 
+encapsulate a piece of the UI's functionality and appearance, allowing you to create modular,
+reusable, and maintainable code. Components are like reusable custom HTML elements with their
+own behaviour and styling.
+
+* Function is used as a Tag in React
+* Always use Camel Case in JSX
+
+1. Fragment -> In React, a fragment is a way to group multiple children elements without adding
+ an extra DOM element to the rendered output. Fragments are a lightweight and efficient way 
+ to structure your component's JSX code, especially when you need to return adjacent JSX elements
+ without a parent wrapper.
+
+2. JSX -> 
+JSX (JavaScript XML) is an extension of JavaScript used in React for defining the structure and
+ content of user interfaces. It provides a more concise and readable way to describe the structure 
+ of UI components compared to manually creating DOM elements with JavaScript functions.
+                                    JSX resembles HTML but is actually a syntax extension for JavaScript. It allows you to write
+ HTML-like code within your JavaScript files. 
+
+3. 
