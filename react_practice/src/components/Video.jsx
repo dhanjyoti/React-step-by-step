@@ -9,7 +9,7 @@ function Video({title, channel="Coder Dost", views, time, verified}) {
                 <img src='https://picsum.photos/id/1/160/90' alt='Dhanjyoti Rabha' />
             </div>
             <div className='title'>{title}</div>
-            <div className='channel'>{channel} {verified ? "✅" : null}</div>
+            <div className='channel'>{channel} {verified && "✅"}</div>
             <div className='views'>
                 {views} views <span>.</span> {time}
             </div>
