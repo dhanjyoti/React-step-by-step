@@ -1,0 +1,121 @@
+1. `main()` -> In Java, `main()` is a special method and serves as the entry point for a Java application. When you run a Java program,
+the Java Virtual Machine(JVM) looks for a `main()` method within the class that you specify as the starting point for your program. 
+This `main()` method is the first method that gets executed when your program is launched.
+
+Eg:- 
+public class MyClass {
+    public static void main(String[] args) {
+        // Your code here
+    }
+}
+
+2 `public` -> This is an access modifier that specifies that the `main()` method is accessible from outside the class.
+
+3 `static` -> This keyword indicates that the `main()` method belongs to the class itself, rather than an instance of the class. 
+This allows you to call the `main()` method without creating an object of the class.
+
+4. `void` -> The `main()` method doesn't return any value (it has a `void` return type).
+
+5. `main` -> This is the name of the method, specifically `main`.
+
+6. `String[] args` -> This is a parameter that allows you to pass command-line arguments to your program.
+ This `args` parameter is an array of strings, where each element contains a command-line argument.
+
+7. Variables -> A variable is a named container that holds data or values. Variables are used to store and manipulate data within a program.
+Eg:- int a = 13; (here `a` is the variable)
+
+8. Identifiers -> Identifier is a name given to a class, method, variable or other program elements. 
+Identifiers are used to uniquely identify these program elements within the code. IDentifiers follow certain naming rules and conventions in Java. 
+Here are some key points about Identifiers in Java:
+* Naming Rules
+* Naming conventions
+
+9. Data Type -> Data Types are classification that specifies which type of value a variable can hold or what type of result a method can return.
+Java provides two categories of data types:
+#Primitive Data Type. Eg- byte, short, int long, float, double, char, boolean
+#Reference Data Type. Eg- Classes, Interfaces, Arrays, Enums
+Classes: User-defined data types that can contain variables and methods.
+Interfaces: Like classes but only contain abstract methods and constants.
+Arrays: Ordered collections of elements of the same type.
+Enums: Enumeration types that define a set of named values
+
+10. Non-Primitive/Reference Data Type -> Non-primitive data types are called reference types because they refer to objects.
+
+11. Operators -> Operators are symbols or special keywords used to perform operations on variables and values.
+Operators define how computations are carried out in a program.
+Eg- Arithmetic Operators, Assignment Operators, Comparison Operators, Logical Operators, Unary Operators, Bitwise Operators and Conditional(Ternary) Operators
+
+12. String -> A string is a sequence of characters that represents text. It's a fundamental and widely used data type
+for working with textual data. Strings are objects in Java and belong to the `java.lang.String` class, 
+which provides various methods for manipulating and working with strings.
+
+13. Math -> Java Math is a built-in library in the Java programming language that provides a collection of mathematical functions and constants 
+for performing various mathematical operations. The java.lang.Math class contains static methods that allow you to perform common mathematical 
+tasks without having to write your own implementations. This class is part of the Java Standard Library and is available for use in any Java program.
+
+Here are some of the common mathematical operations and functionalities provided by the java.lang.Math class:
+
+Basic Mathematical Functions:
+
+Trigonometric functions: sin(), cos(), tan(), asin(), acos(), atan()
+Exponential and logarithmic functions: exp(), log(), log10(), pow(), sqrt()
+Rounding and Approximation:
+
+ceil(): Returns the smallest double value that is greater than or equal to the argument.
+floor(): Returns the largest double value that is less than or equal to the argument.
+round(): Rounds a floating-point value to the nearest integer.
+abs(): Returns the absolute value of a number.
+Constants:
+
+PI: A constant representing the mathematical constant π (pi).
+E: A constant representing the mathematical constant e (the base of natural logarithms).
+Random Number Generation:
+
+random(): Returns a random double value between 0.0 (inclusive) and 1.0 (exclusive).
+MinMax Functions:
+
+min(): Returns the minimum of two values.
+max(): Returns the maximum of two values.
+Conversions:
+
+toDegrees(): Converts radians to degrees.
+toRadians(): Converts degrees to radians.
+
+14. Statement -> A statement is a complete instruction that the Java compiler can understand and execute. 
+Statements are the building blocks of Java programs, and they define the actions or operations that 
+the program should perform. 
+Eg- Expression Statements, Declaration Statements, Control Flow Statements, Block Statement,
+Empty Statement, Try-Catch Statements
+
+15. For-Each Loop -> the for-each loop, also known as the enhanced for loop, is a convenient way to 
+iterate over elements of array or a collection (such as ArrayList, List Set, etc.) without the need for explicit initialization, 
+termination condition, or manual indexing. It simplifies the process of iterating through a collection,
+making the code more concise and readable.
+It is used exclucively to loop through elements in an array.
+
+16. Break -> Break is a control statement used to terminate the execution of a loop or a switch statement prematurely.
+When `break` is encountered inside a loop or a `switch` block, it immediately exits he loop or terminates the 
+switch block, allowing program execution to continue with the next statement after the loop or switch.
+                        The `break` statement is particularly useful for exiting a loop when a certain condition is met
+or for preventing further execution of case statements within a `switch` block after a particular case is satisfied.
+
+17. Continue -> In Java, continue is a control statement that is used inside loops (such as for, while, and do-while)
+ to skip the current iteration of the loop and proceed to the next iteration. When a continue statement is encountered 
+ within a loop, the remaining code within the current iteration is skipped, and the loop immediately goes to 
+ the next iteration.
+                    The primary purpose and significance of the continue statement are as follows:
+1. Skipping Specific Iterations
+2. Avoiding Unnecessary Code Execution
+3. Fine-Grained Loop Control
+4. Working with Nested Loops
+                    The continue statement is a powerful tool for controlling loop execution in a more granular manner. 
+It is valuable for avoiding unnecessary computations, handling special cases, and fine-tuning the behavior of loops, 
+making your code more efficient and readable. 
+
+18. Array -> An Array is a data structure that allows you to store a collection of elements, such as integers, characters,
+or objects, undert a single variable name. Arrays provide a way to organize and access multiple values of the same data type 
+using a single identifier. Each element in an array is identified by an index, starting from 0 for the first element.
+
+19. 
+
+
