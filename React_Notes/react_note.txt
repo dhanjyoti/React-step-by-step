@@ -221,3 +221,64 @@ Reconciliation: React uses keys to perform a process called "reconciliation," wh
 how to update the UI when the underlying data changes. Keys help React maintain a mapping 
 between the elements in the virtual DOM and their corresponding elements in the real DOM.
 
+                Chapter 4- Events
+
+1. Events -> In React, `Events` are interactions or actions that occur in the user interface, 
+such as clicks, keystrokes, and mouse movements. React provides a way to handle these events 
+using event handlers or event listeners. Event handling in React is similar to handling events 
+in traditional JavaScript, but with some key differences due to React's synthetic event system 
+and its one-way data flow.
+
+Here are the fundamental concepts of handling events in React:
+
+Event Handlers: Event handlers are functions that are called in response to a specific event. 
+In React, event handlers are typically defined as methods within a component's class or as arrow 
+functions in functional components.
+
+Event Syntax: In JSX, you use camelCase event names, such as onClick or onKeyDown, instead of 
+lowercase event names like onclick or onkeydown in traditional HTML.
+
+Passing Event Handlers: To associate an event handler with a DOM element, you pass it as a prop. 
+For example, to handle a click event, you pass an onClick prop to an element.
+
+Event Object: React uses a synthetic event system that wraps the native browser events and 
+provides a consistent API across different browsers. The event object passed to event handlers 
+in React is a synthetic event with properties and methods similar to the native event object.
+
+2. Event Bubbling -> Event bubbling is a concept in React and other web development frameworks 
+that describes the order in which events are handled when multiple elements within the DOM 
+hierarchy are nested and an event is triggered on one of them. In event bubbling, the event 
+starts from the innermost (target) element and "bubbles up" to the outermost (root) element.
+
+Here's how event bubbling works in React:
+
+* When an event (e.g., a click event) occurs on an element, such as a button or a div, React 
+processes the event by invoking the associated event handler (e.g., onClick).
+
+* After handling the event on the target element, React allows the event to propagate up the 
+DOM tree. This means that the same event is triggered on each ancestor element of the target 
+element, one after another, in a hierarchical order.
+
+* Each ancestor element can have its event handlers, and if they are defined, they will also 
+be called in the order of the event propagation.
+
+* Event propagation continues until it reaches the root of the DOM tree (usually the <html> 
+or <body> element), or until one of the event handlers explicitly stops further propagation 
+using the stopPropagation method on the event object.
+
+`Note` -> Event bubbling in React is not a problem to be solved but rather a natural behavior 
+of the DOM and React's event handling system. It allows you to capture and handle events at 
+different levels of your component hierarchy. However, if you want to prevent an event from 
+bubbling up to parent elements or siblings, you can use the `stopPropagation` method on the 
+event object.
+
+3. `stopPropagation` -> 
+In React, `.stopPropagation()` is not a specific React method but rather a method provided 
+by the event object, typically referred to as `event` or `e`. It is not specific to React but 
+is a part of the standard event handling in JavaScript and the DOM (Document Object Model).
+
+The `.stopPropagation()` method is used to prevent the further propagation of an event in 
+the DOM hierarchy. When an event occurs on an element, such as a button or a div, it can 
+"bubble up" the DOM tree, triggering event handlers on parent elements or other elements 
+in the hierarchy. Calling .stopPropagation() inside an event handler stops this propagation, 
+ensuring that the event does not reach other elements.
