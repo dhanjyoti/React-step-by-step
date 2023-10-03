@@ -2,7 +2,10 @@ import './PlayButton.css';
 
 function PlayButton ({message, children, onPlay, onPause}){
     let playing = false; // don't use this approach
-    function handleClick(){
+    function handleClick(event){
+        console.log(event)
+        event.stopPropagation();
+        
         if(playing) onPause();
         else onPlay();
 
