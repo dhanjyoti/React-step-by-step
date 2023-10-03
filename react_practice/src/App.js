@@ -6,7 +6,7 @@ import videos from './data/Data';
 function App() {
 
   return (
-    <div className="App">
+    <div className="App" onClick={()=> console.log('App')}>
       <div>Videos</div>
       {
         videos.map(video => <Video 
@@ -17,12 +17,18 @@ function App() {
           channel={video.channel} 
           verified={video.verified} 
           id={video.id}
-          />
+          >
+          <PlayButton 
+            onPlay={()=>console.log('Play',video.title)} 
+            onPause={()=>console.log('Pause',video.title)}>
+              {video.title}
+          </PlayButton>
+          </Video>
         )
       }
       <div style={{clear:'both'}}>
-        <PlayButton onSmash={()=>console.log('Play')} message="play-msg">Play</PlayButton>
-        <PlayButton onSmash={()=>alert('Playyy')} message="pause-msg">Pause</PlayButton>
+        {/* <PlayButton onPlay={()=>console.log('Play')} onPause={()=>console.log('Pause')} message="play-msg">Play</PlayButton> */}
+        {/* <PlayButton onSmash={()=>alert('Playyy')} message="pause-msg">Pause</PlayButton> */}
       </div>
     </div>
   );
