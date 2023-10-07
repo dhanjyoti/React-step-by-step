@@ -2,7 +2,14 @@
 module.exports = {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        poppins: ["Poppins", "sans-serif"],
+      },
+      backgroundColor:{
+        "app-black": "#121212",
+      }
+    },
   },
   plugins: [],
 }

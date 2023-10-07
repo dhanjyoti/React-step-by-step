@@ -6,7 +6,7 @@ import Home from './route/Home';
 
 function App() {
   return (
-    <div className="w-full h-full flex flex-col items-center">
+    <div className="w-screen h-screen font-poppins">
       <Router>
         <Routes>
           <Route path='/login' element={<Login />} />
