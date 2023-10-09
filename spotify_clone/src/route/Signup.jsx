@@ -1,11 +1,31 @@
-import React from 'react'
-import TextInput from '../components/share/TextInput'
-import PasswordInput from '../components/share/PasswordInput'
-import {Link} from 'react-router-dom'
+import React, { useState } from 'react';
+import PasswordInput from '../components/shared/PasswordInput';
+import TextInput from '../components/shared/TextInput';
+import { Link } from 'react-router-dom';
+import { makeUnauthenticatedPOSTRequest } from '../utils/serverHelper';
 
-const SignUp = () => {
+const Signup = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+
+  const signUp = async () => {
+    // Inputs that are required according to the api
+    const data = { email, password, name:firstName+" "+lastName, appType: 'music', };
+    const response = await makeUnauthenticatedPOSTRequest("user/signup", data);
+    // if the input successful it post/ else it will show the error message
+    if (response.status === "success") {
+      console.log(response);
+      alert("Successful");
+    } else {
+      alert(response.message);
+    }
+  }
+
   return (
     <div className='w-full h-full flex flex-col items-center'>
+      {/* Spotify Logo */}
       <div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -20,27 +40,56 @@ const SignUp = () => {
         </svg>
       </div>
       <div className='w-1/3 py-10 flex items-center justify-center flex-col'>
+        {/* I will have my inputs(email, password, etc) and used of signup button */}
         <div className='font-bold mb-4'>
-            Sign up for free to start listening.
+          Sign up for free to start listening.
         </div>
-        <TextInput label="Email or username" placeholder="Enter email or username" />
-        <PasswordInput label="Password" placeholder="Create a password" />
-        <TextInput label="What should we call you?" placeholder="Enter your name" />
+        <TextInput
+          label="Email"
+          placeholder="Enter your email"
+          className="my-6"
+          value={email}
+          setValue={setEmail}
+        />
+        <PasswordInput
+          label="Password"
+          placeholder="Create a password"
+          value={password}
+          setValue={setPassword}
+        />
+        <TextInput
+          label="First Name"
+          placeholder="First Name"
+          className="my-6"
+          value={firstName}
+          setValue={setFirstName}
+        />
+        <TextInput
+          label="Last Name"
+          placeholder="Last Name"
+          className="my-6"
+          value={lastName}
+          setValue={setLastName}
+        />
         <div className='w-full flex items-center my-8'>
-          <button className='bg-green-500 w-full text-lg font-semibold p-3 px-10 rounded-full'>
+          <button className='bg-green-500 w-full text-lg font-semibold p-3 px-10 rounded-full' onClick={e=>{
+            e.preventDefault();
+            signUp();
+          }}>
             SIGN UP
           </button>
         </div>
-      <div className='w-full border border-solid border-gray-300'></div>
-      </div>
-      <div className='my-6 font-semibold text-lg'>
-        Already have an account?
-      </div>
-      <div>
-        <Link to='/login'>LOG IN INSTEAD</Link>
+        {/* This div is made for the hr-(horizontal line) */}
+        <div className='w-full border border-solid border-gray-300'></div>
+        <div className='my-6 font-semibold text-lg'>
+          Already have an account?
+        </div>
+        <div className="border border-gray-500 text-gray-500 w-full flex items-center justify-center py-4 rounded-full font-bold">
+          <Link to='/login'>LOG IN INSTEAD</Link>
+        </div>
       </div>
     </div>
   )
 }
 
-export default SignUp
+export default Signup;
