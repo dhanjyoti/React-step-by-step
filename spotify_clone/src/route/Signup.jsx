@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PasswordInput from '../components/shared/PasswordInput';
 import TextInput from '../components/shared/TextInput';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { makeUnauthenticatedPOSTRequest } from '../utils/serverHelper';
 
 const Signup = () => {
@@ -9,6 +9,8 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+
+  const navigate = useNavigate();
 
   const signUp = async () => {
     // Inputs that are required according to the api
@@ -21,6 +23,7 @@ const Signup = () => {
     } else {
       alert(response.message);
     }
+    navigate('/home');
   }
 
   return (

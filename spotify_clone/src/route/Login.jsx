@@ -44,11 +44,34 @@
 
 // export default Login
 
+import React, { useState } from 'react';
 import PasswordInput from "../components/shared/PasswordInput";
 import TextInput from "../components/shared/TextInput";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { makeUnauthenticatedPOSTRequest } from '../utils/serverHelper';
+
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
+
+  const logIn = async () => {
+    // Inputs that are required according to the api
+    const data = {email, password, appType: 'music'};
+    const response = await makeUnauthenticatedPOSTRequest("user/login", data);
+    // if the input successful it post/ else it will show the error message
+
+    if(response.status === "success"){
+      console.log(response);
+      alert("Successful");
+    } else {
+      alert(response.message)
+    }
+    navigate('/home');
+  }
+
   return (
     <div className="w-full h-full flex flex-col items-center">
       {/* Spotify logo */}
@@ -72,10 +95,20 @@ const Login = () => {
           label="Email address or username"
           placeholder="Email address or username"
           classname="my-6"
+          value={email}
+          setValue={setEmail}
         />
-        <PasswordInput label="Password" placeholder="Password" />
+        <PasswordInput 
+          label="Password" 
+          placeholder="Password" 
+          value={password}
+          setValue={setPassword}
+        />
         <div className="w-full flex items-center justify-end my-8">
-          <button className="bg-[#47d320] text-lg font-semibold p-3 px-10 rounded-full">
+          <button className="bg-[#47d320] text-lg font-semibold p-3 px-10 rounded-full" onClick={e=>{
+            e.preventDefault();
+            logIn();
+          }}>
             LOG IN
           </button>
         </div>
