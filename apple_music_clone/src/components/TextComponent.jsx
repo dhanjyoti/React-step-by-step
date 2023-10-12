@@ -1,7 +1,10 @@
-const TextComponent = () => {
+import './componentText.css';
+
+const TextComponent = ({icon, text}) => {
     return (
-        <div>
-            
+        <div className="comopnent">
+            <div>{icon}</div>
+            <div>{text}</div>
         </div>
     )
 }
