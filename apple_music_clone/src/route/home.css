@@ -1,0 +1,13 @@
+.mainContainer{
+    display: flex;
+    flex-direction: row;
+}
+.leftSidebarContainer{
+    border: 2px solid red;
+    width: 19vw;   
+    height: 100vh;  
+}
+.logoIcon{
+    height: 80px;
+    width: 100px;
+}

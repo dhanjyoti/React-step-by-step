@@ -1,10 +1,15 @@
-import React from 'react'
+import React from 'react';
+import './home.css';
+import AppleMusicLogo from "../icons/Apple_music_logo.jpg";
 
 const Home = () => {
   return (
-    <div className=''>
+    <div className='mainContainer'>
         {/* Left sidebar */}
-        <div>
+        <div className='leftSidebarContainer'>
+            <div>
+                <img className='logoIcon' src={AppleMusicLogo} alt='Logo'/>
+            </div>
             home
         </div>
 
