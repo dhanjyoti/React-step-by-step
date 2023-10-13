@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+}
+.mainContainer{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+ /* LEFT SIDE CONTAINER */
+
+.leftSidebarContainer{
+    box-sizing: border-box;
+    border: 2px solid red;
+    min-width: 260px;
+    /* width: 19vw;    */
+    /* height: 100vh;  */
+}
+.logoIcon{
+    height: 20px;
+    /* width: 100px; */
+}
+.sidebarContainer{
+    margin: 25px;
+}
+.iconDiv{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+hr {
+    box-sizing: border-box;
+    border: none; /* Remove the default line */
+    border-top: 1px solid gray; /* Set the line color and thickness */
+}
+
+/* RIGHT SIDE */
+
+.rightSideContainer{
+    box-sizing: border-box;
+    border: 2px solid green;
+    flex: 1 1 auto;
+    /* height: 100vh; */
+    /* width: 81vw; */
+}
+.topBar{
+    box-sizing: border-box;
+    border: 2px solid blue;
+    height: 54px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* height: 8%; */
+    /* width: 81vw; */
+}
+
+/* HERO SECTION */
+
+.heroSection{
+
+    border: 2px solid yellow;
+    /* height: 92%; */
+    /* width: 81vw; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 76px;
+    
+}
+.headline{
+    font-size: 42px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.notes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.tryButton{
+    color: white;
+    background-color: #D60017;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 4px;
+}
+.imageContainer{
+    height: 50vh;
+    width: 100%;
+    /* object-fit: cover; */
+}
+
+.image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}

@@ -1,4 +1,4 @@
-import './componentText.css';
+import './styleText.css';
 
 const TextComponent = ({icon, text}) => {
     return (

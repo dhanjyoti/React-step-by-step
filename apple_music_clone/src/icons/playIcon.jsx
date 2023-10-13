@@ -1,5 +1,5 @@
 const PlayIcon = () => {
-	return <svg fill="#FF0000" height="20px" width="20px" version="1.1" id="Capa_1"  
+	return <svg fill="#D60017" height="20px" width="20px" version="1.1" id="Capa_1"  
 	viewBox="0 0 60 60">
 <g>
    <path d="M45.563,29.174l-22-15c-0.307-0.208-0.703-0.231-1.031-0.058C22.205,14.289,22,14.629,22,15v30
