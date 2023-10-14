@@ -7,6 +7,9 @@ import AddBoxIcon from '@mui/icons-material/AddBox';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import LanguageIcon from '@mui/icons-material/Language';
 import TextHover from "../components/shared/TextHover";
+import { useNavigate } from "react-router-dom";
+import useUser from "../utils/use-user";
+import { useEffect } from "react";
 
 // Focus
 const focusCardsData = [
@@ -45,8 +48,20 @@ const focusCardsData = [
       imgUrl: "https://picsum.photos/id/230/160/140",
     },
   ];
-  
+
   const Home = () => {
+    const navigate = useNavigate()
+    const {user} = useUser()
+    useEffect(()=>{
+      if(!user){
+        navigate('./login')
+      }
+    },[])
+
+    if(!user){
+      return null
+    }
+
     return (
       <div className="h-full w-full flex">
         {/* This first div will be the left part/panel */}

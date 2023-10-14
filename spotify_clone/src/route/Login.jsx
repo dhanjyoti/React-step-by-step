@@ -44,11 +44,12 @@
 
 // export default Login
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PasswordInput from "../components/shared/PasswordInput";
 import TextInput from "../components/shared/TextInput";
 import { Link, useNavigate } from "react-router-dom";
-import { makeUnauthenticatedPOSTRequest } from '../utils/serverHelper';
+import api from '../utils/api';
+import useUser from '../utils/use-user';
 
 
 const Login = () => {
@@ -57,20 +58,38 @@ const Login = () => {
 
   const navigate = useNavigate();
 
+  const {user, setUser} = useUser();
+
+  useEffect(() => {
+    if(user){
+      navigate("/home")
+    }
+  }, [user]);
+
+  if(user){
+    return null;
+  }
+
   const logIn = async () => {
     // Inputs that are required according to the api
     const data = {email, password, appType: 'music'};
-    const response = await makeUnauthenticatedPOSTRequest("user/login", data);
-    // if the input successful it post/ else it will show the error message
-
-    if(response.status === "success"){
-      console.log(response);
-      alert("Successful");
-    } else {
-      alert(response.message)
+    try{
+      let res = await api.login({data})
+      // if the input successful it post/ else it will show the error message
+  
+      if(res.status === "success"){
+        console.log(res);
+        alert("Successful");
+        setUser(res);
+        navigate('/home');
+      } else {
+        alert(res.message);
+      }
+    } catch(e){
+      alert(e?.response?.data?.message)
     }
-    navigate('/home');
-  }
+
+    }
 
   return (
     <div className="w-full h-full flex flex-col items-center">

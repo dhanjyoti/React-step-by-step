@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PasswordInput from '../components/shared/PasswordInput';
 import TextInput from '../components/shared/TextInput';
 import { Link, useNavigate } from 'react-router-dom';
-import { makeUnauthenticatedPOSTRequest } from '../utils/serverHelper';
+import useUser from '../utils/use-user';
+import api from '../utils/api';
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -11,25 +12,41 @@ const Signup = () => {
   const [lastName, setLastName] = useState("");
 
   const navigate = useNavigate();
+  const {user, setUser} = useUser();
+
+  useEffect(()=>{
+    if(user){
+      navigate("./home");
+    }
+  }, [user]);
+
+  if(user){
+    return null;
+  }
 
   const signUp = async () => {
     // Inputs that are required according to the api
     const data = { email, password, name:firstName+" "+lastName, appType: 'music', };
-    const response = await makeUnauthenticatedPOSTRequest("user/signup", data);
-    // if the input successful it post/ else it will show the error message
-    if (response.status === "success") {
-      console.log(response);
-      alert("Successful");
-    } else {
-      alert(response.message);
+
+    try{
+      let res = await api.signup({data})
+      // if the input successful it post/ else it will show the error message
+      if (res.status === "success") {
+        console.log(res);
+        alert("Successful");
+        navigate('/login');
+      } else {
+        alert(res.message);
+      }
+    } catch(e){
+      alert(e?.response?.data?.message)
     }
-    navigate('/home');
   }
 
   return (
     <div className='w-full h-full flex flex-col items-center'>
       {/* Spotify Logo */}
-      <div>
+      <div className='logo p-4 border-b border-gray-300 w-full flex justify-center'>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="80"
@@ -42,9 +59,9 @@ const Signup = () => {
           />
         </svg>
       </div>
-      <div className='w-1/3 py-10 flex items-center justify-center flex-col'>
+      <div className="w-1/3 py-10 flex items-center justify-center flex-col">
         {/* I will have my inputs(email, password, etc) and used of signup button */}
-        <div className='font-bold mb-4'>
+        <div className='font-bold mb-4 text-2xl'>
           Sign up for free to start listening.
         </div>
         <TextInput
@@ -60,22 +77,24 @@ const Signup = () => {
           value={password}
           setValue={setPassword}
         />
-        <TextInput
-          label="First Name"
-          placeholder="First Name"
-          className="my-6"
-          value={firstName}
-          setValue={setFirstName}
-        />
-        <TextInput
-          label="Last Name"
-          placeholder="Last Name"
-          className="my-6"
-          value={lastName}
-          setValue={setLastName}
-        />
-        <div className='w-full flex items-center my-8'>
-          <button className='bg-green-500 w-full text-lg font-semibold p-3 px-10 rounded-full' onClick={e=>{
+        {/* <div className='w-full flex justify-between items-center space-x-8'> */}
+          <TextInput
+            label="First Name"
+            placeholder="First Name"
+            className="my-6"
+            value={firstName}
+            setValue={setFirstName}
+          />
+          <TextInput
+            label="Last Name"
+            placeholder="Last Name"
+            className="my-6"
+            value={lastName}
+            setValue={setLastName}
+          />
+        {/* </div> */}
+        <div className='w-full flex items-center justify-center my-8'>
+          <button className='bg-[#47d320] w-full text-lg font-semibold p-3 px-10 rounded-full' onClick={e=>{
             e.preventDefault();
             signUp();
           }}>
