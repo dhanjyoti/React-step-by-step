@@ -83,11 +83,16 @@ hr {
     justify-content: center;
 }
 .tryButton{
+    display: flex;
+    
     color: white;
     background-color: #D60017;
     border: none;
     padding: 8px 20px;
     border-radius: 4px;
+}
+.tryButton:hover{
+    cursor: pointer;
 }
 .imageContainer{
     height: 50vh;

@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
 }
-button{
+.continueButton{
     color: white;
     background-color: #D60017;
     height: 30px;
@@ -12,3 +12,4 @@ button{
     border-radius: 5px;
     border: none;
 }
+

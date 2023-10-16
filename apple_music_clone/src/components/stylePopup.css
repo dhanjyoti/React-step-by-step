@@ -1,0 +1,26 @@
+.popupHeader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 30px;
+}
+.popup-body{
+    z-index: 9999;
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
+    padding-top: 0 !important;
+}
+.crossButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    background-color: rgb(221, 221, 221);
+}
+.crossButton:hover{
+    cursor: pointer;
+}

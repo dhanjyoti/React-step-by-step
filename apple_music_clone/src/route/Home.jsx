@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './styleHome.css';
 // import AppleMusicLogo from "../icons/Apple_music_logo.jpg";
 import LogoIcon from '../icons/logoIcon';
@@ -9,8 +9,12 @@ import MusicIcon from '../icons/musicIcon'
 import Image from '../icons/large.webp'
 // import searchIcon from '../icons/searchIcon';
 import TextComponent from '../components/TextComponent';
+import Signup from './Signup';
+import Popup from '../components/Popup';
 
 const Home = () => {
+  const [showSignUp, setShowSignUp] = useState(false);
+
   return (
     <div className='mainContainer'>
         {/* Left sidebar */}
@@ -54,12 +58,22 @@ const Home = () => {
               <span>genres you're listening to. 1 month free, then</span>
               <span>$10.99/month.</span>
             </div>
-            <button className='tryButton'>Try it Free</button>
+            <button className='tryButton' onClick={()=> {
+              setShowSignUp(true)
+            }}>Try it Free</button>
             <div className='imageContainer'>
-              <img className='image' src={Image} alt='image' />
+              <img className='image' src={Image} alt='image'/>
             </div>
           </div>
         </div>
+
+        <Popup show={showSignUp} 
+        onClose={()=>{
+          setShowSignUp(false) // if this onClose is not passed it will not work for the second time
+        }}
+        >
+          <Signup />
+        </Popup>
     </div>
   )
 }
