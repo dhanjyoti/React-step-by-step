@@ -1,0 +1,13 @@
+.userContainer{
+    border: 2px solid red;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+.card{
+    margin: 1rem;
+    border: 2px solid black;
+    height: 40%;
+    width: 30%;
+}
