@@ -49,7 +49,7 @@ const User = ({setFav, fav}) => {
                             <img src="" alt="" />
                             <h1>{ele.login}</h1>
                             <button onClick={()=> {
-                                setFav([...fav,ele,])
+                                setFav([...fav,ele])
                                 localStorage.setItem("favlist", JSON.stringify(fav));
                             }}>Add</button>
                         </div>

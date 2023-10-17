@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import './user.css';
 
 const Favourite = ({ fav }) => {
+  
   useEffect(()=> {
+    // localStorage.setItem("favlist", JSON.stringify(fav));
     setInitialList(JSON.parse(localStorage.getItem("favlist")))
   },[fav]);
 
-  cosnt [initialList, setInitialList] = useState(
-      JSON.parse(localStorage.getItem("favlist"))
-    );
+  const [initialList, setInitialList] = useState(JSON.parse(localStorage.getItem("favlist")));
 
   return (
     <div className='userContainer'>

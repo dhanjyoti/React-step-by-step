@@ -54,9 +54,9 @@ const focusCardsData = [
     const {user} = useUser()
     useEffect(()=>{
       if(!user){
-        navigate('./login')
+        navigate('/login')
       }
-    },[])
+    })
 
     if(!user){
       return null

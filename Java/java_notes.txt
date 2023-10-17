@@ -119,3 +119,59 @@ using a single identifier. Each element in an array is identified by an index, s
 19. 
 
 
+23. Object-Oriented Programming(OOPs) -> OOPs stands for "Object-Oriented Programming".
+It's a programming paradigm, or a way of structuring and designing software, based on the
+concept of "objects". In OOP, software is organizied around objects, which are instances of
+classes. These objects have attributes (data) and methods (functions or behaviors) associated 
+with them.  
+                    The primary principles of OOP include:
+
+    #1. Objects: An object is an instance of a class, and it represents a real-world entity or 
+    concept. Objects can have both data (attributes or properties) and methods (functions or 
+    behaviors) that operate on the data.
+
+    #2. Classes: A class is a blueprint or template for creating objects. It defines the 
+    attributes (data) and methods (functions) that the objects of that class will have. 
+    Classes serve as a design for creating objects with common characteristics and behaviors.
+
+    #3. Encapsulation: Encapsulation is the concept of bundling data (attributes) and methods 
+    (functions) that operate on that data into a single unit, which is the class. This concept 
+    enforces access control and data hiding, ensuring that the internal representation of an 
+    object is not directly accessible from outside the object.
+
+    #4. Inheritance: Inheritance is a mechanism that allows a class (subclass or derived class) 
+    to inherit attributes and methods from another class (superclass or base class). This 
+    promotes code reuse and allows for the creation of hierarchies of classes, where more 
+    specific classes inherit properties and behaviors from more general classes.
+
+    #5. Polymorphism: Polymorphism allows objects of different classes to be treated as objects 
+    of a common superclass. It enables the same interface to represent a general action that 
+    can be implemented differently in various classes. Polymorphism simplifies code and 
+    enhances flexibility.
+
+    #6. Abstraction: Abstraction is the process of simplifying complex reality by modeling 
+    classes based on the essential properties and behaviors while hiding unnecessary details. 
+    It helps in creating a high-level view of an object's functionality.
+
+    #7. Method Overloading and Method Overriding: Method overloading involves defining multiple 
+    methods in the same class with the same name but different parameters. Method overriding is 
+    when a subclass provides a specific implementation of a method defined in its superclass.
+
+    #8. Association: Association represents the relationship between two or more classes. It can 
+    be one-to-one, one-to-many, or many-to-many. Associations help model how objects interact 
+    with each other.
+
+    #9. Aggregation and Composition: Aggregation and composition are forms of association that 
+    represent different relationships between classes. Aggregation represents a "has-a" 
+    relationship, while composition represents a stronger "part-of" relationship.
+
+    #10. Interfaces: An interface defines a contract of methods that a class must implement. 
+    It promotes the design of classes with common behavior, even if they belong to different 
+    class hierarchies.
+
+    #11. Messages and Collaboration: In OOP, objects communicate with each other by sending 
+    messages. Collaboration among objects enables complex systems to be constructed.
+
+    #12. Design Patterns: Design patterns are reusable solutions to common programming problems. 
+    They help in creating efficient, maintainable, and flexible software by following proven 
+    practices.

@@ -1,7 +1,7 @@
 import './Video.css'
 
 function Video({title, id, channel="Coder Dost", views, time, verified, children}) {
-
+  
   return (
     <>
         <div className='container'>
