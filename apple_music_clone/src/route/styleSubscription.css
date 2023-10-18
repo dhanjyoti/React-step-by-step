@@ -1,0 +1,75 @@
+.subscriptionContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.spanContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.lastPara{
+    font-size: smaller;
+    color: #D60017;
+}
+.subscribe{
+    padding: 15px 30px;
+    color: whitesmoke;
+    background-color: #DA0F49;
+    border: none;
+    border-radius: 10px;
+}
+.packageInfo{
+    background-color: rgb(241, 241, 241);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 15px;
+}
+.firstDiv{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+.insideFirstDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+.newMusicIcon{
+    height: 50px;
+    width: 50px;
+}
+/* HORIZONTAL LINE */
+hr {
+    border: none; /* Remove the default line */
+    border-top: .5px solid rgb(180, 180, 180); /* Set the line color and thickness */
+}
+
+.secondDiv{
+    font-size: smaller;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.thirdDiv{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.fourthDiv{
+    display: flex;
+    flex-direction: column;
+}
+
+.para{
+    font-size: smaller;
+    color: gray;
+}
+

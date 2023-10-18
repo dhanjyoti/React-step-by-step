@@ -2,7 +2,7 @@ import './styleText.css';
 
 const TextComponent = ({icon, text}) => {
     return (
-        <div className="comopnent">
+        <div className="component">
             <div>{icon}</div>
             <div>{text}</div>
         </div>

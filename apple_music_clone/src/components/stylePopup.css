@@ -6,7 +6,7 @@
     padding-block: 30px;
 }
 .popup-body{
-    z-index: 9999;
+    z-index: 20;
     background-color: white;
     border-radius: 20px;
     padding: 30px;

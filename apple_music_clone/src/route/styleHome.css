@@ -1,6 +1,3 @@
-*{
-    box-sizing: border-box;
-}
 .mainContainer{
     display: flex;
     flex-direction: row;
@@ -10,7 +7,6 @@
  /* LEFT SIDE CONTAINER */
 
 .leftSidebarContainer{
-    box-sizing: border-box;
     border: 2px solid red;
     min-width: 260px;
     /* width: 19vw;    */
@@ -29,8 +25,9 @@
     flex-direction: column;
     gap: 10px;
 }
+
+    /* HORIZONTAL LINE */
 hr {
-    box-sizing: border-box;
     border: none; /* Remove the default line */
     border-top: 1px solid gray; /* Set the line color and thickness */
 }
@@ -38,17 +35,14 @@ hr {
 /* RIGHT SIDE */
 
 .rightSideContainer{
-    box-sizing: border-box;
     border: 2px solid green;
     flex: 1 1 auto;
     /* height: 100vh; */
     /* width: 81vw; */
 }
 .topBar{
-    box-sizing: border-box;
     border: 2px solid blue;
     height: 54px;
-    box-sizing: border-box;
     position: fixed;
     top: 0;
     left: 0;
@@ -60,7 +54,6 @@ hr {
 /* HERO SECTION */
 
 .heroSection{
-
     border: 2px solid yellow;
     /* height: 92%; */
     /* width: 81vw; */
@@ -84,7 +77,6 @@ hr {
 }
 .tryButton{
     display: flex;
-    
     color: white;
     background-color: #D60017;
     border: none;
@@ -105,4 +97,15 @@ hr {
     width: 100%;
     object-fit: cover;
     object-position: top;
+}
+.topBar{
+    display: flex;
+    justify-content: flex-end;
+}
+.subscribeButton{
+    padding: 10px 30px;
+    color: white;
+    background-color: #D60017;
+    border: none;
+    border-radius: 5px;
 }
