@@ -14,7 +14,7 @@ const Subscription = () => {
                 </div>
                 <div className='insideFirstDiv'>
                     <div>Apple Music</div>
-                    <div>Individual </div>
+                    <div className='para'>Individual &#40;1-Month Free Trial&#41;</div>
                 </div>
             </div>
                 <hr />
