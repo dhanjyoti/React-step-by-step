@@ -1,0 +1,22 @@
+1. Everything in JS happens inside an Execution Context.
+Divided into 2 components- 1. Memory Component(Variable Environment) 
+                            Key as a Value
+                           2. Code Component(Thread of Execution)
+                            Works line by line
+
+2. Javascript is synchronous single-threaded language. 
+means - js can execute only one code of line at a time & in a specific order.
+
+What happens when you run a Javascript code?
+
+
+3. Call stack maintains the order of execution of execution contexts.
+Call stack also known as - 1. Execution Context Stack
+                           2. Program stack
+                           3. Control stack
+                           4. Runtime stack
+                           5. Machine stack
+
+4. 
+
+
