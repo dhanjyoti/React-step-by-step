@@ -12,9 +12,12 @@ import TextComponent from '../components/TextComponent';
 import Signup from './Signup';
 import Popup from '../components/Popup';
 import Subscription from './Subscription';
+import Signin from './Signin';
 
 const Home = () => {
-  const [showSignUp, setShowSignUp] = useState(false);
+  // const [showSignUp, setShowSignUp] = useState(false);
+
+  const [showSignIn, setShowSignIn] = useState(false);
 
   const [showSubscribe, setShowSubscribe] =useState("");
 
@@ -64,7 +67,8 @@ const Home = () => {
               <span>$10.99/month.</span>
             </div>
             <button className='tryButton' onClick={()=> {
-              setShowSignUp(true)
+              // setShowSignUp(true)
+              setShowSignIn(true)
             }}>Try it Free</button>
             <div className='imageContainer'>
               <img className='image' src={Image} alt='image'/>
@@ -79,12 +83,15 @@ const Home = () => {
           <Subscription />
         </Popup>
 
-        <Popup show={showSignUp} 
+        {/* <Popup show={showSignUp}  */}
+        <Popup show={showSignIn} 
         onClose={()=>{
-          setShowSignUp(false) // if this onClose is not passed it will not work for the second time
+          // setShowSignUp(false) // if this onClose is not passed it will not work for the second time
+          setShowSignIn(false) // if this onClose is not passed it will not work for the second time
         }}
         >
-          <Signup />
+          {/* <Signup /> */}
+          <Signin />
         </Popup>
     </div>
   )

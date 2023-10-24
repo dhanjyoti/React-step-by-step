@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Backdrop from './Backdrop';
 import './stylePopup.css';
 import CrossIcon from '../icons/crossIcon';
+import SingleAppleIcon from '../icons/singleApple';
 
 const Popup = ({children, backdrop = true, show, onClose}) => {
     const [_show, _setShow] = useState(false);
@@ -29,7 +30,9 @@ const Popup = ({children, backdrop = true, show, onClose}) => {
                     }}>
                         <CrossIcon />
                     </div>
-                    <div></div>
+                    <div>
+                        <SingleAppleIcon />
+                    </div>
                 </div>
                 <div>{children}</div>
             </div>
