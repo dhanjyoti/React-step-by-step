@@ -7,16 +7,40 @@ Divided into 2 components- 1. Memory Component(Variable Environment)
 2. Javascript is synchronous single-threaded language. 
 means - js can execute only one code of line at a time & in a specific order.
 
-What happens when you run a Javascript code?
+3. What happens when you run a Javascript code?
+Ans - An execution context is created.
+    1. A global execution context(GEC) is created with two components.
+    i.e, Memory(This phase is also known as memory creation phase) & 
+    Code(Code execution phase)
+    2. It allocates memory to all the variables(function, object or datatype), 
+    which is undefined or stores whole code if object or function in the beginning.
+    3. value is allocated to each variable.
+    4. function invocation if there is a function(means function is executed) 
+    whole this runs again as it is a mini program(new GEC created for it)
+    5. ones completed execution (GEC gets deleted or goes of)
+
+everything that is done till now is managed through a stack i.e, call stack
 
 
-3. Call stack maintains the order of execution of execution contexts.
+4. Call stack maintains the order of execution of execution contexts.
 Call stack also known as - 1. Execution Context Stack
                            2. Program stack
                            3. Control stack
                            4. Runtime stack
                            5. Machine stack
 
-4. 
+5. Hoisting -> Hoisting is phenomina in Javascrpt by which we can access variables 
+and functions, even before we initialize it or we have put some value in it.
+We can access the variables without any error.
+Eg : In case of single variable the output will be undefined. &
+    In case of proper function declaration it will show us the result. &
+    in case of only function name without the paranthesis
+    it will show us the whole function code.
+    In case the function is an arrow function it will give us
+    an error "_____ is not a function. As arrow function behavaes
+    just like a variable. & undefined is the result if we pass only 
+    the name just like another variable.
+
+6. 
 
 

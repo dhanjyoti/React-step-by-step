@@ -137,6 +137,10 @@ on what to do.
 
 Sep 8+
 Array:- Array is a collection of similar type of data.
+
+Objects: Object: An object in JavaScript is a composite data type that can store key-value pairs. 
+It is a container for related data and functionality, and it is created using curly braces {}. 
+The keys are used to access the values within the object.
  
  
  
