@@ -9,58 +9,38 @@ import LanguageIcon from '@mui/icons-material/Language';
 import TextHover from "../components/shared/TextHover";
 import { useNavigate } from "react-router-dom";
 import useUser from "../utils/use-user";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import api from "../utils/api";
 
-// Focus
-const focusCardsData = [
-    {
-      title: "Piano",
-      description: "Relax and Indulge music, peaceful music",
-      imgUrl: "https://picsum.photos/id/230/160/140",
-    },
-    {
-      title: "Piano",
-      description: "Relax and Indulge music, peaceful music",
-      imgUrl: "https://picsum.photos/id/230/160/140",
-    },
-    {
-      title: "Piano",
-      description: "Relax and Indulge music, peaceful music",
-      imgUrl: "https://picsum.photos/id/230/160/140",
-    },
-    {
-      title: "Piano",
-      description: "Relax and Indulge music, peaceful music",
-      imgUrl: "https://picsum.photos/id/230/160/140",
-    },
-    {
-      title: "Piano",
-      description: "Relax and Indulge music, peaceful music",
-      imgUrl: "https://picsum.photos/id/230/160/140",
-    },
-  ];
-  
-  // Spotify Playlist
-  const spotifyPlaylistsCardData = [
-    {
-      title: "This is One",
-      description: "Relax and indulge with piano music",
-      imgUrl: "https://picsum.photos/id/230/160/140",
-    },
-  ];
 
   const Home = () => {
     const navigate = useNavigate()
     const {user} = useUser()
+
+    const [data, setData]=useState([])
     useEffect(()=>{
       if(!user){
         navigate('/login')
       }
-    })
+    },[])
+
+
+    useEffect(()=>{
+      (async()=>{
+        try{
+          let res = await api.getAlbums()
+          setData(res.data)
+        }catch(e){
+          alert(e)
+        }
+        
+      })()
+    },[])
 
     if(!user){
       return null
     }
+
 
     return (
       <div className="h-full w-full flex">
@@ -115,12 +95,9 @@ const focusCardsData = [
             </div>
           </div>
           <div className="context p-8 pt=O overflow-auto">
-            <PlaylistView titleText="Focus" cardsData={focusCardsData} />
-            <PlaylistView
-              titleText="Spotify Playlist"
-              cardsData={spotifyPlaylistsCardData}
-            />
-            <PlaylistView titleText="Sound of India" cardsData={focusCardsData} />
+            <PlaylistView titleText="Top Mixes" cardsData={data.slice(10, 15)} />
+            {/* <PlaylistView titleText="Focus" cardsData={data.slice(5, 10)} /> */}
+            <PlaylistView titleText="New release" cardsData={data.slice(0, 5)} />
           </div>
         </div>
       </div>
@@ -128,59 +105,35 @@ const focusCardsData = [
   };
   
   const PlaylistView = ({ titleText, cardsData }) => {
+    const navigate = useNavigate()
     return (
       <div className="text-white mb-4">
         <div className="text-2xl font-semibold mb-5">{titleText}</div>
-        <div className="w-full flex justify-between space-x-4">
-          {" "}
+        <div className="w-full grid grid-cols-5 gap-4">
           {/* This space-x will give space between the cards */}
           {cardsData.map((item) => {
             return (
               <Card
+                onClick={()=>{navigate("/playlist?id="+item._id)}}
                 title={item.title}
                 description={item.description}
-                imgUrl={item.imgUrl}
+                imgUrl={item.image}
               />
             );
           })}
-          {/* <Card
-            title="Piano"
-            description="Relax and Indulge music, peaceful music"
-            imgUrl="https://picsum.photos/id/230/160/140"
-          />
-          <Card
-            title="Piano"
-            description="Relax and Indulge music, peaceful music"
-            imgUrl="https://picsum.photos/id/230/160/140"
-          />
-          <Card
-            title="Piano"
-            description="Relax and Indulge music, peaceful music"
-            imgUrl="https://picsum.photos/id/230/160/140"
-          />
-          <Card
-            title="Piano"
-            description="Relax and Indulge music, peaceful music"
-            imgUrl="https://picsum.photos/id/230/160/140"
-          />
-          <Card
-            title="Piano"
-            description="Relax and Indulge music, peaceful music"
-            imgUrl="https://picsum.photos/id/230/160/140"
-          /> */}
         </div>
       </div>
     );
   };
   
-  const Card = ({ title, description, imgUrl }) => {
+  const Card = ({ title, description, imgUrl, onClick }) => {
     return (
-      <div className="bg-black bg-opacity-40 w-30 w-1/5 p-4 rounded-lg">
+      <div className="bg-black bg-opacity-40 w-30 w-full p-4 rounded-lg hover:cursor-pointer" onClick={onClick}>
         <div className="pb-4 pt-2">
-          <img className="w-full rounded-md" src={imgUrl} alt="label" />
+          <img className="w-full aspect-square rounded-md" src={imgUrl} alt="label" />
         </div>
-        <div className="text-white font-semibold py-3">{title}</div>
-        <div className="text-gray-500 text-sm">{description}</div>
+        <div className="text-white font-semibold py-3 truncate">{title}</div>
+        <div className="text-gray-500 text-sm line-clamp-2">{description}</div>
       </div>
     );
   };
