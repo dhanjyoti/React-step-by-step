@@ -1,3 +1,3 @@
 function dhan(){
-    document.getElementById('jina').innerHTML=Date();
+    document.getElementById('demo').innerHTML=Date();
 }

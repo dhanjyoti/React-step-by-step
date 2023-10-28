@@ -10,51 +10,59 @@ means - js can execute only one code of line at a time & in a specific order.
 3. What happens when you run a Javascript code?
 Ans - An execution context is created.
     1. A global execution context(GEC) is created with two components.
-    i.e, Memory(This phase is also known as memory creation phase) & 
-    Code(Code execution phase)
+        i.e, Memory(This phase is also known as memory creation phase) & 
+        Code(Code execution phase)
     2. It allocates memory to all the variables(function, object or datatype), 
-    which is undefined or stores whole code if object or function in the beginning.
+        which is undefined or stores whole code if object or function in the beginning.
     3. value is allocated to each variable.
     4. function invocation if there is a function(means function is executed) 
-    whole this runs again as it is a mini program(new GEC created for it)
+        whole this runs again as it is a mini program(new GEC created for it)
     5. ones completed execution (GEC gets deleted or goes of)
 
 everything that is done till now is managed through a stack i.e, call stack
 
 
 4. Call stack maintains the order of execution of execution contexts.
-Call stack also known as - 1. Execution Context Stack
+    Call stack also known as - 1. Execution Context Stack
                            2. Program stack
                            3. Control stack
                            4. Runtime stack
                            5. Machine stack
 
 5. Hoisting -> Hoisting is phenomina in Javascrpt by which we can access variables 
-and functions, even before we initialize it or we have put some value in it.
-We can access the variables without any error.
-Eg: In case of single variable the output will be undefined. &
-    In case of proper function declaration it will show us the result. &
+    and functions, even before we initialize it or we have put some value in it.
+    We can access the variables without any error.
+
+Eg: In case of single variable the output will be undefined. 
+    In case of proper function declaration it will show us the result. 
     in case of only function name without the paranthesis
     it will show us the whole function code.
     In case the function is an arrow function it will give us
-    an error "_____ is not a function. As arrow function behaves
+    an error "_____ is not a function". As arrow function behaves
     just like a variable. & undefined is the result if we pass only 
     the name just like another variable.
 
 6. We can invoke functions even before initializing it.
 
 7. Shortest javascript program is an empty file of index.js. It will create an window object. 
-Also identified through `this` variable which refers to window in the browser.
-It is a global object.
+    Also identified through `this` variable which refers to window in the browser.
+    It is a global object.
 this === window 
--> true
+    -> true
 
 8. both 1. console.log(window.a) & 
         2. console.log(this.a)
         3. console.log(a)       // are the same, it automatically assumes that we write window.a
 
+        Window is a global object that is created with the global scope.
+
 9. Undefined -> It is a keyword which takes up its own memory until the variable is assigned 
-some value. It works like a placeholder. It is not equal to empty.
+    some value. It works like a placeholder. It is not equal to empty.
+
+    Not defined -> Whenever we are not assigned anything in the code, ones memory execution, 
+    code execution & GEC is erased from call stack and even then value is not there then 
+    that variable eg: "x".
+    It gives a reference error called not defined
 
 Eg:-
 var a;
@@ -69,10 +77,12 @@ if(a === undefined){
 // but if some value is assigned to `a` then it will show `a` is not undefined".
 
 10. Scope -> Scope in javascript is directly related to lexical environment. 
-Scope is where you can access a specific variable or a function in our code.
+    Scope is where you can access a specific variable or a function in our code.
 
 11. Lexical environment is created when the execution context is created.
- The whole chain of lexical environment is called scope chain.
+    The whole chain of lexical environment is called scope chain.
+
+    Lexical environment = local memory + reference to lexical environment to the parent upto the null.
 
 
 
