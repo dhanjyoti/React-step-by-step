@@ -1,5 +1,5 @@
 /*
-    Array-> Array is used to store multiple values in a single variable
+    #2-> Array-> Array is used to store multiple values in a single variable
     in a continuous manner.
                 An array is a fundamental data structure used in computer programming 
         and consists of a collection of elements, each identified by an index or a key. 

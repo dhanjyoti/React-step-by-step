@@ -3,6 +3,12 @@
     such as numbers, text, or objects. They ensure data integrity and guide how 
     operations can be performed on that data. Common data types include integers, strings
     and booleans.
+
+    #3-> What is linked list?
+    Ans-> A linked list is a linear data structure used to store and manage a
+    collection of elements. Each element(node) points to the next one, forming
+    a sequence. It allows for efficient insertion and deletion but requires
+    sequential access for searching.
  */
 
 // Right angled triangle pattern
