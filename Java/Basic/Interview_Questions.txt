@@ -1,0 +1,60 @@
+Easy Level (1-15):
+
+1. What is a data structure?
+2. Define an array.
+3. What is a linked list?
+4. Explain the difference between an array and a linked list.
+5. What is a stack and how is it implemented?
+6. Describe the concept of a queue.
+7. Explain the difference between a stack and a queue.
+8. What is a hash table (hash map)?
+9. How does a binary search work?
+10. Define time complexity.
+11. Define space complexity.
+12. Explain Big O notation.
+13. What is an algorithm?
+14. Describe the difference between a breadth-first search (BFS) and a depth-first search (DFS).
+15. What is a binary tree?
+_____________________________________________________________________________________________________
+
+Intermediate Level (16-30):
+
+1. What is recursion, and how does it work?
+2. Explain the concept of a doubly linked list.
+3. How does a bubble sort algorithm work?
+4. Describe how a merge sort algorithm works.
+5. What is a dynamic programming approach?
+6. Explain the concept of a binary search tree (BST).
+7. How do you perform an in-order traversal of a binary tree?
+8. What is a linked list cycle, and how do you detect it?
+9. Explain the concept of a heap data structure.
+10. What is a priority queue, and how is it implemented?
+11. Describe how quicksort works.
+12. Explain the difference between a graph and a tree.
+13. What is the difference between a breadth-first search (BFS) and a depth-first search (DFS) in a graph?
+14. How do you reverse a linked list?
+15. Explain the concept of memoization in dynamic programming.
+_____________________________________________________________________________________________________
+
+Advanced Level (31-50):
+
+1. What is a hash collision, and how is it resolved?
+2. Describe the various types of sorting algorithms and their time complexities.
+3. How does Dijkstra's algorithm work for finding the shortest path in a graph?
+4. Explain the concept of a red-black tree.
+5. What is the traveling salesman problem, and how is it solved?
+6. Describe the concept of a trie (prefix tree).
+7. How do you implement a graph using an adjacency matrix and an adjacency list?
+8. Explain how the A* algorithm works for pathfinding.
+9. What is the Knapsack problem, and how is it solved using dynamic programming?
+10. Describe the concept of a segment tree.
+11. Explain the concept of a self-balancing tree.
+12. How is a hash function chosen for a hash table?
+13. What is the Manhattan distance, and how is it used in algorithms?
+14. Describe the concept of a skip list.
+15. How do you implement a linked list in a language that doesn't support pointers (e.g., Java)?
+16. What is a suffix tree, and what are its applications?
+17. Explain how to detect and remove a cycle in a directed graph.
+18. How is a B-tree different from a binary search tree, and what are its advantages?
+19. Describe the concept of a Bloom filter.
+20. How can you optimize the time and space complexity of an existing algorithm?
