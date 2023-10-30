@@ -1,0 +1,56 @@
+Easy Level (1-15):
+
+Print "Hello, World!" to the console.
+Declare variables for age, name, and height, and print them.
+Calculate and print the sum of two numbers.
+Calculate and print the product of two numbers.
+Check if a number is even or odd.
+Check if a number is positive, negative, or zero.
+Calculate the factorial of a number.
+Print numbers from 1 to 10 using a loop.
+Calculate and print the area of a rectangle.
+Check if a year is a leap year.
+Print a pattern of stars in the shape of a triangle.
+Reverse a string without using the StringBuilder class.
+Check if a given string is a palindrome.
+Find the largest element in an array.
+Sort an array of integers in ascending order (e.g., using the bubble sort algorithm).
+Intermediate Level (16-30):
+
+Implement a simple calculator with functions for addition, subtraction, multiplication, and division.
+Calculate the Fibonacci sequence up to a given number.
+Find the maximum and minimum elements in an array.
+Swap two numbers without using a temporary variable.
+Find the second largest element in an array.
+Calculate and print the sum of all even numbers from 1 to 100.
+Reverse a linked list.
+Calculate the area of a circle.
+Count the occurrence of a specific character in a string.
+Implement a basic login system using if-else statements.
+Find the prime factors of a number.
+Calculate the average of an array of numbers.
+Find the intersection of two arrays.
+Implement a stack data structure.
+Calculate the power of a number using recursion.
+Advanced Level (31-50):
+
+Implement a binary search algorithm.
+Write a program to detect a cycle in a linked list.
+Implement a simple queue data structure.
+Implement a hash table (key-value store) from scratch.
+Reverse words in a sentence without reversing the entire string.
+Check if a given string has balanced parentheses.
+Implement a merge sort algorithm.
+Implement a binary tree and perform an in-order traversal.
+Find the longest common subsequence of two strings.
+Solve the Tower of Hanoi problem using recursion.
+Implement a basic calculator using the Shunting Yard algorithm for infix to postfix conversion.
+Write a program to validate a credit card number using the Luhn algorithm.
+Implement a basic chat application using sockets.
+Find all permutations of a string.
+Implement a basic graph data structure and perform depth-first and breadth-first traversals.
+Create a basic web server in Java.
+Implement a simple compiler or interpreter for a custom language.
+Design and implement a class hierarchy for a real-world problem, such as a library management system.
+Write unit tests for a given Java class.
+Solve a real-world problem using object-oriented design principles.

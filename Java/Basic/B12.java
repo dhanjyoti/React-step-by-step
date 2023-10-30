@@ -2,7 +2,9 @@
 
 public class B12 {
     public static void main(String... args){
-        int arr[] = {1, 3, 5, 7, 9, 8, 6, 4, 2, 10};
+        int arr[] = {1, 3, 5, 7, 9, 8, 6, 4, 2, 10};        
+        // int arr[] = {90, 90, 90};
+
 
         int sum = 0;
         for(int i=0; i<arr.length; i++){
