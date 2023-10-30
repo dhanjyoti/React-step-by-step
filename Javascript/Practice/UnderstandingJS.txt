@@ -1,11 +1,11 @@
 1. Everything in JS happens inside an Execution Context.
-Divided into 2 components- 1. Memory Component(Variable Environment) 
-                            Key as a Value
-                           2. Code Component(Thread of Execution)
-                            Works line by line
+    Divided into 2 components- 1. Memory Component(Variable Environment) 
+                                Key as a Value
+                               2. Code Component(Thread of Execution)
+                                Works line by line
 
 2. Javascript is synchronous single-threaded language. 
-means - js can execute only one code of line at a time & in a specific order.
+    means - js can execute only one code of line at a time & in a specific order.
 
 3. What happens when you run a Javascript code?
 Ans - An execution context is created.
@@ -52,7 +52,7 @@ this === window
 
 8. both 1. console.log(window.a) & 
         2. console.log(this.a)
-        3. console.log(a)       // are the same, it automatically assumes that we write window.a
+        3. console.log(a)    // are the same, it automatically assumes that we write window.a
 
         Window is a global object that is created with the global scope.
 
@@ -65,14 +65,14 @@ this === window
     It gives a reference error called not defined
 
 Eg:-
-var a;
-console.log(a);
+    var a;
+    console.log(a);
 
-if(a === undefined){
-    console.log("a ia undefined");
-} else {
-    console.log("a is not undefined");
-}
+    if(a === undefined){
+        console.log("a ia undefined");
+    } else {
+        console.log("a is not undefined");
+    }
 
 // but if some value is assigned to `a` then it will show `a` is not undefined".
 
@@ -83,6 +83,58 @@ if(a === undefined){
     The whole chain of lexical environment is called scope chain.
 
     Lexical environment = local memory + reference to lexical environment to the parent upto the null.
+
+12. `let` & `const` declarations are Hoisted. These are for a `temporal dead jone` for the time being.
+
+    Temporal Dead Jone -> temporal dead jone is the time since when a `let`/`const` variable was hoisted,
+    and till it is initialized some value.
+
+    `let` is more strict than `var` since we cannot console.log the `let` before initializing it.  
+
+    Re-declaration or duplication of `let` is not possible, it will throw us an error. & same
+    happens in case we try to transform `let` to `var` with the same name.
+
+    But we can re-declare `var` to `var` with the same name.
+
+    `const` is even more strict than `let`.
+    Eg: we can declare `let` and initialize value to it later on.
+    But `const` doesn't allow us to initialize value later on. We need to assign a value to 
+    `const` immidiately after declaration. Otherwise we get error "Missing initializer in 
+    const declaration".
+
+13. Syntax error:- eg: try to console without assigning any value to `const` / (missing syntax)
+    Type error:- eg: redeclaring new value to `const`
+    Reference error:- eg: when javascript engine tries to find out a specific variable 
+    inside the memory space and could not access it. eg: try to console even before 
+    initializing it(temporal dead jone).
+
+    `const` is more preferable, if not use `let`(it has temporal dead jone) & avoid `var`.
+
+    Best way to avoid Temporal Dead Jone - is to always put declarations and initializations
+    on top of the code. It will hit the initialization part at the first and then it goes 
+    to the logic.
+
+14. Block-> Block is defined under the curly braces{ }, it is also known as compound statement.
+    (it's not doing anything, but why do we use it)
+    It is used to combine multiple javascript statements into one group.
+                We need to group these statements together, so that we can use multiple statements
+    in a place where javascript expects only one statement.
+
+    Scope-> Block scope means what all variables and functions we can access inside this Block.
+    3 types of scope:- Global scope.
+                        Block scope.
+                        lexical scope.(one inside another, untill null)
+
+    Shadowing-> If we have same named variable outside block, the variable inside the block shadows 
+    that block i,e. outside. 
+
+    If we try to shadow `let` into `var`, it is an example of illigal Shadowing, but we can convert 
+    `var` into `let`.
+    If we try to shadow `const` into `let`, it is an example of illigal Shadowing, but we can convert 
+    `let` into `const`.
+
+    These all will work similar with all kinds of functions.
+
 
 
 

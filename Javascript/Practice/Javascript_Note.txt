@@ -138,9 +138,24 @@ on what to do.
 Sep 8+
 Array:- Array is a collection of similar type of data.
 
-Objects: Object: An object in JavaScript is a composite data type that can store key-value pairs. 
+Objects:- Object: An object in JavaScript is a composite data type that can store key-value pairs. 
 It is a container for related data and functionality, and it is created using curly braces {}. 
 The keys are used to access the values within the object.
+
+Bind :- In JavaScript, the bind method is used to create a new function that, when invoked, sets 
+a specific context (the value of this) for that function. This allows you to control what this 
+refers to when the function is executed. The original function remains unchanged.
+
+Explain: 
+        const obj = { value: 42 };
+
+        function getValue() {
+            return this.value;
+        }
+
+        const boundFunction = getValue.bind(obj);
+        console.log(boundFunction()); // Outputs 42
+
  
  
  
