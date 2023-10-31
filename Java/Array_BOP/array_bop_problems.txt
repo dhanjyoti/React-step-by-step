@@ -1,4 +1,4 @@
-    Array Basics:
+Array Basics:
 
     1. Print the elements of an array.
     2. Find the sum of all elements in an array.
@@ -12,7 +12,7 @@
     10. Check if an array is sorted in descending order.
     ___________________________________________________________________________
 
-    Search Operations:
+Search Operations:
 
     11. Search for a specific element in an array.
     12. Find the index of the first occurrence of a given element.
@@ -21,7 +21,7 @@
     15. Check if an array contains duplicate elements.
     ___________________________________________________________________________
 
-    Manipulation and Modification:
+Manipulation and Modification:
 
     16. Reverse an array in-place.
     17. Rotate an array by a specified number of positions.
@@ -30,7 +30,7 @@
     20. Insert an element at a specific position in an array.
     ___________________________________________________________________________
 
-    Subarrays and Slicing:
+Subarrays and Slicing:
 
     21. Find and print all subarrays of an array.
     22. Find the maximum sum of a subarray (Kadane's algorithm).
@@ -39,7 +39,7 @@
     25. Find the intersection of two arrays.
     ___________________________________________________________________________
 
-    Sorting and Searching Algorithms:
+Sorting and Searching Algorithms:
     
     26. Implement the Bubble Sort algorithm.
     27. Implement the Selection Sort algorithm.
@@ -48,7 +48,7 @@
     30. Implement a binary search algorithm.
     ___________________________________________________________________________
 
-    Pattern-Based Exercises:
+Pattern-Based Exercises:
 
     31. Print a pattern of numbers in a pyramid shape.
     32. Print a pattern of stars in a diamond shape.
@@ -57,7 +57,7 @@
     35. Print a pattern of characters in a right-angled triangle.
     ___________________________________________________________________________
 
-    Two-Dimensional Arrays:
+Two-Dimensional Arrays:
     
     36. Find the sum of all elements in a 2D array.
     37. Find the largest element in a 2D array.
@@ -66,20 +66,20 @@
     40. Perform matrix multiplication on two 2D arrays.
     ___________________________________________________________________________
 
-    Intersection and Union:
+Intersection and Union:
     
     41. Find the intersection of two sorted arrays.
     42. Find the union of two sorted arrays.
     43. Find the difference between two arrays.
     ___________________________________________________________________________
 
-    Shuffling and Randomization:
+Shuffling and Randomization:
     
     44. Shuffle the elements of an array randomly.
     45. Generate a random permutation of an array.
     ___________________________________________________________________________
 
-    Element Frequency:
+Element Frequency:
     
     46. Find the most frequent element in an array.
     47. Find the kth most frequent element in an array.
