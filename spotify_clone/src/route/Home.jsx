@@ -1,4 +1,4 @@
-import IconText from "../components/shared/IconText";
+import IconText from "../components/IconText";
 import spotify_logo from "../images/spotify_logo_white.svg";
 import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
@@ -6,7 +6,7 @@ import StyleIcon from '@mui/icons-material/Style';
 import AddBoxIcon from '@mui/icons-material/AddBox';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import LanguageIcon from '@mui/icons-material/Language';
-import TextHover from "../components/shared/TextHover";
+import TextHover from "../components/TextHover";
 import { useNavigate } from "react-router-dom";
 import useUser from "../utils/use-user";
 import { useEffect, useState } from "react";

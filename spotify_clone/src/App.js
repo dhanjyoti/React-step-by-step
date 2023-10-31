@@ -5,6 +5,7 @@ import Signup from './route/Signup';
 import Home from './route/Home';
 import { UserProvider } from './utils/use-user';
 import Playlist from './route/playlist';
+import Subscription from './route/Subscription';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path='/signup' element={<Signup />} />
             <Route path='/home' element={<Home />} />
             <Route path='/playlist' element={<Playlist />} />
+            <Route path='/subscribe' element={<Subscription />} />
           </Routes>
         </Router>
       </UserProvider>

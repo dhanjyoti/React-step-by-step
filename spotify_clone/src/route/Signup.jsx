@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import PasswordInput from '../components/shared/PasswordInput';
-import TextInput from '../components/shared/TextInput';
+import PasswordInput from '../components/PasswordInput';
+import TextInput from '../components/TextInput';
 import { Link, useNavigate } from 'react-router-dom';
 import useUser from '../utils/use-user';
 import api from '../utils/api';

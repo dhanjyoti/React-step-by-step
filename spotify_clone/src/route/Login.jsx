@@ -45,8 +45,8 @@
 // export default Login
 
 import React, { useEffect, useState } from 'react';
-import PasswordInput from "../components/shared/PasswordInput";
-import TextInput from "../components/shared/TextInput";
+import PasswordInput from "../components/PasswordInput";
+import TextInput from "../components/TextInput";
 import { Link, useNavigate } from "react-router-dom";
 import api from '../utils/api';
 import useUser from '../utils/use-user';
@@ -113,7 +113,7 @@ const Login = () => {
         <TextInput
           label="Email address or username"
           placeholder="Email address or username"
-          classname="my-6"
+          className="my-6"
           value={email}
           setValue={setEmail}
         />
