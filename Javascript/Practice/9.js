@@ -1,8 +1,6 @@
-function x(){
-    a = 20;
-    function y(){
-        console.log(a);
-    }
-    y();
+let a = function xyz(param, param2){
+    return param * param2
 }
-x();
+
+a(2, 3)
+console.log(a(2, 3))

@@ -1,4 +1,4 @@
-1. Everything in JS happens inside an Execution Context.
+1. Everything in JS happens inside an Execution Context. It's a kind of box-
     Divided into 2 components- 1. Memory Component(Variable Environment) 
                                 Key as a Value
                                2. Code Component(Thread of Execution)
@@ -7,7 +7,7 @@
 2. Javascript is synchronous single-threaded language. 
     means - js can execute only one code of line at a time & in a specific order.
 
-3. What happens when you run a Javascript code?
+3. What happens when we run a Javascript code?
 Ans - An execution context is created.
     1. A global execution context(GEC) is created with two components.
         i.e, Memory(This phase is also known as memory creation phase) & 
@@ -61,15 +61,15 @@ this === window
 
     Not defined -> Whenever we are not assigned anything in the code, ones memory execution, 
     code execution & GEC is erased from call stack and even then value is not there then 
-    that variable eg: "x".
-    It gives a reference error called not defined
+    that variable eg: "x is not defined".
+    It gives a reference error called not defined.
 
 Eg:-
     var a;
     console.log(a);
 
     if(a === undefined){
-        console.log("a ia undefined");
+        console.log("a is undefined");
     } else {
         console.log("a is not undefined");
     }
@@ -125,7 +125,7 @@ Eg:-
                         Block scope.
                         lexical scope.(one inside another, untill null)
 
-    Shadowing-> If we have same named variable outside block, the variable inside the block shadows 
+    Shadowing-> If we have same named variable outside block, the variable inside the block scope 
     that block i,e. outside. 
 
     If we try to shadow `let` into `var`, it is an example of illigal Shadowing, but we can convert 
@@ -140,7 +140,7 @@ Eg:-
 
     Mdn defination-> A closure is the combination of a function bundled together(enclosed) with 
     reference to its surrounding state(the lexical environment). In other words, a closure gives
-    you  access to an outer function's scope from an inner function. In Javascript, closures are 
+    us  access to an outer function's scope from an inner function. In Javascript, closures are 
     every time a funcion is created, at function creation time.
 
     function x() {
@@ -176,7 +176,7 @@ Eg:-
         Corner_cases_:::::::::::::::::::::::::::::
 
         Case: 1 :::
-        In lexical scope they come with as Reference of a not a value as Reference
+        In lexical scope they come with as Reference of the variavle, not a value as Reference.
         below code also:
         function x() {
         var a = 7;
@@ -208,9 +208,9 @@ Eg:-
         there they call with two closure x and clouser z 
 
         ::::::::: Usage OF Clouser :::::::::::::::
-        Use in Module Desing
+        Use in Module Desgning
         Currying in js 
-        function loke once 
+        function like ones
         memoize
         maintaining state in async world 
         setTimeOut
@@ -274,17 +274,17 @@ function outer(){
 outer()();        // why two peranthesis()()
                     Its like calling the inner function
                     Eg:- 
-                    var colse = outer();
+                    var close = outer();
                     close();
-Both gives the same result.
+        Both gives the same result.
 
 Q. If var a place changed:-
 function outer(){
-                            ->                
+                                ->                
     function inner(){
         console.log(a);
     }
-    var a = 10;              <-
+    var a = 10;                 <-
     return inner;
 } 
 var colse = outer();
@@ -297,7 +297,7 @@ function outer(){
     function inner(){
         console.log(a);
     }
-    let a = 10;              <-
+    let a = 10;                 <-
     return inner;
 } 
 var close = outer();
@@ -314,7 +314,7 @@ function outer(b){                   <- now be is part of outer environment of i
     var a = 10;           
     return inner;
 } 
-var colse = outer("hey, hi");
+var close = outer("hey, hi");
 close();
 
 -> treated the same way, 
@@ -335,7 +335,7 @@ function outest(){
     } 
     return outer;
 }
-var colse = outest()("hey, hi");        <-      when outest() is called, it returns the outer(), 
+var close = outest()("hey, hi");        <-      when outest() is called, it returns the outer(), 
 close();                                outer() called with parameter `b` so the `hey, hi` passed/printed
 
 -> prints
@@ -355,7 +355,7 @@ function outest(){
     return outer;
 }
 let a = 100;                          <- This will be a completely new variable in the global scope.
-var colse = outest()("hey, hi");       It still forms closure the same way, but if we did not had line-352,
+var close = outest()("hey, hi");       It still forms closure the same way, but if we did not had line-352,
 close();                                then it would have referred to the global variable. This is because
                                     if it doesnot find `a` in it, it will go and search in more levels of hirercy.
 
@@ -366,7 +366,7 @@ Q. Advantages of Closure
     It helps in data hiding and encapsulation
 
 Q. What is data hiding and encapsulation?
-->  Suppose we have a variable and we want to have some data privacy over it, so that others funcions 
+->  Suppose we have a variable and we want to have some data privacy over it, so that other funcions 
     or other pieces of code doesnot have access to that particular data, that is known as data hiding 
     or data privacy. Or encapsulate the data, so that other parts of the program or code cannot access it.
 
@@ -376,7 +376,7 @@ function counter(){
     var count = 0;
     return function incrementCounter(){
     count++;
-    console.log(count);         <- if somebody outside the scope tries to access counter it will result 
+    console.log(count);         <- if somebody outside the scope tries to access count it will result 
     }                               out to be an error.
 }
 
@@ -404,7 +404,9 @@ counter2();                                   <- This is another advantage of cl
                                                 function out of it. This is like completely new 
                                                 counter in itself. If we do a counter2, it is a new 
                                                 counter all together, so it will start again from 1.
-                
+
+Optimized way:-
+
 Closure in constructor function:
 
 function Counter(){
@@ -426,7 +428,7 @@ counter1.decrementCounter();
 
 Output: 1 2 1
 
-Q. Disadvantages of closure
+Q. Disadvantages of closure:
 -> There could be over consumption of memory in closure.
     Sometimes those over consumed memory are not garbage collected.
     It means it will accumulating a lot of memory if we create a lot of closures, 
@@ -436,7 +438,7 @@ Q. Disadvantages of closure
 Q. Garbage Collector:
 -> Its like a program, in the browser or the Javascript engine, which freezes the unutilized memory.
     Whenever there is some unused variables, it just takes it out of memory, Whenever it appears to 
-    be not needed anymore.
+    be not needed anymore/not being used.
 
 Q. What is the relation between closures and garbage collectors?
 -> Example
@@ -463,6 +465,24 @@ function a(){
 }
 var y = a();           
 y();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

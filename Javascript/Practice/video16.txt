@@ -1,0 +1,61 @@
+// 1. Function statement/declaration
+function a(){
+    console.log("a called");
+}
+a();
+_____________________________________________________________________________________________________________________
+
+                                        // Difference between function expression & funcion declaration
+// 2. Function expression                     Hoisting is the difference
+var b = function(){                         funcion expression will give an error if we hoist/declare it before initialization.
+    console.log("b called");
+}
+b();
+_____________________________________________________________________________________________________________________
+
+
+// 3. Anonymous Function    
+// function without a name. It doesnot have its own identity. 
+Anonymous functions are used in a place where functions are used as a value.
+Eg: inside `objects`
+// if we try to invoke directly it will show us an error.
+funcion (){
+
+}
+_____________________________________________________________________________________________________________________
+
+
+// 4. Named Function Expression
+// when we have a function name & we put it inside a variable
+var c = function xyz(){
+    console.log("c called");
+}
+// but if we try to invoke xyz() in a global scope, it will give us an error
+_____________________________________________________________________________________________________________________
+
+
+// 5. Difference between Parameters & Arguments ?
+// params are local variables inside the funcion
+var d = function(param1, param2){                         
+}
+d(1, 2);    // these are called arguments. The values inside a function
+_____________________________________________________________________________________________________________________
+
+
+// 6. First Class Functions
+// the ability of functions to be used as values and can be passed as an argument to another function and can be returned 
+// from the function. These ability all together is called a first class function.
+// also known as first class citizens in javascript
+// passing functions inside another function as arguments
+
+var e = function(param3){
+    console.log(param3);        // we can also return a Anonymous function & named function from a funcion
+} 
+function abc(){
+
+}
+e(abc);
+_____________________________________________________________________________________________________________________
+
+
+// 7. Arrow Functions
