@@ -9,14 +9,14 @@
 7. Calculate and print the average of three numbers.
 8. Take user input for a number and check if it's even or odd.
 9. Take user input for a year and check if it's a leap year.
-10. Take user input for a number and print its factorial.
+10. Take user input for a number and print its factorial.(recursion)
 ____________________________________________________________________________________________________
 
 11-20: Loops and Patterns
 
-11. Print the numbers from 1 to 10.
-12. Print a pattern of stars in the shape of a right-angled triangle.
-13. Print a pattern of numbers in a pyramid shape.
+11. Print the numbers from 1 to 10.(reverse)
+12. Print a pattern of stars in the shape of a right-angled triangle.(reverse)
+13. Print a pattern of numbers in a pyramid shape.(pyramid downward)
 14. Calculate and print the Fibonacci series up to a given number.
 15. Calculate and print the factorial of a number using a loop.
 16. Calculate and print the sum of even numbers from 1 to 100.
@@ -32,22 +32,22 @@ ________________________________________________________________________________
 22. Find and print the largest element in an array.
 23. Reverse an array of integers.
 24. Calculate and print the average of elements in an array.
-25. Take user input for a string and check if it's a palindrome.
+25. Take user input for a string and check if it's a palindrome.(imp)
 26. Take user input for a string and count the number of vowels and consonants.
 27. Count and print the number of words in a given sentence.
-28. Remove spaces from a string entered by the user and print the result.
+28. Remove spaces from a string entered by the user and print the result.(convert space into underscore)
 29. Check if two strings are anagrams.
-30. Capitalize the first letter of each word in a given sentence.
+30. Capitalize the first letter of each word in a given sentence.(capitalize the last)
 ___________________________________________________________________________________________________
 
 31-40: Functions and Methods
 
 31. Write a function to calculate the area of a circle given its radius.
 32. Write a function to calculate the volume of a sphere given its radius.
-33. Write a function to check if a number is prime.
+33. Write a function to check if a number is prime.(answer in boolean)
 34. Write a function to calculate the power of a number.
 35. Write a function to swap the values of two variables.
-36. Write a function to find the maximum of three numbers.
+36. Write a function to find the maximum of three numbers.(longer string among 3 words)
 37. Write a function to calculate the LCM (Least Common Multiple) of two numbers.
 38. Write a function to find the GCD (Greatest Common Divisor) of two numbers.
 39. Write a function to check if a number is positive, negative, or zero.

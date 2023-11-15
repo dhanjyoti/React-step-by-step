@@ -14,9 +14,17 @@
 // }
 
 
-const n = 10;
-let i = 1;
-do{
-    process.stdout.write(i + " ");
-    i++;
-} while(i <= n);
+// const n = 10;
+// let i = 1;
+// do{
+//     process.stdout.write(i + " ");
+//     i++;
+// } while(i <= n);
+
+// ### Reverse ###
+
+let n = 10;
+for(let i=n; i>0; i--){
+    // let num = i.toString()
+    process.stdout.write(i.toString() + " ");
+}

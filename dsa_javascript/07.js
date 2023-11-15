@@ -1,3 +1,5 @@
+//  7. Calculate and print the average of three numbers.
+
 let a = prompt("Enter value of a");
 let b = prompt("Enter value of b");
 let c = prompt("Enter value of c");

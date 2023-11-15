@@ -1,3 +1,5 @@
+//  6. Convert temperature from Celsius to Fahrenheit and vice versa, based on user input.
+
 // Function to convert Celsius to Fahrenheit
 function celsiusToFahrenheit(celsius) {
     return (celsius * 9/5) + 32;

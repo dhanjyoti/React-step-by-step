@@ -18,7 +18,7 @@ document.write(`<br> String is: ${word}`);
 
 let word = "I feel good!!";
 let count = 0;
-word = word.replace(/ /g,'').replace(/!/g,'');
+    word = word.replace(/ /g,'').replace(/!/g,'');
 
 let vowels = ['a','e','i','o','u'];
 for(let i=0; i<word.length; i++){

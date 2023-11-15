@@ -1,3 +1,5 @@
+//  9. Take user input for a year and check if it's a leap year.
+
 let input = prompt("Enter a value to find given Year is LeapYear or not");
 
 let YearToTrack = parseInt(input);
