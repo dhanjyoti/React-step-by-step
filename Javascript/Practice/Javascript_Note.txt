@@ -156,6 +156,9 @@ Explain:
         const boundFunction = getValue.bind(obj);
         console.log(boundFunction()); // Outputs 42
 
+join() -> this method not only joins/binds numbers and strings but also converts them into 
+strings in particular.
+
  
  
  

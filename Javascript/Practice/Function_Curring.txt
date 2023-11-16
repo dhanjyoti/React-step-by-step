@@ -1,0 +1,106 @@
+Function currying is a technique in JavaScript where a function that takes multiple arguments, is 
+transformed into a series of functions that each take a single argument. This allows you to 
+partially apply a function, fixing some of its arguments, and creating a new function that expects 
+the remaining arguments. It's a powerful and flexible way to work with functions, especially in 
+functional programming. 
+
+Here's an elabovative explanation of function currying in JavaScript:
+
+1. **Basic Concept**:
+
+   Function currying is all about transforming a function that takes multiple arguments into a 
+   sequence of functions, each taking one argument. This enables you to create more specialized 
+   functions by providing some of the arguments upfront.
+
+2. **Partial Application**:
+
+   Curried functions support partial application, where you can fix one or more arguments and obtain 
+   a new function that expects the remaining ones. This can be particularly useful when we have a 
+   function with many arguments, and we want to reuse parts of it.
+
+3. **Example**:
+
+   Let's consider a simple non-curried function for adding two numbers:
+
+   javascript-
+   function add(a, b) {
+       return a + b;
+   }
+   
+
+   Now, let's curry this function:
+
+   javascript-
+   function curryAdd(a) {
+       return function(b) {
+           return a + b;
+       };
+   }
+   
+
+   With this curried function, we can create new functions by fixing one argument:
+
+   javascript-
+   const add2 = curryAdd(2); // Fix the first argument to 2
+   console.log(add2(3)); // Outputs 5 (2 + 3)
+   
+
+4. **Chaining**:
+
+   Currying allows us to chain functions together. Each function returns a new function, making 
+   it easier to create complex logic by composing smaller functions.
+
+5. **Benefits**:
+
+   - Improved reusability: We can create specialized functions from a common function by 
+   partially applying arguments.
+   - Easier composition: Curried functions can be easily combined or nested to build more complex 
+   operations.
+   - Abstraction: It provides abstraction, means hides operations of the code, that we don't 
+   want to show.
+
+6. **Library Usage**:
+
+   Many JavaScript libraries and functional programming utilities support function currying, 
+   making it a valuable technique for tasks like data transformation, filtering, and mapping.
+
+Here's an example of using a library (Lodash) for currying:
+
+javascript
+const _ = require('lodash');
+
+function greet(name, greeting) {
+    return `${greeting}, ${name}!`;
+}
+
+const greetCurried = _.curry(greet);
+
+const hello = greetCurried('Hello');
+console.log(hello('Alice')); // Outputs: "Hello, Alice!"
+
+
+In this example, the `_.curry` function from Lodash is used to curry the `greet` function, 
+allowing you to partially apply the greeting argument and create a new function for specific greetings.
+
+
+Disadvantage-
+1. Readability: Excessive currying can make code less readable, especially when we have many 
+partially applied functions. It can become challenging to discern the purpose and arguments of 
+each function.
+
+2. Loss of Context: In the process of currying, it's common to lose access to the original context, 
+such as the value of `this`. This can lead to unexpected behavior if the curried functions rely on 
+the context in which they were created.
+
+3. Overhead: Currying can add a layer of function calls and closures, which can consume memory 
+and increase the stack depth, potentially leading to stack overflow errors in deeply nested 
+curried functions.
+
+4. Performance: Creating and executing a chain of curried functions can have a small performance 
+overhead compared to directly calling a function with all its arguments. While this performance 
+difference is often negligible, it can become a concern in performance-critical applications. 
+Eg:- Systems with less memory or CPU.
+
+Function currying is a powerful tool in functional programming that promotes code reusability, 
+composability, and cleaner code organization. It's particularly useful when dealing with 
+higher-order functions and functional transformations.

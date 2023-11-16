@@ -1,0 +1,5 @@
+Micro-task Queue has higher priority than Callback Queue.
+All the callback function which comes through promises and mutation observer comes 
+under microtask queue.
+Event loop will give a chance to callback queue(or task queue) to execute only when all 
+the tasks in microtask queue are completed.

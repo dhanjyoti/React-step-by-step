@@ -1,0 +1,56 @@
+* Javascript is everywhere, eg- browser, server, watch, bulb, robots -> It's a'' 
+    possible because of the javascript runtime environment.
+    Runtime environment is like a big container which has everything required to 
+    run Javascript code.
+    To run the codes it has the JS engine & also it has a set of APIs to connect to
+    the outer environment. We can have event loop, callback queue, microtask
+    queue and many more.
+    JS environment is not possible without the JS engine.
+    Every browser has the JS runtime environment.
+    It is called JS engine, but it is not a machine. It is just like a normal
+    program code which is written in low-level-languages like- C.
+
+* First JS Engine in the world is-> SpiderMonkey which is used inside the Firefox.
+
+###    JS Engine Architecture   ###
+JS engine basically takes code as the input, the human readable format.
+It goes through 3 major steps.
+
+Step 1: Parsing -> In parsing phase the code is broken down into tokens. 
+Eg- "let" "a" "=" "20" everything is divided into a token. & there is also 
+something known as syntax parser. The job of syntax parser is to basically take the
+code and convert into an AST-> popularly known as Abstract Syntax Tree.
+
+Step 2: Compilation -> Javascript has JIT Compilation(Just In Time Compilation),
+    To know about JIT we should know what is- Interpreter, Compiler & Is Javascript 
+    interpreted language or a compile language.
+    Interpreter-> Here code is executed line by line in the order, it doesnot know
+    what will happen in the next line. It executes this way.
+    Compiler-> Here the whole code is complied first even before executed. So the 
+    code is compiled and a new code is formed which is the optimized version of 
+    that code & then it is executed.
+
+    pros of Interpreter-> The code is fast, it doesnot have to wait for the code 
+    to be compiled first. It can immediately start to execute line by line.
+    pros of Compiler-> In case of compiler it has more efficiency.
+
+    So Javascript can behave like an Interpreter as well as a compiler language,
+    everything depends on the JS engine. When it was initially created it was 
+    suppose to be an interpreted language, because it is majorly used on the 
+    browsers. But now most of the modern browers use modern JIT JS engines. 
+    JS engines uses interpreter + compiler both together. So it depends of the 
+    JS engine whether to run javascript in Interpreter or Compiler.
+    Using both together it became JIT Compilation.
+
+Step 3: Execution -> After parsing we got the AST, AST then goes to the interpreter,
+    Interpreter converts our code to byte code(i,e- 0s & 1s) & the code moves to
+    the execution step. While doing so it takes the help of the compiler to 
+    optimize the code. Now the process of event loop, memory heap & call stack
+    takes place.
+    Execution of the code happens after everything is completed.
+
+* Every JS engine works different from the other, every company to trying to 
+    make as better JS engine as possible, so that it can save our micro-seconds.
+    At prsesnt Google's V8 is considered to be the fastest.
+    V8's interpreter is known as Ignition and compiler is known as TurboFan(oprimizing
+    compiler).

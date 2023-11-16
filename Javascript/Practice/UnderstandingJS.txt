@@ -15,11 +15,11 @@ Ans - An execution context is created.
     2. It allocates memory to all the variables(function, object or datatype), 
         which is undefined or stores whole code if object or function in the beginning.
     3. value is allocated to each variable.
-    4. function invocation if there is a function(means function is executed) 
-        whole this runs again as it is a mini program(new GEC created for it)
-    5. ones completed execution (GEC gets deleted or goes of)
+    4. function invocation happens if there is a function(means function is executed) &
+        whole this runs again as if it is a mini program(new GEC created for it).
+    5. ones completed execution (GEC gets deleted or goes off)
 
-everything that is done till now is managed through a stack i.e, call stack
+everything that is done till now is managed through a stack i.e, call stack.
 
 
 4. Call stack maintains the order of execution of execution contexts.
@@ -31,7 +31,7 @@ everything that is done till now is managed through a stack i.e, call stack
 
 5. Hoisting -> Hoisting is phenomina in Javascrpt by which we can access variables 
     and functions, even before we initialize it or we have put some value in it.
-    We can access the variables without any error.
+    We can access the variables without any error.  
 
 Eg: In case of single variable the output will be undefined. 
     In case of proper function declaration it will show us the result. 
@@ -59,9 +59,9 @@ this === window
 9. Undefined -> It is a keyword which takes up its own memory until the variable is assigned 
     some value. It works like a placeholder. It is not equal to empty.
 
-    Not defined -> Whenever we are not assigned anything in the code, ones memory execution, 
-    code execution & GEC is erased from call stack and even then value is not there then 
-    that variable eg: "x is not defined".
+    Not defined -> Whenever we are not assigned anything(variable, function, object) in the code, 
+    ones memory execution, code execution & GEC is erased from call stack and even then value is 
+    not there then it will give us an error "not defined". eg: "x is not defined".
     It gives a reference error called not defined.
 
 Eg:-
@@ -111,7 +111,7 @@ Eg:-
     `const` is more preferable, if not use `let`(it has temporal dead jone) & avoid `var`.
 
     Best way to avoid Temporal Dead Jone - is to always put declarations and initializations
-    on top of the code. It will hit the initialization part at the first and then it goes 
+    on top of the code(i,e variables). It will hit the initialization part at the first and then it goes 
     to the logic.
 
 14. Block-> Block is defined under the curly braces{ }, it is also known as compound statement.
@@ -135,336 +135,6 @@ Eg:-
 
     These all will work similar with all kinds of functions.
 
-15. Closure -> A function bind/bundled together with its lexical environment/lexical scope forms a closure
-    (eg: function inside function).
-
-    Mdn defination-> A closure is the combination of a function bundled together(enclosed) with 
-    reference to its surrounding state(the lexical environment). In other words, a closure gives
-    us  access to an outer function's scope from an inner function. In Javascript, closures are 
-    every time a funcion is created, at function creation time.
-
-    function x() {
-        var a = 7;
-        function y() {
-            console.log(a);
-        }
-        y();
-    }
-        x(); example for clouser
-
-        Clouser : A function blind together with lexical Scope Enviroment
-        Clouser = function + lexical Enviroment  
-
-        function x() {
-        var a = 7;
-        function y() {
-            console.log(a);
-        }
-        return y;
-        }
-        var z = x();
-        console.log(z);
-        z();
-        Answer: line 21 its return function 
-        Answer : line 22 its give 7 
-
-        why ?
-        When we return the function they still maintain lexical Scope 
-
-        in return y they return with not only function but lexical Scope also return in Z 
-
-        Corner_cases_:::::::::::::::::::::::::::::
-
-        Case: 1 :::
-        In lexical scope they come with as Reference of the variavle, not a value as Reference.
-        below code also:
-        function x() {
-        var a = 7;
-        function y() {
-            console.log(a);
-        }
-        a = 100;
-        return y;
-        }
-        var z = x();
-        console.log(z);
-        z();
-
-        Case: 2 :::
-        function z() {
-        var b = 90;
-        function x() {
-            var a = 7;
-            function y() {
-            console.log(a, b);
-            }
-            y();
-            // return y;
-        }
-        x();
-        }
-        z();
-
-        there they call with two closure x and clouser z 
-
-        ::::::::: Usage OF Clouser :::::::::::::::
-        Use in Module Desgning
-        Currying in js 
-        function like ones
-        memoize
-        maintaining state in async world 
-        setTimeOut
-        Iterators
-        
-Note:-  Closeure is like function along with its lexical environment, so even when a function is 
-        taken out of its original scope, if it is executed in some other scope. Still it will
-        remember its lexical environment.
-
-    Eg: 
-    funcion x(){
-        for(var i=1; i<=5; i++){
-            function close(x){
-                setTimeOut(function(){
-                    console.log(x);
-                }, x * 1000);
-            }
-            close(i);
-        }
-        console.log("Hello dj");
-    } 
-    x();
-
-    Uses of Closures: 
-    - Module Design Pattern
-    - Currying 
-    - Functions like once
-    - Memoize
-    - Maintaining state in async world
-    - setTimeouts
-    - Iterators
-    - and many more...
-
-    Currying ->
-    2 ways to curry a function- 1. bind
-                                2. closures
-
-*** Closure *** ->
-What a closure in JS is?
--> A function along with a reference to it's outer environment, together forms a closure.
-    In other words, closure is a combination of a function and its lexical scope bundled together
-    forms a closure.
-
-More Explaination?
--> Its like each and every function in Javascript, has access to its outer lexical environment, 
-    which means access to variables and functions, which is present in the environment of its parents,
-    so each and every funcion has access to them.
-                    So even when this function, is executed in some other scope, not in its original
-    scope, but even executed in other scope, it still remembers outer lexical environments where it was 
-    originally present in the code. This is closure.
-
-Example Demonstration:-
--> 
-function outer(){
-    var a = 10;
-    function inner(){
-        console.log(a);
-    }
-    return inner;
-} 
-outer()();        // why two peranthesis()()
-                    Its like calling the inner function
-                    Eg:- 
-                    var close = outer();
-                    close();
-        Both gives the same result.
-
-Q. If var a place changed:-
-function outer(){
-                                ->                
-    function inner(){
-        console.log(a);
-    }
-    var a = 10;                 <-
-    return inner;
-} 
-var colse = outer();
-close();
-
--> Still gives the same result.
-
-Q. If var changed to let
-function outer(){             
-    function inner(){
-        console.log(a);
-    }
-    let a = 10;                 <-
-    return inner;
-} 
-var close = outer();
-close();
-
--> Still behaves the same way.
-
-Q. If we have an extra parameter in outer.
-function outer(b){                   <- now be is part of outer environment of inner function.
-          
-    function inner(){
-        console.log(a, b);
-    }
-    var a = 10;           
-    return inner;
-} 
-var close = outer("hey, hi");
-close();
-
--> treated the same way, 
-    prints-> 
-    10 hey, hi
-
-Q. What if the outer function nested inside another function?
-->  It will again form a closure with the environment of that function also.
-
-function outest(){
-    var c = 20;
-    function outer(b){
-        function inner(){
-            console.log(a, b, c);
-        }
-        let a = 10;
-        return inner;
-    } 
-    return outer;
-}
-var close = outest()("hey, hi");        <-      when outest() is called, it returns the outer(), 
-close();                                outer() called with parameter `b` so the `hey, hi` passed/printed
-
--> prints
-    10 "hey, hi" 20
-
-Q. What if we had a variable with a conflicted name?
--> 
-function outest(){
-    var c = 20;
-    function outer(b){
-        function inner(){
-            console.log(a, b, c);
-        }
-        let a = 10;                  ---
-        return inner;
-    } 
-    return outer;
-}
-let a = 100;                          <- This will be a completely new variable in the global scope.
-var close = outest()("hey, hi");       It still forms closure the same way, but if we did not had line-352,
-close();                                then it would have referred to the global variable. This is because
-                                    if it doesnot find `a` in it, it will go and search in more levels of hirercy.
-
-Q. Advantages of Closure
-->  It is used in Module Pattern
-    It is used in function curring
-    Used in higher order functions like- memoize, ones
-    It helps in data hiding and encapsulation
-
-Q. What is data hiding and encapsulation?
-->  Suppose we have a variable and we want to have some data privacy over it, so that other funcions 
-    or other pieces of code doesnot have access to that particular data, that is known as data hiding 
-    or data privacy. Or encapsulate the data, so that other parts of the program or code cannot access it.
-
-Example:-
-
-function counter(){
-    var count = 0;
-    return function incrementCounter(){
-    count++;
-    console.log(count);         <- if somebody outside the scope tries to access count it will result 
-    }                               out to be an error.
-}
-
-var counter1 = counter();
-counter1();
-counter1();
-
-Q. If we call the counter() one more time what will happen.
-->
-function counter(){
-    var count = 0;
-    return function incrementCounter(){
-    count++;
-    console.log(count);        
-    }                     
-}
-
-var counter1 = counter();
-counter1();
-counter1();
-
-var counter2 = counter(); 
-counter2();                                   <- This is another advantage of closure. 
-                                                If we want to make a counter2 we can make another 
-                                                function out of it. This is like completely new 
-                                                counter in itself. If we do a counter2, it is a new 
-                                                counter all together, so it will start again from 1.
-
-Optimized way:-
-
-Closure in constructor function:
-
-function Counter(){
-    var count = 0;
-    this.incrementCounter = function(){
-        count++;
-        console.log(count);
-    }
-    this.decrementCounter = function(){
-        count--;
-        console.log(count);
-    }
-}
-var counter1 = new Counter();
-
-counter1.incrementCounter();
-counter1.incrementCounter();
-counter1.decrementCounter();
-
-Output: 1 2 1
-
-Q. Disadvantages of closure:
--> There could be over consumption of memory in closure.
-    Sometimes those over consumed memory are not garbage collected.
-    It means it will accumulating a lot of memory if we create a lot of closures, 
-    because those memories are not garbage collected till the program expires.
-    And if not handled properly it can also lead to memory leaks, which might also freeze the browser.
-
-Q. Garbage Collector:
--> Its like a program, in the browser or the Javascript engine, which freezes the unutilized memory.
-    Whenever there is some unused variables, it just takes it out of memory, Whenever it appears to 
-    be not needed anymore/not being used.
-
-Q. What is the relation between closures and garbage collectors?
--> Example
-function a(){
-    var x = 0;
-    return function b(){
-        console.log(x);
-    }
-}
-var y = a();            // here `x` cannot be free'd as we might need or call it again.
-                            untill it is confirmed that `x` is not needed we cannot garbage collect it.
-y();
-
-But some modern browsers and JS engines like - Vite, Chrome - have smart garbage collection mechanism.
-They somehow finds out the unreachable variables, and smartly collects these garbage variables.
-
-Q. What is the smartly collected garbage variable means?
--> Example
-function a(){
-    var x = 0, z = 10;              <- `z` not being used
-    return function b(){            <- when b() is returned, `z` is garbage collected
-        console.log(x);                smartly and `x` is not, though it forms closure with both.
-    }                                   now `z` is no longer in memory.
-}
-var y = a();           
-y();
 
 
 

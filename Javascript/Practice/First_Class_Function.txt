@@ -5,9 +5,9 @@ function a(){
 a();
 _____________________________________________________________________________________________________________________
 
-                                        // Difference between function expression & funcion declaration
+                                        // Difference between function expression & function declaration
 // 2. Function expression                     Hoisting is the difference
-var b = function(){                         funcion expression will give an error if we hoist/declare it before initialization.
+var b = function(){                         function expression will give an error if we hoist/declare it before initialization.
     console.log("b called");
 }
 b();
@@ -49,7 +49,7 @@ ________________________________________________________________________________
 // passing functions inside another function as arguments
 
 var e = function(param3){
-    console.log(param3);        // we can also return a Anonymous function & named function from a funcion
+    console.log(param3);        // we can also return a Anonymous function & named function from a function
 } 
 function abc(){
 

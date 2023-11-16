@@ -1,0 +1,100 @@
+Note:  * To understand Event loops properly we should know what a callback function is & what are 
+        its uses.
+    * It gives us access to the whole asyncronous world, in a synchronous single threaded language.
+    * Javascript has only one call stack, and we can also call it as the main thread.
+    * Everything that is executed in the page is executed through the call stack only.
+    * If any operation blocks this call stack, that will be called/known as blocking the 
+        main thread. Eg: Suppose, a function has a very heavy operation, which takes around 20/30secs
+        to complete that function. But by that time because javascript has only one call stack
+        (one main thread), so it won't be able to execute any other function in the code. That means 
+        everything will be blocked in the code. 
+                    That's the reason we should never block our main thread. We should always try to 
+        use async operations for things which takes time.  
+
+
+What do you mean by Callback function in Javascript?
+-> We can take a function and pass it into another function, and when we do so, this function which
+we pass into another function is known as callback function.
+                    As we know Javascript is a synchronous and single-threaded language, but 
+due to callback we can do asynhcronous thing in javascript.
+
+Example:
+setTimeout(function () {        // This function that we first pass as a parameter to the setTimeOut 
+    console.log("timer");       // is a callback function.
+}, 4000);      
+
+function x(y){
+    console.log("x");
+    y();
+}
+x(function y(){                 //  Giving the responsibility of this function to another function.  
+    console.log("y");
+})
+
+Output: x y timer(after 4sec)
+
+
+ *** setTimeout for callback ***
+ document.getElementById('wow').addEventListener("click", setTimeout(function xyz(){
+     document.write("button clicked", ++count);
+ }, 3000));
+
+ *** Number of Counts ***
+
+ function attachEventListener(){
+     let count = 0;
+     document.getElementById('wow').addEventListener("click", function xyz(){
+         console.log("button clicked", ++count);
+     });
+ }
+ attachEventListener();
+
+### Garbage Collection and removeEventListeners
+
+EventListerners are heavy, it means it takes memory. So whenever we attach an 
+EventListerner it kind of forms a closure, but even when the call stack is empty,
+but still the program is not freed from the memory. Because we never know if anyone 
+would try to use it later, because of this we cannot free up this extra memory, this 
+is why EventListerners are heavy. This is the reason we remove EventListerners when
+we don't use them.
+
+When we remove an EventListerner, all the variables that was held by the closure
+is garbage collected.
+
+
+### technical example ###
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Event Listener Example</title>
+</head>
+<body>
+
+    <button id="myButton">Click me</button>
+    <button id="removeListenerButton">Remove Event Listener</button>
+
+    <script>
+        // Function to handle the click event
+        function handleClick() {
+            alert("Button clicked!");
+        }
+
+        // Add event listener to the button
+        document.getElementById("myButton").addEventListener("click", handleClick);
+
+        // Function to remove the event listener
+        function removeClickListener() {
+            // Remove the event listener
+            document.getElementById("myButton").removeEventListener("click", handleClick);
+            alert("Event listener removed. Clicking the button will no longer trigger the alert.");
+        }
+
+        // Add event listener to the "Remove Event Listener" button
+        document.getElementById("removeListenerButton").addEventListener("click", removeClickListener);
+    </script>
+
+</body>
+</html>
