@@ -1,26 +1,17 @@
-import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css'
+import Counter from './components/Counter';
+import BgChanger from './components/BgChanger';
 
 function App() {
-  // counter is the variable & setCounter is a function/method
-  const [counter, setCounter] = useState(0);
-
-  const addValue = () => {
-    setCounter(counter + 1);
-  }
-
-  const removeValue = () => {
-    setCounter(counter - 1);
-  }
 
   return (
-    <>
-      <h1>React Counter {counter}</h1>
-      <h2>Counter Value: {counter}</h2>
-      <button onClick={addValue}>Add value</button> {" "}
-      <button onClick={removeValue}>Remove value</button>
-      <p>Footer: {counter}</p>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/counter" element={<Counter />}/>
+        <Route path="/bgchanger" element={<BgChanger />}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
 

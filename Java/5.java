@@ -1,6 +1,5 @@
 // Java Program to Check if Given Integer is Odd or Even
 
-import java.io.*;
 import java.util.*;
 
 class OddEven {

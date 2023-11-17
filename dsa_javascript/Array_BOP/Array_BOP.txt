@@ -1,0 +1,88 @@
+Array Basics:
+
+    1. Print the elements of an array.
+    2. Find the sum of all elements in an array.
+    3. Find the product of all elements in an array.
+    4. Calculate the average of elements in an array.
+    5. Find the largest element in an array.
+    6. Find the smallest element in an array.
+    7. Count the number of even elements in an array.
+    8. Count the number of odd elements in an array.
+    9. Check if an array is sorted in ascending order.
+    10. Check if an array is sorted in descending order.
+    ___________________________________________________________________________
+
+Search Operations:
+
+    11. Search for a specific element in an array.
+    12. Find the index of the first occurrence of a given element.
+    13. Find the index of the last occurrence of a given element.
+    14. Count the occurrences of a specific element in an array.
+    15. Check if an array contains duplicate elements.
+    ___________________________________________________________________________
+
+Manipulation and Modification:
+
+    16. Reverse an array in-place.
+    17. Rotate an array by a specified number of positions.
+    18. Remove duplicates from a sorted array.
+    19. Remove a specific element from an array.
+    20. Insert an element at a specific position in an array.
+    ___________________________________________________________________________
+
+Subarrays and Slicing:
+
+    21. Find and print all subarrays of an array.
+    22. Find the maximum sum of a subarray (Kadane's algorithm).
+    23. Find the subarray with the largest product.
+    24. Check if an array contains a subarray with a given sum.
+    25. Find the intersection of two arrays.
+    ___________________________________________________________________________
+
+Sorting and Searching Algorithms:
+    
+    26. Implement the Bubble Sort algorithm.
+    27. Implement the Selection Sort algorithm.
+    28. Implement the Insertion Sort algorithm.
+    29. Implement a linear search algorithm.
+    30. Implement a binary search algorithm.
+    ___________________________________________________________________________
+
+Pattern-Based Exercises:
+
+    31. Print a pattern of numbers in a pyramid shape.
+    32. Print a pattern of stars in a diamond shape.
+    33. Print a pattern of numbers in a Pascal's triangle.
+    34. Print a pattern of alternating numbers and asterisks.
+    35. Print a pattern of characters in a right-angled triangle.
+    ___________________________________________________________________________
+
+Two-Dimensional Arrays:
+    
+    36. Find the sum of all elements in a 2D array.
+    37. Find the largest element in a 2D array.
+    38. Find the transpose of a 2D array.
+    39. Rotate a square 2D array by 90 degrees.
+    40. Perform matrix multiplication on two 2D arrays.
+    ___________________________________________________________________________
+
+Intersection and Union:
+    
+    41. Find the intersection of two sorted arrays.
+    42. Find the union of two sorted arrays.
+    43. Find the difference between two arrays.
+    ___________________________________________________________________________
+
+Shuffling and Randomization:
+    
+    44. Shuffle the elements of an array randomly.
+    45. Generate a random permutation of an array.
+    ___________________________________________________________________________
+
+Element Frequency:
+    
+    46. Find the most frequent element in an array.
+    47. Find the kth most frequent element in an array.
+    48. Find the majority element (element that appears more than n/2 times).
+    49. Find the elements that appear more than n/3 times in an array.
+    50. Find the second largest element in an array.

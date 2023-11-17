@@ -5,24 +5,27 @@ responsible only for the view layer of the application. ReactJS is not a framewo
 it is just a library developed by Facebook to solve some problems that we were 
 facing earlier.
 
+Why to learn React.JS?
+Ans -> makes easy to manage & build complex front end.
+
 What is npm? -> npm, or Node Package Manager, is a widely used package manager for 
 JavaScript and Node.js applications. It's a command-line tool that allows developers 
 to easily install, manage, and share libraries, packages, and dependencies that are 
 used in JavaScript and Node.js projects.
 
-What is npx? -> npx is a package runner tool that comes with npm (Node Package Manager) 
+What is npx? -> npx(Node Package Executor) is a package runner tool that comes with npm (Node Package Manager) 
 starting from npm version 5.2.0 and higher. It allows you to execute commands from 
 Node.js packages that aren't globally installed on your system. npx is particularly 
 useful for running one-off commands, scripts, or executables that are part of packages 
 you haven't installed globally or don't want to install globally.
 
-Why we install react-router-dom in React.js? -> react-router-dom to add routing and 
-navigation capabilities to your React application. React Router is a popular library 
+Why we install react-router-dom in React.js? -> We need react-router-dom to add routing and 
+navigation capabilities to our React application. React Router is a popular library 
 for handling client-side routing in single-page applications (SPAs) built with React.
 
 Axios -> 
 Axios is a popular JavaScript library used for making HTTP requests in both browser 
-and Node.js environments. It provides a simple and straightforward way to send and 
+and Node.js environments. It provides a simple and straight forward way to send and 
 receive HTTP requests, making it a valuable tool for working with web APIs and servers.
 
                     Chapter 1 - Why React?
