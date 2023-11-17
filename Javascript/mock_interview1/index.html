@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Example</title>
+</head>
+<body>
+
+    <h1 id="mainTitle">Hello, DOM!</h1>
+    <p id="demo">This is a simple webpage.</p>
+
+    <script>
+        // Accessing elements in the DOM
+        var titleElement = document.getElementById("mainTitle");
+        var demoElement = document.getElementById("demo");
+
+        // Modifying content
+        titleElement.textContent = "Welcome to the DOM!";
+        demoElement.innerHTML = "This content has been updated.";
+
+        // Creating a new element and appending it to the body
+        var newParagraph = document.createElement("p");
+        newParagraph.textContent = "This is a new paragraph.";
+        document.body.appendChild(newParagraph);
+    </script>
+
+</body>
+</html>
