@@ -1,0 +1,56 @@
+`setTimeout` doesnot always gives the exact time of execution.
+This is because if the code before the `setTimeout` to get executed takes a longer time to 
+execute eg: 10secs, since the code is too big, by then if the `setTimeout` was set for 3secs
+it already expires and put to callback queue for execution. But since the previous function
+or code is not freed from the memory(GEC), so `setTimeout` is not able to execute itself.
+Event loop can pick up the `setTimeout` and execute only after the code in the GEC has 
+completed execution and the call stack is free. In this case, `setTimeout` took more time 
+then it was set to be. 
+            `setTimeout` didnot come up to the expectation, this is the reason it is called
+    `setTimeout` has Trust Issues & thats one of the reason we should not block our main thread.
+
+    `setTimeout` doesnot guarantees that is will get executed at its given time, but it 
+    guarantees that it will atleast wait till its given time.
+
+This is also known as Concurrency Model in Javascript.
+
+Code Example:
+
+            console.log("start");
+
+            setTimeout(function cb(){
+                console.log("callback");
+            }, 3000);
+
+            console.log("end");
+
+            let startDate = new Date().getTime();
+            let endDate = startDate;
+            while(endDate < startDate + 10000){
+                endDate = new Date().getTime();
+            }
+
+            console.log("while expires");
+
+What happens when `setTimeout` is delayed for `0` seconds?
+-> It will still have to go through the callback queue.
+    Therefore, still it will be executed at last after everything is executed even if 
+    it has `0` seconds to wait.
+
+    This is also known as to `defer` a code. It means this function or code is not that 
+    necessary or important so it will get executed later.
+
+Code Example:
+
+            console.log("start");
+
+            setTimeout(function cb(){
+                console.log("callback");
+            }, 0);
+
+            console.log("end");
+
+Output: start
+        end
+        callback
+

@@ -1,5 +1,15 @@
+// console.log("start");
 
-    let count = 0;
-    document.getElementById('wow').addEventListener("click", function xyz(){
-        console.log("button clicked", ++count);
-    });
+// setTimeout(function cb(){
+//     console.log("callback");
+// }, 3000);
+
+// console.log("end");
+
+// let startDate = new Date().getTime();
+// let endDate = startDate;
+// while(endDate < startDate + 10000){
+//     endDate = new Date().getTime();
+// }
+
+// console.log("while expires");
