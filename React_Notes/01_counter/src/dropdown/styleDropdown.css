@@ -1,0 +1,32 @@
+.main {
+    font-family: sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+    margin: 100px 300px;
+    border: 2px solid green;
+    padding: 50px;
+  }
+  
+  .dropdown {
+    display: flex;
+    padding: 8px;
+    width: 200px;
+    border-radius: 10px;
+  }
+  
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: forestgreen;
+    color: white;
+    font-weight: bold;
+  }
+  
