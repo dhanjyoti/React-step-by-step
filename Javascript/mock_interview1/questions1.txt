@@ -39,7 +39,7 @@ CSS
 JavaScript
 - What are the different data types present in JavaScript?
 - What are non-primitive data type ?
--Explain Hoisting in JavaScript.
+- Explain Hoisting in JavaScript.
 - What is addEventListner?
 - What is event bubbling?
 - What is event delegation, and why is it useful in JavaScript? Provide an example.

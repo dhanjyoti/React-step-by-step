@@ -15,8 +15,8 @@ Ans - An execution context is created.
     2. It allocates memory to all the variables(function, object or datatype), 
         which is undefined or stores whole code if object or function in the beginning.
     3. value is allocated to each variable.
-    4. function invocation happens if there is a function(means function is executed) &
-        whole this runs again as if it is a mini program(new GEC created for it).
+    4. function invocation happens if there is a function(means function is executed) 
+        & whole this runs again as if it is a mini program(new GEC created for it).
     5. ones completed execution (GEC gets deleted or goes off)
 
 everything that is done till now is managed through a stack i.e, call stack.
@@ -29,7 +29,7 @@ everything that is done till now is managed through a stack i.e, call stack.
                            4. Runtime stack
                            5. Machine stack
 
-5. Hoisting -> Hoisting is phenomina in Javascrpt by which we can access variables 
+5. Hoisting -> Hoisting is a phenomena in Javascrpt by which we can access variables 
     and functions, even before we initialize it or we have put some value in it.
     We can access the variables without any error.  
 
@@ -44,9 +44,9 @@ Eg: In case of single variable the output will be undefined.
 
 6. We can invoke functions even before initializing it.
 
-7. Shortest javascript program is an empty file of index.js. It will create an window object. 
-    Also identified through `this` variable which refers to window in the browser.
-    It is a global object.
+7. Shortest javascript program is an empty file of index.js. It will create an 
+    window object. Also identified through `this` variable which refers to window 
+    in the browser. It is a global object.
 this === window 
     -> true
 
@@ -56,13 +56,13 @@ this === window
 
         Window is a global object that is created with the global scope.
 
-9. Undefined -> It is a keyword which takes up its own memory until the variable is assigned 
-    some value. It works like a placeholder. It is not equal to empty.
+9. Undefined -> It is a keyword which takes up its own memory until the variable is 
+    assigned some value. It works like a placeholder. It is not equal to empty.
 
-    Not defined -> Whenever we are not assigned anything(variable, function, object) in the code, 
-    ones memory execution, code execution & GEC is erased from call stack and even then value is 
-    not there then it will give us an error "not defined". eg: "x is not defined".
-    It gives a reference error called not defined.
+    Not defined -> Whenever we are not assigned anything(variable, function, object) 
+    in the code, ones memory execution, code execution & GEC is erased from call stack 
+    and even then value is not there then it will give us an error "not defined". 
+    eg: "x is not defined". It gives a reference error called not defined.
 
 Eg:-
     var a;
@@ -77,30 +77,33 @@ Eg:-
 // but if some value is assigned to `a` then it will show `a` is not undefined".
 
 10. Scope -> Scope in javascript is directly related to lexical environment. 
-    Scope is where you can access a specific variable or a function in our code.
+    Scope is where we can access a specific variable or a function in our code.
 
 11. Lexical environment is created when the execution context is created.
     The whole chain of lexical environment is called scope chain.
 
-    Lexical environment = local memory + reference to lexical environment to the parent upto the null.
+    Lexical environment = local memory + reference to lexical environment to the parent 
+    upto the null.
 
-12. `let` & `const` declarations are Hoisted. These are for a `temporal dead jone` for the time being.
+12. `let` & `const` declarations are Hoisted. These are for a `temporal dead jone` for 
+    the time being.
 
-    Temporal Dead Jone -> temporal dead jone is the time since when a `let`/`const` variable was hoisted,
-    and till it is initialized some value.
+    Temporal Dead Jone -> temporal dead jone is the time since when a `let`/`const` 
+    variable was hoisted, and till it is initialized some value.
 
-    `let` is more strict than `var` since we cannot console.log the `let` before initializing it.  
+    `let` is more strict than `var` since we cannot console.log the `let` before 
+    initializing it.  
 
-    Re-declaration or duplication of `let` is not possible, it will throw us an error. & same
-    happens in case we try to transform `let` to `var` with the same name.
+    Re-declaration or duplication of `let` is not possible, it will throw us an error. 
+    & same happens in case we try to transform `let` to `var` with the same name.
 
     But we can re-declare `var` to `var` with the same name.
 
     `const` is even more strict than `let`.
     Eg: we can declare `let` and initialize value to it later on.
-    But `const` doesn't allow us to initialize value later on. We need to assign a value to 
-    `const` immidiately after declaration. Otherwise we get error "Missing initializer in 
-    const declaration".
+    But `const` doesn't allow us to initialize value later on. We need to assign a 
+    value to `const` immidiately after declaration. Otherwise we get error "Missing 
+    initializer in const declaration".
 
 13. Syntax error:- eg: try to console without assigning any value to `const` / (missing syntax)
     Type error:- eg: redeclaring new value to `const`
@@ -110,28 +113,29 @@ Eg:-
 
     `const` is more preferable, if not use `let`(it has temporal dead jone) & avoid `var`.
 
-    Best way to avoid Temporal Dead Jone - is to always put declarations and initializations
-    on top of the code(i,e variables). It will hit the initialization part at the first and then it goes 
-    to the logic.
+    Best way to avoid Temporal Dead Jone - is to always put declarations and 
+    initializations on top of the code(i,e variables). It will hit the initialization 
+    part at the first and then it goes to the logic.
 
-14. Block-> Block is defined under the curly braces{ }, it is also known as compound statement.
-    (it's not doing anything, but why do we use it)
+14. Block-> Block is defined under the curly braces{ }, it is also known as compound 
+    statement. (it's not doing anything, but why do we use it)
     It is used to combine multiple javascript statements into one group.
-                We need to group these statements together, so that we can use multiple statements
-    in a place where javascript expects only one statement.
+                We need to group these statements together, so that we can use multiple 
+    statements in a place where javascript expects only one statement.
 
-    Scope-> Block scope means what all variables and functions we can access inside this Block.
+    Scope-> Block scope means what all variables and functions we can access inside this 
+    Block.
     3 types of scope:- Global scope.
                         Block scope.
                         lexical scope.(one inside another, untill null)
 
-    Shadowing-> If we have same named variable outside block, the variable inside the block scope 
-    that block i,e. outside. 
+    Shadowing-> If we have same named variable outside block, the variable inside the 
+    block scope shadows that block i,e. outside. 
 
-    If we try to shadow `let` into `var`, it is an example of illigal Shadowing, but we can convert 
-    `var` into `let`.
-    If we try to shadow `const` into `let`, it is an example of illigal Shadowing, but we can convert 
-    `let` into `const`.
+    If we try to shadow `let` into `var`, it is an example of illigal Shadowing, but we 
+        can convert `var` into `let`.
+    If we try to shadow `const` into `let`, it is an example of illigal Shadowing, but 
+        we can convert `let` into `const`.
 
     These all will work similar with all kinds of functions.
 

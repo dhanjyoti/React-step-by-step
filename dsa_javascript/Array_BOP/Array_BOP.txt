@@ -25,7 +25,7 @@ Manipulation and Modification:
 
     16. Reverse an array in-place.
     17. Rotate an array by a specified number of positions.
-    18. Remove duplicates from a sorted array.
+    18. Remove duplicates from a sorted array.(imp)
     19. Remove a specific element from an array.
     20. Insert an element at a specific position in an array.
     ___________________________________________________________________________

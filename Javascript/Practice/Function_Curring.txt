@@ -1,5 +1,5 @@
 Function currying is a technique in JavaScript where a function that takes multiple arguments, is 
-transformed into a series of functions that each take a single argument. This allows you to 
+transformed into a series of functions that each take a single argument. This allows us to 
 partially apply a function, fixing some of its arguments, and creating a new function that expects 
 the remaining arguments. It's a powerful and flexible way to work with functions, especially in 
 functional programming. 
@@ -9,12 +9,12 @@ Here's an elabovative explanation of function currying in JavaScript:
 1. **Basic Concept**:
 
    Function currying is all about transforming a function that takes multiple arguments into a 
-   sequence of functions, each taking one argument. This enables you to create more specialized 
+   sequence of functions, each taking one argument. This enables us to create more specialized 
    functions by providing some of the arguments upfront.
 
 2. **Partial Application**:
 
-   Curried functions support partial application, where you can fix one or more arguments and obtain 
+   Curried functions support partial application, where we can fix one or more arguments and obtain 
    a new function that expects the remaining ones. This can be particularly useful when we have a 
    function with many arguments, and we want to reuse parts of it.
 

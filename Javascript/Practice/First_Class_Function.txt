@@ -42,11 +42,11 @@ d(1, 2);    // these are called arguments. The values inside a function
 _____________________________________________________________________________________________________________________
 
 
-// 6. First Class Functions
-// the ability of functions to be used as values and can be passed as an argument to another function and can be returned 
-// from the function. These ability all together is called a first class function.
-// also known as first class citizens in javascript
-// passing functions inside another function as arguments
+6. First Class Functions
+the ability of functions to be used as values and can be passed as an argument to another function and 
+can be returned from the function. These ability all together is called a first class function.
+also known as first class citizens in javascript
+passing functions inside another function as arguments
 
 var e = function(param3){
     console.log(param3);        // we can also return a Anonymous function & named function from a function
@@ -57,5 +57,3 @@ function abc(){
 e(abc);
 _____________________________________________________________________________________________________________________
 
-
-// 7. Arrow Functions

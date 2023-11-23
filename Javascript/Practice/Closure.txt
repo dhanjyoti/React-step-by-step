@@ -70,42 +70,42 @@ Closure -> A function bind/bundled together with its lexical environment/lexical
 
         there they call with two closure x and clouser z 
 
-        ::::::::: Usage OF Clouser :::::::::::::::
-        Use in Module Desgning
-        Currying in js 
-        function like ones
-        memoize
-        maintaining state in async world 
-        setTimeOut
-        Iterators
+    ::::::::::::::::: Usage OF Clouser ::::::::::::::::
+                Use in Module Desgning
+                Currying in js 
+                function like ones
+                memoize
+                maintaining state in async world 
+                setTimeOut
+                Iterators
         
 Note:-  Closeure is like function along with its lexical environment, so even when a function is 
         taken out of its original scope, if it is executed in some other scope. Still it will
         remember its lexical environment.
 
-    Eg: 
-    funcion x(){
-        for(var i=1; i<=5; i++){
-            function close(x){
-                setTimeOut(function(){
-                    console.log(x);
-                }, x * 1000);
-            }
-            close(i);
-        }
-        console.log("Hello dj");
-    } 
-    x();
+                Eg: 
+                        funcion x(){
+                            for(var i=1; i<=5; i++){
+                                function close(x){
+                                    setTimeOut(function(){
+                                        console.log(x);
+                                    }, x * 1000);
+                                }
+                                close(i);
+                            }
+                            console.log("Hello dj");
+                        } 
+                        x();
 
-    Uses of Closures: 
-    - Module Design Pattern
-    - Currying 
-    - Functions like once
-    - Memoize
-    - Maintaining state in async world
-    - setTimeouts
-    - Iterators
-    - and many more...
+        Uses of Closures: 
+        - Module Design Pattern
+        - Currying 
+        - Functions like once
+        - Memoize
+        - Maintaining state in async world
+        - setTimeouts
+        - Iterators
+        - and many more...
 
     Currying ->
     2 ways to curry a function- 1. bind
@@ -122,8 +122,8 @@ More Explaination?
     which means access to variables and functions, which is present in the environment of its parents,
     so each and every funcion has access to them.
                     So even when this function, is executed in some other scope, not in its original
-    scope, but even executed in other scope, it still remembers outer lexical environments where it was 
-    originally present in the code. This is closure.
+    scope, it still remembers outer lexical environments where it was originally present in the code. 
+    This is closure.
 
 Example Demonstration:-
 -> 
@@ -230,9 +230,10 @@ Q. Advantages of Closure
     It helps in data hiding and encapsulation
 
 Q. What is data hiding and encapsulation?
-->  Suppose we have a variable and we want to have some data privacy over it, so that other funcions 
+->  Suppose we have a variable and we want to have some data privacy over it, so that other functions 
     or other pieces of code doesnot have access to that particular data, that is known as data hiding 
-    or data privacy. Or to encapsulate the data, so that other parts of the program or code cannot access it.
+    or data privacy. Or to encapsulate the data, so that other parts of the program or code cannot 
+    access it.
 
 Example:-
 
@@ -295,9 +296,10 @@ Output: 1 2 1
 Q. Disadvantages of closure:
 -> There could be over consumption of memory in closure.
     Sometimes those over consumed memory are not garbage collected.
-    It means it will accumulating a lot of memory if we create a lot of closures, 
+    It means it will accumulate a lot of memory if we create a lot of closures, 
     because those memories are not garbage collected till the program expires.
-    And if not handled properly it can also lead to memory leaks, which might also freeze the browser.
+    And if not handled properly it can also lead to memory leaks, which might 
+    also freeze the browser.
 
 Q. Garbage Collector:
 -> Its like a program, in the browser or the Javascript engine, which freezes the unutilized memory.

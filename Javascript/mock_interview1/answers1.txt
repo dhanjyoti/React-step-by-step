@@ -40,8 +40,8 @@ ________________________________________________________________________________
 2. What is a difference between between div and span ?
 -> 1. `div` a block-level container. 
                 But `span` is inline-level container.
-    2. `div` is typically used to group and structure content, creating a 
-    block-level container that often separates sections of a webpage.
+    2. `div` is typically used to group and structure content, creating a block-level 
+        container that often separates sections of a webpage.
                 But `span` is used to apply styles or scripting to a specific 
                 portion of text within a block-level element.
     3. `div` is usually starts on a new line and takes up the full width available.
@@ -56,18 +56,18 @@ ________________________________________________________________________________
     JavaScript and CSS.
 
     Having multiple elements with the same ID is considered invalid HTML and can 
-    lead to unexpected behavior in scripts and styles. When you attempt to select 
+    lead to unexpected behavior in scripts and styles. When we attempt to select 
     an element by its ID using JavaScript, the browser will typically return only 
     the first element with that ID, ignoring subsequent elements with the same ID.
 
                 To uniquely identify and work with multiple elements, use classes 
-    instead of IDs. Classes can be applied to multiple elements, and you can select 
+    instead of IDs. Classes can be applied to multiple elements, and we can select 
     and manipulate them collectively or individually using JavaScript or CSS.
 ___________________________________________________________________________________
 
 4. How do you specify a MetaData in HTML?
 -> In HTML, metadata is often specified using the `<meta>` element, which provides 
-    information about the HTML document. The `<meta>`element is placed within the 
+    information about the HTML document. The `<meta>` element is placed within the 
     `<head>` section of the HTML document. 
 
     Example: 1. Character Set Encoding (UTF-8)
@@ -129,7 +129,7 @@ ________________________________________________________________________________
         understand.
 
     Consistent Styling:
-        CSS allows you to define styles in a central location and apply them 
+        CSS allows us to define styles in a central location and apply them 
         consistently across multiple pages. This ensures a cohesive and professional 
         look for the entire website.
 
@@ -140,9 +140,8 @@ ________________________________________________________________________________
 
     Responsive Design:
         CSS provides features like media queries and flexible layout options, 
-        enabling 
-        the creation of responsive designs that adapt to different screen sizes and 
-        devices.
+        enabling the creation of responsive designs that adapt to different screen 
+        sizes and devices.
 
     Reusability of Code:
         CSS classes and styles can be reused across different elements, reducing 
@@ -182,7 +181,7 @@ ________________________________________________________________________________
 ___________________________________________________________________________________
 
 3. What is diff between Display : none and Visible false.
--> 1. When an element is set to `display: none`, it is entirely removed from the 
+->  1. When an element is set to `display: none`, it is entirely removed from the 
         document flow.
                     But when an element is set to `visibility: hidden`, it remains 
         in the document flow, but it is not visible.
@@ -305,8 +304,8 @@ Code Examples:
         var undefinedVar;
         console.log(undefinedVar); // Output: undefined
 
-Intuition: You can think of null as an explicit "nothing" you can assign to a 
-    variable, while undefined is what you get when a variable has been declared 
+Intuition: We can think of null as an explicit "nothing" we can assign to a 
+    variable, while undefined is what we get when a variable has been declared 
     without an assigned value.
 ___________________________________________________________________________________
 
@@ -420,7 +419,7 @@ ________________________________________________________________________________
     * In a "passed by value" mechanism, the actual value of the variable is passed 
         to the function or method.
     * The function receives a copy of the variable's value, and any changes made to 
-    the parameter inside the function do not affect the original variable outside 
+        the parameter inside the function do not affect the original variable outside 
         the function.
     * This is typical for primitive data types such as numbers, strings, and booleans.
 
@@ -462,7 +461,7 @@ but reassigning the reference inside the function does not affect the
 original reference.
 ___________________________________________________________________________________
 
-7. What is immediately invoked function
+7. What is immediately invoked function?
 -> An Immediately Invoked Function Expression (IIFE) is a common JavaScript pattern 
     where a function is defined and executed immediately after its creation. This 
     pattern helps create a private scope for variables, preventing them from 
@@ -488,7 +487,7 @@ ________________________________________________________________________________
         the IIFE are not added to the global scope, they don't interfere with 
         other scripts or libraries.
     3. Immediate Execution: The function is executed immediately after it's 
-        defined, allowing you to perform tasks or initialize values right away.
+        defined, allowing us to perform tasks or initialize values right away.
 ___________________________________________________________________________________
 
 8. Explain Higher Order Functions in javascript.
@@ -612,7 +611,7 @@ ________________________________________________________________________________
 ___________________________________________________________________________________
 
 13. What is `addEventListner`?
-->  `addEventListener` is a method in JavaScript that allows you to attach an event 
+->  `addEventListener` is a method in JavaScript that allows us to attach an event 
     handler function to an HTML element. An event handler is a function that gets 
     executed in response to a specific event occurring on an HTML element, such as a 
     click, mouseover, keypress, etc.
@@ -654,14 +653,14 @@ ________________________________________________________________________________
 
 15. What is event delegation, and why is it useful in JavaScript? Provide an example.
 
--> Event delegation is a JavaScript programming pattern where you use a single event 
+-> Event delegation is a JavaScript programming pattern where we use a single event 
     listener to manage all the events for a particular type on a parent element, 
     rather than setting up individual event listeners on each child element. This is 
     achieved by taking advantage of event bubbling, where events on nested elements 
     propagate up to their ancestors.
 
 Event delegation is useful for the following reasons:
-    1. Efficiency: It reduces the number of event listeners in your code, which can 
+    1. Efficiency: It reduces the number of event listeners in our code, which can 
         improve performance, especially when dealing with a large number of elements.
 
     2. Dynamic Content: It works well with dynamically added or removed elements, 
@@ -699,7 +698,7 @@ ________________________________________________________________________________
     --Callback Functions, Promises, Async/Await, etc... 
 ___________________________________________________________________________________ 
 
-Question--- Call this api and show the result
+17. Question--- Call this api and show the result
             API - https://gorest.co.in/public/v2/users
 -> Code: In html 
 

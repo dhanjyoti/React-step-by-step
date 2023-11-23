@@ -1,0 +1,89 @@
+### Promise ###
+-> A promise in JavaScript is an object that represents the eventual completion or 
+    failure of an asynchronous operation and its resulting value. It is a way to handle 
+    asynchronous operations more elegantly and avoid the callback hell, making code 
+    more readable and maintainable.
+
+Here's an explanation of key concepts related to promises:
+
+1. States of a Promise:
+    * Pending: The initial state when the promise is created, representing that the 
+        operation is still in progress.
+    * Fulfilled: The state when the asynchronous operation is completed successfully, 
+        and the promise has a resulting value.
+    * Rejected: The state when the asynchronous operation encounters an error or is 
+        unsuccessful, and the promise has a reason for failure.
+
+2. Creating a Promise:
+    * A promise is created using the `Promise` constructor, which takes a function 
+        (commonly referred to as the executor) as an argument.
+    * The executor function has two parameters: `resolve` and `reject`. They are functions 
+        provided by the promise implementation to indicate the successful fulfillment 
+        or rejection of the promise.
+    Example->
+                const myPromise = new Promise((resolve, reject) => {
+                    // Asynchronous operation
+                    // If successful, call resolve with the result
+                    // If an error occurs, call reject with the reason
+                });
+
+3. Handling the Result:
+    * The `then` method is used to handle the fulfillment of a promise. It takes a 
+        callback function that will be executed when the promise is resolved 
+        successfully.
+    Example->
+                myPromise.then((result) => {
+                    console.log('Promise fulfilled with result:', result);
+                });
+
+4. Handling Errors:
+    * The `catch` method is used to handle the rejection of a promise. It takes a 
+        callback function that will be executed when the promise is rejected.
+    Example-> 
+                myPromise.catch((reason) => {
+                    console.error('Promise rejected with reason:', reason);
+                });
+
+5. Chaining Promises:
+    * Promises can be chained using `then` to execute asynchronous operations sequentially.
+    Example-> 
+                myPromise
+                .then((result) => {
+                    // Do something with the result
+                    return anotherPromise;
+                })
+                .then((anotherResult) => {
+                    // Handle the result of the second promise
+                })
+                .catch((error) => {
+                    // Handle errors in any of the previous promises
+                });
+
+Promises provide a cleaner and more structured way to work with asynchronous code 
+compared to traditional callback patterns. They are widely used in modern JavaScript 
+development, especially in scenarios like making API calls, reading files, or handling 
+other asynchronous operations.
+
+Code Example:-
+            function fetchData(){
+                return new Promise((resolve, reject)=>{
+                    setTimeout(()=>{
+                        const success = true;
+                        if(success){
+                            resolve("Data successfully fetched!");
+                        } else{
+                            reject("Error, Unable to fetch data");
+                        }
+                    }, 2000);
+                });
+            }
+
+            fetchData()
+                .then((result)=>{
+                    console.log(result);
+                })
+                .catch((error)=>{
+                    console.error(error);
+                });
+
+

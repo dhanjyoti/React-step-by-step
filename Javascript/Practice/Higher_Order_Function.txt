@@ -1,0 +1,47 @@
+One of the most amazing part of Javascript is functional programming, but it is 
+    not possible without Higher-Order-Function.
+
+Higher Order Function-> A function which takes another function as an arguemnt
+    or returns a function from it is known as Higher-Order-Function. 
+
+Example:
+        function x(){
+            console.log("Hello");   // Callback
+        }
+
+        function y(x){      // Higher Order Function
+            x();
+        }
+
+Interview Approach to write the functions
+
+            const radius = [3, 1, 2, 4];
+
+            const area = function(radius){                  // callback
+                return Math.PI * radius * radius;
+            };
+
+            const circumference = function(radius){         // callback
+                return 2 * Math.PI * radius;
+            };
+
+            const diameter = function(radius){              // callback
+                return 2 * radius;
+            }
+
+        { /*    Array.prototype.calculate = function(radius, logic) */  } // When we put something to `prototype`(`calculate` avalaible in all arrays) it appear in all of that type
+            const calculate = function(radius, logic){      // calculate is the Higher-Order-Function
+                const output = [];
+                for(let i=0; i<radius.length; i++){
+                    output.push(logic(radius[i]));
+                }
+                return output;
+            }
+
+        { /* console.log(radius.map(area))   */ }         // both are similar
+
+            console.log(calculate(radius, area));
+            console.log(calculate(radius, circumference));
+            console.log(calculate(radius, diameter));
+
+These all are possible because functions are First-Class citizens in Javascript.

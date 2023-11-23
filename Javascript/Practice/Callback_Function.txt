@@ -13,10 +13,14 @@ Note:  * To understand Event loops properly we should know what a callback funct
 
 
 What do you mean by Callback function in Javascript?
--> We can take a function and pass it into another function, and when we do so, this function which
-we pass into another function is known as callback function.
+-> A callback function is a function that is passed as an argument to another function 
+    and is executed after the completion of some operation. Callback functions are used 
+    to handle asynchronous operations, maintain control flow, and support functional 
+    programming patterns.
+                    We can take a function and pass it into another function, and when we do so, 
+    this function which we pass into another function is known as callback function.
                     As we know Javascript is a synchronous and single-threaded language, but 
-due to callback we can do asynhcronous thing in javascript.
+    due to callback we can do asynhcronous thing in javascript.
 
 Example:
 setTimeout(function () {        // This function that we first pass as a parameter to the setTimeOut 
@@ -52,7 +56,7 @@ Output: x y timer(after 4sec)
 ### Garbage Collection and removeEventListeners
 
 EventListerners are heavy, it means it takes memory. So whenever we attach an 
-EventListerner it kind of forms a closure, but even when the call stack is empty,
+EventListerner it kind of forms a closure, even when the call stack is empty,
 but still the program is not freed from the memory. Because we never know if anyone 
 would try to use it later, because of this we cannot free up this extra memory, this 
 is why EventListerners are heavy. This is the reason we remove EventListerners when

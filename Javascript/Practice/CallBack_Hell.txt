@@ -1,0 +1,11 @@
+While writing callback we face two issues-
+    # Callback Hell
+    # Inversion Of Control
+
+Callback-Hell-> When we have a large code base, & too many functions here and there 
+    & one function is dependent on the other, we end up falling into callback-hell. 
+    Here our code starts to grow horizontally instead of vertically. It is very 
+    unmaintainable. It is also known as `Pyramid of Doom`.
+
+Inversion Of Control-> It is another problem while using callback, it is like we 
+    loose the control of our code when we are using callbacks.
