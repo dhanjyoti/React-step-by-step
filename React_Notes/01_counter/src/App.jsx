@@ -3,6 +3,7 @@ import './App.css'
 import Counter from './components/Counter';
 import BgChanger from './components/BgChanger';
 import MainDropdown from './dropdown/MainDropdown';
+import PasswordGenerator from './passwordGenerator/PasswordGenerator';
 
 function App() {
 
@@ -11,7 +12,8 @@ function App() {
       <Routes>
         <Route path="/counter" element={<Counter />}/>
         <Route path="/bgchanger" element={<BgChanger />}/>
-        <Route path="/mainDropdown" element={<MainDropdown />}/>
+        <Route path="/maindropdown" element={<MainDropdown />}/>
+        <Route path="/passwordgenerator" element={<PasswordGenerator />}/>
       </Routes>
     </BrowserRouter>
   )
