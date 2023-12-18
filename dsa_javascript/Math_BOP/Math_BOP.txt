@@ -1,0 +1,76 @@
+Basic Math Operations:
+    1. Add two numbers.
+    2. Subtract two numbers.
+    3. Multiply two numbers.
+    4. Divide two numbers.
+    5. Calculate the remainder when dividing two numbers.
+    6. Find the absolute value of a number.
+    7. Round a floating-point number to the nearest integer.
+    8. Calculate the square root of a number.
+    9. Raise a number to a power.
+    10. Calculate the factorial of a number.
+__________________________________________________________________________________
+
+Trigonometry:
+    11. Find the sine of an angle.
+    12. Find the cosine of an angle.
+    13. Find the tangent of an angle.
+    14. Convert degrees to radians.
+    15. Convert radians to degrees.
+__________________________________________________________________________________
+
+Exponents and Logarithms:
+    16. Calculate the natural logarithm of a number.
+    17. Calculate the base-10 logarithm of a number.
+    18. Exponentiate a number (raise e to the power of the number).
+    19. Raise a number to an arbitrary power using logarithms.
+__________________________________________________________________________________
+
+Random Numbers:
+    20. Generate a random integer within a specified range.
+    21. Generate a random floating-point number between 0 and 1.
+    22. Simulate a coin toss (generate a random 0 or 1).
+    23. Simulate a six-sided die roll (generate a random number from 1 to 6).
+__________________________________________________________________________________
+
+Geometry:
+    24. Calculate the area of a rectangle.
+    25. Calculate the perimeter of a rectangle.
+    26. Calculate the area of a circle.
+    27. Calculate the circumference of a circle.
+    28. Calculate the volume of a sphere.
+    29. Calculate the surface area of a cube.
+    30. Calculate the hypotenuse of a right-angled triangle.
+__________________________________________________________________________________
+
+Equations and Inequalities:
+    31. Solve a linear equation (ax + b = 0).
+    32. Solve a quadratic equation (ax^2 + bx + c = 0).
+    33. Solve a system of linear equations.
+    34. Check if a number is prime.
+    35. Find the greatest common divisor (GCD) of two numbers.
+__________________________________________________________________________________
+
+Statistics:
+    36. Calculate the mean (average) of a set of numbers.
+    37. Calculate the median of a set of numbers.
+    38. Calculate the mode of a set of numbers.
+    39. Calculate the standard deviation of a set of numbers.
+    40. Perform basic statistical analysis on a dataset.
+__________________________________________________________________________________
+
+Number Manipulation:
+    41. Reverse the digits of an integer.
+    42. Check if a number is a palindrome.
+    43. Find the factors of a number.
+    44. Convert a binary number to decimal.
+    45. Convert a decimal number to binary.
+__________________________________________________________________________________
+
+Number Properties:
+    46. Check if a number is even.
+    47. Check if a number is odd.
+    48. Check if a number is a perfect square.
+    49. Find the next prime number after a given number.
+    50. Calculate the sum of digits of a number.
+__________________________________________________________________________________

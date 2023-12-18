@@ -33,7 +33,7 @@ Manipulation and Modification:
 Subarrays and Slicing:
 
     21. Find and print all subarrays of an array.
-    22. Find the maximum sum of a subarray (Kadane's algorithm).
+    22. Find the maximum sum of a subarray (Kadane's algorithm).(time complexity O(n))(imp)
     23. Find the subarray with the largest product.
     24. Check if an array contains a subarray with a given sum.
     25. Find the intersection of two arrays.
@@ -73,7 +73,7 @@ Intersection and Union:
     43. Find the difference between two arrays.
     ___________________________________________________________________________
 
-Shuffling and Randomization:
+Shuffling and Randomization:                                                    
     
     44. Shuffle the elements of an array randomly.
     45. Generate a random permutation of an array.
@@ -81,8 +81,9 @@ Shuffling and Randomization:
 
 Element Frequency:
     
-    46. Find the most frequent element in an array.
-    47. Find the kth most frequent element in an array.
-    48. Find the majority element (element that appears more than n/2 times).
-    49. Find the elements that appear more than n/3 times in an array.
-    50. Find the second largest element in an array.
+    46. Find the most frequent element in an array.                            
+    47. Find the kth most frequent element in an array.                        
+    48. Find the majority element (element that appears more than n/2 times).  
+    49. Find the elements that appear more than n/3 times in an array.         
+    50. Find the second largest element in an array.                           
+    ___________________________________________________________________________
