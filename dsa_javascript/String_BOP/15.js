@@ -14,3 +14,4 @@ let ans1 = containsOnlyDigit(str1);
 let ans2 = containsOnlyDigit(str2);
 console.log(ans1);
 console.log(ans2);
+
