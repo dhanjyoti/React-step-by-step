@@ -1,0 +1,132 @@
+Basic Operations:
+
+    1. Create an empty queue.
+    2. Enqueue an element into the queue.
+    3. Dequeue an element from the queue.
+    4. Peek at the front element of the queue without dequeuing.
+    5. Check if a queue is empty.
+    6. Implement a queue using arrays.
+    7. Implement a queue using linked lists.
+    8. Reverse the elements of a queue.
+    9. Implement a circular queue.
+    10. Implement a double-ended queue (Deque).
+_____________________________________________________________________________________
+
+Queue Applications:
+
+    11. Implement a queue-based breadth-first search (BFS) algorithm.
+    12. Implement a queue-based depth-first search (DFS) algorithm.
+    13. Implement a queue-based level order traversal of a binary tree.
+    14. Generate binary numbers from 1 to N using a queue.
+    15. Implement a stack using two queues.
+_____________________________________________________________________________________
+
+Circular Queue:
+
+    16. Implement a circular queue using arrays.
+    17. Implement a circular queue using linked lists.
+    18. Design a data structure that supports the following operations: insert, delete, 
+        get_random_element. All operations should be done in constant time.
+_____________________________________________________________________________________
+
+Priority Queue:
+
+    19. Implement a basic priority queue.
+    20. Implement a max heap using a priority queue.
+    21. Implement a min heap using a priority queue.
+_____________________________________________________________________________________
+
+Applications of Priority Queue:
+
+    22. Merge multiple sorted arrays using a priority queue.
+    23. Sort an almost sorted array (each element is at most k away from its target position) 
+        using a priority queue.
+    24. Design and implement a data structure for LRU (Least Recently Used) cache.
+_____________________________________________________________________________________
+
+Double-Ended Queue (Deque):
+
+    25. Implement a deque using arrays.
+    26. Implement a deque using linked lists.
+    26. Implement a data structure for a sliding window maximum using a deque.
+_____________________________________________________________________________________
+
+Applications of Deque:
+
+    28. Implement a stack supporting push, pop, top, and retrieving the minimum element in 
+        constant time.
+    29. Design and implement a circular deck.
+    30. Design and implement a data structure for a max frequency stack.
+_____________________________________________________________________________________
+
+Circular Tour Problem:
+
+    31. Solve the circular tour problem.
+    32. Find the minimum element in every window of size k in a circular array.
+_____________________________________________________________________________________
+
+Rearrange Queue:
+
+    33. Reverse the first k elements of a queue.
+    34. Interleave the first half of the queue with the second half.
+    35. Implement a queue using stacks.
+_____________________________________________________________________________________
+
+Applications of Queue:
+
+    36. Design and implement a data structure for a recent counter.
+    37. Design and implement a data structure for a call center.
+    38. Implement a data structure for a printer spooler.
+_____________________________________________________________________________________
+
+Josephus Problem:
+
+    39. Solve the Josephus problem.
+    40. Find the position of the surviving person in a Josephus problem variant.
+_____________________________________________________________________________________
+
+Petrol Pump Tour:
+
+    41. Solve the petrol pump tour problem.
+_____________________________________________________________________________________
+
+Implement a Queue using Stacks:
+
+    42. Implement a queue using two stacks.
+_____________________________________________________________________________________
+
+Check for Palindrome Queue:
+
+    43. Check if a queue is a palindrome.
+    44. Implement a palindrome checker using a queue.
+_____________________________________________________________________________________
+
+Generate Binary Numbers:
+
+    45. Generate binary numbers from 1 to N using a queue.
+_____________________________________________________________________________________
+
+Rotating Queue:
+
+    46. Rotate a queue by k elements.
+_____________________________________________________________________________________
+
+Generate Fibonacci Series using Queue:
+
+    47. Generate the Fibonacci series using a queue.
+_____________________________________________________________________________________
+
+Find the First Circular Tour:
+
+    48. Find the first circular tour that visits all petrol pumps.
+_____________________________________________________________________________________
+
+Implement a Stack using Queues:
+
+    49. Implement a stack using two queues.
+_____________________________________________________________________________________
+
+Check for Balanced Parentheses:
+
+    50. Check for balanced parentheses using a queue.
+_____________________________________________________________________________________

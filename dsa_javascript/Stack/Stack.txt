@@ -1,0 +1,143 @@
+Basic Operations:
+
+    1. Create an empty stack.
+    2. Push an element onto the stack.
+    3. Pop an element from the stack.
+    4. Peek at the top element of the stack without popping.
+    5. Check if a stack is empty.
+    6. Implement a stack using arrays.
+    7. Implement a stack using linked lists.
+    8. Reverse a string using a stack.
+    9. Check for balanced parentheses using a stack.
+    10. Evaluate a postfix expression using a stack.
+_____________________________________________________________________________________
+
+Parenthesis Matching:
+
+    11. Check for balanced parentheses in an expression.
+    12. Extend the parenthesis matching to handle multiple types of parentheses.
+    13. Evaluate an infix expression with parentheses using a stack.
+    14. Convert an infix expression to postfix using a stack.
+_____________________________________________________________________________________
+
+Expression Evaluation:
+
+    15. Evaluate a postfix expression with multiple-digit numbers.
+    16. Evaluate a postfix expression with variables.
+    17. Evaluate a postfix expression with unary operators.
+    18. Convert an infix expression to prefix using a stack.
+_____________________________________________________________________________________
+
+Special Stack Operations:
+
+    19. Design a stack that supports push, pop, top, and retrieving the minimum element.
+    20. Implement a stack with push, pop, top, and retrieving the middle element.
+    21. Implement a stack that supports push, pop, top, and retrieving the maximum element.
+    22. Implement a stack with push, pop, top, and constant time retrieving the minimum element.
+_____________________________________________________________________________________
+
+Stack Applications:
+
+    23. Implement a stack-based sorting algorithm.
+    24. Implement a stack-based queue.
+    24. Implement a stack with efficient push, pop, and find-max operations.
+_____________________________________________________________________________________
+
+Expression Conversion:
+
+    26. Convert an infix expression to postfix using a stack.
+    27. Convert a postfix expression to infix using a stack.
+    28. Convert an infix expression to prefix using a stack.
+    29. Convert a postfix expression to prefix using a stack.
+_____________________________________________________________________________________
+
+Stack and Recursion:
+
+    30. Implement a function to reverse a stack using recursion.
+    31. Implement a function to sort a stack using recursion.
+_____________________________________________________________________________________
+
+Next Greater Element:
+
+    32. Find the next greater element for each element in an array.
+    33. Find the next greater element for each element in a circular array.
+_____________________________________________________________________________________
+
+Stock Span Problem:
+
+    34. Calculate the span of stock prices.
+    35. Implement a stack-based solution for the stock span problem.
+_____________________________________________________________________________________
+
+Maximum Area in Histogram:
+
+    36. Calculate the maximum area of a histogram.
+_____________________________________________________________________________________
+
+Expression Tree:
+
+    37. Build an expression tree from a postfix expression.
+    38. Evaluate an expression tree.
+_____________________________________________________________________________________
+
+Implement a Min Stack:
+
+    39. Implement a stack that supports push, pop, top, and retrieving the minimum element 
+        in constant time.
+_____________________________________________________________________________________
+
+Simplify Directory Path:
+
+    40. Simplify a Unix-like directory path using a stack.
+_____________________________________________________________________________________
+Implement a Stack with Middle Operations:
+
+    41. Implement a stack with push, pop, top, find-middle, and delete-middle operations 
+        in O(1) time.
+_____________________________________________________________________________________
+
+Implement a Stack with Max Operations:
+
+    42. Implement a stack with push, pop, top, and retrieving the maximum element in O(1) time.
+_____________________________________________________________________________________
+
+Implement a Stack with Sort Operations:
+
+    43. Implement a stack with push, pop, top, and sorting the elements in the stack.
+_____________________________________________________________________________________
+
+Expression Parenthesis Depth:
+
+    44. Find the maximum depth of nested parentheses in an expression.
+_____________________________________________________________________________________
+
+Evaluate a Boolean Expression:
+
+    45. Evaluate a boolean expression represented as a string.
+_____________________________________________________________________________________
+
+Largest Rectangle in Histogram:
+
+    46. Find the largest rectangle in a histogram.
+_____________________________________________________________________________________
+
+Evaluate Division:
+
+    47. Evaluate division expressions.
+_____________________________________________________________________________________
+
+Design a Stack with Increment Operation:
+
+    48. Design a stack with push, pop, increment, and retrieve operations.
+_____________________________________________________________________________________
+
+Implement a Min Stack using Extra Space:
+
+    49. Implement a stack that supports push, pop, top, and retrieving the minimum element 
+        in constant time using extra space.
+_____________________________________________________________________________________
+
+Implement a Stack with O(1) Space:
+
+    50. Implement a stack with push, pop, and retrieving the minimum element in O(1) space.
+_____________________________________________________________________________________

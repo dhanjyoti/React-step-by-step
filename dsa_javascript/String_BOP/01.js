@@ -6,6 +6,12 @@ let myStr = "Hello Dhanjyoti";
 //     process.stdout.write(myStr[i] + " ");
 // }
 
+// for(let char of myStr){
+//     process.stdout.write(char + " ");
+// }
+
+let result = '';
 for(let char of myStr){
-    process.stdout.write(char + " ");
+    result += char + ' ';
 }
+console.log(result)

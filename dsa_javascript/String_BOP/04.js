@@ -1,6 +1,6 @@
 //  4. Reverse a string.
 
-let str = "holuloo";
+// let str = "holuloo";
 
 // function reverseString(str){
 //     return str.split("").reverse().join("")
@@ -9,16 +9,16 @@ let str = "holuloo";
 // console.log(result);
 
 
-// function reverseString(str){
-//     let reversed = "";
-//     for(const c of str){
-//         reversed = c + reversed;
-//     }
+function reverseString(str){
+    let reversed = "";
+    for(const c of str){
+        reversed = c + reversed;
+    }
 
-//     return reversed;
-// }
-// let result = reverseString(str);
-// console.log(result);
+    return reversed;
+}
+let result = reverseString(str);
+console.log(result);
 
 
 // function reverseString(str){
