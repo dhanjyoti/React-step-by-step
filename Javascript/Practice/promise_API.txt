@@ -1,0 +1,30 @@
+There are four major promise APIs
+    1. promise.all()
+    2. promise.allSettled()
+    3. promise.race()
+    4. promise.any()
+
+1. promise.all() -> Suppose we need to make parallel API calls, Eg: there are 10
+    user Ids, & we have an api call for user info, we want to make 10 parallel api 
+    calls for 10 users. Here we shall use parallel apis.
+                It is used to handle multiple api calls together. It takes an 
+    array(iterables) of promises as an input.
+    But if any one of these api's is not successfull, it will give us an error for
+    all the api's. It will not wait for other promises to get successful or rejected.
+
+2. promise.allSettled() -> The problem of promise.all() is settled through
+    promise.allSettled(). when we need the result of only the successful promises, we
+    use promise.allSettled(). Here even if any one of the promise fails in between
+    it will still wait for all promises to settled.
+
+3. promise.race() -> As the name suggest its a race, so as soon as the first promise 
+    resolves, it will give the result of that promise. So whether the result maybe 
+    success or failure. It will give us the outcome of the first promise. It will not
+    wait for other promises to finish. 
+
+4. promise.any() -> Whenever the first promise will resolve, or it will wait for
+    the first promise to get success, it will show us the result of the first successful 
+    promise. Even if any promise is failed in the beginning, it doesn't matter. It
+    will show us the promise of that result.
+                But if all the api/promise fails, the return will be an aggregated
+    error. It will be an error of all the errors, in a array.

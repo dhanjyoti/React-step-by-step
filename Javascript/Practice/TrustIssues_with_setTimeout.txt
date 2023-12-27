@@ -1,6 +1,6 @@
 `setTimeout` doesnot always gives the exact time of execution.
 This is because if the code before the `setTimeout` to get executed takes a longer time to 
-execute eg: 10secs, since the code is too big, by then if the `setTimeout` was set for 3secs
+execute, eg: 10secs, since the code is too big, by then if the `setTimeout` was set for 3secs
 it already expires and put to callback queue for execution. But since the previous function
 or code is not freed from the memory(GEC), so `setTimeout` is not able to execute itself.
 Event loop can pick up the `setTimeout` and execute only after the code in the GEC has 

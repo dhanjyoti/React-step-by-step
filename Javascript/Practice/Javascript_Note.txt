@@ -1,29 +1,33 @@
-Javascript: JavaScript is a cross-platform, object-oriented scripting language used to make webpages interactive 
-(e.g., having complex animations, clickable buttons, pop-up menus, etc.). 
+Javascript: JavaScript is a cross-platform, object-oriented scripting language 
+used to make webpages interactive (e.g., having complex animations, clickable buttons, 
+pop-up menus, etc.). 
 
 Statement ->  A unit of code in JavaScript that represents a complete instruction or action, 
-often terminated by a semicolon. Statements are executed sequentially, one after the other, and they 
-define the program's behavior.
+often terminated by a semicolon. Statements are executed sequentially, one after the other, 
+and they define the program's behavior.
 
 Sep 9+
-DOCTYPE:-  <!DOCTYPE> is a declaration in HTML that specifies the type and version of the document.
+DOCTYPE:-  <!DOCTYPE> is a declaration in HTML that specifies the type and version of 
+the document.
 
 Meta:-This is an HTML element used to provide metadata about the HTML document. 
-Metadata is information about the document that isn't displayed on the web page but provides important 
-information for web browsers and search engines.
+Metadata is information about the document that isn't displayed on the web page but provides 
+important information for web browsers and search engines.
 
-Encoding:- Encoding, in the context of computing and data representation, refers to the process of converting 
-information or data from one format or representation into another. 
+Encoding:- Encoding, in the context of computing and data representation, refers to the process 
+of converting information or data from one format or representation into another. 
 
 Decoding:- Decoding is the process of converting encoded or encoded data back into its original, 
-human-readable format or its original representation. It is essentially the reverse operation of encoding. 
+human-readable format or its original representation. It is essentially the reverse operation 
+of encoding. 
 
-<meta charset="UTF-8"> :- <meta charset="UTF-8"> is an HTML meta tag used to declare the character encoding 
-of a web page.
+<meta charset="UTF-8"> :- <meta charset="UTF-8"> is an HTML meta tag used to declare the 
+character encoding of a web page.
 
-UTF:- "UTF" stands for "Unicode Transformation Format." Unicode is a standardized character encoding system 
-that assigns a unique number (called a "code point") to every character from every writing system 
-in the world. This includes characters from English, Chinese, Arabic, Greek, and many others.
+UTF:- "UTF" stands for "Unicode Transformation Format." Unicode is a standardized character 
+encoding system that assigns a unique number (called a "code point") to every character from 
+every writing system in the world. This includes characters from English, Chinese, Arabic, Greek, 
+and many others.
 
 OUTPUT:
 JavaScript can "display" data in four(4) different ways:
@@ -45,22 +49,23 @@ Eg: window.alert("hello")
 Writing into the browser console, using console.log().
 Eg: console.log("hello");
 
-Variable: Variables are Containers for Storing Data. A variable is a named reference to a value. That way 
-an unpredictable value can be accessed through a predetermined name.
-Eg- var mithun = 30; here "mithun" is the variable. "var" is variable declaration & "30" is value.
+Variable: Variables are Containers for Storing Data. A variable is a named reference 
+to a value. That way an unpredictable value can be accessed through a predetermined name.
+Eg- var mithun = 30; here "mithun" is the variable. "var" is variable declaration & 
+"30" is value.
 types of variable declaration - var, let & const
 
-let, const & var:- let can be declared and value can be assigned later. In const value should be assigned 
-immediately after declaration.
+let, const & var:- let can be declared and value can be assigned later. In const value 
+should be assigned immediately after declaration.
 
 let mithun = 30; // If the value might change later
 const mithun = 30; // If the value should not be changed (constant)
-var mithun = 30; // works similar to both let and const, it came before ES6(2015). var has global as well as 
-functional scope;
+var mithun = 30; // works similar to both let and const, it came before ES6(2015). 
+var has global as well as functional scope;
 
 Aug25+ 
-Hoisting: Hoisting in JavaScript is the behavior where variable and function declarations are moved to the 
-top of their containing scope during the code execution phase.
+Hoisting: Hoisting in JavaScript is the behavior where variable and function declarations 
+are moved to the top of their containing scope during the code execution phase.
 
 Aug18+ 
 Data Type: a data type defines the type of value that a variable or expression can hold.
@@ -70,8 +75,8 @@ Data types are divided into two groups 1> Primitive & 2> Non-Primitive
 (Primitive eg:- undefined, null, boolean, string, symbol, bigint, number).
 (Non-Primitive:- Object).
 
-JavaScript provides eight(8) different data types which are undefined, null, boolean, string, symbol, bigint, 
-number, and object.
+JavaScript provides eight(8) different data types which are undefined, null, boolean, string, 
+symbol, bigint, number, and object.
 
 Assignment Operator: https://www.w3schools.com/js/js_assignment.asp
 
@@ -94,12 +99,12 @@ shift() - it removes the first element.
 Function - a function is a reusable block of code that performs a specific task or set of tasks.
  
 Aug21+ 
-JSON -  JSON stands for "JavaScript Object Notation." It's a simple and widely used way to organize and 
-store data in a format that's easy for both humans and computers to understand.	
+JSON -  JSON stands for "JavaScript Object Notation." It's a simple and widely used way to 
+organize and store data in a format that's easy for both humans and computers to understand.	
  
-Stringify - stringify is a term used to describe the process of turning complex data, like objects or arrays, 
-into a special kind of text called a "string." A string is just a bunch of characters, like letters, numbers,
-and symbols, all put together.	
+Stringify - stringify is a term used to describe the process of turning complex data, 
+like objects or arrays, into a special kind of text called a "string." A string is just a 
+bunch of characters, like letters, numbers, and symbols, all put together.	
 
 Aug22+
 Conditional Statement Questions:
@@ -132,8 +137,8 @@ ans:    xyz has highest salary
 console.log(factorial(5)); // Outputs 120 (5! = 5 * 4 * 3 * 2 * 1 = 120)
 
 Statement:- In JavaScript, a statement is a complete line of code that performs a specific action. 
-Statements are the fundamental building blocks of JavaScript programs, and they instruct the computer 
-on what to do. 
+Statements are the fundamental building blocks of JavaScript programs, and they instruct the 
+computer on what to do. 
 
 Sep 8+
 Array:- Array is a collection of similar type of data.

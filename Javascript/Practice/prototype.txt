@@ -1,0 +1,84 @@
+prototype is a behaviour of Javascript
+
+we get the new keyword, this keyword, classes in javascript, & inheritance.
+
+Array & string-> object-> null
+
+everything is javascript is an object, and all properties available inside object
+are also included in Array and String.
+
+// New
+Here's what happens behind the scenes when the new keyword is used:
+
+A new object is created: The new keyword initiates the creation of a 
+new Javascript object.
+
+A prototype is linked: The newly created object gets linked to the
+prototype property of the constructor function. This means that it 
+has access to properties and methods defined on the constructor's 
+prototype.
+
+The constructor is called: The constructor function is called with 
+the specified  arguments and this is bound to the newly created 
+object. If no explicit return value is specified from the constructor,
+Javascript asssumes this, the newly created object, to be the intended
+return value.
+
+The new object is returned: After the constructor function has been 
+called, if it doesn't return a non-primitive value(object, array, function,
+etc.), the newly created object is returned.
+
+// Prototype
+
+Explaination through constructor function:-
+
+            function Person(name, age, salary){
+                this.name = name;
+                this.age = age;
+                this.salary = salary;
+            }
+            const Ram = new Person("dj", 25, 30000);
+            console.log(Ram);
+
+In this the output is // Person {name:'dj', age:25, salary:30000}        
+            But if we try to insert one more variable inside the 
+Constructor function-
+Example:
+            function Person(name, age, salary){
+                this.name = name;
+                this.age = age;
+                this.salary = salary;
+            }
+            Person.nationality = "Indian"   <- trying to insert new variable
+            const Ram = new Person("dj", 25, 30000);
+            console.log(Ram);    
+This will not take the input and give the same result.
+
+This problem can be solved through the use of prototype.
+
+            function Person(name, age, salary){
+                this.name = name;
+                this.age = age;
+                this.salary = salary;
+            }
+            Person.prototype.nationality = "Indian"
+            const Ram = new Person("dj", 25, 30000);
+            console.log(Ram);
+
+            console.log(Ram.nationality);
+            console.log(Ram.__proto__.nationality);
+            console.log(Ram.constructor.prototype.nationality);
+Here we can add another variable through prototype & we can access it through 3 different ways-
+1.  Ram.nationality
+2.  Ram.__proto__.nationality
+3.  Ram.constructor.prototype.nationality
+
+And if we try to add the below line at end of the previous code, it will result in `true`.
+
+            console.log(Ram.__proto__===Person.prototype);
+
+*   to access prototype of constructor or any other function we write 
+    function_name.prototype
+*   to access prototype of the instance of constructor we write 
+    instance_name.__proto__
+

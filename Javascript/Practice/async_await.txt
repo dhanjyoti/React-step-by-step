@@ -1,0 +1,26 @@
+async-> will always return a promise.
+await-> can only be used inside an async function. 
+
+Async eg:-
+            async function getData(){
+                return "Namaste";
+            }
+            const data = getData();
+            //console.log(data)
+            async function getData(){
+                return "Namaste";
+            }
+            const dataPromise = getData();
+            dataPromise.then((res)=> console.log(res));
+
+* async & await are used to handle promises.
+
+            const p = new Promise((resolve, reject)=>{
+                resolve("Promise resolve value");
+            })
+            async function handlePromise(){
+                const val = await p;
+                console.log(val);
+            }
+            handlePromise();
+

@@ -1,0 +1,160 @@
+Define Call method:
+->  The Javascript Function `call` is a predefined javascript method, that is used to write 
+    methods for different objects. It calls the method, taking the owner object as an argument. 
+    The keyword `this` refers to the “owner” of the function or the object it belongs to. 
+    All the functions in javascript are considered object methods. So we can bind a function 
+    to a particular object by using ‘call()’. A function will be the global object if the 
+    function is not considered a method of a JavaScript object.
+
+Call-> The call() method of function instances calls `this` function with
+    a given `this` value and arguments provided individually.
+
+    Code Example: 
+
+            function fullName(){
+                console.log(`${this.firstName} ${this.lastName}`);
+            }
+
+            name1 = {
+                firstName: "dhanjyoti",
+                lastName: "rabha"
+            }
+
+            name2 = {
+                firstName: "joon",
+                lastName: "rabha"
+            }
+
+            fullName.call(name1);
+            fullName.call(name2);           // This method helps us to work as DRY principle
+
+    Code Example: 
+
+            function fullName(hello, bye){
+                console.log(`${hello} ${this.firstName} ${this.lastName} ${bye}`);
+            }
+
+            name1 = {
+                firstName: "dhanjyoti",
+                lastName: "rabha",
+            }
+                
+            name2 = {
+                firstName: "joon",
+                lastName: "rabha"
+            }
+
+            fullName.call(name2, "hi", "ba-bye");
+
+    Code Example:
+
+            name1 = {
+                firstName: "dhanjyoti",
+                lastName: "rabha",
+                fullName: function(){
+                    console.log(`${this.firstName} ${this.lastName}`);
+                }
+            }
+
+            name2 = {
+                firstName: "joon",
+                lastName: "rabha"
+            }
+
+            name1.fullName.call(name2);
+
+Define Apply method:
+->  The apply() method is used to write methods, which can be used on different objects. 
+    It is different from the function call() because it takes arguments as an array. 
+
+Apply-> The apply() method of function instances calls `this` function with
+    a given `this` value, and arguments provided as an array
+    (or an array-like object).
+
+    Code Example:
+
+            function fullName(hello, bye){
+                console.log(`${hello} ${this.firstName} ${this.lastName} ${bye}`);
+            }
+
+            name1 = {
+                firstName: "dhanjyoti",
+                lastName: "rabha",
+            }
+                
+            name2 = {
+                firstName: "joon",
+                lastName: "rabha"
+            }
+
+            fullName.apply(name2, ["hi", "byeee"]);
+
+    Code Example:
+
+            name1 = {
+                firstName: "dhanjyoti",
+                lastName: "rabha",
+                fullName: function(hello, bye){
+                    console.log(`${hello} ${this.firstName} ${this.lastName} ${bye}`);
+                }
+            }
+                
+            name2 = {
+                firstName: "joon",
+                lastName: "rabha"
+            }
+
+            name1.fullName.apply(name2, ["hi", "byeee"]);
+
+Define Bind method:
+->  In JavaScript function binding happens using Bind() method. With this method, we can bind 
+    an object to a common function, so that the function gives different results when needed. 
+    Otherwise, it gives the same result or gives an error while the code is executing. We use 
+    the Bind() method to call a function with `this` value, `this` keyword refers to the same object 
+    which is currently selected. In other words, the bind() method allows us to easily set which 
+    object will be bound by `this` keyword when a function or method is invoked. The need for bind 
+    usually occurs, when we use this keyword in a method and we call that method from a receiver 
+    object, then sometimes this is not bound to the object that we expect to be bound to. 
+    This results in errors in our program. Now, a simple program to print the name which is 
+    called by `this` keyword when the function printFunc() is invoked. 
+
+Bind-> The bind() method of function instances creates a new function that,
+    when called, calls `this` function with its `this` keyword set to the 
+    provided value, and a given sequence of arguments preceding any provided
+    when the new function is called.
+
+    Code Example:
+
+            name1 = {
+                firstName: "dhanjyoti",
+                lastName: "rabha",
+                fullName: function(hello, bye){
+                    console.log(`${hello} ${this.firstName} ${this.lastName} ${bye}`);
+                }
+            }
+                
+            name2 = {
+                firstName: "joon",
+                lastName: "rabha"
+            }
+
+            name1.fullName.bind(name2, 'hi', 'byeeee')();
+
+    Code Example:
+
+            function fullName(){
+                console.log(`${this.firstName} ${this.lastName}`);
+            }
+
+            name1 = {
+                firstName: "dhanjyoti",
+                lastName: "rabha",
+            }
+                
+            name2 = {
+                firstName: "joon",
+                lastName: "rabha"
+            }
+
+            const bindingMethod = fullName.bind(name1);
+            bindingMethod();

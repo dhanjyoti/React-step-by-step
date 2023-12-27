@@ -2,59 +2,14 @@ Throttling-> is useful when you want to ensure that a function
     is called at a limited rate or frequency, without missing 
     any important inputs or events. 
 
+    data fetched after some time in throttling even in the first time
+
 Debouncing-> delays the execution of a function until after a 
     certain amount of time has passed without the input being
     triggered again.
+
+    data fetched immediately in the first time
 _________________________________________________________________________    
-
---Difference between debouncing and throttling in javascript--
-
-Debouncing and throttling are both techniques used in JavaScript to control 
-the rate at which a function is executed, especially in response to events 
-that can happen frequently. While they share the goal of preventing 
-functions from being executed too often, there are key differences between 
-debouncing and throttling:
-
-1. Execution Timing:
-    Debouncing: Delays the execution of a function until after a specified 
-        period of inactivity. If the triggering event occurs multiple times 
-        within the debounce delay, the function is only executed once, 
-        after the last occurrence of the event.
-    Throttling: Ensures that a function is not executed more frequently than 
-        a specified time interval. If the triggering event occurs more often 
-        than the throttle interval, the function is still executed at a 
-        controlled rate.
-
-1. Function Execution:
-    Debouncing: The function is executed only once, and that's after the 
-        debounce delay has passed since the last occurrence of the event. 
-        This is useful when you want the function to be invoked only after 
-        the user has stopped a continuous action (e.g., typing or scrolling).
-    Throttling: The function is executed periodically, according to the 
-        specified time interval. Even if the event occurs more frequently, 
-        the function is allowed to execute at a controlled rate.
-
-2. Use Cases:
-    Debouncing: Useful when we want to ensure that a function is only 
-        executed after a period of inactivity following the last occurrence 
-        of an event. Examples include search suggestions or form validation 
-        after the user stops typing.
-    Throttling: Useful when we want to limit the rate of execution of a 
-        function, especially for events that can occur rapidly (e.g., scrolling, 
-        mouse movement).
-
-3. Timing Control:
-    Debouncing: Delays the execution of the function, resetting the delay 
-        each time the event occurs. The function is executed only when 
-        there is a pause in the events.
-    Throttling: Executes the function periodically, ensuring that it is 
-        invoked at a controlled rate, even if the events continue to occur.
-
-4. Implementation:
-    Debouncing: Often implemented using setTimeout and clearTimeout to 
-        introduce a delay before the function is executed.
-    Throttling: Often implemented using a timer and a flag to control the 
-        rate of function execution.
 
 Here's a simplified example of debouncing and throttling functions:
 
@@ -65,7 +20,7 @@ Here's a simplified example of debouncing and throttling functions:
             let timer;
             return function() {
                 clearTimeout(timer);
-                timer = setTimeout(() => func.apply(this, arguments), delay);
+                timer = setTimeout(()=> func.apply(this, arguments), delay);
             };
         }
 
@@ -85,3 +40,80 @@ In summary, debouncing delays the execution until a period of inactivity,
 while throttling controls the rate of execution to a specific interval,
 allowing periodic invocations. The choice between debouncing and throttling 
 depends on the specific use case and desired behavior.
+_________________________________________________________________________
+
+    Throttling & Debouncing are not provided by Javascript. Throttling & 
+    Debouncing are concept by using which we can have better performance of 
+    our application. Or we can say we use it so that the function or data of 
+    api is not called again and again unnecessarily.
+
+Throttling:-
+*** JavaScript Throttling or JavaScript Throttle concept provides the mechanism 
+    to improve the performance and speed of the application.
+                The throttling mechanism is also known as throttle method, is 
+    a way to execute a function after a fixed interval after the first event 
+    is being triggered by that function. 
+
+    JavaScript Throttling is a mechanism that allows a function execution for 
+    a limited number of times after that it will block its execution. It can 
+    also prohibit a function from execution if it is invoked recently. It also 
+    determines a consistent rate of execution. It is a practice used in the 
+    web development to enhance the application performance and prevent 
+    unexpected re-renders.
+   
+    Throttling is usefull when we want to ensure that a function is called at 
+    a limited rate or frequency, without missing any important input or events.
+
+Debouncing:-
+*** In JavaScript, debounce is a powerful technique used to optimize event 
+    handling by delaying the execution of a function until after a specified 
+    period of inactivity. It helps prevent excessive function calls triggered 
+    by rapid events, such as keystrokes or scroll movements.
+
+Debouncing-> Let's say that we want to show suggestions for a search query, 
+    but only after a visitor has finished typing it.
+
+    Debouncing takes two arguments, function & timer.
+
+Implementation of debouncing in JavaScript.
+
+    1. Debouncing ensures that a function is called only after a specified 
+        delay of inactivity.
+    2. When an event is triggered, the debounce function starts a timer. 
+        If the function is called again within the delay period, the timer 
+        is reset.
+    3. The function execution is deferred until the delay has passed without 
+        any further calls.
+    4. This delay helps prevent unnecessary or premature function calls, 
+        resulting in more efficient event handling.
+
+Difference between Debouncing & Throttling:-
+
+    1. Debouncing waits for a certain time before invoking the function again.
+    But, Throttling limits the number of times the function can be called 
+    over a certain period.
+
+    2. Debouncing ensures that the function is called only once, even if the 
+    event is triggered multiple times.
+    But, Throttling ensures that the function is called at a regular interval, 
+    even if the event is triggered multiple times.
+
+    3. Debouncing us useful, when we want to delay the invocation of a function 
+    until a certain period of inactivity has passed.
+    But, Throttling is useful when we want to list the Frequency of function calls.
+
+    4. Debouncing Eg. We can debounce an async API request function that is 
+    called every time the user types in an input field.
+    But, Throttling Eg. We can throttle a slide change Function that is called 
+    every time the user clicks a button in a carousel.
+
+    5. Debouncing resets the timer if a new event occurs within the specified 
+    delay period.
+    But, Throttling does not reset the interval, and the function will be called 
+    at the next interval, regardless of the number of events that occurred in 
+    the previous interval.
+
+    6. Debouncing prevents a function from being executed too many times in 
+    response to user events.
+    But, Throttling limits the frequency of function calls responding to 
+    high-frequency events such as mouse movements or keystrokes.

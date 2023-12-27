@@ -1,0 +1,122 @@
+*   In Javascript when we assign an object to another object, there is no data copy of it, 
+    it gets a reference copy. It means it copies the location of it, and what happens is 
+    location of both the objects becomes same. Now if we change the variable of the second 
+    object there will also be change in the variable of the first object. This is called 
+    coping an object.
+    This is coping through reference. Means coping of the memory.
+    When we copy an object, the memory location of it is copied.
+
+    Example-
+                let obj={
+                    name: 'dhan'
+                };
+                let user = obj;
+                user.name = 'jyoti'
+                console.log(obj)    
+
+*   But coping of object happens through two types-
+    1. coping by value  &
+    2. coping by reference
+
+*   When we copy a variable, the value of the variable is copied. This is coping by value.
+
+    Example-
+            let x = 'dhan';
+            let y = x;
+            y = 'jyoti';
+            console.log(x);
+
+*   But coping an object as a coping by reference, sometimes is not a good practice.
+    Sometimes we don't want to change the whole object while coping it.
+    To solve this problem we try to copy objects in different ways.
+    Two ways to do so are Deep Copy & Shallow Copy.
+
+    Shallow Copy-   A shallow copy of an object is a copy whose properties share the same 
+        references (point to the same underlying values) as those of the source object from 
+        which the copy was made. As a result, when you change either the source or the copy, 
+        you may also cause the other object to change too.
+
+        Shallow copy goes only one level down, it means that it copies the object but any
+        nested object or arrays will still reference to same memory of original array.
+    Example:-
+            let obj = {
+                name: "dhan"
+            };
+            //  let user = Object.assign({}, obj);  // or
+            //  let user = {...obj};
+            user.name = "Jyoti"
+
+            console.log("Object is :", obj);
+            console.log("User is :", user);
+
+        Here the memory location is not copied, here the actual value is copied.
+
+Imp Note:-    But if we have a nested object, shallow coping has an issue, again it will change the 
+    value of the nested object. Neither Object.assign nor spread operator... will work here.
+
+Note- Javascript by default create shallow copy of only non-primitive datatype, i,e- object &
+    arrays. There is no shallow copy or deep copy for primitive datatypes in 
+    javascript and primitive are immutable.
+
+    Example:-
+            let obj={
+                name:'dhan',
+                address:{
+                    city:'Guwahati',
+                    state:'Assam'
+                }
+            };
+            let user = {...obj}
+            user.address.city = "Shillong"
+
+            console.log("Object is : ", obj)
+
+*   Here comes the solution with the use of Deep Copy. 
+    Meaning we need to make a copy of the nested objects as well.
+
+    Deep Copy-  A deep copy of an object is a copy whose properties do not share the same references 
+        (point to the same underlying values) as those of the source object from which the copy 
+        was made. As a result, when you change either the source or the copy, you can be assured you're 
+        not causing the other object to change too.
+        
+    To Deep Copy we convert the object into a string(i,e.- JSON.stringify). 
+    And in the next copied object(which is string now) we again convert it into object(i,e-JSON.parse).
+
+    Example:-
+            let obj={
+                name: 'Dhan',
+                address:{
+                    city:'Guwahati',
+                    state:'Assam'
+                }
+            };
+            let user = JSON.parse(JSON.stringify(obj));
+            user.address.city = "Delhi"
+
+            console.log("Object is : ", obj);
+            console.log("User is : ", user);
+
+But Deep copy has its own limitation.
+    Firstly, there is no other way of deep coping apart from converting object 
+    to string and again re-converting it into an object.
+    Or else we need to make a function and manually create a new object, create its loop and make logic 
+    to do so which is not recommended.
+
+    Secondly, Deep Copy  doesnot work with functions and Date.
+
+    And unfortuntely there is no solution in javascript to solve these issues.
+
+*   Lodash-> is one solution of this problem to us. We can install `lodash` library of node.js through
+    npm i lodash & use it to solve this issue of Deep Copy.
+    
+
+# Difference between Shallow copy & Deep Copy
+
+1. In Shallow Copy only the main object is copied, but in Deep Copy we copy the nested objects as well.
+2. Shallow Copy stores the reference of objects to the original memory address, but Deep Copy stores 
+    copies of the object's value.
+3. Shallow Copy reflects changes made to the new/copied object in the original object, but Deep copy
+    doesn't reflect changes made to the new/copied object in the original object.
+4. Shallow Copy stores the copy of the original object and points the references to the objects. But, 
+    Deep Copy stores the copy of the original object and recursively copies the objects as well.
+5. A shallow copy is faster. But, Deep Copy is comparetively slower.`

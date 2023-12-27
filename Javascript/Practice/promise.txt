@@ -85,5 +85,18 @@ Code Example:-
                 .catch((error)=>{
                     console.error(error);
                 });
+___________________________________________________________________________________
 
+Promises are used to handle async operations in Javascript.
+It solves the problem of `Inversion of control`, it guarantees and also gives control 
+of our code.
+fetch() -> it is an api given by browser to make external calls.
+It can be resolved only ones, either fulfill or rejected.
+It is immutable. We cannot alter promise if it is resolved.
 
+        Promise is an object that represents eventual complition of an async operation.
+Whenever there is a promise, inside a promise chain, we must return it, otherwise we 
+might loose some data.
+___________________________________________________________________________________
+
+`catch` will handle any error down the promise chain.

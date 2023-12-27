@@ -1,0 +1,28 @@
+4 pillers of Oops-
+
+1.  Encapsulation:-
+    Encapsulation means wrapping up data & member function(Method) together into 
+    a single unit i.e, class.
+
+2.  Abstraction:-
+    Abstraction is the process of showing only essential/necessary features of 
+    an entity/object to the outside world and hide the other irrelevent information.
+                For Example:- to open our TV we only have a power button. It is not 
+    required to understand how infra-red waves are getting generated in TV 
+    remote control.
+
+3.  Inheritance:- 
+    Inheritance allows a class(subclass) to acquire the properties and behaviour of 
+    another class(super-class). It helps to reuse, customize and enhance the existing 
+    code. So, it helps to write a code accurately and reduce the development time.
+
+4.  Polymorphism:-
+    Polymorphism means 'many forms'. A subclass can define its own unique behaviour
+    and still share the same functionalities or behaviour of its parent/base class.
+
+    class square(){                     |   class circle(){}
+        area();                         |       area();   
+    }                                   |   }
+                                        |
+    Var S1 = new square();              |   Var C1 = new circle();
+    S1-> area();                        |   C1-> area();

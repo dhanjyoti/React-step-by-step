@@ -1,0 +1,76 @@
+# whenever we put `+` before string & boolean, it will convert into numbers.
+
+# whenever we put `!` before a string, it will convert into a boolean.
+
+# console.log(typeof typeof 1);         // string
+
+# console.log([..."dhan"]);
+Output-> ['d','h','a','n']
+
+console.log(typeof 3 + 4 + '5);
+Output-> number45
+
+console.log(typeof (3 + 4 + +'5'));
+Output-> number
+
+console.log([]==[])
+Output-> false  // because they have different memory locations
+
+(()=> {
+    let x = (y = 10);
+})();
+console.log(typeof x);
+Output-> undefined
+
+(()=> {
+    let x = y = 10;
+})();
+console.log(typeof y);
+Output-> number
+
+console.log(!true - true);
+Output-> -1
+
+console.log(true + + '10');
+Output-> 11
+
+let arr = [11,33,12,15,14,200]
+// Provide a compare function to sort numerically
+let data = arr.sort(function(a, b) {
+    return a - b;
+});
+console.log(data);
+
+let a = [];
+let b = [];
+console.log(a == b);
+console.log(a === b);
+Output->    false
+            false
+
+let a = [20];
+let b = [20];
+console.log(a[0] == b[0]);
+console.log(a[0] === b[0]);
+Output->    true
+            true
+
+const data = {name: "anil", age: 34, skill: "js"};
+// console.log(data.name);
+// Output without using `.` print the name.
+
+const {name, skill} = data;
+console.log(name)
+
+
+console.log(Promise.resolve(5))
+// Output-> Promise{5}
+
+JSON.parse();
+what does this do?
+//  parses JSON to a javascript value.
+
+console.log(`${(x =>x)('I love)} to program`);
+Output:- I love to program
+
+    

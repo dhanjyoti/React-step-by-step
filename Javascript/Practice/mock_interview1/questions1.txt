@@ -1,0 +1,56 @@
+HTML
+1. What is a DOM ?
+2. What is a difference between between div and span ?
+3. Can I have a multiple element with same ID. If No then Why ?
+4. How do you specify a MetaData in HTML?
+5. What is difference between document & Window object.
+CSS
+1. What is Box Model ?
+2. What are the advantages of using CSS?
+3. What is diff between Display : none and Visible false.
+4. What are the different types of Selectors in CSS?
+5. Difference between percentage and Pixel?
+6. What is the difference between logical tag and physical tag ?
+JavaScript
+- What are the different data types present in JavaScript?
+- Difference between `null` and `undefined`
+- Difference between Let & Var
+-Explain Hoisting in JavaScript.
+-Explain Implicit Type Coercion in javascript.
+-Explain passed by value and passed by reference.
+- What is immediately invoked function
+- Explain Higher Order Functions in javascript.
+- What is callback
+- What is closure
+- Write is promise. Write a code for promise
+
+
+
+
+
+1:30
+HTML
+- What is a DOM ?
+- What is difference between document & Window object.
+CSS
+1. What is Box Model ?
+2. What is the difference between logical tag and physical tag ?
+3. Difference between percentage and Pixel
+JavaScript
+- What are the different data types present in JavaScript?
+- What are non-primitive data type ?
+- Explain Hoisting in JavaScript.
+- What is addEventListner?
+- What is event bubbling?
+- What is event delegation, and why is it useful in JavaScript? Provide an example.
+- What is a closure in JavaScript, and how would you use one in your code?
+- Explain the concept of promises in JavaScript and how they differ from callbacks.
+- What are Async operations ?
+- What is a JavaScript prototype, and how does it relate to inheritance in JavaScript?
+- Explain the purpose of the Local Storage and Session Storage in the context of web applications.
+- How does the JavaScript event loop work, and what is the role of the call stack, callback queue, and microtask queue?
+- Explain the concept of debouncing and throttling in JavaScript and when you would use each technique.
+- How do you handle cross-origin requests in JavaScript, and what is the Same-Origin Policy?
+- Describe the differences between a shallow copy and a deep copy of objects and arrays in JavaScript.
+- Call this api and show the result
+API - https://gorest.co.in/public/v2/users

@@ -122,12 +122,12 @@ More Explaination?
     which means access to variables and functions, which is present in the environment of its parents,
     so each and every funcion has access to them.
                     So even when this function, is executed in some other scope, not in its original
-    scope, it still remembers outer lexical environments where it was originally present in the code. 
+    scope, it still remembers its outer lexical environments where it was originally present in the code. 
     This is closure.
 
 Example Demonstration:-
 -> 
-function outer(){
+function outer(){   
     var a = 10;
     function inner(){
         console.log(a);
@@ -318,7 +318,7 @@ var y = a();            // here `x` cannot be free'd as we might need or call it
                             untill it is confirmed that `x` is not needed we cannot garbage collect it.
 y();
 
-But some modern browsers and JS engines like - Vite, Chrome - have smart garbage collection mechanism.
+But some modern browsers and JS engines like - Chrome V8 - have smart garbage collection mechanism.
 They somehow finds out the unreachable variables, and smartly collects these garbage variables to the 
 garbage collector & erase it.
 

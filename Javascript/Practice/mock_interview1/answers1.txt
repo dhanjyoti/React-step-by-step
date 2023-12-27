@@ -1,0 +1,1029 @@
+### HTML ###
+
+1. What is a DOM ?
+
+->  The Document Object Model (DOM) is a programming interface for web documents. 
+    It represents the structure of an HTML or XML document as a tree of objects, 
+    and it allows scripts to interact with and manipulate the content and 
+    structure of a webpage dynamically.
+
+example:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Example</title>
+</head>
+<body>
+
+    <h1 id="mainTitle">Hello, DOM!</h1>
+    <p id="demo">This is a simple webpage.</p>
+
+    <script>
+        // Accessing elements in the DOM
+        var titleElement = document.getElementById("mainTitle");
+        var demoElement = document.getElementById("demo");
+
+        // Modifying content
+        titleElement.textContent = "Welcome to the DOM!";
+        demoElement.innerHTML = "This content has been updated.";
+
+        // Creating a new element and appending it to the body
+        var newParagraph = document.createElement("p");
+        newParagraph.textContent = "This is a new paragraph.";
+        document.body.appendChild(newParagraph);
+    </script>
+
+</body>
+</html>
+___________________________________________________________________________________
+
+2. What is a difference between div and span ?
+
+-> 1. `div` is a block-level container. 
+                But `span` is inline-level container.
+    2. `div` is typically used to group and structure content, creating a block-level 
+        container that often separates sections of a webpage.
+                But `span` is used to apply styles or scripting to a specific 
+                portion of text within a block-level element.
+    3. `div` is usually starts on a new line and takes up the full width available.
+                But `span` does not start on a new line and only takes up as much 
+                width as necessary.
+___________________________________________________________________________________
+
+3. Can I have a multiple element with same ID. If No then Why ?
+
+-> No, according to the HTML specification, IDs (identifiers) must be unique within 
+    a page. Each element should have a unique ID to ensure that the document's 
+    structure and elements can be reliably accessed and manipulated using 
+    JavaScript and CSS.
+
+    Having multiple elements with the same ID is considered invalid HTML and can 
+    lead to unexpected behavior in scripts and styles. When we attempt to select 
+    an element by its ID using JavaScript, the browser will typically return only 
+    the first element with that ID, ignoring subsequent elements with the same ID.
+
+                To uniquely identify and work with multiple elements, use classes 
+    instead of IDs. Classes can be applied to multiple elements, and we can select 
+    and manipulate them collectively or individually using JavaScript or CSS.
+___________________________________________________________________________________
+
+4. How do you specify a MetaData in HTML?
+
+-> In HTML, metadata is often specified using the `<meta>` element, which provides 
+    information about the HTML document. The `<meta>` element is placed within the 
+    `<head>` section of the HTML document. 
+
+    Example: 1. Character Set Encoding (UTF-8)
+            2.  Viewport Configuration (for Responsive Design)
+            3.  Setting the Page Title
+            4.  Description and Keywords (for Search Engines)
+            5.  Setting the Author and Copyright
+            6.  Preventing Page Indexing by Search Engines
+___________________________________________________________________________________
+
+5. What is difference between document & Window object.
+
+-> 1. The `window` object represents the browser window or the global context for 
+        JavaScript execution.
+                    But the `document` object represents the HTML document loaded in 
+        the browser window.
+
+    2.  `window` is the top-level object in the browser's hierarchy and serves as 
+        the global object for JavaScript in a web page.
+                    But `document` is a property of the window object and provides 
+        an interface to interact with the content and structure of the document.
+
+    3.  Properties and methods associated with the `window` object include things 
+        like 'document', 'location', 'console', 'alert', and 'setTimeout'.
+                    But properties and methods associated with the `document` object 
+        include things like 'getElementById', 'querySelector', 'createElement', and 
+        others used for DOM manipulation.
+___________________________________________________________________________________
+
+### CSS ###
+
+1. What is Box Model ?
+
+-> The Box Model in CSS is a fundamental concept that describes how elements on a 
+web page are rendered and how their dimensions are calculated. It conceptualizes 
+an HTML element as a rectangular box with four main components:
+
+Content:
+    The actual content of the element, such as text, images, or other media.
+    It is defined by the width and height properties.
+
+Padding:
+    The transparent area around the content inside the element.
+    Padding is specified using the padding property and its individual 
+    components like padding-top, padding-right, padding-bottom, and padding-left.
+
+Border:
+    The boundary around the padding, separating the content from the next layer.
+    The border is specified using the border property and its individual 
+    components like border-width, border-style, and border-color.
+
+Margin:
+    The transparent area outside the border, creating space between the element 
+    and its surrounding elements.
+    Margin is specified using the margin property and its individual components 
+    like margin-top, margin-right, margin-bottom, and margin-left.
+___________________________________________________________________________________
+
+2. What are the advantages of using CSS?
+
+-> 1. It gives styling to the website, which makes the website look more beautiful.
+    2. It makes our app responsive, making it usable in desktop, tab and mobile.
+    3. We can provide animation and transition in our app making it more dynamic.
+
+-> 1. Separation of Concerns:
+        CSS separates the structure (HTML) and presentation (styling) of a web page. 
+        This separation makes the code more modular, maintainable, and easier to 
+        understand.
+
+    Consistent Styling:
+        CSS allows us to define styles in a central location and apply them 
+        consistently across multiple pages. This ensures a cohesive and professional 
+        look for the entire website.
+
+    Easy Maintenance:
+        Centralized styling makes it easier to update the look and feel of a website. 
+        Changes to the design can be made in the CSS file without altering the HTML 
+        structure.
+
+    Responsive Design:
+        CSS provides features like media queries and flexible layout options, 
+        enabling the creation of responsive designs that adapt to different screen 
+        sizes and devices.
+
+    Reusability of Code:
+        CSS classes and styles can be reused across different elements, reducing 
+        redundancy and promoting a more efficient coding process.
+
+    Improved Page Load Times:
+        External CSS files can be cached by the browser, resulting in faster page 
+        load times for subsequent visits to the site.
+
+    Accessibility:
+        CSS allows for the creation of accessible designs, making it easier to 
+        implement features like proper heading structures, text alternatives for 
+        images, and improved navigation for users with disabilities.
+
+    Browser Compatibility:
+        CSS helps in achieving a consistent appearance across different web 
+        browsers. It provides ways to handle browser-specific issues and 
+        inconsistencies.
+
+    Animation and Transitions:
+        CSS supports animations and transitions, allowing developers to create 
+        visually engaging effects without relying on JavaScript or Flash.
+
+    Print-Friendly Styles:
+        Separate styles for print media can be defined using CSS, ensuring that 
+        web pages are readable and presentable when printed.
+
+    Flexibility and Control:
+        CSS provides a high level of control over the layout, styling, and 
+        positioning of elements on a web page, allowing developers to create 
+        intricate designs.
+
+    Maintainable Codebase:
+        Well-organized and modular CSS code leads to a more maintainable 
+        codebase, making it easier for multiple developers to collaborate on 
+        a project.
+___________________________________________________________________________________
+
+3. What is diff between Display : none and Visible false.
+
+->  1. When an element is set to `display: none`, it is entirely removed from the 
+        document flow.
+                    But when an element is set to `visibility: hidden`, it remains 
+        in the document flow, but it is not visible.
+
+    2. In `display: none` the element is not rendered, and it doesn't take up any 
+        space on the page. 
+                    But in `visibility: hidden` the element is still rendered, and 
+        it takes up space on the page as if it were visible.
+          
+    3. In `display: none` child elements of the hidden element are also not rendered.
+                    But in `visibility: hidden` child elements of the hidden element 
+        are still rendered.
+
+    4. In `display: none` property essentially hides the element and its content, 
+        making it as if it doesn't exist on the page
+                    But in `visibility: hidden` the property hides the element 
+        visually while keeping its position in the layout.
+___________________________________________________________________________________
+
+4. What are the different types of Selectors in CSS?
+
+-> 1. Universal Selector (`*`):
+        Selects all elements on the page.
+        Example: `* { color: blue; }`
+
+    2.Type or Element Selector:
+        Selects elements based on their HTML tag.
+        Example: `p { font-size: 16px; }`
+
+    3.Class Selector (`.class`):
+        Selects elements based on their class attribute.
+        Example: `.highlight { background-color: yellow; }`
+
+    4.ID Selector (`#id`):
+        Selects a single element based on its unique ID attribute.
+        Example: `#header { font-family: 'Arial', sans-serif; }`
+
+    5.Child Selector (`>`):
+        Selects a direct child element.
+        Example: `ul > li { list-style-type: square; }`
+
+    6.Descendant Selector (whitespace):
+        Selects an element that is a descendant of another specified element.
+        Example: `article p { color: #333; }`
+
+    7.Adjacent Sibling Selector (`+`):
+        Selects an element that is directly adjacent to another specified element.
+        Example: `h2 + p { font-style: italic; }`
+
+    8.Attribute Selector:
+        Selects elements based on the presence or value of their attributes.
+        Example: `input[type="text"] { border: 1px solid #ccc; }`
+
+    9.Pseudo-class Selector (`:pseudo-class`):
+        Selects elements based on their state or position.
+        Example: `a:hover { color: red; }`
+    
+    10.Pseudo-element Selector (`::pseudo-element`):
+        Selects a specific part of an element.
+        Example: `p::first-line { font-weight: bold; }`
+
+    11.Grouping Selector:
+        Groups multiple selectors to apply the same style to multiple elements.
+        Example: `h1, h2, h3 { color: navy; }`
+___________________________________________________________________________________
+
+5. Difference between percentage and Pixel?
+
+->  Pixel (px):
+        1. Absolute Unit: Pixels are an absolute unit of measurement.
+        2. Fixed Size: One pixel is a single dot on a screen, and the size of 
+            elements specified in pixels remains constant regardless of the screen 
+            size or resolution.
+        Example: width: 200px;
+
+    Percentage (%):
+        1. Relative Unit: Percentages are relative units that are calculated 
+            relative to the size of the parent container.
+        2. Responsive: Using percentages allows for more responsive designs, as the 
+            size is relative to the container's dimensions.
+        Example: width: 50%;
+___________________________________________________________________________________
+
+6. What is the difference between logical tag and physical tag ?
+
+-> 1. Logical Tag:
+    *   "logical tag" may refer to semantic HTML elements that 
+            describe the meaning or purpose of the content they enclose rather than 
+            their visual presentation.
+    *   Examples of logical tags include <header>, <nav>, <main>, <article>, 
+            <section>, <aside>, <footer>, etc.
+    *   Logical tags are designed to convey the structure and purpose of the content, 
+            making the HTML more semantically meaningful.
+
+    2. Physical Tag:
+    *   "physical tag" might be used to refer to HTML elements that are 
+            more presentational and describe how content should be styled or displayed.
+    *   Examples of physical tags include <b> (bold), <i> (italic), <u> (underline), 
+            <font>, etc.
+    *   In modern web development, the use of physical tags is discouraged in favor 
+            of CSS for styling, and the emphasis is on using logical, semantic HTML.
+___________________________________________________________________________________
+->  * Logical Properties and Values:
+        Logical Properties: Introduced in modern CSS, logical properties are 
+        designed to provide a more abstract and flexible way to describe layout and 
+        styling that adapts to different writing modes 
+        (e.g., left-to-right or right-to-left).
+
+        Example: Instead of margin-left, you might use margin-inline-start, which 
+        represents the start of the inline axis and adapts based on the writing mode.
+
+    * Physical Properties and Values:
+        Physical Properties: These are traditional CSS properties that describe 
+        layout and styling based on the physical characteristics of the document, 
+        such as left, right, top, bottom, margin-left, etc.
+
+        Example: margin-left: 20px;, padding-top: 10px;
+___________________________________________________________________________________
+
+### Javascript ###
+
+1. What are the different data types present in JavaScript?
+
+-> Data Type: a data type defines the type of value that a variable or expression 
+    can hold.
+                    JavaScript provides eight(8) different data types which are 
+    undefined, null, boolean, string, symbol, bigint, number, and object.
+___________________________________________________________________________________
+
+2. Difference between `null` and `undefined`.
+
+->  In JavaScript, null is an assignment value that represents no value or no object. 
+    It is an intentional absence of any object value. On the other hand, `undefined` 
+    is a type itself and represents a variable that has been declared but has not 
+    yet been assigned a value.
+
+Code Examples:
+
+        var nullVar = null;
+        console.log(nullVar); // Output: null
+
+        var undefinedVar;
+        console.log(undefinedVar); // Output: undefined
+
+Intuition: We can think of null as an explicit "nothing" we can assign to a 
+    variable, while undefined is what we get when a variable has been declared 
+    without an assigned value.
+___________________________________________________________________________________
+
+3. Difference between Let, const & Var.
+
+-> In JavaScript, let, const, and var are used to declare variables. var is 
+    function-scoped and has been the traditional way of declaring variables. let and 
+    const are block-scoped, and they were introduced in ECMAScript 2015 (ES6).
+
+    let allows us to declare a variable that can be reassigned, while const is used 
+    to declare a variable that cannot be reassigned.
+
+Code Examples:
+
+        var functionScopedVar = "I am function-scoped!";
+        let blockScopedVar = "I am block-scoped!";
+        const constantVar = "I am a constant!";
+
+        if (true) {
+        var functionScopedVar = "I am still function-scoped!";
+        let blockScopedVar = "I am still block-scoped!";
+        // const constantVar = "I cannot be reassigned!"; // Would throw an error
+        }
+
+        console.log(functionScopedVar); // Output: "I am still function-scoped!"
+        console.log(blockScopedVar); // Output: "I am block-scoped!"
+        console.log(constantVar); // Output: "I am a constant!"
+
+Intuition: Think of var as a more flexible way of declaring variables that can be 
+    accessed within the entire function scope. In contrast, let and const provide 
+    better control over variable scope, reducing the chances of bugs caused by 
+    unintentional modifications.
+
+1. var is the traditional way of writing Javascript variable.
+    But, let & const are the latest version of writing javascript variable, 
+    introduced in ECMAScript 2015(ES6);
+
+2. var is a functional scoped, But let & const are block scoped.
+
+3. var can be redeclared and converted to var again.
+    let can be declared without assigning any value to it, 
+    we can declare value to it later on.
+
+4. let can be converted to const, but const cannot be converted. let can change it's 
+    value. But const is constant, which is unchangable and cannot change it's value.
+
+5. We can initialize values to var & let later on, but in const we must initialize value
+    immediately.
+
+6. let allows us to declare a variable that can be reassigned, while const is used 
+    to declare a variable that cannot be reassigned.
+
+___________________________________________________________________________________
+
+4. Explain Hoisting in JavaScript.
+
+-> Hoisting -> Hoisting is a phenomina in Javascrpt by which we can access variables 
+    and functions, even before we initialize it or we have put some value in it.
+    We can access the variables without any error.  
+
+Eg: In case of single variable the output will be undefined. 
+    In case of proper function declaration it will show us the result. 
+    in case of only function name without the paranthesis `()`
+    it will show us the whole function code.
+    In case the function is an arrow function it will give us
+    an error "x is not a function". 
+
+                Hoisting is a mechanism in JavaScript where variable and function 
+    declarations are moved to the top of their containing scope during the 
+    compilation phase. However, only the declarations are hoisted, not the 
+    initializations.
+
+Code Example:
+
+            console.log(hoistedVar); // Output: undefined
+            var hoistedVar = "I am hoisted!";
+
+            // Equivalent to:
+            sayHello();
+            function sayHello(){
+                console.log("hello");
+            }                           // Output: hello
+___________________________________________________________________________________
+
+5. Explain Implicit Type Coercion in javascript.
+
+-> Implicit type coercion in JavaScript refers to the automatic conversion of one 
+    data type to another without the explicit involvement of the programmer. This 
+    behavior occurs during certain operations or comparisons involving different 
+    data types. JavaScript attempts to make sense of the operation by converting 
+    one or more values to a common type.
+
+Here are some examples of implicit type coercion:
+
+    String and Number Concatenation: 
+        var result = "5" + 3; // Result is the string "53"
+
+        In this example, the number `3` is implicitly coerced into a string and 
+        concatenated with the string `"5"`.
+
+    Number and Boolean Operations:
+        var result = 5 - true; // Result is the number 4
+
+        The boolean value `true` is implicitly coerced to the number `1` during the 
+        subtraction operation.
+
+    Comparison Operators:
+        var result = "10" > 5; // Result is true
+
+        The string `"10"` is implicitly coerced to the number `10` during the 
+        greater-than comparison.
+
+    Falsy and Truthy Values:
+        var result = "Hello" || "World"; // Result is "Hello"
+
+        The logical OR (`||`) operator returns the first truthy value. If the left 
+        operand is truthy, it is returned; otherwise, the right operand is returned. 
+        Here, the string `"Hello"` is truthy, so it is returned.
+
+While implicit type coercion can be convenient, it's important for developers to be 
+aware of its behavior to prevent unexpected results. Explicit type conversion using 
+functions like `parseInt`, `parseFloat`, `Number()`, `String()`, etc., can be used 
+when more control over the conversion process is needed.
+___________________________________________________________________________________
+
+6. Explain passed by value and passed by reference.
+
+-> In programming, the terms "passed by value" and "passed by reference" refer to 
+    how arguments are transferred to functions and methods. These concepts are 
+    crucial in understanding how data is manipulated in a programming language.
+
+    1. Passed by Value:
+    -> Pass by value means when a variable is assigned to another variable, the value stored 
+        in the variable is copied into the new variable. They are independent of each other, 
+        each occupying its own memory space.
+
+    * In a "passed by value" mechanism, the actual value of the variable is passed 
+        to the function or method.
+    * The function receives a copy of the variable's value, and any changes made to 
+        the parameter inside the function do not affect the original variable outside 
+        the function.
+    * This is typical for primitive data types such as numbers, strings, and booleans.
+
+Example (in JavaScript):
+
+                function increment(num) {
+                num = num + 1;
+                }
+
+                let count = 5;
+                increment(count);
+                console.log(count); // Output: 5 (unchanged)
+
+    2. Passed by Reference:
+    -> When an object is created in JavaScript, it is stored in a memory space, 
+        and the variable associated with it stores the memory address or reference 
+        where the object is stored.
+
+    * In a "passed by reference" mechanism, the memory address (reference) of the 
+        variable is passed to the function or method.
+    * Any changes made to the parameter inside the function affect the original 
+        variable outside the function because they both point to the same memory 
+        location.
+    * This is typical for non-primitive data types such as objects and arrays.
+
+Example (in JavaScript):
+
+                function addItem(arr, item) {
+                    arr.push(item);
+                }
+
+                let myArray = [1, 2, 3];
+                addItem(myArray, 4);
+                console.log(myArray); // Output: [1, 2, 3, 4] (modified)
+
+It's important to note that the terms "passed by value" and "passed by reference" 
+are somewhat simplifications, and a more accurate way to describe JavaScript's 
+behavior is "passed by value" for primitives and "passed by sharing" or "passed by 
+object reference" for objects. In the case of objects, the reference is passed by 
+value, meaning changes to the object's properties are visible outside the function, 
+but reassigning the reference inside the function does not affect the 
+original reference.
+
+//  Difference
+1.  Pass by Value works only on Primitive Datatypes.
+2.  In pass by value original copy of the data is copied.
+3.  The function receives a copy of the variable's value,
+    and any changes made to the parameter inside the function 
+    do not affect the original variable outside the function.
+4.  Example:- 
+    let a = 5; 
+    let b = a;
+    console.log(a);
+    console.log(b);
+    // Output for both will be 5.
+5.  After passing by value the original variable and the copied variable
+    both works independently.
+
+
+1.  Pass by Reference works only on Non-primitive Datatypes.
+2.  In pass by reference the memory location is copied 
+    or the reference value is copied
+3.  Any changes made to the parameter inside the function affect 
+    the original variable outside the function because they both 
+    point to the same memory location.
+4.  Example:-
+    let obj1 = {
+        name: "dhan",
+        pass: "rabha"
+    }
+    let obj2 = obj1;
+    obj2.pass = "dddd";
+    console.log(obj1);
+    console.log(obj2);
+    // Output will change the 'pass' of original variable to "dddd";
+5.  After passing by reference the value of the original variable and the
+    copied variable is depedent on each other, which means if one changes,
+    the other's value might also get changed.
+___________________________________________________________________________________
+
+7. What is immediately invoked function?
+
+-> An Immediately Invoked Function Expression (IIFE) is a common JavaScript pattern 
+    where a function is defined and executed immediately after its creation. This 
+    pattern helps create a private scope for variables, preventing them from 
+    polluting the global scope. The syntax involves wrapping the function in 
+    parentheses and invoking it immediately.
+
+    Imp:- Prevent Global scope pollution, by not letting the code assible outside 
+    the IIFE.
+
+    Here's the basic structure of an IIFE:
+
+                (function() {
+                    // code inside this function is executed immediately
+                })();
+
+    You can also pass arguments to an IIFE:
+
+                (function(x, y) {
+                    console.log(x + y);
+                })(3, 5); // Outputs: 8
+
+    Key features of IIFE:
+    1. Encapsulation: Variables declared inside the IIFE are not accessible from 
+        the outside, providing a way to create private variables.
+    2. Avoiding Global Scope Pollution: Since the variables and functions inside 
+        the IIFE are not added to the global scope, they don't interfere with 
+        other scripts or libraries.
+    3. Immediate Execution: The function is executed immediately after it's 
+        defined, allowing us to perform tasks or initialize values right away.
+___________________________________________________________________________________
+
+8. Explain Higher Order Functions in javascript.
+
+-> Higher-order functions in JavaScript are functions that operate on other 
+    functions by taking them as arguments or returning them. In other words, a 
+    higher-order function either takes one or more functions as arguments or 
+    returns a new function.
+
+    Here are the two main characteristics of higher-order functions:
+
+    1. Takes a Function as an Argument:
+        A higher-order function can accept another function as an argument.
+
+                function higherOrderFunction(callback) {
+                    // Do something
+                    callback();
+                }
+
+                function myCallback() {
+                    console.log("Callback executed!");
+                }
+
+                higherOrderFunction(myCallback);
+
+    2. Returns a Function:
+        A higher-order function can also return a new function.
+
+                function higherOrderFunction() {
+                    // Returns a new function
+                    return function() {
+                        console.log("Returned function executed!");
+                    };
+                }
+
+                const returnedFunction = higherOrderFunction();
+                returnedFunction();
+
+    Common examples of higher-order functions in JavaScript include `map`, `filter`, 
+    `reduce`, and `forEach` for array manipulation, as well as functions like 
+    `setTimeout` and `addEventListener` for handling asynchronous operations. 
+
+        Example:
+                const numbers = [1, 2, 3, 4, 5];
+
+                // Higher-order function: map
+                const squaredNumbers = numbers.map(function(num) {
+                    return num * num;
+                });
+
+                console.log(squaredNumbers); // Output: [1, 4, 9, 16, 25]
+
+Why we use it is because, to make a low level design code, so that the function is reusable,
+small & understandable.
+___________________________________________________________________________________
+
+9. What is callback?
+
+-> We can take a function and pass it into another function, and when we do so, this 
+    function which we pass into another function is known as callback function.
+                    As we know Javascript is a synchronous and single-threaded 
+    language, but due to callback we can do asynhcronous thing in javascript.
+
+    A callback function is a function that is passed as an argument to another function
+    and is executed after the completion of some operation. Callback function are used 
+    to handle asynchronous operations, maintain control flow and support functional 
+    programming patterns. 
+
+Example:
+
+setTimeout(function () {    // This function that we first pass as a parameter to the setTimeOut 
+    console.log("timer");   // is a callback function.
+}, 4000);      
+
+function x(y){ 
+    console.log("x");
+    y();
+}
+x(function y(){             //  Giving the responsibility of this function to another function.  
+    console.log("y");
+})
+
+Output: x y timer(after 4sec)
+___________________________________________________________________________________
+
+10. What is closure?
+
+-> A function along with a reference to it's outer environment, together forms a 
+    closure. In other words, closure is a combination of a function and its lexical 
+    scope bundled together forms a closure.
+
+    Closure can be used to create reusable function that can access data which is not 
+    in their own scope. 
+___________________________________________________________________________________
+
+11. What is promise? Write a code for promise.
+
+-> A promise in JavaScript is an object that represents the eventual completion or 
+    failure of an asynchronous operation and its resulting value. It is a way to handle 
+    asynchronous operations more elegantly and avoid the callback hell, making code 
+    more readable and maintainable.
+    
+    A Promise is in one of three states:
+    1.  Pending: The initial state; neither fulfilled nor rejected.
+    2.  Fulfilled: The operation completed successfully, and the Promise has a 
+        resulting value.
+    3.  Rejected: The operation failed, and the Promise has a reason for the failure.
+
+A Promise is said to be "settled" if it is either fulfilled or rejected.
+
+Code Example:
+
+            const myPromise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("Promise resolved");
+            }, 1000);
+            });
+
+            myPromise.then((message) => {
+            console.log(message);
+            }).catch((error) => {
+            console.log(error);
+            });
+
+Intuition: Think of a Promise as a contract between two parties. One party promises 
+to deliver a result in the future (resolve) or provide a reason why they 
+couldn't (reject). The other party can then decide what to do based on whether the 
+promise was fulfilled or rejected.
+___________________________________________________________________________________
+
+12. What are non-primitive data type?
+
+-> Non-primitive data types, also known as reference types, are data types in 
+    programming languages that are not directly represented as a single, simple value. 
+
+    Example:
+    objects, array, functions, etc...
+___________________________________________________________________________________
+
+13. What is `addEventListner`?
+
+->  `addEventListener` is a method in JavaScript that allows us to attach an event 
+    handler function to an HTML element. An event handler is a function that gets 
+    executed in response to a specific event occurring on an HTML element, such as a 
+    click, mouseover, keypress, etc.
+
+    Example:
+    element.addEventListener(event, function, options);
+___________________________________________________________________________________
+
+14. What is event bubbling?
+
+-> In event bubbling, the event starts at the target element and then moves up the DOM 
+    tree, notifying each ancestor element of the event. This is the default behaviour 
+    in Javascript.
+                In event bubbling, the child tells its parents, who tells their parents
+    (i,e. grandparents) and so on.
+
+    Example:
+    html:
+            <div id="outer">
+                <div id="middle">
+                    <button id="inner">Click me</button>
+                </div>
+            </div>
+
+    Example of handling an event during the bubbling phase:
+    JavaScript:
+            document.getElementById('outer').addEventListener('click', function() {
+                console.log('Outer div clicked');
+            });
+
+            document.getElementById('middle').addEventListener('click', function() {
+                console.log('Middle div clicked');
+            });
+
+            document.getElementById('inner').addEventListener('click', function() {
+                console.log('Button clicked');
+            });
+___________________________________________________________________________________
+
+15. What is event delegation, and why is it useful in JavaScript? Provide an example.
+
+-> Event delegation is a JavaScript programming pattern where we use a single event 
+    listener to manage all the events for a particular type on a parent element, 
+    rather than setting up individual event listeners on each child element. This is 
+    achieved by taking advantage of event bubbling, where events on nested elements 
+    propagate up to their ancestors.
+
+    imp:- to create cleaner code and fewer event listeners with better logic.
+
+Event delegation is useful for the following reasons:
+    1. Efficiency: It reduces the number of event listeners in our code, which can 
+        improve performance, especially when dealing with a large number of elements.
+
+    2. Dynamic Content: It works well with dynamically added or removed elements, 
+        as the event listener is attached to a parent that exists when the page loads.
+
+    3. Simpler Code: It often leads to cleaner and more maintainable code since we 
+        don't need to manage individual event listeners for each child element.
+
+    Example:
+            <ul id="itemList">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+
+            <script>
+                // Event delegation
+                document.getElementById('itemList').addEventListener('click', function(event) {
+                    if (event.target.tagName === 'LI') {
+                        // The clicked element is an <li> element
+                        console.log('Clicked on:', event.target.textContent);
+                    }
+                });
+            </script>
+___________________________________________________________________________________
+
+16. What are Async operations ?
+
+-> Async operations in JavaScript refer to operations that are asynchronous, meaning 
+    they don't block the execution of the program while waiting for a particular 
+    task to complete. Asynchronous operations are crucial for handling tasks that 
+    may take some time to finish, such as fetching data from a server, reading a 
+    file, or waiting for user input.
+
+    Key concepts related to async operations in JavaScript include:
+    --Callback Functions, Promises, Async/Await, etc... 
+___________________________________________________________________________________ 
+
+17. What is a JavaScript prototype, and how does it relate to inheritance in JavaScript? 
+
+-> In JavaScript, each object has a prototype, and the prototype is an object itself. 
+    The prototype is used for inheritance, allowing one object to inherit properties 
+    and methods from another object. 
+___________________________________________________________________________________
+
+18. How do you handle cross-origin requests in JavaScript, and what is the Same-Origin Policy?
+
+-> Cross-Origin Requests:-
+    Cross-Origin Requests occur when a web page makes a request for a resource from a 
+    domain (origin) different from the one that served the web page. Browsers, by default, 
+    follow the Same-Origin Policy, a security measure designed to prevent potentially 
+    harmful interactions between different origins.
+
+    To handle cross-origin requests, developers often use techniques like:
+    1. CORS (Cross-Origin Resource Sharing):
+    2. JSONP (JSON with Padding):
+    3. Proxy Server:
+
+   Same-Origin Policy (SOP):-
+    The Same-Origin Policy restricts web pages from making requests to a different 
+    domain than the one that served the web page. It applies to requests made via 
+    JavaScript, and it includes restrictions on accessing certain properties and methods 
+    of cross-origin resources.
+___________________________________________________________________________________
+
+19. Describe the differences between a shallow copy and a deep copy of objects and 
+    arrays in JavaScript.
+
+-> In JavaScript, the concepts of shallow copy and deep copy refer to how objects and 
+    arrays are duplicated. Understanding the differences between them is essential 
+    for avoiding unexpected behavior when working with complex data structures.
+
+Shallow Copy:
+    Definition: A shallow copy creates a new object or array and copies the top-level 
+        structure of the original object or array. However, the nested objects or 
+        arrays within the original object are still referenced in the copied object.
+    Copying Mechanism: Shallow copy is typically achieved using methods like `Object.assign()`, 
+        the spread (`...`) operator, or array methods like `slice()`.
+
+    Example of Shallow Copy:
+                const originalArray = [1, 2, [3, 4]];
+                const shallowCopyArray = [...originalArray];
+
+                shallowCopyArray[2][0] = 99;
+
+                console.log(originalArray);      // Output: [1, 2, [99, 4]]
+                console.log(shallowCopyArray);   // Output: [1, 2, [99, 4]]
+
+Deep Copy:
+    Definition: A deep copy creates a completely independent copy of the original 
+        object or array along with all nested objects or arrays. Changes made to the 
+        deep copy do not affect the original object or any of its nested structures.
+    Copying Mechanism: Achieving a deep copy is more complex and often requires a   
+        custom recursive function or a library like `lodash`.
+
+    Example of Deep Copy:
+                const originalArray = [1, 2, [3, 4]];
+                const deepCopyArray = JSON.parse(JSON.stringify(originalArray));
+
+                deepCopyArray[2][0] = 99;
+
+                console.log(originalArray);    // Output: [1, 2, [3, 4]]
+                console.log(deepCopyArray);    // Output: [1, 2, [99, 4]]
+
+    Difference:-
+    Shallow copies are simpler to create and may be sufficient for some use cases.
+
+                But, Deep copies ensure complete independence but can be less efficient 
+    and may have limitations, especially with objects containing functions 
+    or non-JSON-safe values.When using deep copies, be cautious about circular 
+    references, as they may lead to infinite recursion.
+___________________________________________________________________________________
+
+20. Question--- Call this api and show the result
+            API - https://gorest.co.in/public/v2/users
+
+-> Code: In html 
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>API Request Example</title>
+        </head>
+        <body>
+            <h1>API Response:</h1>
+            <pre id="apiResponse"></pre>
+
+            <script>
+                // Make a GET request to the API
+                fetch('https://gorest.co.in/public/v2/users')
+                    .then(response => response.json())
+                    .then(data => {
+                        // Display the API response in the HTML
+                        document.getElementById('apiResponse').textContent = JSON.stringify(data, null, 2);
+                    })
+                    .catch(error => console.error('Error:', error));
+            </script>
+        </body>
+        </html>
+
+Code: In JavaScript 
+
+        fetch('https://gorest.co.in/public/v2/users')
+        .then(response => response.json())
+        .then(data => {
+            // Display the API response in the console
+            console.log(data);
+        })
+        .catch(error => console.error('Error:', error));
+___________________________________________________________________________________
+
+22. Event Loop:- Event Loop is a continuous process that handles the execution of code, 
+    ensuring that tasks are processed efficiently in a non-blocking and asynchronous way. 
+                    It is a critical part of JavaScript's concurrency model and is 
+    responsible for managing tasks such as handling user interactions, making network 
+    requests, and processing events.
+___________________________________________________________________________________
+
+23. How does the JavaScript event loop work, and what is the role of the call stack, 
+callback queue, and microtask queue?
+
+-> The JavaScript event loop is a crucial mechanism that handles asynchronous operations 
+    in the language. Here's a brief explanation of how it works, including the roles of 
+    the call stack, callback queue, and microtask queue:
+
+1. Call Stack:
+    The call stack is a data structure that records where in the program we are. It keeps 
+    track of function calls. When a function is invoked, it's added to the top of the stack.
+    When a function completes, it's removed from the stack.
+
+2. Callback Queue (Task Queue):
+    The callback queue, also known as the task queue, holds messages (functions) to be 
+    processed. These messages are added to the queue when an asynchronous operation 
+    completes or when an event occurs.
+
+3. Microtask Queue:
+    The microtask queue holds tasks that are higher-priority than the regular callback 
+    queue tasks. Microtasks are usually used for promises and mutation observer callbacks.
+
+4. MutationObserver:
+    The MutationObserver interface provides the ability to watch for changes being made to 
+    the DOM tree. It is designed as a replacement for the older Mutation Events feature, 
+    which was part of the DOM3 Events specification.
+
+    ### Event Loop Process: ###
+
+1. Execute Synchronous Code:
+    The JavaScript engine starts by executing any synchronous code it finds. Functions are 
+    added to the call stack and executed in a first-in, last-out order.
+
+2. Handle Asynchronous Operations:
+    When an asynchronous operation (e.g., a setTimeout, AJAX request, or event listener) 
+    is encountered, it's offloaded to the browser's APIs, and the engine continues executing 
+    the remaining synchronous code.
+
+3. Callback Queue and Microtask Queue:
+    When an asynchronous operation completes or an event occurs, a callback (function) is 
+    added to the callback queue or microtask queue, depending on the type of task.
+
+4. Event Loop:
+    The event loop continually checks the call stack. If it's empty, it takes the first 
+    task from the microtask queue and moves it to the call stack. Microtasks are given 
+    priority and are processed before regular tasks.
+
+5. Repeat:
+    The process repeats, with the event loop continuously checking the call stack and 
+    moving tasks from the callback queue or microtask queue to the call stack as needed.
+
+Example:
+                console.log('Start');
+
+                setTimeout(function() {
+                console.log('Timeout callback');
+                }, 0);
+
+                Promise.resolve().then(function() {
+                console.log('Promise resolved');
+                });
+
+                console.log('End');
+
+Output:
+                Start
+                End
+                Promise resolved
+                Timeout callback
+
+The JavaScript event loop ensures that asynchronous operations are handled efficiently, 
+with the call stack, callback queue, and microtask queue working together to manage the 
+flow of code execution. The event loop continuously checks for available tasks, 
+prioritizing microtasks over regular tasks, and ensures that the program remains 
+responsive and non-blocking.
+___________________________________________________________________________________
+
+24. What are the types of framework in javascript?
+
+->
+
