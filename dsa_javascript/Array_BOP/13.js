@@ -15,6 +15,6 @@ let lastIndex = 4;
 let index = lastIndexOccurance(array, lastIndex);
 if (index !== -1) {
     console.log(`Index of the last occurrence of ${lastIndex}: ${index}`);
-  } else {
+} else {
     console.log(`Element ${lastIndex} not found in the array`);
-  }
+}

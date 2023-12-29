@@ -20,28 +20,28 @@
 
 // Web api
 
-function dataFetch(){
-    return new Promise((resolve, reject)=>{
-        setTimeout(()=>{
-            const success = true;
-            if(success){
-                resolve("work done successfully");
-            } else {
-                reject("Error, unable to do work")
-            }
-        }, 1000);
-    })
-}
-// dataFetch().then((result)=>{
+// function dataFetch(){
+//     return new Promise((resolve, reject)=>{
+//         setTimeout(()=>{
+//             const success = true;
+//             if(success){
+//                 resolve("work done successfully");
+//             } else {
+//                 reject("Error, unable to do work")
+//             }
+//         }, 1000);
+//     })
+// }
+// // dataFetch().then((result)=>{
+// //     console.log(result);
+// // }).catch((error)=>{
+// //     console.log(error);
+// // })
+// const myPromise = dataFetch();
+// async function myAsync(){
+//     const result = await myPromise;
 //     console.log(result);
-// }).catch((error)=>{
-//     console.log(error);
-// })
-const myPromise = dataFetch();
-async function myAsync(){
-    const result = await myPromise;
-    console.log(result);
-} 
-myAsync();
+// } 
+// myAsync();
 
-// where every there is a complex application of code eg: 
+// // where every there is a complex application of code eg: 

@@ -1,3 +1,5 @@
+// 1. Print "Hello, World!" to the console.
+
 console.log("hello world");
 
 document.getElementById("hi").innerHTML = "hello world";

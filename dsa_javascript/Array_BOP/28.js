@@ -28,4 +28,4 @@ function insertionSort(arr){
 }
 let array = [3, 5, 8, 4, 2];
 let result = insertionSort(array);
-console.log(result);
+console.log(result);    

@@ -68,7 +68,8 @@ Regular Expressions:
     42. Validate a phone number using a regular expression.
     43. Extract all URLs from a given text.
     44. Validate an IP address using a regular expression.
-    45. Replace all occurrences of a word with another word using a regular expression.
+    45. Replace all occurrences of a word with another word using a regular 
+        expression.
 __________________________________________________________________________________
 
 File Handling with Strings:
@@ -78,3 +79,4 @@ File Handling with Strings:
     48. Read a CSV file and extract data based on a condition.
     49. Write a string to a text file.
     50. Replace all occurrences of a word in a text file.   
+__________________________________________________________________________________
