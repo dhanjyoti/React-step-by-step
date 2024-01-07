@@ -35,6 +35,7 @@ example:
         document.body.appendChild(newParagraph);
     </script>
 
+
 </body>
 </html>
 ___________________________________________________________________________________
