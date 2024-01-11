@@ -3,7 +3,7 @@
 1. What is a DOM ?
 
 ->  The Document Object Model (DOM) is a programming interface for web documents. 
-    It represents the structure of an HTML or XML document as a tree of objects, 
+    It represents the structure of an HTMtL or XML document as a tree of objects, 
     and it allows scripts to interact with and manipulate the content and 
     structure of a webpage dynamically.
 
@@ -16,7 +16,6 @@ example:
     <title>DOM Example</title>
 </head>
 <body>
-
     <h1 id="mainTitle">Hello, DOM!</h1>
     <p id="demo">This is a simple webpage.</p>
 
@@ -34,8 +33,6 @@ example:
         newParagraph.textContent = "This is a new paragraph.";
         document.body.appendChild(newParagraph);
     </script>
-
-
 </body>
 </html>
 ___________________________________________________________________________________
@@ -757,7 +754,7 @@ ________________________________________________________________________________
     html:
             <div id="outer">
                 <div id="middle">
-                    <button id="inner">Click me</button>
+                   <button id="inner">Click me</button>
                 </div>
             </div>
 

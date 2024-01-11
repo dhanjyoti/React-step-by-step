@@ -45,3 +45,33 @@
 // myAsync();
 
 // // where every there is a complex application of code eg: 
+
+// const { log } = require('console');
+// const readline = require('readline');
+
+// const rl = readline.createInterface({
+//     input: process.stdin,
+//     output: process.stdout
+// });
+// let userInputArray = [];
+// function takeUserInput(){
+//     rl.question("Enter an element: ", (input)=>{
+//         if(input.toLowerCase() === 'done'){
+//             console.log("entered element: ", userInputArray);
+//             rl.close();
+//         } else {
+//             userInputArray.push(input);
+//             takeUserInput();
+//         }
+//     })
+// }
+// takeUserInput();
+
+let arr = [3, 5, 4, 23, 67, 2];
+let max = 0;
+for(let i=0; i<arr.length; i++){
+    max = max + arr[i];
+}
+let avg = max/arr.length;
+
+console.log(avg.toFixed(2))

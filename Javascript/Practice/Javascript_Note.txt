@@ -5,6 +5,7 @@ pop-up menus, etc.).
 Statement ->  A unit of code in JavaScript that represents a complete instruction or action, 
 often terminated by a semicolon. Statements are executed sequentially, one after the other, 
 and they define the program's behavior.
+Eg: let a = 20;
 
 Sep 9+
 DOCTYPE:-  <!DOCTYPE> is a declaration in HTML that specifies the type and version of 

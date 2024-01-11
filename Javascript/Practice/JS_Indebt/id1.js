@@ -181,8 +181,29 @@
 //     x();
 
 
-const button = document.getElementsByTagName("button")[0];
+// const button = document.getElementsByTagName("button")[0];
 
-button.addEventListener('click', ()=>{
-    document.write("button clicked");
-})
+// button.addEventListener('click', ()=>{
+//     document.write("button clicked");
+// })
+
+// Arrow Function
+
+// let multiply = () => {
+//     return (
+//         console.log("hello")
+//     )
+// }
+// multiply()
+
+// Immediately Invoking Function Expression(IIFE)
+
+
+
+function hoc(){
+    return function(){
+        console.log("hello");
+    }
+}
+let fff = hoc()();
+

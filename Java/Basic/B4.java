@@ -20,7 +20,7 @@
         2. Linked lists can dynamically grow or shrink by adding or removing nodes.
         They adapt to the number of elements in real-time without requiring a new 
         allocation.
-    ## Insertion and Deletion:
+    ## Insertion and Deletion:  
         1. Inserting or deleting elements in an array, especially in the middle or the
         beginning, can be slow and may require shifting other elements.
         2. Linked lists excel at insertions and deletions since you can change references

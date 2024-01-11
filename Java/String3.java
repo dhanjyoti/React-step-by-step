@@ -2,7 +2,7 @@
 
 import java.util.Scanner;
 
-public class SwapNumber{
+public class String3{
     static void swapNumberValues(int m, int n){
         // Swapping the values
         int temp = m;

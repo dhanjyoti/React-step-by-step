@@ -21,7 +21,7 @@ What do you mean by Callback function in Javascript?
                     We can take a function and pass it into another function, and when we do so, 
     this function which we pass into another function is known as callback function.
                     As we know Javascript is a synchronous and single-threaded language, but 
-    due to callback we can do asynhcronous thing in javascript.
+    callback is one of the ways through which, we can do asynhcronous thing in javascript.
 
 Simple example:-
 
