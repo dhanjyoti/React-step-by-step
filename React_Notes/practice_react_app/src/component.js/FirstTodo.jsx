@@ -20,6 +20,20 @@ const Firstodo = () => {
             setInputValue('')
         }
     }
+
+    const handleEditTodo = (index)=> {
+        const editedTodo = prompt('Edit the task:', todos[index]);
+        if(editedTodo !== null){
+            const updatedTodos =[...todos];
+            updatedTodos[index] = editedTodo;
+            setTodos(updatedTodos);
+        }
+    }
+    const handleDeleteTodo= (index) => {
+        const updatedTodos = todos.filter((_, i) => i !== index);
+        setTodos(updatedTodos);
+    }
+
   return (
     <div>
         <h2>Todo App</h2>
@@ -29,7 +43,11 @@ const Firstodo = () => {
         </div>
         <ul>
             {todos.map((todo, index)=>(
-                <li key={index}>{todo}</li>
+                <li key={index}>
+                    {todo}
+                    <button onClick={()=>handleEditTodo(index)}>Edi</button>
+                    <button onClick={()=> handleDeleteTodo(index)}>Delete</button>
+                </li>
             ))}
         </ul>
     </div>
