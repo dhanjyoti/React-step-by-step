@@ -1,8 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Firstodo = () => {
     const [inputValue, setInputValue] = useState('');
-    const [todos, setTodos] = useState([]);
+    const [todos, setTodos] = useState(()=>{
+        const storedTodos = localStorage.getItem('todos');
+        return storedTodos ? JSON.parse(storedTodos) : [];
+    });
+    useEffect(()=>{
+        localStorage.setItem('todos', JSON.stringify(todos));
+    },[todos]);
 
     const handleChange = (e)=>{
         setInputValue(e.target.value);
