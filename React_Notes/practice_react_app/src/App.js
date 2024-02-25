@@ -5,7 +5,7 @@ import CategoryTodo from './component/CategoryTodo';
 import FormValidation from './component/FormValidation';
 import RealTimeInputDisplay from './component/RealTimeInputDisplay';
 import Counter from './component/Counter';
-import SearchProducts from './component/Text';
+import SearchProducts from './component/SearchProduct';
 
 function App() {
   return (
