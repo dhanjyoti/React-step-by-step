@@ -1,3 +1,12 @@
+Debounce is most suitable for control events like typing or button clicks.
+If the user triggers a new event during that time, the time will be reset.
+
+
+Throttle is most suitable for continuous user events like resizing and scrolling.
+Instead of delaying, it invokes the callback function at regular intervals 
+as long as the event trigger is active.
+
+
 Throttling-> is useful when you want to ensure that a function 
     is called at a limited rate or frequency, without missing 
     any important inputs or events. 
@@ -98,7 +107,7 @@ Difference between Debouncing & Throttling:-
     But, Throttling ensures that the function is called at a regular interval, 
     even if the event is triggered multiple times.
 
-    3. Debouncing us useful, when we want to delay the invocation of a function 
+    3. Debouncing is useful, when we want to delay the invocation of a function 
     until a certain period of inactivity has passed.
     But, Throttling is useful when we want to list the Frequency of function calls.
 

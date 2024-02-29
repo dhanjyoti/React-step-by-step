@@ -1,4 +1,4 @@
-// 25.    Find the intersection of two arrays. explain this question
+// 25.    Find the intersection of two arrays. 
 
 let array1 = [2, 5, 7, 9, 8];
 let array2 = [5, 6, 12, 9, 7, 566];

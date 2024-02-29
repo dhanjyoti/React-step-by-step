@@ -8,7 +8,7 @@ function searchElement(arr, target){
             return i;
         }
     }
-    return -i;
+    return -1;
 }
 let search = 34;
 

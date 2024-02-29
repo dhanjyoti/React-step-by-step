@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      The Document Fragment interface represents a minimal document object that
+      has no parent.
+    </p>
+    <div id="myList"></div>
+    ist
+    <script>
+      let df = document.createDocumentFragment();
+      let hNode = document.createElement("h3");
+      let pNode = document.createElement("p");
+      hNode.textContent = "hello";
+      pNode.textContent = "I AM p";
+      df.appendChild(hNode);
+      df.appendChild(pNode);
+      let targetNode = document.getElementById("myList");
+      targetNode.appendChild(df);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        route
+    </div>
+    <script>
+        let arr = ['Rahul', 'dhan', 'sonu', 'monu', 'hari'];
+        arr.forEach(element=>{
+            let paragraph = document.createElement('p');
+            let mainDiv = document.getElementsByClassName('main')[0];
+            paragraph.textContent = element;
+            mainDiv.appendChild(paragraph);
+        })
+    </script>
+</body>
+</html>

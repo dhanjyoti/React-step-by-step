@@ -6,7 +6,7 @@ let occuranceValue = 4;
 function occurance(arr, target){
     let count = 0;
     for(let i=0; i<=arr.length; i++){
-        if(arr[i] == occuranceValue){
+        if(arr[i] == target){
             count++;
         }
     }

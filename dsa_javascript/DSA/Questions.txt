@@ -1,1 +1,5 @@
 2. Square root of a number
+
+10. you have a string you need to give the count aside the string as output using Run-length algorithm.
+example: Input - aaabbddddfee
+output - 3a2b4d1f2e

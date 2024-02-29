@@ -34,7 +34,7 @@
     Shallow Copy-   A shallow copy of an object is a copy whose properties share the same 
         references (point to the same underlying values) as those of the source object from 
         which the copy was made. As a result, when you change either the source or the copy, 
-        you may also cause the other object to change too.
+        we may also cause the other object to change too.
 
         Shallow copy goes only one level down, it means that it copies the object but any
         nested object or arrays will still reference to same memory of original array.
@@ -102,7 +102,7 @@ But Deep copy has its own limitation.
     Or else we need to make a function and manually create a new object, create its loop and make logic 
     to do so which is not recommended.
 
-    Secondly, Deep Copy  doesnot work with functions and Date.
+    Secondly, Deep Copy doesnot work with functions and Date.
 
     And unfortuntely there is no solution in javascript to solve these issues.
 

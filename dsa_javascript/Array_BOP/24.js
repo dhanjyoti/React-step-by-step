@@ -9,12 +9,10 @@ function hasSubarrayWithSum(arr, targetsum){
 
     for(let i=0; i<arr.length; i++){
         currentSum += arr[i];
-
         while(currentSum > targetsum && start <= i){
             currentSum -= arr[start];
             start++;
         }
-
         if(targetsum === currentSum){
             return true;
         }

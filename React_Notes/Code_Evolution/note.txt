@@ -1,0 +1,65 @@
+What is React?
+-> React is an open source library for building user interfaces.
+2 key points - 1. It is a javascript library. Not a Framework.
+               2. Building user interfaces.
+
+Why learn React?
+-> It is project created and maintained by facebook.
+It has a huge community.
+
+Component Based Architecture -
+-> It helps us break down our application into small encapsulated 
+part and which can then be composed to make more complex UI's.
+
+React is Declarative -
+-> Tell React what we want and React will build the actual UI.
+React will handle efficiently updating and rendering of the components.
+DOM updates are handles gracefully in React.
+
+What is npx?
+-> It is npm package runner. It gets installed when we install node.
+
+Components -
+-> Components describe a part of the user interface.
+They are re-usable and can be used nested inside other components.
+Components are the building blogs of any React application.
+2 types - Stateless Functional Components
+        - Stateful Class Components
+
+Functional Component vs Class Component
+Functional->
+- Simple functions receiving props and returning a declaration.
+- advantage is absence of `this` keyword.
+- solution without using state.
+- Mainly responsible for the UI.
+- also known as stateless/dumb/presentational Components,
+but after introduction of hooks it became stateful again.
+
+Class->
+- More feature rich
+- maintain their own private data - state
+- Complex UI logic
+- Provide lifecycle hooks
+- also known as stateful/smart/container Components
+
+JSX
+-> Javascript XML(JSX) - Extension to the Javascript syntax.
+Write XML - like code in React for elements and components.
+JSX tags have a tag name, attributes and children.
+JSX makes React code simpler and elegant.
+JSX ultimately transpiles to pure Javascript which is
+understood by the browsers.
+
+In JSX `props` are immutable, it means they cannot be changed.
+
+props vs state
+props->
+- props get passed to the component
+- Function parameters
+- props are immutable
+
+
+state->
+- state is managed within the component
+- Variables declared in the function body
+- state can be changed         

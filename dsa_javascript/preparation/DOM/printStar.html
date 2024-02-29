@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Star print</h1>
+    <div id="print"></div>
+    <script>
+      // *
+      // * *
+      // * * *
+      // * * * *
+      // * * * * *
+      // function starPrint(n){
+      //     let printing = document.querySelector('#print');
+      //     for (let i = 0; i < n; i++) {
+      //         let star = "";
+      //         for (let j = 0; j <= i; j++) {
+      //             star += "*" + " ";
+      //         }
+      //         let para = document.createElement('p');
+      //         para.textContent = star;
+      //         printing.appendChild(para);
+      //     }
+      // }
+      // let n = 5;
+      // starPrint(n)
+
+      //         *
+      //       * *
+      //     * * *
+      //   * * * *
+      // * * * * *
+      function starPrint(n) {
+        let printing = document.querySelector("#print");
+        for (let i = 0; i < n; i++) {
+          let star = "";
+          for (let j = i; j < n - 1; j++) {
+            star += "_" + " ";
+          }
+          for (let k = 0; k <= i; k++) {
+            star += "*" + " ";
+          }
+          let para = document.createElement("p");
+          para.textContent = star;
+          printing.appendChild(para);
+        }
+      }
+      let n = 5;
+      starPrint(n);
+    </script>
+  </body>
+</html>

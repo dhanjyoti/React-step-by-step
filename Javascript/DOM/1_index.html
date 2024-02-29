@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Print array with dom</h1>
+    <!-- <div id="main">
+        route
+    </div> -->
+    <div class="classMain">
+        classdiv
+    </div>
+    <script>
+        const array = [1, 4, 6, 7, 8];
+        const arrayDiv = document.querySelector(".classMain");
+        let idHTML = '';
+        for(let i=0; i<array.length; i++){
+            idHTML += array[i]+' ';
+        }
+        arrayDiv.innerHTML = idHTML;
+    </script>
+</body>
+</html>

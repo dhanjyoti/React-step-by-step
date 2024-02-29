@@ -2,6 +2,8 @@
 
 let arr = [2, 4, 7, 3];
 
+let printArr = ''
 for(let i=0; i<arr.length; i++){
-    console.log(arr[i]);
+    printArr += arr[i]
 }
+console.log(printArr);

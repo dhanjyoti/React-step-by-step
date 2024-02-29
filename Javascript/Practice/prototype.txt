@@ -1,3 +1,7 @@
+Prototype inheritance in javascript is the linking of prototypes of a parent object 
+to a child object to share and utilize the properties of a parent class using a child 
+class. 
+
 prototype is a behaviour of Javascript
 
 we get the new keyword, this keyword, classes in javascript, & inheritance.
@@ -37,8 +41,8 @@ Explaination through constructor function:-
                 this.age = age;
                 this.salary = salary;
             }
-            const Ram = new Person("dj", 25, 30000);
-            console.log(Ram);
+            const DJ = new Person("dj", 25, 30000);
+            console.log(DJ);
 
 In this the output is // Person {name:'dj', age:25, salary:30000}        
             But if we try to insert one more variable inside the 

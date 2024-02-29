@@ -82,8 +82,12 @@ Shuffling and Randomization:
 Element Frequency:
     
     46. Find the most frequent element in an array.                            
-    47. Find the kth most frequent element in an array.                        
+    47. Find the kth most frequent element in an array. (not complete)                       
     48. Find the majority element (element that appears more than n/2 times).  
     49. Find the elements that appear more than n/3 times in an array.         
     50. Find the second largest element in an array.                           
     ___________________________________________________________________________
+
+    51. Print all possible arrays in from a given array.
+    52. Frequency of elements in an array.
+    53. Given two finite non-empty sets, find their Cartesian Product.

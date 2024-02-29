@@ -3,7 +3,7 @@
 1. What is a DOM ?
 
 ->  The Document Object Model (DOM) is a programming interface for web documents. 
-    It represents the structure of an HTMtL or XML document as a tree of objects, 
+    It represents the structure of an HTML or XML document as a tree of objects, 
     and it allows scripts to interact with and manipulate the content and 
     structure of a webpage dynamically.
 
@@ -45,7 +45,7 @@ ________________________________________________________________________________
         container that often separates sections of a webpage.
                 But `span` is used to apply styles or scripting to a specific 
                 portion of text within a block-level element.
-    3. `div` is usually starts on a new line and takes up the full width available.
+    3. `div` usually starts on a new line and takes up the full width available.
                 But `span` does not start on a new line and only takes up as much 
                 width as necessary.
 ___________________________________________________________________________________
@@ -653,7 +653,7 @@ ________________________________________________________________________________
 -> We can take a function and pass it into another function, and when we do so, this 
     function which we pass into another function is known as callback function.
                     As we know Javascript is a synchronous and single-threaded 
-    language, but due to callback we can do asynhcronous thing in javascript.
+    language, but callback one of the ways through we can do asynhcronous thing in javascript.
 
     A callback function is a function that is passed as an argument to another function
     and is executed after the completion of some operation. Callback function are used 
@@ -716,10 +716,64 @@ Code Example:
             console.log(error);
             });
 
+Code Example:-
+            function fetchData(){
+                return new Promise((resolve, reject)=>{
+                    setTimeout(()=>{
+                        const success = true;
+                        if(success){
+                            resolve("Data successfully fetched!");
+                        } else{
+                            reject("Error, Unable to fetch data");
+                        }
+                    }, 2000);
+                });
+            }
+
+            fetchData()
+                .then((result)=>{
+                    console.log(result);
+                })
+                .catch((error)=>{
+                    console.error(error);
+                });
+
 Intuition: Think of a Promise as a contract between two parties. One party promises 
 to deliver a result in the future (resolve) or provide a reason why they 
 couldn't (reject). The other party can then decide what to do based on whether the 
 promise was fulfilled or rejected.
+
+There are four major promise APIs
+    1. promise.all()
+    2. promise.allSettled()
+    3. promise.race()
+    4. promise.any()
+
+1. promise.all() -> Suppose we need to make parallel API calls, Eg: there are 10
+    user Ids, & we have an api call for user info, we want to make 10 parallel api 
+    calls for 10 users. Here we shall use parallel apis.
+                It is used to handle multiple api calls together. It takes an 
+    array(iterables) of promises as an input.
+    But if any one of these api's is not successfull, it will give us an error for
+    all the api's. It will not wait for other promises to get successful or rejected.
+
+2. promise.allSettled() -> The problem of promise.all() is settled through
+    promise.allSettled(). when we need the result of only the successful promises, we
+    use promise.allSettled(). Here even if any one of the promise fails in between
+    it will still wait for all promises to settled.
+
+3. promise.race() -> As the name suggest its a race, so as soon as the first promise 
+    resolves, it will give the result of that promise. So whether the result maybe 
+    success or failure. It will give us the outcome of the first promise. It will not
+    wait for other promises to finish. 
+
+4. promise.any() -> Whenever the first promise will resolve, or it will wait for
+    the first promise to get success, it will show us the result of the first successful 
+    promise. Even if any promise is failed in the beginning, it doesn't matter. It
+    will show us the promise of that result.
+                But if all the api/promise fails, the return will be an aggregated
+    error. It will be an error of all the errors, in a array.
+
 ___________________________________________________________________________________
 
 12. What are non-primitive data type?
@@ -853,49 +907,128 @@ ________________________________________________________________________________
 19. Describe the differences between a shallow copy and a deep copy of objects and 
     arrays in JavaScript.
 
--> In JavaScript, the concepts of shallow copy and deep copy refer to how objects and 
-    arrays are duplicated. Understanding the differences between them is essential 
-    for avoiding unexpected behavior when working with complex data structures.
+-> *   In Javascript when we assign an object to another object, there is no data copy of it, 
+    it gets a reference copy. It means it copies the location of it, and what happens is 
+    location of both the objects becomes same. Now if we change the variable of the second 
+    object there will also be change in the variable of the first object. This is called 
+    coping an object.
+    This is coping through reference. Means coping of the memory.
+    When we copy an object, the memory location of it is copied.
 
-Shallow Copy:
-    Definition: A shallow copy creates a new object or array and copies the top-level 
-        structure of the original object or array. However, the nested objects or 
-        arrays within the original object are still referenced in the copied object.
-    Copying Mechanism: Shallow copy is typically achieved using methods like `Object.assign()`, 
-        the spread (`...`) operator, or array methods like `slice()`.
+    Example-
+                let obj={
+                    name: 'dhan'
+                };
+                let user = obj;
+                user.name = 'jyoti'
+                console.log(obj)    
 
-    Example of Shallow Copy:
-                const originalArray = [1, 2, [3, 4]];
-                const shallowCopyArray = [...originalArray];
+*   But coping of object happens through two types-
+    1. coping by value  &
+    2. coping by reference
 
-                shallowCopyArray[2][0] = 99;
+*   When we copy a variable, the value of the variable is copied. This is coping by value.
 
-                console.log(originalArray);      // Output: [1, 2, [99, 4]]
-                console.log(shallowCopyArray);   // Output: [1, 2, [99, 4]]
+    Example-
+            let x = 'dhan';
+            let y = x;
+            y = 'jyoti';
+            console.log(x);
 
-Deep Copy:
-    Definition: A deep copy creates a completely independent copy of the original 
-        object or array along with all nested objects or arrays. Changes made to the 
-        deep copy do not affect the original object or any of its nested structures.
-    Copying Mechanism: Achieving a deep copy is more complex and often requires a   
-        custom recursive function or a library like `lodash`.
+*   But coping an object as a coping by reference, sometimes is not a good practice.
+    Sometimes we don't want to change the whole object while coping it.
+    To solve this problem we try to copy objects in different ways.
+    Two ways to do so are Deep Copy & Shallow Copy.
 
-    Example of Deep Copy:
-                const originalArray = [1, 2, [3, 4]];
-                const deepCopyArray = JSON.parse(JSON.stringify(originalArray));
+    Shallow Copy-   A shallow copy of an object is a copy whose properties share the same 
+        references (point to the same underlying values) as those of the source object from 
+        which the copy was made. As a result, when you change either the source or the copy, 
+        we may also cause the other object to change too.
 
-                deepCopyArray[2][0] = 99;
+        Shallow copy goes only one level down, it means that it copies the object but any
+        nested object or arrays will still reference to same memory of original array.
+    Example:-
+            let obj = {
+                name: "dhan"
+            };
+            //  let user = Object.assign({}, obj);  // or
+            //  let user = {...obj};
+            user.name = "Jyoti"
 
-                console.log(originalArray);    // Output: [1, 2, [3, 4]]
-                console.log(deepCopyArray);    // Output: [1, 2, [99, 4]]
+            console.log("Object is :", obj);
+            console.log("User is :", user);
 
-    Difference:-
-    Shallow copies are simpler to create and may be sufficient for some use cases.
+        Here the memory location is not copied, here the actual value is copied.
 
-                But, Deep copies ensure complete independence but can be less efficient 
-    and may have limitations, especially with objects containing functions 
-    or non-JSON-safe values.When using deep copies, be cautious about circular 
-    references, as they may lead to infinite recursion.
+Imp Note:-    But if we have a nested object, shallow coping has an issue, again it will change the 
+    value of the nested object. Neither Object.assign nor spread operator... will work here.
+
+Note- Javascript by default create shallow copy of only non-primitive datatype, i,e- object &
+    arrays. There is no shallow copy or deep copy for primitive datatypes in 
+    javascript and primitive are immutable.
+
+    Example:-
+            let obj={
+                name:'dhan',
+                address:{
+                    city:'Guwahati',
+                    state:'Assam'
+                }
+            };
+            let user = {...obj}
+            user.address.city = "Shillong"
+
+            console.log("Object is : ", obj)
+
+*   Here comes the solution with the use of Deep Copy. 
+    Meaning we need to make a copy of the nested objects as well.
+
+    Deep Copy-  A deep copy of an object is a copy whose properties do not share the same references 
+        (point to the same underlying values) as those of the source object from which the copy 
+        was made. As a result, when you change either the source or the copy, you can be assured you're 
+        not causing the other object to change too.
+        
+    To Deep Copy we convert the object into a string(i,e.- JSON.stringify). 
+    And in the next copied object(which is string now) we again convert it into object(i,e-JSON.parse).
+
+    Example:-
+            let obj={
+                name: 'Dhan',
+                address:{
+                    city:'Guwahati',
+                    state:'Assam'
+                }
+            };
+            let user = JSON.parse(JSON.stringify(obj));
+            user.address.city = "Delhi"
+
+            console.log("Object is : ", obj);
+            console.log("User is : ", user);
+
+But Deep copy has its own limitation.
+    Firstly, there is no other way of deep coping apart from converting object 
+    to string and again re-converting it into an object.
+    Or else we need to make a function and manually create a new object, create its loop and make logic 
+    to do so which is not recommended.
+
+    Secondly, Deep Copy doesnot work with functions and Date.
+
+    And unfortuntely there is no solution in javascript to solve these issues.
+
+*   Lodash-> is one solution of this problem to us. We can install `lodash` library of node.js through
+    npm i lodash & use it to solve this issue of Deep Copy.
+    
+
+# Difference between Shallow copy & Deep Copy
+
+1. In Shallow Copy only the main object is copied, but in Deep Copy we copy the nested objects as well.
+2. Shallow Copy stores the reference of objects to the original memory address, but Deep Copy stores 
+    copies of the object's value.
+3. Shallow Copy reflects changes made to the new/copied object in the original object, but Deep copy
+    doesn't reflect changes made to the new/copied object in the original object.
+4. Shallow Copy stores the copy of the original object and points the references to the objects. But, 
+    Deep Copy stores the copy of the original object and recursively copies the objects as well.
+5. A shallow copy is faster. But, Deep Copy is comparetively slower.`
 ___________________________________________________________________________________
 
 20. Question--- Call this api and show the result
@@ -936,6 +1069,27 @@ Code: In JavaScript
             console.log(data);
         })
         .catch(error => console.error('Error:', error));
+
+        Async ->
+            async function fetchData(){
+                try{
+                    const response = await fetch('https://gorest.co.in/public/v2/users');
+                    if(!response.ok){
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+                    const data = await response.json();
+                    console.log(data)
+                    document.getElementById('apiResponse').innerHTML = data.map((d)=>{
+                        return (`
+                        <div>${d.id}</div>
+                        <div>${d.name}</div>
+                        <div>${d.email}</div>`)
+                    });    
+                } catch(error){
+                    console.error("Error:", error);
+                }
+            }
+            fetchData();
 ___________________________________________________________________________________
 
 22. Event Loop:- Event Loop is a continuous process that handles the execution of code, 
@@ -1024,4 +1178,33 @@ ________________________________________________________________________________
 24. What are the types of framework in javascript?
 
 ->
+
+25. What is prototype?
+-> Prototype inheritance in javascript is the linking of prototypes of a parent object 
+    to a child object to share and utilize the properties of a parent class using a child 
+    class. 
+
+
+26. Throttling and Debouncing
+->  Debounce is most suitable for control events like typing or button clicks.
+If the user triggers a new event during that time, the time will be reset.
+
+
+Throttle is most suitable for continuous user events like resizing and scrolling.
+Instead of delaying, it invokes the callback function at regular intervals 
+as long as the event trigger is active.
+___________________________________________________________________________________
+
+27. Accessibility of a website.
+->
+
+28.  What are polyphils in js ?
+-> 
+
+networking questions-
+
+- computer networks, 7 OSI layers, DBMS - asset properties, normalization & 
+de-normalization forms, OS, Raise condition, System design - high - low - scalability,
+
+youtube -> Gaurav Sen - System Design
 

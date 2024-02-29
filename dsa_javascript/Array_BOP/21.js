@@ -11,6 +11,7 @@ function subArrays(arr){
             console.log(subArray);
         }
     }
+    return arr;
 }
 
 let result = subArrays(array);

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main"></div>
+    <div class="classMain"></div>
+    <script>
+        const arr = [
+            {name:"john", age: 20},
+            {name:"Dhan", age: 30},
+            {name:"bob", age: 40}
+        ];
+        const mainDiv = document.getElementById("main");
+        let idHTML = '';
+        for(let i=0; i<arr.length; i++){
+            let obj = arr[i];
+            for(let prop in obj){
+                idHTML += `<p>${prop}: ${obj[prop]}</p>`;
+            }
+            // idHTML += '<br>'
+        }
+        mainDiv.innerHTML = idHTML;
+
+
+        const classDiv = document.getElementsByClassName('classMain')[0];
+        let classHTML = '';
+        for(let j=0; j<arr.length; j++){
+            let value = arr[j];
+            for(let key in value){
+                classHTML += `<p>${key}=> ${value[key]}</p>`;
+            }
+        }
+        classDiv.innerHTML = classHTML;
+    </script>
+</body>
+</html>
+

@@ -199,11 +199,87 @@
 // Immediately Invoking Function Expression(IIFE)
 
 
+// "https://gorest.co.in/public/v2/users"
 
-function hoc(){
-    return function(){
-        console.log("hello");
+// fetch("https://gorest.co.in/public/v2/users").then(res => res.json())
+// .then((data)=>{
+//     document.getElementById("api").textContent = JSON.stringify(data, null, 2)
+// })
+// .catch(error =>{
+//     console.error("Error", error)
+// })
+
+// async function fetchData() {
+//     try {
+//         const response = await fetch("https://gorest.co.in/public/v2/users");
+//         if (!response.ok) {
+//             throw new Error(`HTTP error! Status: ${response.status}`);
+//         }
+
+//         const data = await response.json();
+//         document.getElementById("api").textContent = JSON.stringify(data, null, 2);
+//     } catch (error) {
+//         console.error("Error:", error);
+//     }
+// }
+
+// // Call the async function
+// fetchData();
+class Node {
+    constructor(data){
+        this.data = data;
+        this.next = null;
     }
 }
-let fff = hoc()();
+class LinkedList{
+    constructor(){
+        this.head = null;
+    }
+    // Function to insert a node at the end of the linked List
+    insertAtEnd(data){
+        const newNode = new Node(data);
 
+        //  If the list is empty, set the new node as the head
+        if(!this.head){
+            this.head = newNode;
+            return;
+        }
+        //  Traverse to the end of the list
+        let current = this.head;
+        while(current.next !== null){
+            current = current.next;
+        }
+        // Set the next pointer of the last node to the new node
+        current.next = newNode;
+    }
+
+    findLength(){
+        let length = 0;
+        let current = this.head;
+        while(current !== null){
+            length++;
+            current = current.next;
+        }
+        return length;
+    }
+
+    //  Function to print the linked list
+    printList(){
+        let current = this.head;
+        while(current !== null){
+            console.log(current.data);
+            current = current.next;
+        }
+    }
+}
+const myList = new LinkedList();
+myList.insertAtEnd(1);
+myList.insertAtEnd(2);
+myList.insertAtEnd(3);
+myList.insertAtEnd(3);
+myList.insertAtEnd(3);
+
+myList.printList();
+console.log("before");
+const length = myList.findLength();
+console.log("length: ", length);

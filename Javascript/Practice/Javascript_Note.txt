@@ -11,14 +11,14 @@ Sep 9+
 DOCTYPE:-  <!DOCTYPE> is a declaration in HTML that specifies the type and version of 
 the document.
 
-Meta:-This is an HTML element used to provide metadata about the HTML document. 
+Meta:- This is an HTML element used to provide metadata about the HTML document. 
 Metadata is information about the document that isn't displayed on the web page but provides 
 important information for web browsers and search engines.
 
 Encoding:- Encoding, in the context of computing and data representation, refers to the process 
 of converting information or data from one format or representation into another. 
 
-Decoding:- Decoding is the process of converting encoded or encoded data back into its original, 
+Decoding:- Decoding is the process of converting encoded data back into its original, 
 human-readable format or its original representation. It is essentially the reverse operation 
 of encoding. 
 
@@ -59,8 +59,8 @@ types of variable declaration - var, let & const
 let, const & var:- let can be declared and value can be assigned later. In const value 
 should be assigned immediately after declaration.
 
-let mithun = 30; // If the value might change later
-const mithun = 30; // If the value should not be changed (constant)
+let mithun = 30; // The value might change later
+const mithun = 30; // The value should not be changed (constant)
 var mithun = 30; // works similar to both let and const, it came before ES6(2015). 
 var has global as well as functional scope;
 
@@ -100,12 +100,13 @@ shift() - it removes the first element.
 Function - a function is a reusable block of code that performs a specific task or set of tasks.
  
 Aug21+ 
-JSON -  JSON stands for "JavaScript Object Notation." It's a simple and widely used way to 
+JSON - JSON stands for "JavaScript Object Notation." It's a simple and widely used way to 
 organize and store data in a format that's easy for both humans and computers to understand.	
  
 Stringify - stringify is a term used to describe the process of turning complex data, 
 like objects or arrays, into a special kind of text called a "string." A string is just a 
 bunch of characters, like letters, numbers, and symbols, all put together.	
+______>
 
 Aug22+
 Conditional Statement Questions:
@@ -149,7 +150,7 @@ It is a container for related data and functionality, and it is created using cu
 The keys are used to access the values within the object.
 
 Bind :- In JavaScript, the bind method is used to create a new function that, when invoked, sets 
-a specific context (the value of this) for that function. This allows you to control what this 
+a specific context (the value of this) for that function. This allows you to control what `this` 
 refers to when the function is executed. The original function remains unchanged.
 
 Explain: 
@@ -162,10 +163,32 @@ Explain:
         const boundFunction = getValue.bind(obj);
         console.log(boundFunction()); // Outputs 42
 
-join() -> this method not only joins/binds numbers and strings but also converts them into 
+join() -> `this` method not only joins/binds numbers and strings but also converts them into 
 strings in particular.
 
- 
+for in loop -> 
+    The `for...in` loop is a construct in JavaScript used to iterate over the properties 
+    of an object. Here's a general syntax:
+                for (variable in object) {
+                // code to be executed for each property
+                }
+    Here, `variable` is a variable that will be assigned the property name on each 
+    iteration, and `object` is the object you want to loop through.
+
+forEach -> The "forEach" loop in JavaScript is a method available for arrays that 
+    allows you to iterate over each element in the array and perform a 
+    specified action for each element. It provides a concise and expressive 
+    way to loop through array elements.
+
+                // forEach loop syntax
+                let array = [[3, 12, 1],[9, 7, 6]];
+                let string = '';
+                array.forEach(valueFunction);
+                function valueFunction(value){
+                    string += value;
+                }
+                console.log(string);
+    
  
  
  
