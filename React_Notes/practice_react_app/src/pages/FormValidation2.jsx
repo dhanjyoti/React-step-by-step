@@ -54,7 +54,6 @@ const FormValidation2 = () => {
         
       <form onSubmit={handleSubmit}>
         <h1>Login Form</h1>
-        <div></div>
         <div>
           <div>
             <label>Username</label>

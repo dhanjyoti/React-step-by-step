@@ -105,22 +105,21 @@ In React, when a component renders, all of its code gets executed, including any
 
 
 # 6. What is useLocation hook ?
-- The useLocation hook is a built-in React hook provided by React Router. It allows you to access the location object in functional components. The location object represents the current URL location in the browser.
+- The useLocation hook is a built-in React hook provided by React Router. It allows us to access the location object in functional components. The location object represents the current URL location in the browser.
 
-The useLocation hook is particularly useful when you need to access information about the current URL location in functional components, such as determining which route is currently active or extracting query parameters from the URL.
-
+The useLocation hook is particularly useful when we need to access information about the current URL location in functional components, such as determining which route is currently active or extracting query parameters from the URL.
 <!-- ____________________________________________________________________ -->
 
 # 9. What is React?
-- React JS is a declarative, efficient, and flexible JavaScript library for building user interfaces. It is an open-source, component-based front-end library that is responsible only for the view layer of the application ReactJS is not a framework, it is just a library developed by Facebook to solve some problems that we were facing earlier.
+- React JS is a declarative, efficient, and flexible JavaScript library for building user interfaces. It is an open-source, component-based front-end library that is responsible only for the view layer of the application. ReactJS is not a framework, it is just a library developed by Facebook.
 <!-- ____________________________________________________________________ -->
 
 # 8. What is jsx?
-- JSX stands for JavaScript XML. It is a syntax extension for JavaScript, often used with React, that allows you to write HTML-like code directly within JavaScript. JSX makes it easier to write and read React components by blending HTML and JavaScript together.
+- JSX stands for JavaScript XML. It is a syntax extension for JavaScript, often used with React, that allows us to write HTML-like code directly within JavaScript. JSX makes it easier to write and read React components by blending HTML and JavaScript together.
 
 Using JSX directly is much more readable and maintainable compared to manually creating React elements using React.createElement. Therefore, JSX has become the standard way of writing React components.
-
 <!-- ____________________________________________________________________ -->
+
 # 10. What is virtul Dom ?
 - In React.js, the Virtual DOM (Document Object Model) is a concept that refers to a lightweight copy of the actual DOM. The DOM represents the structure of a document as a tree of nodes, where each node represents an element, attribute, or text. 
 
@@ -129,6 +128,7 @@ React then compares the updated Virtual DOM with the previous version of the Vir
 
 Once React determines the difference between the previous Virtual DOM and the updated Virtual DOM, it applies only those necessary changes to the real DOM. By minimizing the number of actual DOM manipulations, React optimizes performance and ensures faster rendering of UI changes.
 <!-- ____________________________________________________________________ -->
+
 # 30. what is use of StrictMode in react?
 - `StrictMode` is a built-in component in React that helps developers write better React code by highlighting potential problems and deprecated features in their applications. It is designed for development mode only and has no effect in production builds.
 ```jsx
@@ -153,9 +153,9 @@ In statically typed languages, each variable, parameter, function, and expressio
 <!-- ____________________________________________________________________ -->
 
 # 32. what is React.Fragment?
-- `React.Fragment` is a built-in component in React that allows you to group multiple children elements without adding extra nodes to the DOM. It provides a way to return multiple elements from a component's render method without needing to wrap them in a parent element like a `div` or a `span`.
+- `React.Fragment` is a built-in component in React that allows us to group multiple children elements without adding extra nodes to the DOM. It provides a way to return multiple elements from a component's render method without needing to wrap them in a parent element like a `div` or a `span`.
 
-`React.Fragment` is a useful feature in React for grouping multiple elements without adding extra nodes to the DOM, helping you write cleaner and more efficient JSX code.
+`React.Fragment` is a useful feature in React for grouping multiple elements without adding extra nodes to the DOM, helping us write cleaner and more efficient JSX code.
 <!-- ____________________________________________________________________ -->
 
 # 11. What is Types of Components?
@@ -165,7 +165,7 @@ In statically typed languages, each variable, parameter, function, and expressio
 # ***12. What is lifecycle methods in class base component?***
 - In React.js, class components (or stateful components) have a set of methods known as "lifecycle methods." These methods allow developers to hook into various points in the lifecycle of a component, from its creation to its removal from the DOM. By using lifecycle methods, developers can perform tasks such as setting up state, fetching data, responding to updates, and cleaning up resources.
 
-    onstructor(): This method is called when the component is initialized. It's typically used for initializing state and binding event handlers.
+    constructor(): This method is called when the component is initialized. It's typically used for initializing state and binding event handlers.
 
     componentDidMount(): This method is called after the component is mounted (i.e., rendered for the first time). It's commonly used for making AJAX requests to fetch data from APIs or performing any other initialization that requires access to the DOM.
 
@@ -177,8 +177,9 @@ In statically typed languages, each variable, parameter, function, and expressio
 
     shouldComponentUpdate(): This method allows you to optimize performance by preventing unnecessary re-renders of the component. It can be used to compare the current props and state with the next props and state and decide whether the component should update or not.
 
-These lifecycle methods provide hooks into different stages of a component's life, allowing you to control its behavior and perform actions at specific points in time. However, it's essential to note that with the introduction of React Hooks, the use of lifecycle methods in functional components has become less common, as Hooks provide alternative ways to achieve similar functionality.
+These lifecycle methods provide hooks into different stages of a component's life, allowing us to control its behavior and perform actions at specific points in time. However, it's essential to note that with the introduction of React Hooks, the use of lifecycle methods in functional components has become less common, as Hooks provide alternative ways to achieve similar functionality.
 <!-- ____________________________________________________________________ -->
+
 # 5. What is componentDidUpdate() method?
 - `componentDidUpdate` is a lifecycle method in React class components that gets called immediately after a component updates and after the DOM has been updated. It is invoked every time the component re-renders, including the initial render (though for the initial render, you'd generally use `componentDidMount`).
 
@@ -186,9 +187,7 @@ The `componentDidUpdate` method receives two parameters: `prevProps` and `prevSt
 <!-- ____________________________________________________________________ -->
 
 # 13. What is Hooks in Functional component?
-- In React.js, `Hooks` are functions that allow us to add state and other React features to 
-functional components. Prior to hooks, state and lifecycle features were only available in
-class components. The introduction of hooks in React 16.8 revolutionized the way
+- In React.js, `Hooks` are functions that allow us to add state and other React features to functional components. Prior to hooks, state and lifecycle features were only available in class components. The introduction of hooks in React 16.8 revolutionized the way
 developers manage state and side effects in functional components. Hooks make it possible
 to reuse stateful logic without changing our component hierarchy.
 <!-- ____________________________________________________________________ -->
@@ -288,6 +287,7 @@ export default Counter;
 
 - Example: Props are commonly used to customize or configure child components based on data from parent components. They allow for the reuse of components and facilitate component composition in React applications.
 <!-- ____________________________________________________________________ -->
+
 # 20. What is code spilting?
 - Code splitting is a technique used in web development to improve performance by splitting a large JavaScript bundle into smaller bundles or chunks. Instead of loading the entire JavaScript bundle when the web application is loaded, code splitting allows us to load only the necessary code for the current page or feature, reducing initial loading times and improving the overall user experience.
 <!-- ____________________________________________________________________ -->
@@ -348,7 +348,7 @@ When we wrap a functional component with `memo`, React memoizes the component, m
 
 - Lazy loading is a technique used in web development to defer the loading of non-essential resources (such as images, scripts, or other assets) until they are actually needed. This helps improve the initial loading time and performance of web pages by prioritizing the loading of critical content first and delaying the loading of less important content until later.
 
-- Lazy loading is particularly useful for web pages with large or complex content, where loading all resources upfront would significantly increase the initial page load time and impact the user experience. By lazily loading resources only when they are needed, you can reduce the initial payload size and improve the perceived performance of the web page.
+- Lazy loading is particularly useful for web pages with large or complex content, where loading all resources upfront would significantly increase the initial page load time and impact the user experience. By lazily loading resources only when they are needed, we can reduce the initial payload size and improve the perceived performance of the web page.
 
 - In the context of images, lazy loading typically involves loading placeholder images (such as small, low-resolution thumbnails) initially, and then loading the full-size images asynchronously as the user scrolls down the page or when the images come into the viewport. This technique is commonly used in image galleries, image-heavy websites, and long-scrolling pages.
 
@@ -370,7 +370,7 @@ When we wrap a functional component with `memo`, React memoizes the component, m
 - `useMemo`, `useCallback`, and `useEffect`, three important React hooks, based on their purposes and use cases:
     *useMemo:**
 - Purpose: `useMemo` is used for memoizing the result of expensive calculations or computations. It caches the result of a function and returns the cached value when the dependencies (specified as the second argument) remain the same.
-- Use Case: It's useful when you need to optimize performance by avoiding redundant calculations, especially when the result of a computation is used repeatedly in a component but doesn't need to be recalculated every render.
+- Use Case: It's useful when we need to optimize performance by avoiding redundant calculations, especially when the result of a computation is used repeatedly in a component but doesn't need to be recalculated every render.
 - Example: Memoizing a complex computation, such as sorting or filtering a large array, to avoid recalculating it on every render.
 
     **useCallback:**
@@ -379,7 +379,7 @@ When we wrap a functional component with `memo`, React memoizes the component, m
 - Example: Memoizing event handlers or callback functions passed as props to child components to optimize performance.
 
     **useEffect:**
-- Purpose: useEffect is used for handling side effects in functional components. It allows you to perform side effects (such as data fetching, DOM manipulation, or subscriptions) after the component has rendered.
+- Purpose: useEffect is used for handling side effects in functional components. It allows us to perform side effects (such as data fetching, DOM manipulation, or subscriptions) after the component has rendered.
 - Use Case: It's useful for managing asynchronous operations, subscribing to data sources, setting up timers, or performing cleanup tasks.
 - Example: Fetching data from an API, subscribing to WebSocket events, updating the document title, or cleaning up resources when the component is unmounted.
 
@@ -439,17 +439,17 @@ const MyComponent = () => {
 
 
 # 33. What is type checking with Proptype in React?
-- In React, PropTypes is a mechanism for validating the props passed to components. It allows you to specify the types (and sometimes shapes) of the props that a component is expecting to receive. PropTypes are used primarily for type checking and documentation purposes, helping developers catch errors early and communicate the intended usage of components.
+- In React, PropTypes is a mechanism for validating the props passed to components. It allows us to specify the types (and sometimes shapes) of the props that a component is expecting to receive. PropTypes are used primarily for type checking and documentation purposes, helping developers catch errors early and communicate the intended usage of components.
 <!-- ____________________________________________________________________ -->
 
 # 34. what is High Order Component?
-- A Higher-Order Component (HOC) is a pattern in React that allows you to reuse component logic by wrapping components with another component. HOCs are a powerful tool for code reuse, abstraction, and separation of concerns in React applications.
+- A Higher-Order Component (HOC) is a pattern in React that allows us to reuse component logic by wrapping components with another component. HOCs are a powerful tool for code reuse, abstraction, and separation of concerns in React applications.
 <!-- ____________________________________________________________________ -->
 
 # 35. what is Synthetic Event in react?
 - In React, a synthetic event is a cross-browser wrapper around the browser's native event system. It is an abstraction provided by React to ensure consistent behavior and handling of events across different browsers.
 
-- When you write event handlers in React components, such as onClick, onChange, or onSubmit, React intercepts the native browser events and normalizes them into instances of synthetic events. These synthetic events have the same interface as native DOM events, but they are created and managed by React rather than directly by the browser.
+- When we write event handlers in React components, such as onClick, onChange, or onSubmit, React intercepts the native browser events and normalizes them into instances of synthetic events. These synthetic events have the same interface as native DOM events, but they are created and managed by React rather than directly by the browser.
 
 - The purpose of synthetic events is to provide a unified and predictable way to handle events in React applications, regardless of the underlying browser implementation. By using synthetic events, React can optimize event handling and provide additional features such as event pooling and automatic event delegation.
 <!-- ____________________________________________________________________ -->
@@ -462,14 +462,14 @@ const MyComponent = () => {
 - A compiler is a software tool that translates source code written in a high-level programming language into machine code or another intermediate representation that can be executed by a computer's processor. The primary function of a compiler is to convert human-readable source code into executable code that can be run on a computer.
 <!-- ____________________________________________________________________ -->
 
-# 38. what is interpeter?
+# 38. what is interpreter?
 - An interpreter is a software program that directly executes instructions written in a high-level programming language without the need for prior compilation into machine code. Unlike compilers, which translate entire source code files into machine code before execution, interpreters execute code line by line or statement by statement, interpreting and executing each instruction in real-time.
 <!-- ____________________________________________________________________ -->
 
 # 39. what is ContextApi?
-- The Context API is a feature in React that provides a way to pass data through the component tree without having to pass props manually at every level. It allows you to share data between components at different levels of the component tree without the need to explicitly pass props through every intermediate component.
+- The Context API is a feature in React that provides a way to pass data through the component tree without having to pass props manually at every level. It allows us to share data between components at different levels of the component tree without the need to explicitly pass props through every intermediate component.
     ***The Context API consists of two main parts:***
-    1. Context Object: A context object is created using the React.createContext() function. This context object represents the shared data that you want to make available to components within the context tree.
+    1. Context Object: A context object is created using the React.createContext() function. This context object represents the shared data that we want to make available to components within the context tree.
 
     2. Provider and Consumer Components: The context object provides a Provider component and a Consumer component. The Provider component is used to wrap a portion of the component tree and supply the context data to all descendant components. The Consumer component is used within descendant components to access the context data provided by the nearest Provider ancestor.
 <!-- ____________________________________________________________________ -->

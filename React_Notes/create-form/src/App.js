@@ -8,6 +8,7 @@ import Home from './components/Home';
 import SearchProducts from './components/SearchProducts';
 import SecondTodoApp from './components/SecondTodoApp';
 import FristTodo from './components/FirstTodo';
+import SimpleInterestCalculator from './pages/SimpleInterestCalculator';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/searchproduct" element={<SearchProducts/>} />
           <Route path="/secondtodo" element={<SecondTodoApp/>} />
           <Route path="/firsttodo" element={<FristTodo/>} />
+          <Route path="/simpleinterest" element={<SimpleInterestCalculator/>} />
           <Route element={<NotFound/>} />
         </Routes>
     </Router>

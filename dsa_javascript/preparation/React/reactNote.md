@@ -43,6 +43,9 @@ what is Memo?
 JavaScript and Node.js applications. It's a command-line tool that allows developers 
 to easily install, manage, and share libraries, packages, and dependencies that are 
 used in JavaScript and Node.js projects.
+***Why do we use npm?***
+- to manage the packages and libraries that help use to work with Node.
+**alternative of npm is yarn**
 
 # what is strictMode?
 - StrictMode is a tool for highlighting potential problems in an application. Like Fragment, StrictMode does not render any visible UI. It activates additional checks and warnings for its descendants. Note: Strict mode checks are run in development mode only; they do not impact the production build.

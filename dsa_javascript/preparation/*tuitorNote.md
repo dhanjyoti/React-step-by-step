@@ -153,14 +153,9 @@ Partition is done recursively on each side of the pivot after the pivot is place
 <!-- -------------------------------------------------------------------- -->
 
 # ----------Selection Sort----------
-Selection Sort is a simple and efficient sorting algorithm that works by
-repeatedly selecting the smallest(or largest) element from the unsorted 
-portion of the list and moving it to the sorted portion of the list.
+Selection Sort is a simple and efficient sorting algorithm that works by repeatedly selecting the smallest(or largest) element from the unsorted portion of the list and moving it to the sorted portion of the list.
 
-The algorithm repeatedly selects the smallest (or largest) element from 
-the unsorted portion of the list and swaps it with the first element of 
-the unsorted part. This process is repeated for the remaining unsorted 
-portion until the entire list is sorted. 
+The algorithm repeatedly selects the smallest (or largest) element from the unsorted portion of the list and swaps it with the first element of the unsorted part. This process is repeated for the remaining unsorted portion until the entire list is sorted. 
 ***Time Complexity-> O(n^2) -> Big `O` of n to the power 2***
 
 ```js
@@ -219,17 +214,10 @@ Merge sort is a recursive algorithm that continuously splits the array in half u
 <!-- -------------------------------------------------------------------- -->
 
 # ---------Insertion Sort----------
-Insertion sort is a simple sorting algorithm that works similar to the 
-way we sort playing cards in our hands. The array is virtually split 
-into a sorted and an unsorted part. Values from the unsorted part are 
-picked and placed at the correct position in the sorted part.
+Insertion sort is a simple sorting algorithm that works similar to the way we sort playing cards in our hands. The array is virtually split into a sorted and an unsorted part. Values from the unsorted part are picked and placed at the correct position in the sorted part.
 ***Time Complexity-> O(n^2)-> Big `O` of n to the power 2***
 
-To sort an array of size `N` in ascending order iterate over the array 
-and compare the current element (key) to its predecessor, if the key 
-element is smaller than its predecessor, compare it to the elements 
-before. Move the greater elements one position up to make space for 
-the swapped element.
+To sort an array of size `N` in ascending order iterate over the array and compare the current element (key) to its predecessor, if the key element is smaller than its predecessor, compare it to the elements before. Move the greater elements one position up to make space for the swapped element.
 
 ```js
     function insertionSort(arr){
@@ -250,3 +238,32 @@ the swapped element.
     console.log(result); 
 ```
 <!-- -------------------------------------------------------------------- -->
+
+# Two pointer approach
+
+<!-- -------------------------------------------------------------------- -->
+
+# Stack
+- The stack data structure is a sequential collection of elements that follows the principle of `Last In First Out`(LIFO).
+- The last element inserted into the stack is first element to be removed.
+- A stack of plates. The last plate placed on top of the stack is also the first plate removed from the stack.
+- Stack is an abstract data type. It is defined by its behaiour rather than being a mathematical model.
+- The stack data structure supports two main operations:
+    * Push, which adds an element to the collection.
+    * Pop, which removes the most recently added element from the collection.
+Usages of Stack ->
+* Browser history tracking
+* Undo operation when typing
+* Expression conversions
+* Call stack in Javascript runtime
+
+
+
+<!-- -------------------------------------------------------------------- -->
+
+# Prefix Sum
+- It is a simple yet powerful technique that allows to perform fast calculation on the sum  of elements in a given range(called contiguous segments of arrays).
+
+Example: 
+Input: 6, 3, -2, 4, -1, 0, 15
+output: 6, 9, 7, 11, 10, 10, 5

@@ -1,51 +1,95 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Test = () => {
-    const [formData, setFormData] = useState({
-        email:'',
-        password:''
-    })
-    const [error, setError] = useState({});
-    const [submitted, setSubmitted]= useState(false);
-    const handleChange = (e)=>{
-        const {name, value}= e.target;
-        setFormData({
-            ...formData,
-            [name]: value
-        });
-        setSubmitted(false);
-    }
-    const handleSubmit = (e)=>{
-        e.preventDefault();
-        const error = {};
-        if(!formData.email.includes('@') || !formData.email.includes('.')){
-            error.email = "email is invalid";
-        }
-        if(formData.password.length < 6){
-            error.password = 'Password must be atleast 6 charaters long';
-        }
-        setError(error);
-        if(Object.keys(error).length === 0){
-            setSubmitted(true);
-            console.log("Form submitted successfully");
-        }
-    };
+  const initialValue = {username:"", email:"", password:""};
+  const [formValue, setFormValue] = useState(initialValue);
+  const [formError, setFormError] = useState({});
+  const [isSubmit, setIsSubmit] = useState(false);
 
-    return (
-    <form onSubmit={handleSubmit}>
+  const handleChange=(e)=>{
+    console.log(e.target);
+    const {name, value} = e.target;
+    setFormValue({...formValue, [name]: value});
+    console.log(formValue);
+  }
+
+  const handleSubmit=(e)=>{
+    e.preventDefault();
+    setFormError(validate(formValue));
+    setIsSubmit(true);
+  }
+
+  useEffect(()=>{
+    console.log(formError)
+    if(Object.keys(formError).length === 0 && isSubmit){
+      console.log(formValue)
+    }
+  },[formError]);
+
+  const validate = (value)=>{
+    const error = {};
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+    if(!value.username){
+      error.username = "Username is required!";
+    }
+    if(!value.email){
+      error.email = "Email is required!";
+    } else if(!regex.test(value.email)){
+      error.email = "This is not a valid email format!";
+    }
+    if(!value.password){
+      error.password = "Password is required!";
+    } else if(value.password.length < 4 || value.password.length > 10 ){
+      error.password = "Password need to have minimum 4 and maximum 10!";
+    }
+  }
+  return (
+    <div>
+      {Object.keys(formError).length === 0 && isSubmit ? (
+        <div>Signed in successfully</div>
+      ):(
+        <pre>{JSON.stringify(formValue, undefined, 2)}</pre>
+      )}
+      <form onSubmit={handleSubmit}>
+        <h3>Login Form</h3>
         <div>
-            <label>Email:</label>
-            <input type="email" name='email' value={formData.email} onChange={handleChange} />
-            {error.email && <span>{error.email}</span>}
+          <div>
+            <label>Username</label>
+            <input
+              type='text'
+              name='username'
+              placeholder='Username'
+              value={formValue.username}
+              onChange={handleChange}
+            />
+          </div>
+          <p>{formError.username}</p>
+          <div>
+            <label>Username</label>
+            <input
+              type='email'
+              name='email'
+              placeholder='Email'
+              value={formValue.email}
+              onChange={handleChange}
+            />
+          </div>
+          <p>{formError.email}</p>
+          <div>
+            <label>Username</label>
+            <input
+              type='password'
+              name='password'
+              placeholder='Password'
+              value={formValue.password}
+              onChange={handleChange}
+            />
+          </div>
+          <p>{formError.password}</p>
+          <button>Submit</button>
         </div>
-        <div>
-            <label>Password:</label>
-            <input type="password" name='password' value={formData.password} onChange={handleChange} />
-            {error.password && <span>{error.password}</span>}
-        </div>
-        <button type='submit'>Submit</button>
-        {submitted && <p>Form submitted successfully</p>}
-    </form>
+      </form>
+    </div>
   )
 }
 

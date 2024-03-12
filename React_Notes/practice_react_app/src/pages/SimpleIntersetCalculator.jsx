@@ -11,6 +11,7 @@ const SimpleIntersetCalculator = () => {
         const si = (principal * rate * time)/100;
         setSimpleInterest(si);
     }
+    
   return (
     <div>
         <h2>Simple Interest Calculator</h2>

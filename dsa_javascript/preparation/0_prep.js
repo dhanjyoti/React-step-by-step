@@ -1,3 +1,5 @@
+// task file=./practice.js
+
 // let n = 5;
 // let target = 1;
 // for(let i=0; i<n; i++){
@@ -31,10 +33,8 @@
 // what is the use of `&` and, not, `!` ans  or `|` operator?
 // Types of sorting.(bubble sort)
 
-
-  // merge sort
-  // insertion sort
-
+// merge sort
+// insertion sort
 
 //  ** Merge sort(Conquer Two sorted array with Two pointer approach)
 // let array = [3, 1, 2, 4];
@@ -71,9 +71,6 @@
 // const sort = mergeSort(array);
 // console.log(sort);
 
-
-
-
 // let num = 12;
 // function countPrimes(n) {
 //   let arr = [];
@@ -98,26 +95,24 @@
 // const result = countPrimes(num);
 // console.log(result);
 
-
 // I am the key and I am the value
 // key-> id value-> 1
 // key= dny1 calue = test
 
+// for(let key of arr){
+//   for(let data in key){
+//     console.log(`I am the ${data} and I am the ${key[data]}`);
+//   }
+// }
 
-  // for(let key of arr){
-  //   for(let data in key){
-  //     console.log(`I am the ${data} and I am the ${key[data]}`);
-  //   }
-  // }
+// arr.forEach(obj => {
+//   Object.keys(obj).forEach(key => {
+//     const value = obj[key];
+//     console.log(`I am the key ${key} and I am the value ${value}`);
+//   });
+// });
 
-  // arr.forEach(obj => {
-  //   Object.keys(obj).forEach(key => {
-  //     const value = obj[key];
-  //     console.log(`I am the key ${key} and I am the value ${value}`);
-  //   });
-  // });
-
-  // DOM api
+// DOM api
 
 // Stack
 
@@ -150,47 +145,122 @@
 // Output: [3,6], [3,5,1], [3,4,2],[8,1], [7,2], [6,1,2], [5, 4],[9];
 // let output = [];
 // for(let i=0; i<arr.length; i++){
-  //   let result = [];
-  //   let start = arr[i];
-  //   for(let j=i+1; j<arr.length; j++){
-    //     if((start + arr[j]) == sum){
-      //       result.push(start);
-      //       result.push(arr[j]);
-      //     } else if(start+arr[j] < sum){
-        //       start += arr[j];
-        //       result.push(arr[j])
-        //     }else {
-          //       continue;
-          //     }
-          //   }
-          //   output.push(result);
-          //   result = [];
-          // }
-          // console.log(output)
-          
+//   let result = [];
+//   let start = arr[i];
+//   for(let j=i+1; j<arr.length; j++){
+//     if((start + arr[j]) == sum){
+//       result.push(start);
+//       result.push(arr[j]);
+//     } else if(start+arr[j] < sum){
+//       start += arr[j];
+//       result.push(arr[j])
+//     }else {
+//       continue;
+//     }
+//   }
+//   output.push(result);
+//   result = [];
+// }
+// console.log(output)
+
+// let arr = [3, 8, 7, 6, 5, 4, 1, 9, 2];
+// let sum = 9;
+// // Output: [3,6], [3,5,1], [3,4,2],[8,1], [7,2], [6,1,2], [5, 4],[9];
+// function findPairs(arr, target){
+//   let result = [];
+//   let output = [];
+//   for(let i=0; i<arr.length-1; i++){
+//     for(let j=i+1; j<arr.length; j++){
+//       if(arr[i]+arr[j] == target){
+//         result.push([arr[i], arr[j]]);
+//       } else if(arr[i]==target){
+//         result.push([arr[i]])
+//       } else if(arr[i]+arr[j]<target){
+
+//       }
+//     }
+//   }
+//   return result;
+// }
+// console.log(findPairs(arr, sum));
+// let arr = [4, 6, 2, 8, 6, 6, 3, 9, 2];
+// let arr2 = [6, 7, 9, 3];
 
 
-let arr = [3, 8, 7, 6, 5, 4, 1, 9, 2];
-let sum = 9;
-// Output: [3,6], [3,5,1], [3,4,2],[8,1], [7,2], [6,1,2], [5, 4],[9];
-function findPairs(arr, target){
-  let result = [];
-  let output = [];
-  for(let i=0; i<arr.length-1; i++){
-    for(let j=i+1; j<arr.length; j++){
-      if(arr[i]+arr[j] == target){
-        result.push([arr[i], arr[j]]);
-      } else if(arr[i]==target){
-        result.push([arr[i]])
-      } else if(arr[i]+arr[j]<target){
 
-      }
-    }
-  }
-  return result;
+
+
+
+
+
+
+// let arr = [1, 2, 3, 4, 5];
+// let rotate = 3;
+
+// function rotateArray(arr, rotate){
+//   for(let i=0; i<rotate; i++){
+//     arr.unshift(arr.pop())
+//   }
+//   return arr;
+// }
+// console.log(rotateArray(arr, rotate))
+
+
+// function Rotation(arr) {
+//   let n = arr.length;
+//   let x = arr[n - 1];
+//   for (let i = n - 1; i > 0; i--) {
+//     arr[i] = arr[i - 1];
+//   }
+//   arr[0] = x;
+//   return arr;
+// }
+// const result = Rotation(arr);
+// console.log(result);
+
+
+//  Find the maximum sum of the contigious sub array
+
+// let arr = [-1, 3, 4, -5, 6, 8, 10, -11];
+
+// let subArrays = [];
+// for(let i=0; i<arr.length; i++){
+//     let count = 0;
+//     for(let j=i+1; j<arr.length-1; j++){
+//         count += arr[j]
+//     }
+//     subArrays.push(count);
+// }
+// console.log(subArrays)
+// let sortArray = subArrays.sort((a, b)=> a-b);
+// let max = sortArray[sortArray.length - 1];
+// console.log(max);
+
+// function maxSubArraySum(arr){
+//     let sum = arr[0];
+//     let currentSum = arr[0];
+//     for(let i=1; i<arr.length; i++){
+//         sum = Math.max(arr[i], sum + arr[i]);
+//         currentSum = Math.max(sum, currentSum);
+//     }
+//     return currentSum;
+// }
+// console.log(maxSubArraySum(arr));
+
+
+
+let str = "rrarabcb"
+// let obj = {r:3,a:2,b:2,c:1};
+// r3a2b2c1
+
+
+let frequency = {};
+for (let i = 0; i < str.length; i++) {
+    frequency[str[i]] = (frequency[str[i]] || 0) + 1;
 }
-console.log(findPairs(arr, sum));
-
-
-
-
+// console.log(frequency);
+let string = '';
+for(let key in frequency){
+    string += `${key}:${frequency[key]}`
+}
+console.log(string);

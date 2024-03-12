@@ -9,12 +9,14 @@ import SearchProducts from './pages/SearchProduct';
 import Test from './pages/Test';
 import SimpleIntersetCalculator from './pages/SimpleIntersetCalculator';
 import FormValidation2 from './pages/FormValidation2';
+import TodoApp from './pages/TodoApp';
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path='todolist' element={<TodoList/>} />
+        <Route path='/' element={<TodoApp/>} />
         <Route path='categorytodo' element={<CategoryTodo/>} />
         <Route path='formvalidation' element={<FormValidation/>} />
         <Route path='formvalidation2' element={<FormValidation2/>} />

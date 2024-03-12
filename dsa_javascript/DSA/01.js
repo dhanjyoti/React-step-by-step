@@ -1,4 +1,4 @@
 // print something
 
-let name = "good boy";
-console.log(`Hello ${name}!`);
+let namee = "good boy";
+console.log(`Hello ${namee}!`);

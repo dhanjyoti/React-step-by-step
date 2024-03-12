@@ -1,3 +1,5 @@
+// task file=./practice.js
+
 // console.log("start");
 
 // async function asyncFunction(){
@@ -170,7 +172,20 @@
 // let arr3 = [9, 10, 11];
 
 // let result = mergeArray(arr1, arr2, arr3);
-
 // console.log("mergeArray", result);
 
 
+// constructoor
+
+let a = "abcba";
+function isPalindrome(string){
+    let j = string.length - 1;
+    for(let i=0; i<string.length/2; i++){
+        if(string[i]!= string[j]){
+            return false;
+        }
+        j--;
+    }
+    return true;
+}
+console.log(isPalindrome(a))
