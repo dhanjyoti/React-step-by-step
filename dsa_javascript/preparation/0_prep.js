@@ -247,20 +247,26 @@
 // }
 // console.log(maxSubArraySum(arr));
 
+let s1 = 'delete';
+let s2 = 'leet';
 
-
-let str = "rrarabcb"
-// let obj = {r:3,a:2,b:2,c:1};
-// r3a2b2c1
-
-
-let frequency = {};
-for (let i = 0; i < str.length; i++) {
-    frequency[str[i]] = (frequency[str[i]] || 0) + 1;
+let minimumDeleteSum = function(s1, s2){
+    let prevRow = new Array(s2.length + 1).fill(0);
+    for(let j=1; j<=s2.length; j++){
+        prevRow[j] = prevRow[j-1] + s2.charCodeAt(j-1);
+    }
+    for(let i=1; i<s2.length; i++){
+        let currRow = [prevRow[0] + s1.charCodeAt(i-1)];
+        for(let j=1; j<s2.length; j++){
+            if(s1[i-1] === s2[j-1]){
+                currRow.push(prevRow[j-1]);
+            } else {
+                currRow.push(Math.min(prevRow[j] + s1.charCodeAt(i-1), currRow[currRow.length-1] + s2.charCodeAt(j-1)))
+            }
+        }
+        prevRow = currRow;
+    }
+    return prevRow[prevRow.length - 1];
 }
-// console.log(frequency);
-let string = '';
-for(let key in frequency){
-    string += `${key}:${frequency[key]}`
-}
-console.log(string);
+
+console.log(minimumDeleteSum(s1, s2))

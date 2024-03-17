@@ -30,3 +30,15 @@
 * In React when we control the input fields through the state is called Controlled components.
 * Uncontrolled components are those input fields in react which we do not comtrol through states. It is either controlled through Javascript or by the use of useRef.
 * Higher Order Component -> are those components which takes other components as props and returns other components.
+* **Routing** -> For different functionalities we need different pages. So, we convert components to pages & we put links on them, so that for different functionality there forms a different page. Now we can open them through specific URLs. This is called routing.
+* We use `Link` from react-router-dom instead of `href` because it helps us render the page without reloading, whereas, using `href` will surely reload the page.
+* API -> Application Programming Interface, we cannot directly connect or interact to the database through react, so we need some server-side programming language which provides us APIs to connect to the database. These helps us to fetch data from the database for us to use. It comes in the form of JSON format. Now we can use those data to show in the UI or frontend.
+
+* GET - when we need to show the data, we use GET method.
+* POST - when we need to store the data, we use POST method.
+* PUT - when we need to update the data, we use PUT method.
+* DELETE - when we need to delete the data, we use DELETE method.
+
+
+Node js ->
+**Core modules** -> There are some basic features in programming language, which are in-build from before and we can use them whenever needed. These are called `core modules`.

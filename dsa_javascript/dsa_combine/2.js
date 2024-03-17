@@ -1,8 +1,6 @@
 // •⁠  ⁠Convert a String "Hello" to a LinkedList and then print that Linkedlist. H->E->L->L->O
 
 
-
-
 // Define a class for the nodes of the linked list
 class Node {
     constructor(data) {
@@ -10,13 +8,11 @@ class Node {
         this.next = null;
     }
 }
-
 // Define a class for the linked list
 class LinkedList {
     constructor() {
         this.head = null;
     }
-    
     // Method to add a new node to the end of the linked list
     append(data) {
         const newNode = new Node(data);
@@ -29,8 +25,7 @@ class LinkedList {
             current = current.next;
         }
         current.next = newNode;
-    }
-    
+    } 
     // Method to print the linked list
     print() {
         let current = this.head;
@@ -42,7 +37,6 @@ class LinkedList {
         console.log(result);
     }
 }
-
 // Function to convert a string to a linked list
 function stringToLinkedList(str) {
     const linkedList = new LinkedList();
@@ -51,7 +45,6 @@ function stringToLinkedList(str) {
     }
     return linkedList;
 }
-
 // Example usage:
 const str = "Hello";
 const linkedList = stringToLinkedList(str);

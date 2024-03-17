@@ -40,7 +40,6 @@ function findLeftIndex(arr, X) {
             right = mid - 1;
         }
     }
-
     return resultIndex;
 }
 

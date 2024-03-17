@@ -38,7 +38,7 @@ const TodoApp = () => {
 
   useEffect(()=>{
     if(task && task.length > 0){
-        localStorage.setItem('task', JSON.stringify(task))
+         localStorage.setItem('task', JSON.stringify(task))
     }
   },[task])
 

@@ -80,8 +80,7 @@
 <!-- -------------------------------------------------------------------- -->
 
 # ---------Sorting---------
-A Sorting Algorithm is used to re-arrange a given array or list of elements according 
-to a comparison operator on the elements. The comparison operator is used to decide
+A Sorting Algorithm is used to re-arrange a given array or list of elements according to a comparison operator on the elements. The comparison operator is used to decide
 the new order of elements in the respective data structure.
 
 # ---------Bubble Sorting---------
@@ -91,11 +90,9 @@ large data sets as its average and worst-case time complexity is quite high.
 ***Time Complexity-> O(n^2) -> Big `O` of n to the power 2***
 
 In Bubble Sort algorithm, 
-1.  traverse from left and compare adjacent elements and the higher one is placed 
-    at right side. 
+1.  traverse from left and compare adjacent elements and the higher one is placed at right side. 
 2.  In this way, the largest element is moved to the rightmost end at first. 
-3.  This process is then continued to find the second largest and place it and so on 
-    until the data is sorted.
+3.  This process is then continued to find the second largest and place it and so on until the data is sorted.
 
 ```js
     function bubbleSort(arr){
