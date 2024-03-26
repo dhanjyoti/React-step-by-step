@@ -6,7 +6,7 @@ const rotate = 4;
 function arrayRotation(arr, numberOfShifts){
     for(let i=0; i<numberOfShifts; i++){
         arr.unshift(arr.pop());
-        console.log(`step ${i+1}: `, arr);
     }
+    return arr;
 }
 console.log("Final result: ", arrayRotation(number, rotate));

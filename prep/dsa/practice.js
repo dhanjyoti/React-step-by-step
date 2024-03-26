@@ -1,2 +1,10 @@
-let arr = [3, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 19, 23, 23, 25];
+let data = 0;
+let value = '';
 
+function apple(x){
+    if(x<10){
+        apple(x+1);
+    }
+    return value += x + ' ';
+}
+console.log(apple(data))

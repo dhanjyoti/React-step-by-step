@@ -71,7 +71,7 @@ The arrow function expression syntax is a concise way of defining functions.
     1. React is a javascript library.
     2. React uses a virtual DOM which makes it faster.
     3. React is smaller in size and light weight and therefore faster sometime.
-    4. React depends on external libraries for amny complex features, so developer has to write many lines of code for complex functionalities.
+    4. React depends on external libraries for many complex features, so developer has to write many lines of code for complex functionalities.
     5. React is simple to learn and more popular then Angular.
 - Angular ->
     1. Angular is a complete framework.
@@ -83,9 +83,92 @@ The arrow function expression syntax is a concise way of defining functions.
 # Name 5 JS frameworks other than React?
 - Angular, Vue.js, Angular JS, Backbone .js, Ember.js
 
-# Whether React is a Framework or a Library? What is the difficult?
+# Whether React is a Framework or a Library? What is the difference?
 * Library: Developers import the libraries at the top and then used its functions in components. React is commonly referred to as a Javascript library.
 * Framework: Developers need to follow a specific structure or pattern defined by the framework. Angular is a framework.
 
 # How React provides Reusability and Composition?
 * React provides reusability and composition through its component-based architecture.
+* **Reusability:** Once we create a component, we can ***re-use*** it in different parts of our application or even in multiple projects.
+* **Composition:** Composition is creating new and big components by ***combining existing small components.*** Its advantage is, change to one small component will not impact other components.
+
+# What are state, stateless, stateful and state management terms?
+"state" refers to the current data of the component.
+Stateful or state management means, when a user performs some actions on the UI, then the React appliction should be able to ***update and re-render that data or state*** on the UI.
+
+# What are Props n JSX?
+props(properties) are a way to ***pass data*** from a parent component to a child component.
+
+# What is NPM? What is the role of node_modules folder?
+NPM(Node Package Manager) is used to manage the dependencies for our React project, including the React library itself.
+Node_modules folder contains all the dependencies of the project, including the React library.
+
+# What is the role of the public folder in React?
+Public folder contains static assets that are served directly to the user's broweser, such as images, fonts, and the index.html file.
+
+# What is the role of the src folder in React?
+src folder is used to store all the source code of the application which is then responsible for the dynamic changes in our web application.
+
+# What is the role of index.html page in React?
+index.html file is the main HTML file(SPA) in React application. 
+Here we have the div with id="root" which will be replaced by the component inside index.js file.
+
+# What is the role of index.js file and ReactDOM in React?
+ReactDOM is a Javascript library that renders components to the DOM or browser.
+
+The index.js file is the JS file that replaces the root element of the index.html file with the newly rendered components.
+
+# What is the role of the App.js file in React?
+App.js file contain the root component(App) of React application.
+App component is like a container for other components.
+App.js defines the structure , layout and routing in the application.
+
+# What is the role of function and return inside App.js?
+Function - the function keyword is used to define a Javascript function that represents our React component. Function is like a placeholder which contains all the code or logic of the component. The function takes in props as its arguments(if needed) and returns JSX.
+
+return is used to return the element from the function.
+
+# Can we have a function without a return inside App.js?
+Yes, a function without a return statement is possible. In that case, our component will not render anything in the UI. The common use case is for logging purpose.
+
+# What is the role of export default in App.js?
+Export statement is used to make a component available for import using "import" statement in other files.
+
+# Does the file name and component name must be same in React?
+No, the file name and component name don't have to be the same. However it is not recommended to keep the same for easier to organise and understand the code.
+
+# Advantages of JSX.
+-   1. Improve code readability and writability.
+    2. Error checking in advance.
+    3. Support JS expressions.
+    4. Improved performance.
+    5. Code reusability.
+
+# What is Babel?
+Babel in JS is used to transpile JSX syntax into regular Javascript which browser can understand.
+
+# Fragments
+In React, fragment is a way to group multiple children's elements. Using a fragment prevents the addition of unnecessary nodes to the DOM.
+
+# Spread Operator in JSX.
+The spread operator(...) is used to expand or spread an array or object.
+
+# What are the types of Conditional Rendering in JSX?
+-   1. If/else statement
+    2. Ternary operator
+    3. && operator
+    4. Switch statement
+
+# How to iterate over a list in JSX? What is map() method?
+map() method allows us to iterate over an array and modify its elements using a callback function.
+
+# What is transpiler? Difference between compiler and transpiler.
+A transpiler is a tool that converts source code from one High-Level language(JSX) to another high-level programming language(Javascript). Example: Babel.
+A compiler is a tool that converts high-level programming language(Java) into a lower-level language(machine code or byte-code).
+
+# Is it possible to use JSX without React.
+Yes, it is possible to use JSX without React by creating our own transpiler like React. However it is not recommended to since JSX is tightly integrated with React and relies on many React-specific features.
+
+
+
+

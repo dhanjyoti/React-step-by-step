@@ -11,14 +11,24 @@
 // }
 // console.log(arr);
 
-let array = [3, 5, 7, 9, 6, 2];
-let specificElement = 7;
+// let array = [3, 5, 7, 9, 6, 2];
+// let specificElement = 7;
 
-let newArray = [];
-for(let i=0; i<array.length; i++){
-    if(array[i] == specificElement){
-        continue;
-    }
-    newArray.push(array[i]);
+// let newArray = [];
+// for(let i=0; i<array.length; i++){
+//     if(array[i] == specificElement){
+//         continue;
+//     }
+//     newArray.push(array[i]);
+// }
+// console.log(newArray)
+
+
+let array = [3, 5, 7, 9, 6, 2];
+
+let position = 3;
+for(let i=position; i<arr.length-1; i++){
+    arr[i] = arr[i+1];
 }
-console.log(newArray)
+arr.length = arr.length-1;
+console.log(arr)

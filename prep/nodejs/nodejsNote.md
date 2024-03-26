@@ -4,3 +4,5 @@ Node JS is not a language. This is a server environment. Node JS can connect wit
 Node is mostly used for making API. So we can connect the same database with Web App and Mobile App. Node is easy to understand who knows Javascript. Node JS is super-fast for APIs.
 
 * **Filter** It works only on an array.
+
+* Node JS is single threaded and async language.

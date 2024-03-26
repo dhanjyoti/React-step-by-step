@@ -1,0 +1,10 @@
+.autoExpandTextArea {
+    resize: none; /* Disable textarea resizing */
+    overflow-y: hidden; /* Hide vertical scrollbar */
+  }
+  
+  .autoExpandTextArea {
+    min-height: 60px; /* Set initial minimum height */
+  }
+  
+  

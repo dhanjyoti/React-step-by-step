@@ -15,7 +15,7 @@ function Sorted(arr){
     arr.sort((a,b)=>a-b);
     return arr
     }
-    function SunSetSum(arr, largest){
+    function SubSetSum(arr, largest){
         let sum=0;
         for(let i=0;i<arr.length;i++){
            if(arr[i] != largest){
@@ -30,5 +30,5 @@ function Sorted(arr){
     let arr = [1,5,3,1,5,5];
     Sorted(arr);
     let largest = arr[arr.length-1];
-    let result = SunSetSum(arr,largest)
-    console.log(result)
+    let result = SubSetSum(arr,largest)
+    console.log(result);

@@ -177,15 +177,85 @@
 
 // constructoor
 
-let a = "abcba";
-function isPalindrome(string){
-    let j = string.length - 1;
-    for(let i=0; i<string.length/2; i++){
-        if(string[i]!= string[j]){
-            return false;
+// let a = "abcba";
+// function isPalindrome(string){
+//     let j = string.length - 1;
+//     for(let i=0; i<string.length/2; i++){
+//         if(string[i]!= string[j]){
+//             return false;
+//         }
+//         j--;
+//     }
+//     return true;
+// }
+// console.log(isPalindrome(a))
+
+
+// let n = 5;
+// let ne = ''
+// function recursion(n){
+//     if(n == 0){
+//         return;
+//     }
+//     recursion(n-1);
+//     return ne += n + " ";
+// }
+// console.log(recursion(n))
+
+
+// let ne = '';
+// function recursion(n) {
+//     if (n == 0) {
+//         return;
+//     }
+//     ne += n + " ";
+//     recursion(n - 1);
+// }
+// recursion(5);
+// console.log(ne);
+
+// print the sum of first n natural numbers using recursion
+// function sumOfN(n){
+//     if(n === 0) return 0;
+//     return n + sumOfN(n - 1);
+// }
+// let n = 5;
+// console.log(sumOfN(n))
+
+// for(let i=1; i<=10; i++){
+//     console.log(`${i} X 10 = ${i*10}`)
+// }
+// console.log(arr[4])
+// let insertEl = 34;
+// let position = 2;
+// arr.splice(position, 0, insert);
+// console.log(arr)
+
+// let arr = [5, 6, 7, 9, 3, 2, 19, 4];
+// let rotate = 3;
+// let neR = [];
+// function rotation(arr, rotate){
+//     for(let i=0; i<rotate; i++){
+//         arr.unshift(arr.pop());
+//     }
+//     return arr;
+// }
+// console.log(rotation(arr, rotate))
+
+// let arr = ["123f", "1dsa12", "1212ds", "65fd", "sadfa", "asdasd"];
+// let arr = [2, 4, 2, 3, 5, 3, 6, 3]; 
+// let arr = [3,4,5,5,5,6,6,6,7,7,7,19, 23 , 23, 25];
+
+let arr = [3, 6, 7, 8, 2, 9];
+let index = 3;
+for(let i=0; i<arr.length-1; i++){
+    for(let j=0; j<arr.length-i-1; j++){
+        if(arr[j] > arr[j+1]){
+            let temp = arr[j];
+            arr[j] = arr[j+1];
+            arr[j+1] = temp;
         }
-        j--;
     }
-    return true;
 }
-console.log(isPalindrome(a))
+let kthLargest = arr[arr.length - index];
+console.log(kthLargest)

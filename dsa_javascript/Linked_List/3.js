@@ -11,7 +11,7 @@ class LinkedList {
         this.head = null;
     }
     insertAtEnd(data){
-        const newNode = new  Node(data);
+        const newNode = new Node(data);
         // If the list is empty, set the new node as the head
         if(!this.head){
             this.head = newNode;

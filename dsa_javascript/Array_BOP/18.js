@@ -38,7 +38,7 @@
 // let result = removeDuplicateElement(arr);
 // console.log(result);
 
-let arr = [4,3, 6, 8, 5, 5, 3];
+let arr = [4, 3, 6, 8, 5, 5, 3];
 let sortedArray = arr.sort((a, b) => a - b); // Sort numerically
 
 let uniqueArray = [sortedArray[0]];
