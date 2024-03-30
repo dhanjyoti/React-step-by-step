@@ -169,6 +169,79 @@ A compiler is a tool that converts high-level programming language(Java) into a 
 # Is it possible to use JSX without React.
 Yes, it is possible to use JSX without React by creating our own transpiler like React. However it is not recommended to since JSX is tightly integrated with React and relies on many React-specific features.
 
+# What are React Components? What are the main elements of it?
+In react, a component is a reusable building block for creating user interfaces.
+
+# Types of React Components. What is functional componentss?
+Two types: Functional components and Class components.
+Functional components are declared as a Javascript function. They are stateless component, but with the help of hooks, they can now manage state also.
+
+# How do you pass data between functional components in React?
+prop(properties) are a way to pass data from a parent componenet to a child component.
+
+# Prop Drilling.
+Prop drilling is the process of passing down props through multiple layers of components.
+
+# Why to Avoid Prop Drilling? In how many ways can we avoid prop drilling?
+- Why to avoid:
+    1. Maintenance: Prop drilling can make code harder to maintain as changesss in data flow require updates across multiple components.
+    2. Complexity: It increases code complexity and reduces code readability.
+    3. Debugging: Debugging becomes challenging when props need to be traced through numerous components.
+
+- 5 ways to avoid Prop Drilling:
+    1. Using Context API
+    2. Using Redux
+    3. Using Component Composition
+    4. Using Callback Function
+    5. Using Custom Hooks
+
+# Class Components.
+Class components are defined ussing Javascript classes. They are stateful components by using the lifecycle methods. The render method in a class component is responsible for returning JSX.
+
+# How to pass data between class components in React. 
+this.props can be used in child component to access properties/data passed from parent component.
+
+# What is the role of this keyword in class component?
+`this` keyword is used to refer to the instance of the class.
+
+# 5 difference between Functional component & class component.
+- Funcitonal components
+    1. Syntax: Defined as a JS function.
+    2. state: Originally stateless but can now maintain state using hooks.
+    3. Lifecycle mehtods: No
+    4. Readability: more readable & concise.
+    5. this keyword: No
+    6. Do not have render method.
+- Class components
+    1. Defined as a JS(ES6) class.
+    2. Can manage local state with this.state.
+    3. There is Lifecycle method
+    4. Verbose(complex)
+    5. Access props using this.props
+    6. have render method
+
+# What is Routing and Router in React?
+**Routing** It allows us to create a single-page web application with navigation, without the need for a full-page refresh.
+**React Router** React Router is a library for handling routing and enables navigation and rendering of different components based on the URL.
+
+# How to implement Routing in React.
+- Step 1: Install React Router
+- Step 2: Create Navigation
+- Step 3: Create Routes
+
+# What are the roles of <Routes> & <Route> component in React Routing?
+The `<Routes>` component is used as the root container for declaring our collection of routes.
+The `<Route>` component is used to define a route and specify the component that should render when the route matches. 
+
+# What are Route Parameters in React Routing?
+Route parameters in React Router are a way to pass dynamic values(data) to the component as part of the URL path.
+
+# What is the role of Switch component in React Routing?
+Switch component ensures that only the first matching `<Route>` is rendered and rest are ignored. Eg: Switch is commonly used to handle 404 or "not found" routes.
+
+# What is the role of exect prop in React Routing?
+exact prop is used with the `<Route>` component to match exactly to the provided path.
+
 
 
 

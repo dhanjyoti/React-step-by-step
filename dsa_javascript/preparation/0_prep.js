@@ -186,14 +186,6 @@
 // let arr = [4, 6, 2, 8, 6, 6, 3, 9, 2];
 // let arr2 = [6, 7, 9, 3];
 
-
-
-
-
-
-
-
-
 // let arr = [1, 2, 3, 4, 5];
 // let rotate = 3;
 
@@ -204,7 +196,6 @@
 //   return arr;
 // }
 // console.log(rotateArray(arr, rotate))
-
 
 // function Rotation(arr) {
 //   let n = arr.length;
@@ -217,7 +208,6 @@
 // }
 // const result = Rotation(arr);
 // console.log(result);
-
 
 //  Find the maximum sum of the contigious sub array
 
@@ -248,3 +238,173 @@
 // console.log(maxSubArraySum(arr));
 
 // Coins denomination
+
+// Factorial
+// function factorial(n){
+//     if(n == 0){
+//         return 1;
+//     }
+//     return n * factorial(n-1);
+// }
+// console.log(factorial(5));
+
+//  Create an array with a range of numbers. input start: 1, end: 5
+// function rangeOfNumbers(start, end){
+//     if(end < start){
+//         return [];
+//     }
+//     const num = rangeOfNumbers(start, end-1);
+//     num.push(end);
+//     return num;
+// }
+// console.log(rangeOfNumbers(1, 5));
+
+// Find if a number is Palindrome
+// function isPalindrome(s){
+//     if(s.length==0 || s.length==1){
+//         return true;
+//     }
+//     else{
+//         if(s.charAt(0)===s.charAt(s.length-1)){
+//             return isPalindrome(s.slice(1,s.length-1))
+//         }
+//         else{
+//             return false
+//         }
+//     }
+// }
+// console.log(isPalindrome("221"))
+
+// print odd numbers from 1 to 100 using recursion
+// function printOddNumbers(start, end){
+//     if(start > end){
+//         return
+//     }
+//     if(start%2 !== 0){
+//         console.log(start);
+//     }
+//     printOddNumbers(start+1, end);
+// }
+// console.log(printOddNumbers(1, 100))
+
+// Sum of array using recursion
+// let arr = [3, 8, 6, 4, 1];
+// function addition(arr, n){
+//     if(n <= 0){
+//         return 0;
+//     }
+//     return (addition(arr, n-1) + arr[n-1]);
+// }
+// console.log(addition(arr, arr.length))
+
+// const obj1 = {
+//     name: "Rahul"
+// }
+// const obj2 = {
+//     name: "Rahul"
+// }
+
+// console.log(JSON.stringify(obj1) == JSON.stringify(obj2))
+
+// let employeeList = [
+//   {
+//     first_name: "Eleanor",
+//     last_name: "Bolton",
+//     designation: "CEO, Co-Founder",
+//     age: 45,
+//   },
+//   {
+//     first_name: "Caspian",
+//     last_name: "Shields",
+//     designation: "CTO, Co-Founder",
+//     age: 34,
+//   },
+//   {
+//     first_name: "Marek",
+//     last_name: "Goodman",
+//     designation: "CFO",
+//     age: 31,
+//   },
+//   {
+//       last_name: "Goodman",
+//       designation: "CFO",
+//       age: 31,
+//       first_name: "Marek",
+//   },
+//   {
+//     first_name: "Buster",
+//     last_name: "Mackenzi",
+//     designation: "COO",
+//     age: 43,
+//   },
+//   {
+//     first_name: "Caspian",
+//     last_name: "Shields",
+//     designation: "CTO, Co-Founder",
+//     age: 34,
+//   },
+// ];
+
+// // Using Map
+// let uniqueList = [...new Map(employeeList.map(item => [item.designation, item])).values()]
+// console.log(uniqueList)
+
+// Object.entries, Object.keys, Object.values => Read
+
+// Using JSON.stringify
+// const array = employeeList.filter(function(item, index){
+//     return index === employeeList.findIndex(function(obj){
+//         return JSON.stringify(item) === JSON.stringify(obj);
+//     });
+// })
+// console.log(array)
+
+// function removeDuplicate(arr){
+//     let result = [];
+//     for(let i=0; i<arr.length; i++){
+//         for(let j=i+1; j<arr.length; j++){
+//             if(JSON.stringify(arr[i]) === JSON.stringify(arr[j])){
+//                 result.push(i);
+//             }
+//         }
+//     }
+//     for(let i=0; i<result.length; i++){
+//         arr.splice(result[i], 1);
+//     }
+//     console.log(arr)
+// }
+// removeDuplicate(employeeList);
+
+// function removeDuplicateObj(arr) {
+// const uniqueArray = Array.from(new Set(arr.map(a => JSON.stringify(a))));
+// return uniqueArray.map(str => JSON.parse(str));
+// }
+// console.log(removeDuplicateObj(employeeList));
+
+// function removeDuplicateObj(arr) {
+//     const uniqueArray = [...new Set(arr.map(a => JSON.stringify(a)))];
+//     return uniqueArray.map(str => JSON.parse(str));
+// }
+// console.log(removeDuplicateObj(employeeList));
+
+// function removeDuplicates(arr) {
+//     const uniqueObjects = new Set(arr.map(obj => JSON.stringify(obj)));
+//     return Array.from(uniqueObjects).map(str => JSON.parse(str));
+//   }
+//   // Call the function to remove duplicates
+//   const uniqueEmployeeList = removeDuplicates(employeeList);
+
+//   console.log(uniqueEmployeeList);
+
+
+
+
+// console.log(JSON.stringify(obj1) == JSON.stringify(obj2))
+// function objectsHaveSameKeys(...objects) {
+//     const allKeys = objects.reduce((keys, object) => keys.concat(Object.keys(object)), []);
+//     const union = new Set(allKeys);
+//     return objects.every(object => union.size === Object.keys(object).length);
+//  }
+//  console.log(objectsHaveSameKeys(obj1, obj2));
+
+

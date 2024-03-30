@@ -231,8 +231,71 @@ Advantages: Reusability, modularity and specialization, Big, complex function wi
 # What are call, apply and bind in JS?
 These methods in JS are used to work with functions and control how they are invoked and what context they operate in. These methods provide a way to manipulate the `this` value and pass arguments to functions.
 
+# String
+A string is a data type used to store and manipulate data.
+
+# Template literals and string interpolation in strings.
+A template literal, also known as a template string, is a feature introduced in ECMAScript 2015(ES6) for string interpolation and multiline strings in Javascript.
+
+# Difference between single quotes(''), double quotes("") & backticks(``).
+
+# What are some important string operations in JS?
+substr(), subtring(), replace(), search(), toLocaleLowerCase(), toLocaleUpperCase(), indexOf(),  includes(), slice(), concat(), lastIndexOf(), charCodeAt(), trim(), charAt(), valueOf(), split(), toString(), match().
+
+# String immutability
+Strings in Javascript are considered immutable because we cannot modify the contents of an exiting string directly.
+
+# In how many ways we can concatenate strings?
+- 4 ways:
+    1. +Operator
+    2. Concat() method
+    3. Template literals
+    4. Join() method
+
+# What is DOM? What is the difference between HTML and DOM?
+The DOM(Document Object Model) represents the web page as a tree-like structure that allows Javascript to dynamically access and manipulate the content and structure of a web page.
+
+# How do you select, modify, create and remove DOM elements?
+$$DOM-Methods$$
+
+- Selecting DOM elements-
+getElementById(id), querySelector(selector), querySelectorAll(selector), getElementsByClassName(className), getElementsByTagName(tagName), getElementsByName(name)
+
+- Modify element properties and attributes-
+textContent, innerHTML, setAttribute(name, value), removeAttribute(name), style.property
+
+- Creating & appending elements-
+createElement(tagName), appentChild(node), cloneNode(deep)
+
+- Removing elements-
+remove(), removeChild(node)
+
+- Adding & removing event liteners- 
+addEventListener(type, listener), removeEventListener(type, listener)
+
+# What are selectors in JS?
+Selectors in JS help to get specific elements from DOM based on Ids, class names, tag names.
+- DOM Selector methods:
+getElementById(id), querySelector(selector), querySelectorAll(selector), getElementsByClassName(className), getElementsByTagName(tagName)
+
+# Difference between getElementById, getElementsByClassName & getElementsByTagName?
+
+# Difference between querySelector() & querySelectorAll()?
+
+# What are the methods to modify elements properties and attributes?
+- DOM methods for modifying elements and their properties-
+textContent, innerHTML, setAttribute(), removeAttribute(), style.property, classList.add()
+
+# Difference between innerHTML and textContent.
 
 
+# How to add & remove properties of HTML elements in the DOM using JS?
+setAttribute() & removeAttribute()
 
+# How to add & remove style from HTML elements in DOM using JS?
+style.setProperty & classList.add()
 
+# How to create new elements in DOM using JS? Difference between createElement() and cloneNode().
+createElement() & cloneNode()
 
+# Difference between createElement() & createTextNode().
