@@ -15,6 +15,8 @@ import Contact from "./pages/Contact";
 // import POST from './stepbystep/POST';
 import NewApi from "./pages/NewApi";
 import UserProvider from "./utils/UserProvider";
+import AxiosCom from "./pages/Axios";
+import PostAxios from "./pages/PostAxios";
 
 
 
@@ -25,6 +27,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/axiospost" element={<PostAxios />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/contact/:id" element={<Contact />} />
           <Route path="/newapi" element={<NewApi />} />

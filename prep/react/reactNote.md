@@ -242,6 +242,23 @@ Switch component ensures that only the first matching `<Route>` is rendered and 
 # What is the role of exect prop in React Routing?
 exact prop is used with the `<Route>` component to match exactly to the provided path.
 
+# What are react hooks? What are the top React hooks?
+React hooks are inbuilt functions provided by react that allows functional components to use state and lifecycle features.
+Before hooks, class components lifecycle methods were used to maintain state in React applications.
+To use react hooks we first have to import it from React library.
+Different hooks - useState, useEffect, useContext, useReducer, useCallback, useMemo, useRef, useLayoutEffect
 
+#  What  is useEffert? How and when to use it.
+useEffect is called after the function renders. Eg:- side effect. useEffect function will take two parameters. Eg: function and dependency array.
+
+# What is the dependency array in the useEffect hook?
+Depedency array acts as triggers for useEffect to rerun; meaning if any of dependencies value change, the code inside useEffect() will execute again. 
+
+# What is the meaning of the Empty array[] in the useEffect()?
+An empty array[] indicates that the effect function will run only ones, because there are no dependencies.
+
+
+
+ 
 
 

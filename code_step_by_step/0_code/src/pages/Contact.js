@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useSearchParams, useParams } from 'react-router-dom';
+import useTitle from '../utils/useTitle';
 
 let user = [
   {id: 1, name: "Dhan", email: "dhan@gmail.com"},
@@ -10,11 +11,14 @@ let user = [
 ]
 
 const Contact = () => {
+  const [count, setCount] = useState(0);
+  useTitle(count)
+
   const [params] = useSearchParams();
   const {id} = useParams();
   return (
     <div>
-      cc
+      <butto onClick={()=>setCount(count+1)}>Click to Count</butto>
       <h2>Dynamic</h2>
         {
           user.map((item)=>

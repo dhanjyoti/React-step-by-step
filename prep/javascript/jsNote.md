@@ -299,3 +299,27 @@ style.setProperty & classList.add()
 createElement() & cloneNode()
 
 # Difference between createElement() & createTextNode().
+
+
+# What is Error Handling in JS?
+Error handling is the process of managing errors.
+
+# What is the role of finally block in JS?
+Finally block is used to execute some code irrespective of some error.
+
+# What is the purpose of throw statement in JS?
+The throw statement stops the function of the current function and passes the error to the catch block of calling function.
+
+# What is error propagation in JS?
+Error propagation refers to the process of passing or propagating an error from one part of the code to another by using the throw statement in try catch.
+
+# What are the best practices for error handling?
+-   1. Use try catch and handle errors appropriately.
+    2. Use descriptive error messages.
+    3. Avoid swallowing errors.
+    4. Lof errors.
+
+# What are the different types of errors in JS?
+Syntax error, reference error, type error and range error.
+
+# 

@@ -594,3 +594,9 @@ They provide a centralized way to manage behavior for all HTTP requests and resp
 
 It's important to note that while Axios was used in this example, the concept of 
 interceptors can apply to other HTTP request libraries and contexts as well.
+
+
+# Redux
+A container where we can store our whole application data. So we call it to state management. It does not belong to the component state.
+
+
