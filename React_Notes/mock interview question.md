@@ -114,10 +114,7 @@ The useLocation hook is particularly useful when we need to access information a
 - React JS is a declarative, efficient, and flexible JavaScript library for building user interfaces. It is an open-source, component-based front-end library that is responsible only for the view layer of the application. ReactJS is not a framework, it is just a library developed by Facebook.
 <!-- ____________________________________________________________________ -->
 
-# 8. What is jsx?
-- JSX stands for JavaScript XML. It is a syntax extension for JavaScript, often used with React, that allows us to write HTML-like code directly within JavaScript. JSX makes it easier to write and read React components by blending HTML and JavaScript together.
 
-Using JSX directly is much more readable and maintainable compared to manually creating React elements using React.createElement. Therefore, JSX has become the standard way of writing React components.
 <!-- ____________________________________________________________________ -->
 
 # 10. What is virtul Dom ?

@@ -1,22 +1,8 @@
-# React-
-ReactJS is a declarative, efficient, and flexible JavaScript library for building
-user interfaces. It is an open-source, component-based front-end library that is 
-responsible only for the view layer of the application. ReactJS is not a framework, 
-it is just a library developed by Facebook to solve some problems that we were 
-facing earlier.
 
-# Why to learn React.JS?
-Ans -> makes easy to manage & build complex front end.
 
-# What is npm? 
--> npm, or Node Package Manager, is a widely used package manager for 
-JavaScript and Node.js applications. It's a command-line tool that allows developers 
-to easily install, manage, and share libraries, packages, and dependencies that are 
-used in JavaScript and Node.js projects.
 
-# What is npx? 
--> `npx`(Node Package Executor) is a package runner tool that comes with npm 
-(Node Package Manager) starting from npm version 5.2.0 and higher. It allows us to execute commands from Node.js packages that aren't globally installed on our system. `npx` is particularly useful for running one-off commands, scripts, or executables that are part of packages we haven't installed globally or don't want to install globally.
+
+
 
 # Why we install react-router-dom in React.js? 
 -> We need react-router-dom to add routing and navigation capabilities to our React application. React Router is a popular library for handling client-side routing in single-page applications (SPAs) built with React.
@@ -24,10 +10,6 @@ used in JavaScript and Node.js projects.
 # Props -> 
 "props" is a shorthand for "properties," and it is a mechanism for passing data from a parent component to a child component. Props allow us to pass values, functions, or any data from one component to another, enabling communication between components in a React application.
 
-# Axios -> 
-Axios is a popular JavaScript library used for making HTTP requests in both browser 
-and Node.js environments. It provides a simple and straight forward way to send and 
-receive HTTP requests, making it a valuable tool for working with web APIs and servers.
 
                     Chapter 1 - Why React?
 
@@ -126,12 +108,9 @@ own behaviour and styling.
 * Function is used as a Tag in React
 * Always use Camel Case in JSX
 
-1. # Fragment 
--> In React, a fragment is a way to group multiple children elements without adding an extra DOM element to the rendered output. Fragments are a lightweight and efficient way to structure our component's JSX code, especially when we need to return adjacent JSX elements without a parent wrapper.
+1. 
 
-2. # JSX -> 
-JSX (JavaScript XML) is an extension of JavaScript used in React for defining the structure and content of user interfaces. It provides a more concise and readable way to describe the structure of UI components compared to manually creating DOM elements with JavaScript functions.
-                    JSX resembles HTML but is actually a syntax extension for JavaScript. It allows us to write HTML-like code within our JavaScript files. 
+2. 
 
 
                     Chapter 3 - Conditional Rendering
@@ -596,7 +575,5 @@ It's important to note that while Axios was used in this example, the concept of
 interceptors can apply to other HTTP request libraries and contexts as well.
 
 
-# Redux
-A container where we can store our whole application data. So we call it to state management. It does not belong to the component state.
 
 

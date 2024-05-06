@@ -1,10 +1,10 @@
 # 1. Class Components
--> In react Class Components are basically ES6 classes. Similar to functional components, a class component can also optionally receive props as input and return HTML. Apart from the props a class component can also maintain a private internal state. In simpler words, it can maintain some information which is private to that component and use that information to describe the user interface.
+-> In react, Class Components are basically ES6 classes. Similar to functional components, a class component can also optionally receive props as input and return HTML. Apart from the props a class component can also maintain a private internal state. In simpler words, it can maintain some information which is private to that component and use that information to describe the user interface.
 
 # 2 Functional components Vs Class components
 **functional components ->**
     1. functional components are simple functions receiving props and returning a declaration.
-    2. first, it has an advantage that funcitonal components do not use `this` keyword. The use of `this` is quiet tricky for beginners. 
+    2. first, it has an advantage that funcitonal components do not use `this` keyword.
         Secondly, in class component we will be forced to think of a solution without having to use state, if we have a number of components each with their own private state maintainance and debugging our application is difficult.
             Functional components tend to be without any complicated logic and are mainly responsible for the user interface. 
 
@@ -14,7 +14,7 @@
     3. because of what they are capable of and how they are used class components are also called as stateful components, smart components or container components.
 
 # 3. Hooks
-->  Hooks are a new feature addition in React version 16.8 which allow us to use React features without having to write a class.
+-> Hooks are a kind of function which helps us to resolve a particular problem. Hooks are a new feature addition in React version 16.8 which allow us to use React features without having to write a class. 
 
 
 # 4. Lifecycle method
@@ -184,7 +184,7 @@ not to call the setState method. Simply because the component is never re-render
 ***Error Boundary***
 In a class component that implements either one or both of the lifecycle methods i.e, getDerivedStateFromError or componentDidCatch becomes an `error boundary`.
 
-The static method getDerivedStateFromError method is used to render a fallack UI after an error is thrown and the componentDidCatch method is used to log the error information.
+The static method getDerivedStateFromError method is used to render a fallback UI after an error is thrown and the componentDidCatch method is used to log the error information.
 
 Error Boundaries will catch the error and display a fallback UI. This is done through `getDerivedStateFromError`.
 
@@ -195,17 +195,12 @@ Error boundaries are React components that catch Javascript error in their child
 
 A class component becomes an Error Boundary by defining either or both of getDerivedStateFromError and componentDidCatch lifecycle methods.
 
-The placement of the Error Boundary also matters as it controls if the entire app should have the fall-back UI or just the component cousing the problem.
+The placement of the Error Boundary also matters as it controls if the entire app should have the fall-back UI or just the component causing the problem.
 
 Provide a way to gracefully handle error in application code.
 
 
 
-
-
-
-
-  
 
 
 # What is React Router?
@@ -361,7 +356,7 @@ Using JSX directly is much more readable and maintainable compared to manually c
 <!-- ____________________________________________________________________ -->
 
 # 9. What is React?
-- React JS is a declarative, efficient, and flexible JavaScript library for building user interfaces. It is an open-source, component-based front-end library that is responsible only for the view layer of the application ReactJS is not a framework, it is just a library developed by Facebook to solve some problems that we were facing earlier.
+- React JS is a declarative, efficient, and flexible JavaScript library for building user interfaces. It is an open-source, component-based front-end library that is responsible only for the view layer of the application ReactJS is not a framework, it is just a library developed by Facebook.
 <!-- ____________________________________________________________________ -->
 # 10. What is virtul Dom ?
 - In React.js, the Virtual DOM (Document Object Model) is a concept that refers to a lightweight copy of the actual DOM. The DOM represents the structure of a document as a tree of nodes, where each node represents an element, attribute, or text. Manipulating the DOM directly can be inefficient, especially when dealing with large and complex web applications.
@@ -376,6 +371,7 @@ Virtual DOM Key Concepts :
 * Virtual DOM is just like a blueprint of a machine, can do changes in the blueprint but those changes will not directly apply to the machine.
 * Virtual DOM is a programming concept where a virtual representation of a UI is kept in memory synced with “Real DOM ” by a library such as ReactDOM and this process is called reconciliation.
 * Virtual DOM makes the performance faster, not because the processing itself is done in less time. The reason is the amount of changed information – rather than wasting time on updating the entire page, you can dissect it into small elements and interactions.
+
 <!-- ____________________________________________________________________ -->
 
 # Components
@@ -390,11 +386,7 @@ Virtual DOM Key Concepts :
 <!-- ____________________________________________________________________ -->
 
 # 13. What is Hooks in Functional component?
-- In React.js, `Hooks` are functions that allow us to add state and other React features to 
-functional components. Prior to hooks, state and lifecycle features were only available in
-class components. The introduction of hooks in React 16.8 revolutionized the way
-developers manage state and side effects in functional components. Hooks make it possible
-to reuse stateful logic without changing our component hierarchy.
+- In React.js, `Hooks` are functions that allow us to add state and other React features to functional components. Prior to hooks, state and lifecycle features were only available in class components. The introduction of hooks in React 16.8 revolutionized the way developers manage state and side effects in functional components. Hooks make it possible to reuse stateful logic without changing our component hierarchy.
 <!-- ____________________________________________________________________ -->
 
 # 14. What is control and uncontrol Components?
@@ -407,6 +399,7 @@ to reuse stateful logic without changing our component hierarchy.
 - In uncontrolled components, the component's state is managed by the DOM itself. The state is not stored in the component's state but is instead managed by the DOM (e.g., input value stored in the DOM).
 - Uncontrolled components typically use refs to access the DOM nodes directly to read the current state.
 - They are useful when integrating with non-React code or when we need a simpler approach for handling form inputs.
+
 <!-- ____________________________________________________________________ -->
 
 # 15. How we can create custom hook ?
@@ -468,7 +461,7 @@ export default Counter;
 ```
 <!-- ____________________________________________________________________ -->
 
-# 16. What is the use of usememo ?
+# 16. What is the use of useMemo ?
 - `useMemo` is a React hook that is used for memoization, which is a technique to optimize performance by caching the results of expensive computations and recalculating them only when necessary. It is particularly useful when we have a function that is computationally expensive to run or a value that takes a lot of time to compute, and we want to avoid re-computing it on every render.
 
 The primary use of `useMemo` is to memoize the result of a computation and recompute it only when one of the dependencies has changed. It takes two arguments:
@@ -494,18 +487,10 @@ The primary use of `useEffect` is to perform side effects in functional componen
 - Dependency array: An optional array of dependencies. If provided, the effect function will only be re-executed if one of the dependencies has changed since the last render. If the dependency array is empty ([]), the effect will only run once after the initial render.
 <!-- ____________________________________________________________________ -->
 
-# 19. What is memo ?
-- In React, `memo` is a higher-order component (HOC) or a function that allows to optimize the performance of functional components by memoizing the result of the component's render function. It's similar to `React.PureComponent` for class components.
 
-When we wrap a functional component with `memo`, React memoizes the component, meaning that React will only re-render the component if its props have changed. If the props remain the same between renders, React will reuse the memoized result of the component's render function, thereby preventing unnecessary re-renders and improving performance.
-<!-- ____________________________________________________________________ -->
-
-# 20. What is code spilting?
-- Code splitting is a technique used in web development to improve performance by splitting a large JavaScript bundle into smaller bundles or chunks. Instead of loading the entire JavaScript bundle when the web application is loaded, code splitting allows us to load only the necessary code for the current page or feature, reducing initial loading times and improving the overall user experience.
 <!-- ____________________________________________________________________ -->
 
 # 21. What is Lazy Loading?
-
 - Lazy loading is a technique used in web development to defer the loading of non-essential resources (such as images, scripts, or other assets) until they are actually needed. This helps improve the initial loading time and performance of web pages by prioritizing the loading of critical content first and delaying the loading of less important content until later.
 
 - Lazy loading is particularly useful for web pages with large or complex content, where loading all resources upfront would significantly increase the initial page load time and impact the user experience. By lazily loading resources only when they are needed, you can reduce the initial payload size and improve the perceived performance of the web page.
@@ -518,7 +503,7 @@ When we wrap a functional component with `memo`, React memoizes the component, m
 <!-- ____________________________________________________________________ -->
 
 # 22. What is Reconcilation?
-- Reconciliation is the algorithm React uses to differenciate on tree with another to determine which parts need to be changed in the UI.
+- Reconciliation is the algorithm React uses to differenciate one tree with another to determine which parts need to be changed in the UI.
 - Reconciliation is a process in React that ensures that the user interface (UI) stays in sync with the application's state. When the state of a React component changes (due to updates in props or state), React re-renders the component and compares the new virtual DOM tree with the previous one to determine the minimum number of DOM manipulations needed to update the actual DOM.
 <!-- ____________________________________________________________________ -->
 
@@ -557,21 +542,9 @@ In summary, while `useMemo`, `useCallback`, and `useEffect` are all React hooks 
 The main idea behind lifting state up is to maintain a single source of truth for the shared state, making it easier to manage and update. By lifting state up, we create a more centralized and predictable state management system for our React application.
 <!-- ____________________________________________________________________ -->
 
-# 26. what is condition Rendering?
-- Conditional rendering in React refers to the practice of rendering different content or components based on certain conditions. This allows us to dynamically control what is displayed in our UI based on the current state of our application or specific criteria.
-
-There are several ways to implement conditional rendering in React:
-
-***1. Using JavaScript Conditional Statements:***
-***2. Using Logical && Operator:***
-***3. Using Conditional Rendering with Functions:***
-***4. Using Ternary Operator within JSX:***
 <!-- ____________________________________________________________________ -->
 
-# 27. what is Portal?
-- In React, a portal is a feature that allows to render children components into a different part of the DOM tree, outside of the parent component's DOM hierarchy. This means we can render components at any location in the DOM, even if they are not direct descendants of the current component's DOM node.
 
-Portals are useful for scenarios where we need to render content outside of the typical DOM hierarchy, such as modals, tooltips, popovers, or dropdown menus. By using portals, we can ensure that these components are rendered in a specific part of the DOM, such as at the top level of the document body, regardless of their position in the component tree.
 <!-- ____________________________________________________________________ -->
 
 # 28. what is useRef?
@@ -646,8 +619,7 @@ In statically typed languages, each variable, parameter, function, and expressio
 - In React, PropTypes is a mechanism for validating the props passed to components. It allows you to specify the types (and sometimes shapes) of the props that a component is expecting to receive. PropTypes are used primarily for type checking and documentation purposes, helping developers catch errors early and communicate the intended usage of components.
 <!-- ____________________________________________________________________ -->
 
-# 34. what is High Order Component?
-- A Higher-Order Component (HOC) is a pattern in React that allows you to reuse component logic by wrapping components with another component. HOCs are a powerful tool for code reuse, abstraction, and separation of concerns in React applications.
+
 <!-- ____________________________________________________________________ -->
 
 # 35. what is Synthetic Event in react?
@@ -671,9 +643,9 @@ In statically typed languages, each variable, parameter, function, and expressio
 <!-- ____________________________________________________________________ -->
 
 # 39. what is ContextApi?
-- The Context API is a feature in React that provides a way to pass data through the component tree without having to pass props manually at every level. It allows you to share data between components at different levels of the component tree without the need to explicitly pass props through every intermediate component.
+- The Context API is a feature in React that provides a way to pass data through the component tree without having to pass props manually at every level. It allows to share data between components at different levels of the component tree without the need to explicitly pass props through every intermediate component.
     ***The Context API consists of two main parts:***
-    1. Context Object: A context object is created using the React.createContext() function. This context object represents the shared data that you want to make available to components within the context tree.
+    1. Context Object: A context object is created using the React.createContext() function. This context object represents the shared data that we want to make available to components within the context tree.
 
     2. Provider and Consumer Components: The context object provides a Provider component and a Consumer component. The Provider component is used to wrap a portion of the component tree and supply the context data to all descendant components. The Consumer component is used within descendant components to access the context data provided by the nearest Provider ancestor.
 <!-- ____________________________________________________________________ -->
