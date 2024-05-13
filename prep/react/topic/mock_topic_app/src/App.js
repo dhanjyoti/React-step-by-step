@@ -8,7 +8,12 @@ import SearchProduct from "./topics/SearchProduct/SearchProduct";
 import Practice from "./topics/Practice/Practice";
 import GetData from "./topics/Form/GetData";
 import FormValidation from "./topics/Form/FormValidation";
-import UseEffect from "./topics/Hooks/UseEffect";
+// import UseEffect from "./topics/Hooks/UseEffect";
+// import Effect from "./topics/Hooks/Effect";
+import UseMemo from "./topics/Hooks/UseMemo";
+import UseReducer from "./topics/Hooks/UseReducer";
+// import Higher from "./topics/HOC/Higher";
+import UseRef from "./topics/Hooks/UseRef";
 // import Student from "./topics/Practice/Student";
 
 function App() {
@@ -16,7 +21,7 @@ function App() {
     <Router>
 
       <Routes>
-        <Route path="/useeffect" element={<UseEffect/>} />
+        <Route path="/higher" element={<UseRef/>} />
         <Route path="/formvalidation" element={<FormValidation/>} />
         <Route path="/getdataform" element={<GetData />} />
         <Route path="/simpleinterest" element={<SIC />} />
@@ -25,6 +30,8 @@ function App() {
         <Route path="/todo" element={<Todo />} />
         <Route path="/searchproduct" element={<SearchProduct />} />
         <Route path="/practice" element={<Practice />} />
+        <Route path="/usememo" element={<UseMemo/>} />
+        <Route path="/usereducer" element={<UseReducer/>} />
       </Routes>
 
     </Router>
