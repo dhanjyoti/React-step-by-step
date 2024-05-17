@@ -698,6 +698,135 @@ React useCallback hook returns a memoized function to reduce unnecessary callbac
 
 # Axios
 Axios is a popular JS library used for making `http` requests in both browser and Node.js environments. It provides a simple and straight forward way to send and receive `http` requests, making it a valuable tool for working with web API's and servers.
+
+# Custom Hook
+React Custom Hooks are JavaScript functions starting with ‘use’ containing reusable logic.
+Sometimes we make components that we have to reuse again and again in the application. In this case, we can convert the component to hooks by extracting logic from it. This self-made hook is known as Custom hook.
+
+Creating custom hooks in React allows us to extract and reuse stateful logic across multiple components. Custom hooks are regular JavaScript functions prefixed with use, and they can call other hooks if needed. 
+
+Custom hooks allow us to reuse stateful logic without changing our component hierarchy. They are a way to share logic between components without having to use higher-order components or render props.
+
+# How we can create custom hook ?
+Here's how we can create a custom hook:
+
+    * **Identify the Reusable Logic:**
+    Determine the logic that we want to reuse across different components. This could involve managing state, performing side effects, or any other behavior that we find ourself repeating.
+
+    * **Create a Function with use Prefix:**
+    Define a function with the use prefix (e.g., useCustomHook). This naming convention is not mandatory, but it's a convention followed by the React community to indicate that the function is a custom hook.
+
+    * **Implement the Hook Logic:**
+    Inside the custom hook function, implement the reusable logic using hooks like useState, useEffect, or other custom hooks if necessary. The custom hook can accept parameters just like regular functions.
+
+    * **Return Values as Needed:**
+    If our custom hook needs to return any values (such as state variables or functions), make sure to return them from the custom hook function.
+
+    * **Use the Custom Hook in Components:**
+    Once the custom hook is created, we can use it in our functional components just like any other hook provided by React.
+
+Here's an example of a custom hook that manages a simple counter:
+```jsx
+    import { useState } from 'react';
+
+    function useCounter(initialCount = 0, step = 1) {
+        const [count, setCount] = useState(initialCount);
+
+        const increment = () => {
+            setCount(count + step);
+        };
+        const decrement = () => {
+            setCount(count - step);
+        };
+        const reset = () => {
+            setCount(initialCount);
+        };
+        return { count, increment, decrement, reset };
+    }
+    export default useCounter;
+```
+We can then use this custom hook in our components:
+```jsx
+import React from 'react';
+import useCounter from './useCounter';
+
+function Counter() {
+    const { count, increment, decrement, reset } = useCounter(0, 1);
+
+    return (
+        <div>
+            <p>Count: {count}</p>
+            <button onClick={increment}>Increment</button>
+            <button onClick={decrement}>Decrement</button>
+            <button onClick={reset}>Reset</button>
+        </div>
+    );
+}
+export default Counter;
+```
+
+# What is static type checking?
+- Static type checking is a process used in programming languages to detect type-related errors in code at compile time, before the code is executed. The goal of static type checking is to identify potential type mismatches, inconsistencies, or errors in the codebase and prevent them from causing runtime errors or unexpected behavior.
+
+In statically typed languages, each variable, parameter, function, and expression has a fixed type that is known at compile time. The compiler analyzes the code to ensure that types are used consistently and correctly throughout the program. If the compiler detects any type-related errors, it raises a compilation error or warning, alerting the developer to the issue.
+
+#  What is the useReducer hook in react js ?
+- The `useReducer` hook is a built-in React hook that provides an alternative to the `useState` hook for managing complex state logic in functional components. It is particularly useful when the state logic involves multiple sub-values or when the next state depends on the previous one.
+
+`useReducer` is inspired by the Redux library's reducer pattern and is similar to how reducers work in Redux. It accepts a reducer function and an initial state, and returns the current state and a dispatch function. The dispatch function is used to dispatch actions to update the state based on the logic defined in the reducer function.
+
+```jsx
+    import React, { useReducer } from 'react';
+
+    // Reducer function
+    const reducer = (state, action) => {
+    switch (action.type) {
+        case 'increment':
+        return { count: state.count + 1 };
+        case 'decrement':
+        return { count: state.count - 1 };
+        default:
+        throw new Error();
+    }
+    };
+
+    const Counter = () => {
+    // Initialize state using useReducer
+    const [state, dispatch] = useReducer(reducer, { count: 0 });
+
+    return (
+        <div>
+        <p>Count: {state.count}</p>
+        {/* Dispatch actions to update state */}
+        <button onClick={() => dispatch({ type: 'increment' })}>Increment</button>
+        <button onClick={() => dispatch({ type: 'decrement' })}>Decrement</button>
+        </div>
+    );
+    };
+
+    export default Counter;
+```
+***In this example:***
+- We define a reducer function (reducer) that takes the current state and an action as arguments and returns the new state based on the action.
+- We initialize the state using useReducer, passing the reducer function and an initial state object { count: 0 }.
+- We use the dispatch function returned by useReducer to dispatch actions ({ type: 'increment' } and { type: 'decrement' }) to update the state.
+- The component renders the current count value (state.count) and two buttons to increment and decrement the count. When the buttons are clicked, the corresponding actions are dispatched to update the count value.
+
+# What is use of StrictMode in react?
+- `StrictMode` is a built-in component in React that helps developers write better React code by highlighting potential problems and deprecated features in their applications. It is designed for development mode only and has no effect in production builds.
+```jsx
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+ReactDOM.render(
+    <React.StrictMode>
+        {/* Your root component goes here */}
+    </React.StrictMode>,
+    document.getElementById('root')
+);
+```
+`StrictMode` is a useful tool for improving the quality of React applications, promoting best practices, and ensuring smoother upgrades to future versions of React. It's recommended to use StrictMode during development to catch potential issues early and write cleaner, safer React code.
+
 <!--
 ______________________________________________________________________________________________________ -->
 

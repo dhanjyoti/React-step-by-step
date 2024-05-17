@@ -1,14 +1,14 @@
 const configs = require("./src/config");
-const { connect } = require("./src/db");
+const {connect} = require("./src/db");
 
 const main = async ()=>{
-    connect({ uri: configs.URI});
-};
+    await connect({uri: configs.URI});
+}
 
-(async ()=>{
-    try {
+(async()=>{
+    try{
         await main();
-    } catch (err){
-        console.error(err);
+    } catch(err){
+        console.log(err);
     }
 })();

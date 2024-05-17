@@ -244,18 +244,5 @@
 
 // let arr = ["123f", "1dsa12", "1212ds", "65fd", "sadfa", "asdasd"];
 // let arr = [2, 4, 2, 3, 5, 3, 6, 3]; 
-// let arr = [3,4,5,5,5,6,6,6,7,7,7,19, 23 , 23, 25];
+// let arr = [3,4,5,5,5,6,6,6,7,7,7,19, 23 , 23,25];
 
-let arr = [3, 6, 7, 8, 2, 9];
-let index = 3;
-for(let i=0; i<arr.length-1; i++){
-    for(let j=0; j<arr.length-i-1; j++){
-        if(arr[j] > arr[j+1]){
-            let temp = arr[j];
-            arr[j] = arr[j+1];
-            arr[j+1] = temp;
-        }
-    }
-}
-let kthLargest = arr[arr.length - index];
-console.log(kthLargest)

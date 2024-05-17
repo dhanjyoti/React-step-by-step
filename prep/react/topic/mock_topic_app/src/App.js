@@ -13,7 +13,7 @@ import FormValidation from "./topics/Form/FormValidation";
 import UseMemo from "./topics/Hooks/UseMemo";
 import UseReducer from "./topics/Hooks/UseReducer";
 // import Higher from "./topics/HOC/Higher";
-import UseRef from "./topics/Hooks/UseRef";
+import APICalling from "./topics/API/APICalling";
 // import Student from "./topics/Practice/Student";
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
     <Router>
 
       <Routes>
-        <Route path="/higher" element={<UseRef/>} />
+        <Route path="/higher" element={<APICalling/>} />
         <Route path="/formvalidation" element={<FormValidation/>} />
         <Route path="/getdataform" element={<GetData />} />
         <Route path="/simpleinterest" element={<SIC />} />

@@ -1,8 +1,9 @@
-
-const myObject = {
-    city: "Guwahati",
-    greet(){
-        console.log(`Hello ${this.city}`)
-    }
+function Person(age, fname, classes) {
+  this.age = age;
+  this.fname = fname;
+  this.classes = classes;
 }
-myObject.greet()
+Person.prototype.lname = "roi";
+
+let details = new Person(34, "hari", 5);
+console.log(details.lname)

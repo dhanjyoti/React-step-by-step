@@ -1,5 +1,6 @@
 **Javascript** 
 Javascript is a cross-platform, object oriented scripting language used to make webpages interactive( eg., having complex animations, clickable buttons,  pop-up menus, etc ).
+It is also synchronous single-threaded language, meaning Javascript can execute only one code of line at a time and in a spectfic order.
 
 **Javascript Engine**
 A javascript engine is a program present in web browsers that executes Javascript code.
@@ -22,6 +23,21 @@ Local or Blocked scope - Here the variable is defined inside the `if` block or `
 
 **Hoisting**
 Hoisting is a Javascript behavior where functions and variable declaratons are moved to the top of their respective scopes during the compilation phase.
+
+Hoisting is a phenomena in Javascrpt by which we can access variables 
+    and functions, even before we initialize it or we have put some value in it.
+    We can access the variables without any error.  
+
+Eg: In case of single variable the output will be undefined. 
+    In case of proper function declaration it will show us the result. 
+    in case of only function name without the paranthesis
+    it will show us the whole function code.
+    In case the function is an arrow function it will give us
+    an error "_____ is not a function". As arrow function behaves
+    just like a variable. & undefined is the result if we pass only 
+    the name just like another variable.
+
+- We can invoke functions even before initializing it.
 
 **JSON**
 JSON(Javascript Object Notation) is a lightweight data interchange format. JSON consists of key-value pairs.
@@ -209,6 +225,11 @@ Parameters are the placeholders defined in the function declaration.
 Arguments are the actual values passed to a function when it is invoked or called.
 
 # In how many ways you can pass arguments to a function.
+In JavaScript, we can pass arguments to a function in several ways:
+1. Passing arguments by value: 
+2. Passing arguments by reference:
+3. Using the arguments object: 
+4. Using the rest parameter syntax: 
 
 # How do you use default parameters in a function.
 In Javascript, default parameters allows us to specify default values for function parameters.
@@ -423,6 +444,8 @@ removeEventListener() method is used to remove event handler from element.
 
 # What are iterators amd generator functions?
 
+
+
 # Object Oriented Programming
 
 Object-Oriented Programming is a programming style based on classes and objects. These group data(properties) and methods(actions) inside a box.
@@ -465,7 +488,7 @@ In Oops an object is an instance of a class.
     In other words, Inheritance allows a class(subclass) to acquire the properties and behaviour of another class(super-class). It helps to reuse, customize and enhance the existing code. So, it helps to write a code accurately and reduce the development time.
 
     4. Polymorphism:
-    Polymorphism means having different and 'many forms'. A subclass can define its own unique behaviourand still share the same functionalities or behaviour of its parent/base class.
+    Polymorphism means having different and 'many forms'. A subclass can define its own unique behaviour and still share the same functionalities or behaviour of its parent/base class.
 
 ```js
     class square(){                     |   class circle(){}
@@ -815,6 +838,7 @@ but reassigning the reference inside the function does not affect the
 original reference.
 
 //  Difference
+**Pass by Value**
 1.  Pass by Value works only on Primitive Datatypes.
 2.  In pass by value original copy of the data is copied.
 3.  The function receives a copy of the variable's value,
@@ -830,7 +854,7 @@ original reference.
 5.  After passing by value the original variable and the copied variable
     both works independently.
 
-
+**Pass by Reference**
 1.  Pass by Reference works only on Non-primitive Datatypes.
 2.  In pass by reference the memory location is copied 
     or the reference value is copied

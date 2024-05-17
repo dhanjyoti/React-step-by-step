@@ -13,8 +13,15 @@
 // }
 
 
-document.getElementById('itemList').addEventListener('click', function(event){
-    if(event.target.tagName === 'LI'){
-        console.log("Clicked on:", event.target.textContent);
-    }
+
+
+const myPromise = new Promise((res, rej)=>{
+    setTimeout(()=>{
+        res("promise ses")
+    }, 1000)
+})
+myPromise.then((message)=>{
+    console.log(message)
+}).catch((error)=>{
+    console.log(error)
 })

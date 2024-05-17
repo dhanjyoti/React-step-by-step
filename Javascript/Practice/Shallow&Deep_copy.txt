@@ -76,7 +76,7 @@ Note- Javascript by default create shallow copy of only non-primitive datatype, 
 
     Deep Copy-  A deep copy of an object is a copy whose properties do not share the same references 
         (point to the same underlying values) as those of the source object from which the copy 
-        was made. As a result, when you change either the source or the copy, you can be assured you're 
+        was made. As a result, when we change either the source or the copy, we can be assured we're 
         not causing the other object to change too.
         
     To Deep Copy we convert the object into a string(i,e.- JSON.stringify). 

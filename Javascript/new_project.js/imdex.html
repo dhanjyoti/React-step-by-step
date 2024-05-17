@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        color: white;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+      }
+      h5 {
+        font-size: 24px;
+        line-height: 31.2px;
+        margin-top: -3px;
+        font-family: "Chakra Petch", sans-serif;
+      }
+      h4 {
+        font-size: 32px;
+        line-height: 40.2px;
+        margin-top: -15px;
+        font-family: "Chakra Petch", sans-serif;
+        color: #311852;
+      }
+      p {
+        margin-top: 0;
+        font-size: 18px;
+        line-height: 30px;
+        margin-bottom: 0;
+        font-family: "Barlow", sans-serif;
+      }
+      h2 {
+        font-weight: 700;
+        font-size: 57px;
+        line-height: 74.1px;
+        margin-top: -12px;
+        font-family: "Chakra Petch", sans-serif;
+      }
+      a {
+        text-decoration: none;
+      }
+      .header-section {
+        width: 100%;
+        z-index: 9;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 21px 0 0;
+      }
+      .main-menu {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 50px;
+        padding: 0px 26px;
+        list-style: none;
+      }
+      .main-menu li {
+        color: white;
+        font-weight: 600;
+        font-size: 20px;
+        transition: all 0.3s;
+      }
+      .get-btn {
+        border-radius: 100px;
+        padding: 12px 38px 12px;
+        font-size: 18px;
+        font-weight: 600;
+        display: inline-block;
+        color: #16182b;
+        transition: all 0.5s;
+        position: relative;
+        background-color: rgb(255, 223, 237);
+        box-shadow: 0px 8px 18px 0px rgba(109, 100, 139, 0.61);
+      }
+      .get-btn:hover {
+        background-color: transparent;
+        border: 1px solid;
+        color: white;
+      }
+      .head-section {
+        background: url("Images/banner-bg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        padding: 170px 0 200px;
+        margin-bottom: 200px;
+      }
+      .head-section.hero-breadcumnd {
+        padding: 300px 0 90px;
+        margin-bottom: 0;
+        overflow: hidden;
+      }
+      .head-section .planet-one {
+        position: absolute;
+        top: 12%;
+        left: 9%;
+        width: 130px;
+        height: 130px;
+        animation: rotatePlanet 4s linear infinite;
+        animation-delay: 0s;
+        animation-delay: 0.2s;
+      }
+      .planet-one img {
+        width: 100%;
+        height: 100%;
+      }
+      .head-section .bottom-wave {
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        height: 164px;
+        z-index: 1;
+      }
+      .hero-section .bottom-shape img {
+        width: 100%;
+        height: 100%;
+      }
+      .main-section {
+        margin-bottom: 150px;
+      }
+      .main-conatiner {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .main {
+        margin-top: 46px;
+      }
+      .smart-wrapper {
+        position: relative;
+        z-index: 1;
+      }
+      .main-content {
+        visibility: visible;
+        animation-delay: 0.3s;
+        animation-name: fadeInDown;
+        position: relative;
+        margin-bottom: 50px;
+        text-align: center;
+        max-width: 720px;
+        margin: 0 auto 50px;
+        text-align: center;
+        max-width: 720px;
+        margin: 0 auto 50px;
+      }
+      .title {
+        margin-bottom: 25px;
+        color: blueviolet;
+      }
+      .main-title {
+        font-weight: 700;
+        color: #311852;
+        margin-bottom: 5px;
+      }
+      .main-content p {
+        font-size: 18px;
+        max-width: 600px;
+        color: #311852;
+        margin: 0 auto;
+        line-height: 30px;
+        font-family: "Barlow", sans-serif;
+      }
+      .cards {
+        display: flex;
+        width: 60%;
+        gap: 12px;
+        justify-content: center;
+        margin-left: 490px;
+      }
+      .card {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+      }
+      .card-content-container {
+        text-align: center;
+        border-radius: 40px;
+        padding: 35px 15px;
+        background-color: white;
+        transition: all 0.3s;
+        cursor: pointer;
+      }
+      .card-one {
+        border: 1px solid #a2a6c7;
+        box-shadow: 0px 8px 18px 0px rgba(246, 243, 255, 0.61);
+        background-image: -webkit-linear-gradient(
+          90deg,
+          rgba(255, 122, 31, 0.10196) 0%,
+          rgba(1, 5, 48, 0) 100%
+        );
+      }
+      .card-icon {
+        margin-bottom: 30px;
+      }
+      .card-content h4 {
+        margin-bottom: 10px;
+      }
+      .card-content-container p {
+        color: #311852;
+      }
+      .card-two {
+        border: 1px solid;
+        border-color: rgb(178, 181, 210);
+        background-image: -webkit-linear-gradient(
+          90deg,
+          rgba(77, 54, 220, 0.10196) 0%,
+          rgba(1, 5, 48, 0) 100%
+        );
+        box-shadow: 0px 8px 18px 0px rgba(246, 243, 255, 0.61);
+      }
+      .man {
+        position: absolute;
+        left: 0;
+        top: 440px;
+        max-width: 492px;
+      }
+      .man img {
+        width: 100%;
+        height: 100%;
+      }
+      .rocket {
+        position: absolute;
+        right: 0;
+        top: 1150px;
+        width: 140px;
+        height: 140px;
+      }
+      .rocket img {
+        width: 90%;
+        height: 90%;
+      }
+      .footer-section {
+        padding: 183px 0px 154px 0px;
+        background: url("Images/banner-bg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+      .footer-top-wave {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+        overflow: hidden;
+      }
+      .footer-conatainer {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+      .footer-content {
+        visibility: visible;
+        animation-delay: 0.3s;
+        animation-name: fadeInDown;
+        position: relative;
+        z-index: 2;
+        margin-top: 100px;
+        margin-bottom: 50px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+      }
+      .footer-card {
+        flex: 0 0 auto;
+        width: 25%;
+        padding: 0 15px;
+      }
+      .footercard-content {
+        text-align: center;
+        border: 1px solid #7760a5;
+        border-radius: 20px;
+        padding: 45px 20px;
+        position: relative;
+        transition: all 0.3s;
+        z-index: 9;
+      }
+      .number-data {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .footer-para {
+        font-size: 18px;
+        line-height: 30px;
+        margin-bottom: 0;
+        font-family: "Barlow", sans-serif;
+        color: #ff7a1f;
+      }
+      .big-planet {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        max-width: 500px;
+        height: 500px;
+        animation: largerotatePlanet 30s linear infinite;
+        animation-delay: 0s;
+        animation-delay: 0.3s;
+        overflow: hidden;
+        transform: translate(-50%, -50%);
+      }
+      .big-planet img {
+        object-fit: contain;
+        width: 95%;
+        height: 95%;
+      }
+      .footer-bottom-wave {
+        position: absolute;
+        bottom: -7px;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      /* animation */
+      @keyframes rotatePlanet {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes largerotatePlanet {
+        30% {
+          transform: translate(-50%, -50%) rotate(180deg);
+        }
+      }
+
+      /* Media Queries */
+      @media screen and (max-width: 1199px) {
+        .header-section {
+          padding: 15px 0;
+        }
+        .main-menu {
+          padding: 0 20px;
+          gap: 30px;
+        }
+        .get-btn {
+          padding: 10px 20px;
+        }
+        .cards {
+          flex-direction: column;
+        }
+        .card {
+          width: 100%;
+        }
+        .footer-content {
+          gap: 5px;
+        }
+        .footer-card {
+          width: 50%;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .header-section {
+          padding: 10px 0;
+        }
+        .main-menu {
+          padding: 0;
+        }
+        .main-menu li {
+          margin-bottom: 10px;
+        }
+        .get-btn {
+          padding: 8px 15px;
+        }
+        .main-content {
+          max-width: 100%;
+          padding: 0 10px;
+        }
+        .cards {
+          flex-direction: column;
+          gap: 10px;
+        }
+        .footer-content {
+          gap: 5px;
+          flex-direction: column;
+        }
+        .footer-card {
+          width: 100%;
+        }
+        .man {
+          display: none;
+        }
+        .rocket {
+          display: none;
+        }
+      }
+
+      @media screen and (max-width: 576px) {
+        .header-section {
+          padding: 5px 0;
+        }
+        .main-menu {
+          padding: 0 10px;
+        }
+        .main-menu li {
+          font-size: 16px;
+        }
+        .get-btn {
+          padding: 5px 10px;
+        }
+        .head-section {
+          padding: 100px 0 100px;
+          margin-bottom: 100px;
+        }
+        .main-content {
+          max-width: 100%;
+          padding: 0 5px;
+        }
+        .cards {
+          width: 100%;
+          gap: 5px;
+          margin: 0;
+        }
+        .man {
+          display: none;
+        }
+        .rocket {
+          display: none;
+        }
+        .big-planet {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- header start -->
+    <header class="header-section">
+      <ul class="main-menu">
+        <li>Blog</li>
+        <li>Contact</li>
+        <li>
+          <a class="get-btn">Get a Quote</a>
+        </li>
+      </ul>
+    </header>
+    <!-- header End -->
+    <!-- frist section start -->
+    <section class="head-section hero-breadcumnd">
+      <div class="planet-one">
+        <img src="Images/planet-1" />
+      </div>
+      <div>
+        <img class="bottom-wave" src="Images/wave" />
+      </div>
+    </section>
+    <!-- frist section end -->
+
+    <!-- main-section start -->
+    <div class="main-section">
+      <div class="main">
+        <div class="content-conatiner">
+          <div class="smart-wrapper">
+            <div class="main">
+              <div class="content-conatiner">
+                <div class="main-content">
+                  <h5 class="title">Our Love For Animation</h5>
+                  <h2 class="main-title">
+                    We're Storytelling Experts With Creative Smarts
+                  </h2>
+                  <p>
+                    Our culture inspires the creative and innovative spirit
+                    found throughout our Studio. We breathe life into new ideas!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="cards">
+              <div class="card">
+                <div class="card-content-container card-one">
+                  <div class="card-icon">
+                    <img src="Images/frist-bulb" alt="icon" />
+                  </div>
+                  <div class="card-content">
+                    <h4>3D modeling</h4>
+                    <p>
+                      We constantly ask questions. It helps us shape your story
+                      and deliver the results you crave. Yep, we'll drill deep
+                      to deliver above and beyond your expectations.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-content-container card-two">
+                  <div class="card-icon">
+                    <img src="Images/sec-bulb" alt="icon" />
+                  </div>
+                  <div class="card-content">
+                    <h4>Collaboration</h4>
+                    <p>
+                      We constantly ask questions. It helps us shape your story
+                      and deliver the results you crave. Yep, we'll drill deep
+                      to deliver above and beyond your expectations.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-content-container card-one">
+                  <div class="card-icon">
+                    <img src="Images/brain-bulb" alt="icon" />
+                  </div>
+                  <div class="card-content">
+                    <h4>Creativity</h4>
+                    <p>
+                      We constantly ask questions. It helps us shape your story
+                      and deliver the results you crave. Yep, we'll drill deep
+                      to deliver above and beyond your expectations.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="man">
+        <img src="Images/man" />
+      </div>
+      <div class="rocket">
+        <img src="Images/rocket" />
+      </div>
+    </div>
+    <!-- main-section end -->
+    <!-- footer-start -->
+    <section class="footer-section">
+      <div class="footer-top-wave">
+        <img src="Images/top-wave" alt="footer-top-wave" />
+      </div>
+      <div class="footer-conatainer">
+        <div class="footer-content">
+          <div class="footer-card">
+            <div class="footercard-content">
+              <div class="number-data">
+                <h2>
+                  700<span style="font-size: 35px; font-weight: 700">+</span>
+                </h2>
+                <p class="footer-para">Projects done</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-card">
+            <div class="footercard-content">
+              <div class="number-data">
+                <h2>
+                  250<span style="font-size: 35px; font-weight: 700">+</span>
+                </h2>
+                <p class="footer-para">Happy Clients</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-card">
+            <div class="footercard-content">
+              <div class="number-data">
+                <h2>
+                  25<span style="font-size: 35px; font-weight: 700">+</span>
+                </h2>
+                <p class="footer-para">Team Members</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-card">
+            <div class="footercard-content">
+              <div class="number-data">
+                <h2>
+                  12<span style="font-size: 35px; font-weight: 700">+</span>
+                </h2>
+                <p class="footer-para">Years on the market</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="big-planet">
+        <img src="Images/larger-planet" alt="footer-top-wave" />
+      </div>
+      <div class="footer-bottom-wave">
+        <img src="Images/bottom-wave" alt="footer-top-wave" />
+      </div>
+    </section>
+
+    <!-- footer-end -->
+  </body>
+</html>

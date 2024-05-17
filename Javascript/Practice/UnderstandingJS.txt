@@ -13,7 +13,7 @@ Ans - An execution context is created.
         i.e, Memory(This phase is also known as memory creation phase) & 
         Code(Code execution phase)
     2. It allocates memory to all the variables(function, object or datatype), 
-        which is undefined or stores whole code if object or function in the beginning.
+        which is undefined or stores whole code or object or function in the beginning.
     3. value is allocated to each variable.
     4. function invocation happens if there is a function(means function is executed) 
         & whole this runs again as if it is a mini program(new GEC created for it).
@@ -29,20 +29,7 @@ everything that is done till now is managed through a stack i.e, call stack.
                            4. Runtime stack
                            5. Machine stack
 
-5. Hoisting -> Hoisting is a phenomena in Javascrpt by which we can access variables 
-    and functions, even before we initialize it or we have put some value in it.
-    We can access the variables without any error.  
-
-Eg: In case of single variable the output will be undefined. 
-    In case of proper function declaration it will show us the result. 
-    in case of only function name without the paranthesis
-    it will show us the whole function code.
-    In case the function is an arrow function it will give us
-    an error "_____ is not a function". As arrow function behaves
-    just like a variable. & undefined is the result if we pass only 
-    the name just like another variable.
-
-6. We can invoke functions even before initializing it.
+5. 
 
 7. Shortest javascript program is an empty file of index.js. It will create an 
     window object. Also identified through `this` variable which refers to window 

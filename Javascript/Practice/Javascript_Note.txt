@@ -1,6 +1,4 @@
-Javascript: JavaScript is a cross-platform, object-oriented scripting language 
-used to make webpages interactive (e.g., having complex animations, clickable buttons, 
-pop-up menus, etc.). 
+
 
 Statement ->  A unit of code in JavaScript that represents a complete instruction or action, 
 often terminated by a semicolon. Statements are executed sequentially, one after the other, 

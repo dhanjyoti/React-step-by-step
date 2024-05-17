@@ -86,20 +86,6 @@ React then compares the updated Virtual DOM with the previous version of the Vir
 Once React determines the difference between the previous Virtual DOM and the updated Virtual DOM, it applies only those necessary changes to the real DOM. By minimizing the number of actual DOM manipulations, React optimizes performance and ensures faster rendering of UI changes.
 <!-- ____________________________________________________________________ -->
 
-# 30. what is use of StrictMode in react?
-- `StrictMode` is a built-in component in React that helps developers write better React code by highlighting potential problems and deprecated features in their applications. It is designed for development mode only and has no effect in production builds.
-```jsx
-import React from 'react';
-import ReactDOM from 'react-dom';
-
-ReactDOM.render(
-    <React.StrictMode>
-        {/* Your root component goes here */}
-    </React.StrictMode>,
-    document.getElementById('root')
-);
-```
-`StrictMode` is a useful tool for improving the quality of React applications, promoting best practices, and ensuring smoother upgrades to future versions of React. It's recommended to use StrictMode during development to catch potential issues early and write cleaner, safer React code.
 
 <!-- ____________________________________________________________________ -->
 

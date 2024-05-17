@@ -284,9 +284,34 @@
 // const length = myList.findLength();
 // console.log("length: ", length);
 
-let x = 30;
-let y;
-let c = x + y;
-if( y == undefined){
-    console.log("something went wrong")
-}
+// let x = 30;
+// let y;
+// let c = x + y;
+// if( y == undefined){
+//     console.log("something went wrong")
+// }
+
+// let obj = {
+//     name: "dhan"
+// };
+// //  let user = Object.assign({}, obj);  // or
+//  let user = {...obj};
+// user.name = "Jyoti"
+
+// console.log("Object is :", obj);
+// console.log("User is :", user);
+
+
+// fetch('https://gorest.co.in/public/v2/users')
+// .then(response => response.json())
+// .then(data =>{
+//     document.getElementById("apiCall").textContent = JSON.stringify(data, null, 2);
+// }).catch(error => console.error('Error: ', error));
+
+fetch("https://gorest.co.in/public/v2/users")
+.then(res => res.json())
+.then(data =>{
+    console.log(data)
+})
+.catch(error=>console.error("error", error))
+

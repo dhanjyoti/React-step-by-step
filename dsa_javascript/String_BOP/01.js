@@ -14,4 +14,4 @@ let result = '';
 for(let char of myStr){
     result += char + ' ';
 }
-console.log(result)
+console.log(result);

@@ -4,7 +4,7 @@ function calculateStringLength(str) {
     let count = 0;
     
     // Iterate through each character of the string until the end
-    while (str[count] !== undefined) {
+    while(str[count] !== undefined) {
         count++;
     }
     

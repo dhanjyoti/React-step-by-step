@@ -1,7 +1,7 @@
 Understanding the Singleton Pattern:-
     The Singleton Pattern ensures that a class can only have a single instance 
     throughout the lifetime of an application. By restricting the instantiation 
-    of a class to one object, you can ensure that shared resources or data are 
+    of a class to one object, we can ensure that shared resources or data are 
     managed consistently across different parts of your application.
 
 Implementing the Singleton Pattern:-

@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.image-container {
+    width: 100%;
+    overflow: hidden;
+}
+.image-container img {
+    width: 100%;
+    clip-path: polygon("10% 20%, 45% 50%, 20% 60%, 2% 10%");
+}
+
+  

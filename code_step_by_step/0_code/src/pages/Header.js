@@ -12,7 +12,10 @@ const Header = () => {
                 <Link to='/about'>About</Link>
             </div>
             <div>
-                <Link to='/axiospost'>PostAxios</Link>
+                <Link to='/search'>Search</Link>
+            </div>
+            <div>
+                <Link to='/basicform'>Form</Link>
             </div>
             <div>
                 <Link to='/contact'>Contact</Link>
