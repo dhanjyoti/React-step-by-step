@@ -17,7 +17,6 @@ const APICalling = () => {
     console.log(user)
     setClickedData((prevClickedData)=> [...prevClickedData, user])
   }
-
   return (
     <div>
       <h2>Api Calling</h2>

@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import React, { useMemo, useState } from 'react';
 
 const UseMemo = () => {
     const [count, setCount] = useState(0);
@@ -19,4 +19,4 @@ const UseMemo = () => {
   )
 }
 
-export default UseMemo
+export default UseMemo;

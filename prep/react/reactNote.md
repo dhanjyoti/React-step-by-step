@@ -827,6 +827,21 @@ ReactDOM.render(
 ```
 `StrictMode` is a useful tool for improving the quality of React applications, promoting best practices, and ensuring smoother upgrades to future versions of React. It's recommended to use StrictMode during development to catch potential issues early and write cleaner, safer React code.
 
+# Differences between useMemo and useCallback:
+-   **1- Purpose:**
+    - useMemo is used to memoize values or computations, helping to optimize expensive calculations or data transformations.
+    - useCallback is used to memoize callback functions, reducing unnecessary re-creation of functions and optimizing component re-renders.
+
+    **2- Return Value:**
+    - useMemo returns the memoized value itself.
+    - useCallback returns the memoized callback function itself.
+
+    **3- Usage Scenario:**
+    - Use useMemo when you want to optimize and cache the result of a computation that depends on certain inputs.
+    - Use useCallback when you want to optimize the creation of callback functions that are passed to child components.
+
+
+
 <!--
 ______________________________________________________________________________________________________ -->
 

@@ -308,10 +308,10 @@
 //     document.getElementById("apiCall").textContent = JSON.stringify(data, null, 2);
 // }).catch(error => console.error('Error: ', error));
 
-fetch("https://gorest.co.in/public/v2/users")
-.then(res => res.json())
-.then(data =>{
-    console.log(data)
-})
-.catch(error=>console.error("error", error))
+// fetch("https://gorest.co.in/public/v2/users")
+// .then(res => res.json())
+// .then(data =>{
+//     console.log(data)
+// })
+// .catch(error=>console.error("error", error))
 
