@@ -4,7 +4,7 @@ Module Federation is a method in which code can be split into smaller deployable
 **Webpack**
 Webpack is a free and open-source module bundler for JavaScript. It is made primarily for JavaScript, but it can transform front-end assets such as HTML, CSS, and images if the corresponding loaders are included. Webpack takes modules with dependencies and generates static assets representing those modules.
 
-    Webpack is a static module bundler for modern JavaScript applications. When webpack processes your application, it internally builds a dependency graph from one or more entry points and then combines every module your project needs into one or more bundles, which are static assets to serve your content from.
+Webpack is a static module bundler for modern JavaScript applications. When webpack processes your application, it internally builds a dependency graph from one or more entry points and then combines every module your project needs into one or more bundles, which are static assets to serve your content from.
 
 ***Create 3 remote/client apps with different localhost, and a root/host app that will show reomte/client apps in click of a Button in left side of the same screen using module federation in next.js***
 
@@ -98,7 +98,7 @@ Change inside package.json for script: "dev": "next dev" to ->
 "dev": "NEXT_PRIVATE_LOCAL_WEBPACK=true next dev"
 }
 ``` 
-- The presence of NEXT_PRIVATE_LOCAL_WEBPACK=true influences the behavior of the Next.js build process, making it use the locally  installed version of Webpack instead of the bundled one.
+-> The presence of NEXT_PRIVATE_LOCAL_WEBPACK=true influences the behavior of the Next.js build process, making it use the locally  installed version of Webpack instead of the bundled one.
 
 Step 7:
 Made Layout.js file inside src folder
@@ -118,7 +118,8 @@ Made Layout.js file inside src folder
         );
         }
 ```
-- This Layout component creates a two-part layout:
+-
+    This Layout component creates a two-part layout:
     A vertical sidebar with links to different pages (/weather, /simple-interest, and /show-input).
     A main content area that displays the nested content (children).
     The component uses Next.js Link for navigation and flexbox for layout structure.
@@ -146,7 +147,8 @@ Wrap the _app.js file <Component {...pageProps}/> inside the Layout
 
         export default MyApp;
 ```
--     The MyApp component is a custom App component for a Next.js application.
+-     
+    The MyApp component is a custom App component for a Next.js application.
     It imports global CSS styles and uses a Layout component to wrap all pages.
     It defines a static getInitialProps method to fetch initial props for the app, ensuring any necessary data fetching is done before rendering.
     The active page (Component) is rendered inside the Layout, and any props (pageProps) are passed to it.
@@ -183,7 +185,8 @@ Create files inside pages folder for the Remote files to show in the Root app
         );
         }
 ```
--     Lazy Loading: The RemoteTitle component is lazily loaded from show_input/Home only in the browser environment, reducing the initial bundle size.
+-     
+    Lazy Loading: The RemoteTitle component is lazily loaded from show_input/Home only in the browser environment, reducing the initial bundle size.
     State Management: A state variable remoteTitle is used to control when to render the lazily loaded component.
     Effect Hook: The useEffect hook sets remoteTitle to true after the component mounts, triggering the conditional rendering of the RemoteTitle component.
     Suspense: The Suspense component is used to display a loading indicator (<div>Loading...</div>) while the RemoteTitle component is being loaded.
@@ -217,10 +220,14 @@ const nextConfig = {
 
 export default nextConfig;
 ```
-`remotes: {home: "home@http://localhost:3000/_next/static/chunks/remoteEntry.js"}` - remotes: An object defining remote applications that this application can consume.
+`remotes: {home: "home@http://localhost:3000/_next/static/chunks/remoteEntry.js"}` 
+- 
+    remotes: An object defining remote applications that this application can consume.
 
     home: Points to the remote entry file of the "home" micro-frontend hosted at http://localhost:3000.
 
-`exposes: {"./Home": "./src/pages/index.js"}` - exposes: An object defining which modules from this application are exposed to other micro-frontends.
+`exposes: {"./Home": "./src/pages/index.js"}` 
+-   
+    exposes: An object defining which modules from this application are exposed to other micro-frontends.
 
     "./Home": Exposes the module located at ./src/pages/index.js under the name "Home".
