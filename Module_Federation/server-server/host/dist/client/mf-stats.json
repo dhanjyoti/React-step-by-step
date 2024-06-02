@@ -1,0 +1,40 @@
+{
+  "id": "app1",
+  "name": "app1",
+  "metaData": {
+    "name": "app1",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "0.1.0",
+      "buildName": "client"
+    },
+    "remoteEntry": {
+      "name": "",
+      "path": "",
+      "type": "global"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "app1",
+    "pluginVersion": "0.1.16",
+    "publicPath": "http://localhost:3000/static/"
+  },
+  "shared": [],
+  "remotes": [
+    {
+      "alias": "app2",
+      "consumingFederationContainerName": "app1",
+      "federationContainerName": "app2",
+      "moduleName": "Content",
+      "usedIn": [
+        "src/client/App.js"
+      ],
+      "entry": "http://localhost:3001/static/remoteEntry.js"
+    }
+  ],
+  "exposes": []
+}

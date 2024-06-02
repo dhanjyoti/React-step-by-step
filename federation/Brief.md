@@ -221,13 +221,13 @@ const nextConfig = {
 export default nextConfig;
 ```
 `remotes: {home: "home@http://localhost:3000/_next/static/chunks/remoteEntry.js"}` 
-- 
-    remotes: An object defining remote applications that this application can consume.
 
-    home: Points to the remote entry file of the "home" micro-frontend hosted at http://localhost:3000.
+*   remotes: An object defining remote applications that this application can consume.
+
+*   home: Points to the remote entry file of the "home" micro-frontend hosted at http://localhost:3000.
 
 `exposes: {"./Home": "./src/pages/index.js"}` 
--   
-    exposes: An object defining which modules from this application are exposed to other micro-frontends.
 
-    "./Home": Exposes the module located at ./src/pages/index.js under the name "Home".
+*   exposes: An object defining which modules from this application are exposed to other micro-frontends.
+
+*   "./Home": Exposes the module located at ./src/pages/index.js under the name "Home".
