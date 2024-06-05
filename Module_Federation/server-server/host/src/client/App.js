@@ -10,7 +10,7 @@ const fetchUserData = async () => {
 const App = () => {
   const [userInfo, setUserInfo] = React.useState();
 
-  React.useEffect(() => {
+  React.useEffect(() => {``
     // IIEF
     (async () => {
       const userData = await fetchUserData();

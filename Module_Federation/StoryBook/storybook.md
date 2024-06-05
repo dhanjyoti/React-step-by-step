@@ -3,3 +3,5 @@
 * We cannot give storybook names with space nor we can put any special character between them.
 
 * storybook provides use `.storyName` attribute to give custom names.
+
+* stroy arguments can overwrite components, but components arguments cannot overwrite components.
