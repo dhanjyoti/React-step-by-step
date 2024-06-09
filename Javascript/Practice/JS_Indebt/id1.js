@@ -315,14 +315,9 @@
 // })
 // .catch(error=>console.error("error", error))
 
-const measureKelvin = function(){
-    const measurement={
-        type: 'temp',
-        unit: 'celsius',
-        value: 10,
-    };
-    console.log(measurement.value)
-    const kelvin = measurement.value + 273;
-    return kelvin;
+const prefixNum=(numbers)=>{
+    return numbers.map(num=> `ab.${num}`)
 }
-console.log(measureKelvin())
+const inputNum = [4, 7, 9, 13, 23];
+const output = prefixNum(inputNum);
+console.log(output)

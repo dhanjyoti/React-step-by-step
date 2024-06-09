@@ -1,0 +1,399 @@
+{
+  "id": "client1",
+  "name": "client1",
+  "metaData": {
+    "name": "client1",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "0.1.0",
+      "buildName": "client"
+    },
+    "remoteEntry": {
+      "name": "remoteEntry.js",
+      "path": "",
+      "type": "commonjs-module"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "client1",
+    "pluginVersion": "0.1.18",
+    "publicPath": "/_next/"
+  },
+  "shared": [
+    {
+      "singleton": true,
+      "requiredVersion": "^14.2.3",
+      "shareScope": "default",
+      "name": "next/dynamic",
+      "version": "14.2.3",
+      "eager": false,
+      "id": "client1:next/dynamic",
+      "assets": {
+        "js": {
+          "async": [
+            "70-be1ae2843d43a334.js"
+          ],
+          "sync": [
+            "58-4732827ca0b7e926.js",
+            "677-fed0b9ea30f61330.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^14.2.3",
+      "shareScope": "default",
+      "name": "next/head",
+      "version": "14.2.3",
+      "eager": false,
+      "id": "client1:next/head",
+      "assets": {
+        "js": {
+          "async": [
+            "70-be1ae2843d43a334.js"
+          ],
+          "sync": [
+            "615-8923c21918bae71b.js",
+            "996-29160e0f85034ae2.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^14.2.3",
+      "shareScope": "default",
+      "name": "next/image",
+      "version": "14.2.3",
+      "eager": false,
+      "id": "client1:next/image",
+      "assets": {
+        "js": {
+          "async": [
+            "70-be1ae2843d43a334.js"
+          ],
+          "sync": [
+            "198-9ba327e42e5e5f28.js",
+            "817-4c5069c03f40e6d0.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^14.2.3",
+      "shareScope": "default",
+      "name": "next/link",
+      "version": "14.2.3",
+      "eager": false,
+      "id": "client1:next/link",
+      "assets": {
+        "js": {
+          "async": [
+            "70-be1ae2843d43a334.js"
+          ],
+          "sync": [
+            "353-f1eb1e01ba416be0.js",
+            "734-cd6a4609757bd759.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^14.2.3",
+      "shareScope": "default",
+      "name": "next/router",
+      "version": "14.2.3",
+      "eager": false,
+      "id": "client1:next/router",
+      "assets": {
+        "js": {
+          "async": [
+            "70-be1ae2843d43a334.js"
+          ],
+          "sync": [
+            "__federation_expose_next__router-6040c9f8ed61a4e9.js",
+            "335-04bb43c99eed003c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^14.2.3",
+      "shareScope": "default",
+      "name": "next/script",
+      "version": "14.2.3",
+      "eager": false,
+      "id": "client1:next/script",
+      "assets": {
+        "js": {
+          "async": [
+            "70-be1ae2843d43a334.js"
+          ],
+          "sync": [
+            "302-1b379a28d722ab31.js",
+            "921-e3e8a018559f766f.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^18.3.1",
+      "shareScope": "default",
+      "name": "react/jsx-runtime",
+      "version": "18.3.1",
+      "eager": false,
+      "id": "client1:react/jsx-runtime",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "70-be1ae2843d43a334.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [
+        "./pages/index",
+        "./pages/newpage"
+      ]
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^5.1.1",
+      "shareScope": "default",
+      "name": "styled-jsx",
+      "version": "5.1.1",
+      "eager": false,
+      "id": "client1:styled-jsx",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "244-9e006bc9c8943075.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    }
+  ],
+  "remotes": [],
+  "exposes": [
+    {
+      "path": "./noop",
+      "id": "client1:noop",
+      "name": "noop",
+      "requires": [],
+      "file": "node_modules/.pnpm/@module-federation+nextjs-mf@8.3.19_next@14.2.3_react-dom@18.3.1_react@18.3.1_typescript@5.4.5_webpack@5.91.0/node_modules/@module-federation/nextjs-mf/dist/src/federation-noop.js",
+      "assets": {
+        "js": {
+          "sync": [
+            "__federation_expose_noop-e15c720875a7f492.js"
+          ],
+          "async": [
+            "70-be1ae2843d43a334.js",
+            "615-8923c21918bae71b.js",
+            "335-04bb43c99eed003c.js",
+            "353-f1eb1e01ba416be0.js",
+            "302-1b379a28d722ab31.js",
+            "198-9ba327e42e5e5f28.js",
+            "58-4732827ca0b7e926.js",
+            "244-9e006bc9c8943075.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      }
+    },
+    {
+      "path": "./react",
+      "id": "client1:react",
+      "name": "react",
+      "requires": [],
+      "file": "node_modules/.pnpm/react@18.3.1/node_modules/react/index.js",
+      "assets": {
+        "js": {
+          "sync": [
+            "__federation_expose_react-8a511eb258b331d3.js"
+          ],
+          "async": []
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      }
+    },
+    {
+      "path": "./react-dom",
+      "id": "client1:react-dom",
+      "name": "react-dom",
+      "requires": [],
+      "file": "node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/index.js",
+      "assets": {
+        "js": {
+          "sync": [
+            "__federation_expose_react_dom-bf5e394bec04ebd3.js"
+          ],
+          "async": []
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      }
+    },
+    {
+      "path": "./next/router",
+      "id": "client1:next/router",
+      "name": "next/router",
+      "requires": [],
+      "file": "node_modules/.pnpm/next@14.2.3_react-dom@18.3.1_react@18.3.1/node_modules/next/router.js",
+      "assets": {
+        "js": {
+          "sync": [
+            "__federation_expose_next__router-6040c9f8ed61a4e9.js"
+          ],
+          "async": [
+            "70-be1ae2843d43a334.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      }
+    },
+    {
+      "path": "./pages/index",
+      "id": "client1:pages/index",
+      "name": "pages/index",
+      "requires": [
+        "react/jsx-runtime"
+      ],
+      "file": "src/pages/index.js",
+      "assets": {
+        "js": {
+          "sync": [
+            "__federation_expose_index-e34abb93c27df013.js"
+          ],
+          "async": [
+            "70-be1ae2843d43a334.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      }
+    },
+    {
+      "path": "./pages/newpage",
+      "id": "client1:pages/newpage",
+      "name": "pages/newpage",
+      "requires": [
+        "react/jsx-runtime"
+      ],
+      "file": "src/pages/newpage.js",
+      "assets": {
+        "js": {
+          "sync": [
+            "__federation_expose_newpage-548afd79254fc629.js"
+          ],
+          "async": [
+            "70-be1ae2843d43a334.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      }
+    },
+    {
+      "path": "./pages-map",
+      "id": "client1:pages-map",
+      "name": "pages-map",
+      "requires": [],
+      "file": "node_modules/.pnpm/@module-federation+nextjs-mf@8.3.19_next@14.2.3_react-dom@18.3.1_react@18.3.1_typescript@5.4.5_webpack@5.91.0/node_modules/@module-federation/nextjs-mf/dist/src/loaders/nextPageMapLoader.js!/Users/dhanjyotirabha/Documents/React-step-by-step/Module_Federation/server-server-nextjs/client/node_modules/.pnpm/@module-federation+nextjs-mf@8.3.19_next@14.2.3_react-dom@18.3.1_react@18.3.1_typescript@5.4.5_webpack@5.91.0/node_modules/@module-federation/nextjs-mf/dist/src/loaders/nextPageMapLoader.js",
+      "assets": {
+        "js": {
+          "sync": [
+            "__federation_expose_pages_map-741f4226e1c3a2f8.js"
+          ],
+          "async": []
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      }
+    },
+    {
+      "path": "./pages-map-v2",
+      "id": "client1:pages-map-v2",
+      "name": "pages-map-v2",
+      "requires": [],
+      "file": "node_modules/.pnpm/@module-federation+nextjs-mf@8.3.19_next@14.2.3_react-dom@18.3.1_react@18.3.1_typescript@5.4.5_webpack@5.91.0/node_modules/@module-federation/nextjs-mf/dist/src/loaders/nextPageMapLoader.js?v2!/Users/dhanjyotirabha/Documents/React-step-by-step/Module_Federation/server-server-nextjs/client/node_modules/.pnpm/@module-federation+nextjs-mf@8.3.19_next@14.2.3_react-dom@18.3.1_react@18.3.1_typescript@5.4.5_webpack@5.91.0/node_modules/@module-federation/nextjs-mf/dist/src/loaders/nextPageMapLoader.js",
+      "assets": {
+        "js": {
+          "sync": [
+            "__federation_expose_pages_map_v2-163ce2b099c1a5d6.js"
+          ],
+          "async": []
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      }
+    }
+  ]
+}

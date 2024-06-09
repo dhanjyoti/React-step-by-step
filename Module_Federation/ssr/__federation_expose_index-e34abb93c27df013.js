@@ -1,0 +1,1 @@
+"use strict";exports.id=684,exports.ids=[684],exports.modules={2170:(e,r,t)=>{t.r(r),t.d(r,{default:()=>i});var d=t(5353);function i(){return d.jsx("div",{children:"I am index from client 1"})}}};

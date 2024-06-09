@@ -1,0 +1,421 @@
+{
+  "id": "client1",
+  "name": "client1",
+  "metaData": {
+    "name": "client1",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "0.1.0",
+      "buildName": "client"
+    },
+    "remoteEntry": {
+      "name": "remoteEntry.js",
+      "path": "",
+      "type": "commonjs-module"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "client1",
+    "pluginVersion": "0.1.18",
+    "publicPath": "/_next/"
+  },
+  "shared": [
+    {
+      "singleton": true,
+      "requiredVersion": "^14.2.3",
+      "shareScope": "default",
+      "name": "next/dynamic",
+      "version": "14.2.3",
+      "eager": false,
+      "id": "client1:next/dynamic",
+      "assets": {
+        "js": {
+          "async": [
+            "node_modules_pnpm_react_18_3_1_node_modules_react_jsx-runtime_js-27c6c93f986db293.js"
+          ],
+          "sync": [
+            "node_modules_pnpm_next_14_2_3_react-dom_18_3_1_react_18_3_1_node_modules_next_dynamic_js-_da5e0-5aa2f2303c367b15.js",
+            "node_modules_pnpm_next_14_2_3_react-dom_18_3_1_react_18_3_1_node_modules_next_dynamic_js-_da5e1-53c3499d729b45de.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^14.2.3",
+      "shareScope": "default",
+      "name": "next/head",
+      "version": "14.2.3",
+      "eager": false,
+      "id": "client1:next/head",
+      "assets": {
+        "js": {
+          "async": [
+            "node_modules_pnpm_react_18_3_1_node_modules_react_jsx-runtime_js-27c6c93f986db293.js"
+          ],
+          "sync": [
+            "node_modules_pnpm_next_14_2_3_react-dom_18_3_1_react_18_3_1_node_modules_next_head_js-_3ac70-ef1316fde3256109.js",
+            "node_modules_pnpm_next_14_2_3_react-dom_18_3_1_react_18_3_1_node_modules_next_head_js-_3ac71-c97de0d17b94d286.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^14.2.3",
+      "shareScope": "default",
+      "name": "next/image",
+      "version": "14.2.3",
+      "eager": false,
+      "id": "client1:next/image",
+      "assets": {
+        "js": {
+          "async": [
+            "node_modules_pnpm_react_18_3_1_node_modules_react_jsx-runtime_js-27c6c93f986db293.js"
+          ],
+          "sync": [
+            "node_modules_pnpm_next_14_2_3_react-dom_18_3_1_react_18_3_1_node_modules_next_image_js-_fde80-2f50e2434c90f5fb.js",
+            "node_modules_pnpm_next_14_2_3_react-dom_18_3_1_react_18_3_1_node_modules_next_image_js-_fde81-b2b2b60e9cb764cf.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^14.2.3",
+      "shareScope": "default",
+      "name": "next/link",
+      "version": "14.2.3",
+      "eager": false,
+      "id": "client1:next/link",
+      "assets": {
+        "js": {
+          "async": [
+            "node_modules_pnpm_react_18_3_1_node_modules_react_jsx-runtime_js-27c6c93f986db293.js"
+          ],
+          "sync": [
+            "node_modules_pnpm_next_14_2_3_react-dom_18_3_1_react_18_3_1_node_modules_next_link_js-_81d50-7a2232c6ed520be8.js",
+            "node_modules_pnpm_next_14_2_3_react-dom_18_3_1_react_18_3_1_node_modules_next_link_js-_81d51-722b11fc3a31fc0e.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^14.2.3",
+      "shareScope": "default",
+      "name": "next/router",
+      "version": "14.2.3",
+      "eager": false,
+      "id": "client1:next/router",
+      "assets": {
+        "js": {
+          "async": [
+            "node_modules_pnpm_react_18_3_1_node_modules_react_jsx-runtime_js-27c6c93f986db293.js"
+          ],
+          "sync": [
+            "__federation_expose_next__router-027b6fc4e91b3ce3.js",
+            "node_modules_pnpm_next_14_2_3_react-dom_18_3_1_react_18_3_1_node_modules_next_router_js-0341c486061e09a9.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^14.2.3",
+      "shareScope": "default",
+      "name": "next/script",
+      "version": "14.2.3",
+      "eager": false,
+      "id": "client1:next/script",
+      "assets": {
+        "js": {
+          "async": [
+            "node_modules_pnpm_react_18_3_1_node_modules_react_jsx-runtime_js-27c6c93f986db293.js"
+          ],
+          "sync": [
+            "node_modules_pnpm_next_14_2_3_react-dom_18_3_1_react_18_3_1_node_modules_next_script_js-_c3310-1596e7ef1151a3dd.js",
+            "node_modules_pnpm_next_14_2_3_react-dom_18_3_1_react_18_3_1_node_modules_next_script_js-_c3311-63af69dd34af7004.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^18.3.1",
+      "shareScope": "default",
+      "name": "react/jsx-dev-runtime",
+      "version": "18.3.1",
+      "eager": false,
+      "id": "client1:react/jsx-dev-runtime",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "node_modules_pnpm_react_18_3_1_node_modules_react_jsx-dev-runtime_js-d235777ac62e4625.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [
+        "./pages/newpage",
+        "./pages/index"
+      ]
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^18.3.1",
+      "shareScope": "default",
+      "name": "react/jsx-runtime",
+      "version": "18.3.1",
+      "eager": false,
+      "id": "client1:react/jsx-runtime",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "node_modules_pnpm_react_18_3_1_node_modules_react_jsx-runtime_js-27c6c93f986db293.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^5.1.1",
+      "shareScope": "default",
+      "name": "styled-jsx",
+      "version": "5.1.1",
+      "eager": false,
+      "id": "client1:styled-jsx",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "node_modules_pnpm_styled-jsx_5_1_1_react_18_3_1_node_modules_styled-jsx_index_js-3f12934928c399f1.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    }
+  ],
+  "remotes": [],
+  "exposes": [
+    {
+      "path": "./noop",
+      "id": "client1:noop",
+      "name": "noop",
+      "requires": [],
+      "file": "node_modules/.pnpm/@module-federation+nextjs-mf@8.3.19_next@14.2.3_react-dom@18.3.1_react@18.3.1_typescript@5.4.5_webpack@5.91.0/node_modules/@module-federation/nextjs-mf/dist/src/federation-noop.js",
+      "assets": {
+        "js": {
+          "sync": [
+            "__federation_expose_noop-54ec661738a31a79.js"
+          ],
+          "async": [
+            "node_modules_pnpm_next_14_2_3_react-dom_18_3_1_react_18_3_1_node_modules_next_head_js-_3ac70-ef1316fde3256109.js",
+            "node_modules_pnpm_next_14_2_3_react-dom_18_3_1_react_18_3_1_node_modules_next_router_js-0341c486061e09a9.js",
+            "node_modules_pnpm_next_14_2_3_react-dom_18_3_1_react_18_3_1_node_modules_next_link_js-_81d50-7a2232c6ed520be8.js",
+            "node_modules_pnpm_next_14_2_3_react-dom_18_3_1_react_18_3_1_node_modules_next_script_js-_c3310-1596e7ef1151a3dd.js",
+            "node_modules_pnpm_next_14_2_3_react-dom_18_3_1_react_18_3_1_node_modules_next_image_js-_fde80-2f50e2434c90f5fb.js",
+            "node_modules_pnpm_next_14_2_3_react-dom_18_3_1_react_18_3_1_node_modules_next_dynamic_js-_da5e0-5aa2f2303c367b15.js",
+            "node_modules_pnpm_styled-jsx_5_1_1_react_18_3_1_node_modules_styled-jsx_index_js-3f12934928c399f1.js",
+            "node_modules_pnpm_react_18_3_1_node_modules_react_jsx-runtime_js-27c6c93f986db293.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      }
+    },
+    {
+      "path": "./react",
+      "id": "client1:react",
+      "name": "react",
+      "requires": [],
+      "file": "node_modules/.pnpm/react@18.3.1/node_modules/react/index.js",
+      "assets": {
+        "js": {
+          "sync": [
+            "__federation_expose_react-f8a0ce130bd3e7f4.js"
+          ],
+          "async": []
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      }
+    },
+    {
+      "path": "./react-dom",
+      "id": "client1:react-dom",
+      "name": "react-dom",
+      "requires": [],
+      "file": "node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/index.js",
+      "assets": {
+        "js": {
+          "sync": [
+            "__federation_expose_react_dom-15fbb19ed0c11d0e.js"
+          ],
+          "async": []
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      }
+    },
+    {
+      "path": "./next/router",
+      "id": "client1:next/router",
+      "name": "next/router",
+      "requires": [],
+      "file": "node_modules/.pnpm/next@14.2.3_react-dom@18.3.1_react@18.3.1/node_modules/next/router.js",
+      "assets": {
+        "js": {
+          "sync": [
+            "__federation_expose_next__router-027b6fc4e91b3ce3.js"
+          ],
+          "async": [
+            "node_modules_pnpm_react_18_3_1_node_modules_react_jsx-runtime_js-27c6c93f986db293.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      }
+    },
+    {
+      "path": "./pages/index",
+      "id": "client1:pages/index",
+      "name": "pages/index",
+      "requires": [
+        "react/jsx-dev-runtime"
+      ],
+      "file": "src/pages/index.js",
+      "assets": {
+        "js": {
+          "sync": [
+            "__federation_expose_index-dd1fd7e838664174.js"
+          ],
+          "async": [
+            "node_modules_pnpm_react_18_3_1_node_modules_react_jsx-dev-runtime_js-d235777ac62e4625.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      }
+    },
+    {
+      "path": "./pages/newpage",
+      "id": "client1:pages/newpage",
+      "name": "pages/newpage",
+      "requires": [
+        "react/jsx-dev-runtime"
+      ],
+      "file": "src/pages/newpage.js",
+      "assets": {
+        "js": {
+          "sync": [
+            "__federation_expose_newpage-bd7b62b0cc7066ad.js"
+          ],
+          "async": [
+            "node_modules_pnpm_react_18_3_1_node_modules_react_jsx-dev-runtime_js-d235777ac62e4625.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      }
+    },
+    {
+      "path": "./pages-map",
+      "id": "client1:pages-map",
+      "name": "pages-map",
+      "requires": [],
+      "file": "node_modules/.pnpm/@module-federation+nextjs-mf@8.3.19_next@14.2.3_react-dom@18.3.1_react@18.3.1_typescript@5.4.5_webpack@5.91.0/node_modules/@module-federation/nextjs-mf/dist/src/loaders/nextPageMapLoader.js!/Users/dhanjyotirabha/Documents/React-step-by-step/Module_Federation/server-server-nextjs/client/node_modules/.pnpm/@module-federation+nextjs-mf@8.3.19_next@14.2.3_react-dom@18.3.1_react@18.3.1_typescript@5.4.5_webpack@5.91.0/node_modules/@module-federation/nextjs-mf/dist/src/loaders/nextPageMapLoader.js",
+      "assets": {
+        "js": {
+          "sync": [
+            "__federation_expose_pages_map-bb8508b74ec733ba.js"
+          ],
+          "async": []
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      }
+    },
+    {
+      "path": "./pages-map-v2",
+      "id": "client1:pages-map-v2",
+      "name": "pages-map-v2",
+      "requires": [],
+      "file": "node_modules/.pnpm/@module-federation+nextjs-mf@8.3.19_next@14.2.3_react-dom@18.3.1_react@18.3.1_typescript@5.4.5_webpack@5.91.0/node_modules/@module-federation/nextjs-mf/dist/src/loaders/nextPageMapLoader.js?v2!/Users/dhanjyotirabha/Documents/React-step-by-step/Module_Federation/server-server-nextjs/client/node_modules/.pnpm/@module-federation+nextjs-mf@8.3.19_next@14.2.3_react-dom@18.3.1_react@18.3.1_typescript@5.4.5_webpack@5.91.0/node_modules/@module-federation/nextjs-mf/dist/src/loaders/nextPageMapLoader.js",
+      "assets": {
+        "js": {
+          "sync": [
+            "__federation_expose_pages_map_v2-39c6aed1563f05ca.js"
+          ],
+          "async": []
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+exports.id=19,exports.ids=[19],exports.modules={9347:e=>{e.exports={default:{"/":"./pages/index","/newpage":"./pages/newpage"}}}};

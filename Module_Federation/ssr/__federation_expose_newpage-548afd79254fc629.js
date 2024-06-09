@@ -1,0 +1,1 @@
+"use strict";exports.id=319,exports.ids=[319],exports.modules={3567:(e,r,t)=>{t.r(r),t.d(r,{default:()=>d});var s=t(5353);function d(){return s.jsx("div",{children:"I am new page from client1"})}}};
