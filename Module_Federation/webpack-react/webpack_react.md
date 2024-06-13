@@ -132,4 +132,4 @@ We do this by adding script values in the package.json file. Remove the test pro
 ```
 
 * Step 10:
-Now we can start our reactr project by the command `npm start`, and ones we are ready to get the app bundled we just need to hit the command `npm build`, and webpack will create an optimised bundle in our project folder which we be deployed on any web server. 
+Now we can start our reactr project by the command `npm start`, and ones we are ready to get the app bundled we just need to hit the command `npm run build`, and webpack will create an optimised bundle in our project folder which we be deployed on any web server. 
