@@ -4,6 +4,7 @@ import { useState } from "react";
 import Card from "./components/card";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import StudentList from "./studentlist/page";
 
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
   }
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <StudentList />
       <User nam="Dj" />
       <User nam="hero" />
       <User nam="rabha" />

@@ -18,3 +18,14 @@ Web Development can be classified into two ways:
 
 * Backend Development - Backend is the server side of a website. It is part of the website that users cannot see and interact with. It is the portion of software that does not come in direct contact with the users. It is used to store and arrange data.
 
+
+1. Main heading :
+2. 3 paragraph, all letters must be in italics, with different heading
+3. add a website link
+4. add an image
+5. create a table with 4 rows and 2 column
+6. create a selector with 3 options
+7. add a google font from google. eg popins
+8. add 5 different symbols with html-code for characters
+9. attach google map
+10. attach youtube video
