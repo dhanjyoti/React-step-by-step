@@ -41,6 +41,7 @@ export default function Home() {
       <button onClick={()=>navigate("/login")}>Login Button</button>
       <Link href="/about">Go to about page</Link>
       <button onClick={()=>navigate("/about")}>About Button</button>
+      <Link href="/study">Study</Link>
     </main>
   );
 }
