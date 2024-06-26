@@ -18,7 +18,6 @@ export default async function Page(){
 				<Product price={item.price} />
 			</div>
 		))}
-	
 	</div>
 	)
 }
