@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sidehugwebs",
+  "info": {
+    "singularName": "sidehugweb",
+    "pluralName": "sidehugwebs",
+    "displayName": "sidehugweb"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.head"
+    },
+    "hugcomp": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sidehug.sidehug-component"
+    }
+  }
+}

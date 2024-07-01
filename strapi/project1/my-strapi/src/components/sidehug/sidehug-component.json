@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_sidehug_sidehug_components",
+  "info": {
+    "displayName": "sidehug-component",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "head": {
+      "type": "string",
+      "required": true
+    },
+    "paragraph": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "string"
+    },
+    "direction": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "imageurl": {
+      "type": "string"
+    }
+  }
+}

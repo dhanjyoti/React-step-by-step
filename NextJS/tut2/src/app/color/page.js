@@ -10,3 +10,10 @@ export default function Color(){
         </div>
     )
 }
+
+export function generateMetadata(){
+    return {
+        title: "user page title",
+        description: "this is the description of user page"
+    }
+}

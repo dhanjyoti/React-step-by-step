@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout";
 import Chart from "@/components/Chart";
 import ChartsOverviewDemo from "@/components/chartsoverviewdemo";
+import TinyBarChart from "@/components/tinybarchart";
 
 const Home = () => {
   return (
@@ -8,6 +9,7 @@ const Home = () => {
       <h1>Welcome to the Dashboard</h1>
       <ChartsOverviewDemo/>
       <Chart />
+      <TinyBarChart />
     </Layout>
   );
 };
