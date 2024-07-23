@@ -5,6 +5,7 @@ import "./App.css";
 import { SuperHeoresPage } from "./components/SuperHeroes.page";
 import { RQSuperHeoresPage } from "./components/RQSuperHeroes.page";
 import { HomePage } from "./components/Home.page";
+import Dummy from "./components/Dummy";
 
 const queryClient = new QueryClient()
 
@@ -24,12 +25,16 @@ function App() {
               <li>
                 <Link to="/rqsuperheroes">RQ Super Heroes</Link>
               </li>
+              <li>
+                <Link to="/dummy">Dummy</Link>
+              </li>
             </ul>
           </nav>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/superheroes" element={<SuperHeoresPage />} />
             <Route path="/rqsuperheroes" element={<RQSuperHeoresPage />} />
+            <Route path="/dummy" element={<Dummy />} />
           </Routes>
         </div>
       </Router>

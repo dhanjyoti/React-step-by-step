@@ -19,3 +19,5 @@ function quickSort(arr){
     return [...quickSort(left), pivot, ...quickSort(right)];
 }
 console.log(quickSort(arr));
+
+//  Time complexity O(n^2), big O of n square

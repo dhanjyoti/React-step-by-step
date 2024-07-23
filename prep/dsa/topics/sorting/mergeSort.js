@@ -24,3 +24,9 @@ function merge(left, right){
 }
 let result = mergeSort(arr);
 console.log(result)
+
+// first part log n
+// there is loop so the time complexity is linear
+// finally O(nlogn)
+
+// most efficient sortinng

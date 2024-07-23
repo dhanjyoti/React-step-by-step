@@ -21,3 +21,9 @@ export default async function Page(){
 	</div>
 	)
 }
+
+export function  generateMetadata({params}){
+	return {
+		title: "Service Products"
+	}
+}

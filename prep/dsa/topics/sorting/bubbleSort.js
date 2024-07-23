@@ -16,3 +16,6 @@ function bubbleSort(arr){
 let array = [4, 6, 8, 3, 9, 2];
 let sortedArray = bubbleSort(array);
 console.log(sortedArray);
+
+// Time complexity O(n^2)
+// Space complexity 
