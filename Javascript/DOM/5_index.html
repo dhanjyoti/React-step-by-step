@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pause GIF Example</title>
+    <style>
+        .container {
+            position: relative;
+            width: 512px; 
+            height: 512px; 
+        }
+        .gif, .static {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+            transition: opacity 0.8s ease;
+        }
+        .hidden{
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="gif" src="/Gif-image/17-23-21-162_512.webp" alt="gif-image" />
+        <img class="static" src="/images/free-images.avif" alt="static-image" />
+    </div>
+
+<script src="/5_index.js"></script>
+</body>
+</html>
+

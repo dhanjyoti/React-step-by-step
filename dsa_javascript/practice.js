@@ -246,3 +246,24 @@
 // let arr = [2, 4, 2, 3, 5, 3, 6, 3]; 
 // let arr = [3,4,5,5,5,6,6,6,7,7,7,19, 23 , 23,25];
 
+
+
+let theString = "Man: 876425342Manchaster United, 8724422how 7698can789 I 7676887 do!"
+
+let strArr = [...theString];
+
+let numberArray = strArr.reduce((acc, item)=>{
+    if(!isNaN(item) && item !== ' '){
+        acc.push(Number(item));
+    } else {
+        acc.push(item);
+    }
+    return acc;
+}, [])
+
+// console.log(numberArray)
+let stringArray = numberArray.filter(item => typeof item === 'string');
+// console.log(stringArray)
+
+let joinStr = stringArray.join('');
+console.log(joinStr)
