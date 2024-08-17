@@ -257,8 +257,6 @@ Usages of Stack ->
 * Expression conversions
 * Call stack in Javascript runtime
 
-
-
 <!-- -------------------------------------------------------------------- -->
 
 # Prefix Sum

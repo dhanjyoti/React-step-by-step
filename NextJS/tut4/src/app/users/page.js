@@ -1,3 +1,4 @@
+import DeleteUser from "@/util/DeleteUser";
 import Link from "next/link";
 
 async function getUsers(){
@@ -14,8 +15,15 @@ export default async function Page(){
         <h1>user List</h1>
         {
             users.map((item)=>(
-                <div key={item.id}>
-                    <Link href={`users/${item.id}`}>{item.name}</Link>
+                <div key={item.id} className="flex flex-row gap-10">
+                    <span className="inline-block w-28">
+                        <Link href={`users/${item.id}`}>{item.name}</Link>
+                    </span>
+
+                    <span>
+                        <Link href={`users/${item.id}/update`}>Edit</Link>
+                    </span>
+                    <DeleteUser id={item.id}/>
                 </div>
             ))
         }

@@ -12,10 +12,8 @@ function bubbleSort(arr){
     }
     return arr;
 }
-<<<<<<< HEAD
-console.log(bubbleSort(arr))
-=======
+
 console.log(bubbleSort(arr))
 //  Time complexity = O(n^2)
 //  Space complexity = O(1)
->>>>>>> e8caacf (updated)
+

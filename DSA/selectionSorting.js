@@ -14,11 +14,8 @@ function selectionSort(arr){
     }
     return arr; 
 }
-<<<<<<< HEAD
-console.log(selectionSort(arr))
-=======
 console.log(selectionSort(arr))
 
 // Time complexity = O(n^2);
 // Space complexity = O(1)
->>>>>>> e8caacf (updated)
+

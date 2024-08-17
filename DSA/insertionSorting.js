@@ -12,11 +12,10 @@ function insertionSort(arr){
     }
     return arr;
 }
-<<<<<<< HEAD
-console.log(insertionSort(arr))
-=======
+
+
 console.log(insertionSort(arr))
 
 // Time Complexity = O(n^2)
 // Space Complexity = O(1)
->>>>>>> e8caacf (updated)
+
