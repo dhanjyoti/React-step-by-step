@@ -19,7 +19,4 @@ route.get('/contact', (req, resp)=>{
 })
 
 app.use('/', route)
-app.listen(5001) 
-`brew install mongodb-atlas-cli`
-
-brew install --cask mongodb-compass
+app.listen(5001)

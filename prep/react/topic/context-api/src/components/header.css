@@ -1,0 +1,10 @@
+.navbar ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+}
+li{
+    text-decoration: none;
+}
