@@ -1,5 +1,5 @@
 "use client"
-import { stepContentClasses } from '@mui/material';
+// import { stepContentClasses } from '@mui/material';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 
@@ -12,7 +12,7 @@ export default function Page(props) {
 
     useEffect(()=>{
         getProductDetail()
-    })
+    }, [])
 
     const getProductDetail = async ()=>{
         let productId = props.params.editproduct;
@@ -27,6 +27,19 @@ export default function Page(props) {
             setCategory(result.category)
         }
     }
+
+    const updateProduct = async()=>{
+        let productId = props.params.editproduct
+        let data = await fetch("http://localhost:3000/api/products/"+ productId, {
+            method:"PUT",
+            body:JSON.stringify({name, price, color, category, company})
+        });
+        data = await data.json();
+        if(data.result){
+            alert("Product has been updated");
+        }
+    }
+
   return (
     <div>
         <h1>Update Products</h1>
@@ -37,7 +50,7 @@ export default function Page(props) {
             <input type='text' value={company} onChange={(e)=>setCompany(e.target.value)} placeholder='Enter Product Company' />
             <input type='text' value={category} onChange={(e)=>setCategory(e.target.value)} placeholder='Enter Product Category' />
         </div>
-        <button className='border-2 border-gray-700 p-2 rounded-md'>Update Product</button>
+        <button onClick={updateProduct} className='border-2 border-gray-700 p-2 rounded-md'>Update Product</button>
             <Link href={"/products"}>Go to Product List</Link>
     </div>
   )

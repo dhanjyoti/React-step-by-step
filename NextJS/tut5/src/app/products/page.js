@@ -2,9 +2,10 @@
 import React, { useEffect, useState } from "react";
 import styles from "./product.module.css";
 import Link from "next/link";
+import DeleteProduct from "@/library/DeleteProduct";
 
 const getProducts = async () => {
-  let data = await fetch("/api/products");
+  let data = await fetch("/api/products", {cache:"no-cache"});
   data = await data.json();
   if (data.success) {
     return data.result;
@@ -46,6 +47,7 @@ export default function Page() {
               <td>{item.company}</td>
               <td>{item.category}</td>
               <td><Link href={"products/"+item._id}>Edit</Link></td>
+              <td><DeleteProduct id={item._id}/></td>
             </tr>
           ))}
         </tbody>

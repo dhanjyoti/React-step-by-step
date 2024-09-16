@@ -56,4 +56,18 @@
 //     console.log("After 5 sec: ", res);
 // }, 5000)
 
-
+class student{
+    constructor(name){
+        this.stdname = name;
+        console.log("constructor");
+    }
+    hello(){
+        console.log(`hello ${this.stdname}`);
+    }
+    static staticHello(){
+        console.log("static hello");
+    }
+}
+let a = new student("dhanjyoti");
+a.hello();
+student.staticHello();
