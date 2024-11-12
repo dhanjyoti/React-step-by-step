@@ -2,7 +2,7 @@
 
 function isAnagram(str1, str2){
     let clearstr1 = str1.replace(/\s/g, "").toLowerCase();
-    let clearstr2 = str1.replace(/\s/g, "").toLowerCase();
+    let clearstr2 = str2.replace(/\s/g, "").toLowerCase();
 
     return (
         clearstr1.split("").sort().join("") ===

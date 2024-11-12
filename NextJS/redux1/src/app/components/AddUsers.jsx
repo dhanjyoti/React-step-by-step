@@ -2,13 +2,14 @@
 import { useDispatch } from 'react-redux';
 import { useState } from "react";
 import { addUser } from "../redux/slice";
+import Link from 'next/link';
 
 
 export default function AddUsers() {
   const [name, setName] = useState("");
   const dispatch = useDispatch();
   const userDispatch = ()=>{
-    console.log(name);
+    // console.log(name);
     dispatch(addUser(name));
   }
 
@@ -25,6 +26,10 @@ export default function AddUsers() {
       <button className="px-10 py-3 bg-black text-white rounded-lg mt-10" onClick={userDispatch}>
         Add User
       </button>
+      <br/>
+      <Link href="/removeuser">Remove User</Link>
+      <Link href="/todoList">Go to todo page</Link>
+      <Link href="/apiusers">Go to Api User List page</Link>
     </div>
   );
 }
